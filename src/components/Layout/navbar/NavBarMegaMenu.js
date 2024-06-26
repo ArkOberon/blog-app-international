@@ -34,7 +34,7 @@ export const NavbarMegaMenu = () => {
             <span className="icon-bar top-bar mt-0"></span>
             <span className="icon-bar middle-bar"></span>
             <span className="icon-bar bottom-bar"></span>
-          </Navbar.Toggle>
+          </Navbar.Toggle>          
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {NavbarDefaultRoutes.slice(1, 100).map((item, index) => {
@@ -62,10 +62,10 @@ export const NavbarMegaMenu = () => {
             <div className="ms-auto mt-3 mt-lg-0">
               <div className="d-flex align-items-center">
                 <DarkLightMode />
-                <Link href="#" className="btn btn-outline-dark ms-3">
+                <Link href="/authentication/sign-in" className="btn btn-outline-dark ms-3">
                   Sign in
                 </Link>
-                <Link href="#" className="btn btn-dark ms-1">
+                <Link href="/authentication/sign-up" className="btn btn-dark ms-1">
                   Sign up
                 </Link>
               </div>

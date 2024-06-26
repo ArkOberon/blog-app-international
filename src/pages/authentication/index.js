@@ -2,12 +2,12 @@
 import { Fragment } from 'react';
 import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import {useTranslations} from 'next-intl';
 
 // import widget/custom components
 import { HermenautasSEO } from '../../widgets';
 
-const SignIn = () => {
+const Authentication = () => {
 	const t = useTranslations('Sing-in');
 
 	return (
@@ -111,4 +111,4 @@ export async function getStaticProps({locale}) {
   };
 }
 
-export default SignIn;
+export default Authentication;

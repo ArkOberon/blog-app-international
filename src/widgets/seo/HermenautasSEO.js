@@ -2,7 +2,7 @@
 import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 
-const GeeksSEO = props => {
+const HermenautasSEO = props => {
   const router = useRouter()
   const pageURL = process.env.baseURL + router.pathname;
   const { title, description } = props;
@@ -28,4 +28,4 @@ const GeeksSEO = props => {
     />
   )
 }
-export default GeeksSEO;
+export default HermenautasSEO;

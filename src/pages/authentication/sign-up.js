@@ -2,18 +2,16 @@
 import { Fragment } from 'react';
 import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
 // import widget/custom components
 import { HermenautasSEO } from '../../widgets';
 
-const SignIn = () => {
-	const t = useTranslations('Sing-in');
+const SignUp = () => {
 
 	return (
 		<Fragment>
 			{/* SEO settings  */}
-			<HermenautasSEO title={t("title")} />
+			<HermenautasSEO title="Sign Up | Geeks Nextjs Template" />
 
 			<Row className="align-items-center justify-content-center g-0 min-vh-100">
 				<Col lg={5} md={5} className="py-8 py-xl-0">
@@ -23,11 +21,11 @@ const SignIn = () => {
 								<Link href="/">
 									<Image src="/images/brand/logo/logo-icon.svg" className="mb-4" alt="" />
 								</Link>
-								<h1 className="mb-1 fw-bold">Sign in</h1>
+								<h1 className="mb-1 fw-bold">Sign up</h1>
 								<span>
-									Don’t have an account?{' '}
-									<Link href="/authentication/sign-up" className="ms-1">
-										Sign up
+									Already have an account?{' '}
+									<Link href="/authentication/sign-in" className="ms-1">
+										Sign in
 									</Link>
 								</span>
 							</div>
@@ -35,8 +33,18 @@ const SignIn = () => {
 							<Form>
 								<Row>
 									<Col lg={12} md={12} className="mb-3">
-										{/* Username or email */}
-										<Form.Label>Username or email </Form.Label>
+										{/* User Name */}
+										<Form.Label>User Name</Form.Label>
+										<Form.Control
+											type="text"
+											id="username"
+											placeholder="User Name"
+											required
+										/>
+									</Col>
+									<Col lg={12} md={12} className="mb-3">
+										{/* email */}
+										<Form.Label>Email </Form.Label>
 										<Form.Control
 											type="email"
 											id="email"
@@ -56,17 +64,19 @@ const SignIn = () => {
 									</Col>
 									<Col lg={12} md={12} className="mb-3">
 										{/* Checkbox */}
-										<div className="d-md-flex justify-content-between align-items-center">
-											<Form.Group
-												className="mb-3 mb-md-0"
-												controlId="formBasicCheckbox"
-											>
-												<Form.Check type="checkbox" label="Remember me" />
-											</Form.Group>
-											<Link href="/authentication/forget-password">
-												Forgot your password?
-											</Link>
-										</div>
+										<Form.Check type="checkbox" id="check-api-checkbox">
+											<Form.Check.Input type="checkbox" />
+											<Form.Check.Label>
+												I agree to the{' '}
+												<Link href="/marketing/specialty/terms-and-conditions/">
+													Terms of Service
+												</Link>{' '}
+												and{' '}
+												<Link href="/marketing/specialty/terms-and-conditions/">
+													Privacy Policy.
+												</Link>
+											</Form.Check.Label>
+										</Form.Check>
 									</Col>
 									<Col lg={12} md={12} className="mb-0 d-grid gap-2">
 										{/* Button */}
@@ -103,12 +113,6 @@ const SignIn = () => {
 	);
 };
 
-export async function getStaticProps({locale}) {
-  return {
-    props: {
-      messages: (await import(`../../messages/${locale}.json`)).default
-    }
-  };
-}
+/* SignUp.Layout = AuthLayout; */
 
-export default SignIn;
+export default SignUp;

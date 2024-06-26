@@ -4,7 +4,7 @@ import { Col, Row, Image } from 'react-bootstrap';
 import Link from 'next/link';
 
 // import widget/custom components
-import { GeeksSEO } from '../widgets';
+import { HermenautasSEO } from '../widgets';
 
 // import blank layout, header and footer to override default layout 
 import NotFound from '../components/Layout/error/NotFound';
@@ -13,7 +13,7 @@ const Error404 = () => {
 	return (
 		<Fragment>
 			{/* Geeks SEO settings  */}
-			<GeeksSEO title="404 Error | Geeks Nextjs Template" />
+			<HermenautasSEO title="404 Error | Geeks Nextjs Template" />
 
 			<Row>
 				<Col lg={12} md={12} sm={12}>
