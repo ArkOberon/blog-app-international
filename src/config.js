@@ -5,9 +5,29 @@ export const locales = ['es', 'en'];
 
 export const pathnames = {
   '/': '/',
+  '/projects': {
+    es: '/proyectos',
+    en: '/projects'
+  },
+  '/about-us': {
+    es: '/nosotros',
+    en: '/about-us'
+  },
+  '/news': {
+    es: '/noticias',
+    en: '/news'
+  },
+  '/contact': {
+    es: '/contacto',
+    en: '/contact'
+  },
   '/authentication/sign-in': {
     es: '/autenticacion/iniciar-sesion',
     en: '/authentication/sign-in'
+  },
+  '/authentication/sign-up': {
+    es: '/autenticacion/registrarse',
+    en: '/authentication/sign-up'
   }
 };
  

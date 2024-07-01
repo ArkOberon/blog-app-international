@@ -4,23 +4,27 @@ import PropTypes from "prop-types";
 import { Image, Navbar, Nav, Container, ListGroup, Dropdown } from "react-bootstrap";
 import Link from "next/link";
 import { useMediaQuery } from 'react-responsive';
+import { useRouter } from "next/router";
 
 // import sub components
-import { MegaMenu, NavMegaDropdown } from "./";
+import { NavMegaDropdown } from "./";
 import { DarkLightMode } from "../../ui/darklight";
 
 // import data files
-import NavbarDefaultRoutes from "../../../routes/NavbarDefault";
+import NavbarDefault from "../../../routes/NavbarDefault";
 
 // import hooks
 import useMounted from '../../../hooks/useMounted';
 
 export const NavbarMegaMenu = () => {
+  const { locale } = useRouter()
   const [expandedMenu, setExpandedMenu] = useState(false);
   const hasMounted = useMounted();
   const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
   const isLoged = false
+
+  const arrayMenu = NavbarDefault();
   
   return (
     <Fragment>
@@ -44,25 +48,27 @@ export const NavbarMegaMenu = () => {
           </Navbar.Toggle>          
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              {NavbarDefaultRoutes.slice(1, 100).map((item, index) => {
+              {arrayMenu[locale].slice(1, 100).map((item, index) => {
                 if (item.children === undefined) {
                   return (
-                    <Nav.Link key={index} as={Link} href={item.link}>
+                    <Nav.Link className="ms-1 dropdown-item" key={index} as={Link} href={item.link}>
                       {item.menuitem}
                     </Nav.Link>
                   );
                 } else {
                   return (
-                    <NavMegaDropdown
-                      item={item}
-                      key={index}
-                      onClick={(value) => setExpandedMenu(value)}
-                    />
+                    <>
+                      <NavMegaDropdown
+                        item={item}
+                        key={index}
+                        onClick={(value) => setExpandedMenu(value)}
+                      /> 
+                    </>
                   );
                 }
               })}
-              <MegaMenu />
-              {/* <DocumentMenu /> */}
+            {/* <MegaMenu /> */}
+            {/* <DocumentMenu /> */}
             </Nav>
 
             {/* Right side quick / shortcut menu  */}
