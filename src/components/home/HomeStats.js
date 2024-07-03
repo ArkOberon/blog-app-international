@@ -2,9 +2,9 @@
 import { Col, Row, Container } from "react-bootstrap";
 
 // import widget/custom components
-import { StatTopBigIcon } from "widgets";
+import { StatTopBigIcon } from "../../widgets";
 
-const HermenautasStats = () => {
+export const HomeStats = () => {
   return (
     <section className="pb-14 bg-white">
       <Container>
@@ -59,4 +59,3 @@ const HermenautasStats = () => {
   );
 };
 
-export default HermenautasStats;

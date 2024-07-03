@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 // import sub components
 import { NavMegaDropdown } from "./";
 import { DarkLightMode } from "../../ui/darklight";
+import { Flags } from "../../ui"
 
 // import data files
 import NavbarDefault from "../../../routes/NavbarDefault";
@@ -74,8 +75,11 @@ export const NavbarMegaMenu = () => {
             {/* Right side quick / shortcut menu  */}
             
             <div className="ms-auto mt-3 mt-lg-0">
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center">     
+                <Flags />
+
                 <DarkLightMode />
+
                 {isLoged ? 
                   <ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">
                     <Dropdown as="li">
