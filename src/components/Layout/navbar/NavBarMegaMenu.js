@@ -1,6 +1,5 @@
 // import node module libraries
 import { Fragment, useState } from "react";
-import PropTypes from "prop-types";
 import { Image, Navbar, Nav, Container, ListGroup, Dropdown } from "react-bootstrap";
 import Link from "next/link";
 import { useMediaQuery } from 'react-responsive';
@@ -10,6 +9,7 @@ import { useRouter } from "next/router";
 import { NavMegaDropdown } from "./";
 import { DarkLightMode } from "../../ui/darklight";
 import { Flags } from "../../ui"
+import { NavBarCart } from "../../cart";
 
 // import data files
 import NavbarDefault from "../../../routes/NavbarDefault";
@@ -17,13 +17,13 @@ import NavbarDefault from "../../../routes/NavbarDefault";
 // import hooks
 import useMounted from '../../../hooks/useMounted';
 
-export const NavbarMegaMenu = () => {
+export const NavbarMegaMenu = ({ headerstyle= "navbar-default", login = false }) => {
   const { locale } = useRouter()
   const [expandedMenu, setExpandedMenu] = useState(false);
   const hasMounted = useMounted();
   const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const isLoged = false
+  const isLoged = true
 
   const arrayMenu = NavbarDefault();
   
@@ -67,53 +67,22 @@ export const NavbarMegaMenu = () => {
                     </>
                   );
                 }
-              })}
-            {/* <MegaMenu /> */}
-            {/* <DocumentMenu /> */}
+              })}    
             </Nav>
 
             {/* Right side quick / shortcut menu  */}
             
             <div className="ms-auto mt-3 mt-lg-0">
-              <div className="d-flex align-items-center">     
+              <div className="d-flex align-items-center">  
+                 
+                <NavBarCart />
+
                 <Flags />
 
                 <DarkLightMode />
 
                 {isLoged ? 
-                  <ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">
-                    <Dropdown as="li">
-                      <Dropdown.Toggle as="a"
-                        bsPrefix=' '
-                        id="dropdownNotification"
-                        className="text-dark icon-notifications me-lg-1  btn btn-light btn-icon rounded-circle indicator indicator-primary text-muted"
-                      >
-                        <i className="fe fe-bell"></i>
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu
-                        className="dashboard-dropdown notifications-dropdown dropdown-menu-lg dropdown-menu-end mt-4 py-0"
-                        aria-labelledby="dropdownNotification"
-                        align="end"
-                        show={hasMounted && isDesktop ? true : false}
-                      >
-                        <Dropdown.Item className="mt-3" bsPrefix=' ' as="div"  >
-                          <div className="border-bottom px-3 pt-0 pb-3 d-flex justify-content-between align-items-end">
-                            <span className="h4 mb-0">Notifications</span>
-                            <Link href="/" className="text-muted">
-                              <span className="align-middle">
-                                <i className="fe fe-settings me-1"></i>
-                              </span>
-                            </Link>
-                          </div>
-                          {/* <Notifications /> */}
-                          <div className="border-top px-3 pt-3 pb-3">
-                            <Link href="/dashboard/notification-history" className="text-link fw-semi-bold">
-                              See all Notifications
-                            </Link>
-                          </div>
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
+                  <ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">                                          
                     <Dropdown as="li" className="ms-2">
                       <Dropdown.Toggle
                         as="a"
@@ -182,16 +151,4 @@ export const NavbarMegaMenu = () => {
       </Navbar>
     </Fragment>
   );
-};
-
-// Specifies the default values for props
-NavbarMegaMenu.defaultProps = {
-  headerstyle: "navbar-default",
-  login: false,
-};
-
-// Typechecking With PropTypes
-NavbarMegaMenu.propTypes = {
-  headerstyle: PropTypes.string,
-  login: PropTypes.bool,
 };

@@ -1,6 +1,4 @@
 export * from "./CategoriesDropDown"
-export * from "./DocumentMenu"
-export * from "./MegaMenu"
 export * from "./NavBarMegaMenu"
 export * from "./NavMegaDropdown"
 export * from "./NavbarBrandOnly"

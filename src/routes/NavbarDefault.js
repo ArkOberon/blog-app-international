@@ -18,7 +18,12 @@ const NavbarDefault = () =>{
 				id: uuid(),
 				menuitem: 'Noticias',
 				link: '/noticias',		
-			},	
+			},
+			{
+				id: uuid(),
+				menuitem: 'Blog',
+				link: '/blog',	
+			},
 			{
 				id: uuid(),
 				menuitem: 'Contacto',
@@ -42,6 +47,11 @@ const NavbarDefault = () =>{
 				menuitem: 'News',
 				link: '#',		
 			},	
+			{
+				id: uuid(),
+				menuitem: 'Blog',
+				link: '/blog',	
+			},
 			{
 				id: uuid(),
 				menuitem: 'Contact',

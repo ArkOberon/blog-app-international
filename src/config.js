@@ -1,5 +1,3 @@
-import {Pathnames, LocalePrefix} from 'next-intl/routing';
-
 export const defaultLocale = 'es';
 export const locales = ['es', 'en'];
 
@@ -16,6 +14,10 @@ export const pathnames = {
   '/news': {
     es: '/noticias',
     en: '/news'
+  },
+  '/blog': {
+    es: '/blog',
+    en: '/blog'
   },
   '/contact': {
     es: '/contacto',
