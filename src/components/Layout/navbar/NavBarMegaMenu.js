@@ -23,7 +23,7 @@ export const NavbarMegaMenu = ({ headerstyle= "navbar-default", login = false })
   const hasMounted = useMounted();
   const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const isLoged = true
+  const isLoged = false
 
   const arrayMenu = NavbarDefault();
   

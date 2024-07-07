@@ -35,17 +35,17 @@ const NavbarDefault = () =>{
 			{
 				id: uuid(),
 				menuitem: 'Projects',
-				link: '#'		
+				link: '/projects'		
 			},
 			{
 				id: uuid(),
 				menuitem: 'About us',
-				link: '#'
+				link: '/about-us'
 			},
 			{
 				id: uuid(),
 				menuitem: 'News',
-				link: '#',		
+				link: '/news',		
 			},	
 			{
 				id: uuid(),
@@ -55,7 +55,7 @@ const NavbarDefault = () =>{
 			{
 				id: uuid(),
 				menuitem: 'Contact',
-				link: '#',		
+				link: '/contact',		
 			}
 		],
 	}
