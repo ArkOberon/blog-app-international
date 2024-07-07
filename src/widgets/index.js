@@ -8,6 +8,7 @@ import FeatureTopIconCard from './features/FeatureTopIconCard'
 import SectionHeadingLeft2 from './section-headings/SectionHeadingLeft2'
 import SectionHeadingLeftBold from './section-headings/SectionHeadingLeftBold';
 import SectionHeadingCenter from './section-headings/SectionHeadingCenter';
+import FormSelect from './form-select/FormSelect'
 
 export {   
    HermenautasSEO,
@@ -19,5 +20,6 @@ export {
    FeatureTopIconCard,
    SectionHeadingLeft2,
    SectionHeadingLeftBold,
-   SectionHeadingCenter
+   SectionHeadingCenter,
+   FormSelect
 };
