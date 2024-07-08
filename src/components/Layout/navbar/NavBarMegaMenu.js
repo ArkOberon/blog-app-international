@@ -17,7 +17,7 @@ import NavbarDefault from "../../../routes/NavbarDefault";
 // import hooks
 import useMounted from '../../../hooks/useMounted';
 
-export const NavbarMegaMenu = ({ headerstyle= "navbar-default", login = false }) => {
+export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }) => {
   const { locale } = useRouter()
   const [expandedMenu, setExpandedMenu] = useState(false);
   const hasMounted = useMounted();

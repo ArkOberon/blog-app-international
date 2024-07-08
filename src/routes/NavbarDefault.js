@@ -6,8 +6,8 @@ const NavbarDefault = () =>{
 			{},
 			{
 				id: uuid(),
-				menuitem: 'Proyectos',
-				link: '/proyectos'		
+				menuitem: 'Libros',
+				link: '/libros'		
 			},
 			{
 				id: uuid(),
@@ -34,8 +34,8 @@ const NavbarDefault = () =>{
 			{},
 			{
 				id: uuid(),
-				menuitem: 'Projects',
-				link: '/projects'		
+				menuitem: 'Books',
+				link: '/books'		
 			},
 			{
 				id: uuid(),

@@ -7,7 +7,7 @@ import { PortfolioItem } from '../components/projects'
 // import data files
 import PortfolioData from '../data/marketing/portfolio/PortfolioData'
 
-const PortfolioList = () => {
+const Books = () => {
   return (
     <main>
       <section className="py-lg-12 py-7">
@@ -42,4 +42,4 @@ const PortfolioList = () => {
   )
 }
 
-export default PortfolioList
+export default Books
