@@ -11,11 +11,11 @@ const Layout = (props) => {
 	});
 	return (
 		<Fragment>
-			<NavbarMegaMenu login />
+			{/* <NavbarMegaMenu login /> */}
 			<main>
 				{props.children}
 			</main>
-			<FooterWithLinks bgColor="bg-light" />
+		{/* 	<FooterWithLinks bgColor="bg-light" /> */}
 		</Fragment>
 	);
 };
