@@ -1,17 +1,41 @@
 // import node module libraries
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap';
 import Link from 'next/link';
 
 // import widget/custom components
 import { HermenautasSEO } from '../../widgets';
 
+// import API functions
+import { registerUser } from '../api/user/registerUser';
+
 const SignUp = () => {
+	
+	const [submit, setSubmit] = useState(false)
+
+	useEffect(() => {
+		if (submit) {
+			console.log('Submit')
+		}
+	}, [submit])
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+
+		const response = await registerUser(e.target.username.value, e.target.email.value, e.target.password.value)
+		console.log(response)
+
+		if(response.errors){
+			return;
+		} else {
+			setSubmit(true)		
+		}
+	}
 
 	return (
 		<Fragment>
 			{/* SEO settings  */}
-			<HermenautasSEO title="Sign Up | Geeks Nextjs Template" />
+			<HermenautasSEO title="Sign Up | Hermenautas" />
 
 			<Row className="align-items-center justify-content-center g-0 min-vh-100">
 				<Col lg={5} md={5} className="py-8 py-xl-0">
@@ -30,7 +54,7 @@ const SignUp = () => {
 								</span>
 							</div>
 							{/* Form */}
-							<Form>
+							<Form onSubmit={handleSubmit}>
 								<Row>
 									<Col lg={12} md={12} className="mb-3">
 										{/* User Name */}
@@ -58,14 +82,14 @@ const SignUp = () => {
 										<Form.Control
 											type="password"
 											id="password"
-											placeholder="**************"
+											placeholder="Your Password"
 											required
 										/>
 									</Col>
 									<Col lg={12} md={12} className="mb-3">
 										{/* Checkbox */}
 										<Form.Check type="checkbox" id="check-api-checkbox">
-											<Form.Check.Input type="checkbox" />
+											<Form.Check.Input type="checkbox" required />
 											<Form.Check.Label>
 												I agree to the{' '}
 												<Link href="/marketing/specialty/terms-and-conditions/">
@@ -112,7 +136,5 @@ const SignUp = () => {
 		</Fragment>
 	);
 };
-
-/* SignUp.Layout = AuthLayout; */
 
 export default SignUp;

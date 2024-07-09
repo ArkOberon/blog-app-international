@@ -35,5 +35,7 @@ export const pathnames = {
  
 export const localePrefix = 'never';
 
-export const port = 3000;
-export const host = `http://localhost:${port}`;
+export const port = process.env.NEXT_PUBLIC_PORT || 3000;
+export const host = process.env.NEXT_PUBLIC_HOST_URL
+? `https://${process.env.NEXT_PUBLIC_HOST_URL}`
+: `http://localhost:${port}`;
