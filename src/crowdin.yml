@@ -1,0 +1,127 @@
+#
+# Your Crowdin credentials
+#
+"project_id": "1"
+"api_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3UUVxdmhVM3ZMT2EyWGljbVV5VCIsImp0aSI6ImEwYzU5MjU2ZTE2MWE4OTMxZDYzMmZmOGE0MWI2MGY5YjA0OGRkYzVlMWRjNmQ5ZDM2ZTIwYzI1ZDIxNTIyZWUwYTJjNTRkOWEyOTEwZGYxIiwiaWF0IjoxNzIwNTk5NTI1LjIyMDEyMywibmJmIjoxNzIwNTk5NTI1LjIyMDEyNywiZXhwIjoxNzUyMTM1NTI1LjExNDI4NCwic3ViIjoiMSIsInNjb3BlcyI6WyJwcm9qZWN0Il0sImRvbWFpbiI6Imhlcm1lbmF1dGFzIiwiYXNzb2NpYXRpb25zIjpbIioiXSwic2Vzc2lvbiI6MH0.pU10gnUBuVvgOOOzjHEhc9taZ64l6fi2BiAjGcOtkQM5L1seOioQy4ddSPqGZlqiajJSpLLJcmDygSffynTVzX1TY2Y5cEs8LJzxRtryG3bCtbir-na768Blwh4o825gcxaWirqxq0bP101XY-EtypxG0ZdxVHHSKTRSvQuHAy8eeyYeqCPYCIGDAdcU9MkMVpZpVJW1ZtKwHJ_EMVlhGEQIj5sRRwzs-ftBA3ohrhSej8KaFcYBQr6bPjB13MKWOohpug3cVFQOLJeyR95mpJsKakmlqsNZLsQCrEVJde8TRQTAfpZQfohoufc19CIa8xFeMyKtVUyKigbRKmJWe4IfWiGZZL81PbtAW3nlcvCo493QzIithhyoBDMypqsE_K0UyC4WsTfm8AGf-QeAOS0tM1LKMo7susMin7iDIwnsSf4Gv05e8nevHgFzvxlS3oh7_105qwE4YAbpTc4yKSzzOLQ9RnZImwSEWvm3IB85mRk6seEowr3HZi-v5Bs4q2TMh0wmwVUiWacCr1tCTjhxjj0KSQ7j6ucO72Nrn2Rvhq-f7xSNzfcfQSHj-JkR1B5rGIdyG0D0A8Os55xp4Edrc9_YJKcszydK3_y1Dz7Md_1A4HdBwwYGuyCglWlWCgQDH6WLADg-GPaK_2mqo_uZMhrpEzE5iUKXxC1t60Q"
+"base_path": "."
+"base_url": "https://hermenautas.api.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+#
+files: [
+  {
+    #
+    # Source files filter
+    # e.g. "/resources/en/*.json"
+    #
+    "source": "/messages/es.json",
+
+    #
+    # Where translations will be placed
+    # e.g. "/resources/%two_letters_code%/%original_file_name%"
+    #
+    "translation": "/messages/%locale%.json",
+
+    #
+    # Files or directories for ignore
+    # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
+    #
+    # "ignore": [],
+
+    #
+    # The dest allows you to specify a file name in Crowdin
+    # e.g. "/messages.json"
+    #
+    # "dest": "",
+
+    #
+    # File type
+    # e.g. "json"
+    #
+    # "type": "",
+
+    #
+    # The parameter "update_option" is optional. If it is not set, after the files update the translations for changed strings will be removed. Use to fix typos and for minor changes in the source strings
+    # e.g. "update_as_unapproved" or "update_without_changes"
+    #
+    # "update_option": "",
+
+    #
+    # Start block (for XML only)
+    #
+
+    #
+    # Defines whether to translate tags attributes.
+    # e.g. 0 or 1  (Default is 1)
+    #
+    # "translate_attributes": 1,
+
+    #
+    # Defines whether to translate texts placed inside the tags.
+    # e.g. 0 or 1 (Default is 1)
+    #
+    # "translate_content": 1,
+
+    #
+    # This is an array of strings, where each item is the XPaths to DOM element that should be imported
+    # e.g. ["/content/text", "/content/text[@value]"]
+    #
+    # "translatable_elements": [],
+
+    #
+    # Defines whether to split long texts into smaller text segments
+    # e.g. 0 or 1 (Default is 1)
+    #
+    # "content_segmentation": 1,
+
+    #
+    # End block (for XML only)
+    #
+
+    #
+    # Start .properties block
+    #
+
+    #
+    # Defines whether single quote should be escaped by another single quote or backslash in exported translations
+    # e.g. 0 or 1 or 2 or 3 (Default is 3)
+    # 0 - do not escape single quote;
+    # 1 - escape single quote by another single quote;
+    # 2 - escape single quote by backslash;
+    # 3 - escape single quote by another single quote only in strings containing variables ( {0} ).
+    #
+    # "escape_quotes": 3,
+
+    #
+    # Defines whether any special characters (=, :, ! and #) should be escaped by backslash in exported translations.
+    # e.g. 0 or 1 (Default is 0)
+    # 0 - do not escape special characters
+    # 1 - escape special characters by a backslash
+    #
+    # "escape_special_characters": 0
+    #
+
+    #
+    # End .properties block
+    #
+
+    #
+    # Does the first line contain header?
+    # e.g. true or false
+    #
+    # "first_line_contains_header": true,
+
+    #
+    # for spreadsheets
+    # e.g. "identifier,source_phrase,context,uk,ru,fr"
+    #
+    # "scheme": "",
+  }
+]
