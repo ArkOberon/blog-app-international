@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import { HermenautasSEO } from '../../widgets';
 
 const SignIn = () => {
-	const t = useTranslations('Sing-in');
+	const t = useTranslations('Sign-in');
 
 	return (
 		<Fragment>

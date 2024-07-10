@@ -16,18 +16,34 @@ import {NextIntlClientProvider} from 'next-intl';
 import Layout from "../components/Layout/Layout"
 import '../styles/scss/theme.scss';
 
+// Import menssages
+import messagesEn from '../messages/en.json';
+import messagesEs from '../messages/es.json';
+
 function App({ Component, pageProps }) {
   const router = useRouter();
   const pageURL = process.env.baseURL + router.pathname;
   const title = "Geeks UI - Nextjs fully responsive template ";
   const description = "Geeks is a fully responsive and yet modern premium Nextjs template & snippets. Geek is feature-rich Nextjs components and beautifully designed pages that help you create the best possible website and web application projects. Nextjs Snippet "
   const keywords = "Geeks UI, Nextjs, Next.js, Course, Sass, landing, Marketing, admin themes, Nextjs admin, Nextjs dashboard, ui kit, web app, multipurpose"
+  
+  let messages;
+  switch (router.locale) {
+    case 'en':
+      messages = messagesEn;
+      break;
+    case 'es':
+      messages = messagesEs;
+      break;  
+    default:
+      messages = messagesEn; 
+  }
 
   return (
     <NextIntlClientProvider
       locale={router.locale}
       timeZone="Europe/Brussels"
-      messages={pageProps.messages}
+      messages={messages}
     >
       <Fragment>
         <Head>

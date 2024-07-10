@@ -1,5 +1,21 @@
-{  
-  "Sing-in": {
-    "title": "Iniciar sesión"
+{
+  "Sign-in": {
+    "title": "Sign in"
+  },
+  "Sign-up": {
+    "title": "Sign up",
+    "already_have_an_account": "Already have an account?",
+    "sign_in": "Sign in",
+    "redirect_link_slug": "/en/authentication/sign-in",
+    "sign_up": "Sign up",
+    "username": "Username",
+    "email": "Email",
+    "email_address_here": "Email address",
+    "password": "Password",
+    "your_password": "Your Password",
+    "i_agree_to_the_terms": "I agree to the",
+    "terms_of_services": "Terms of Services",
+    "and": "and",
+    "privacy_policy": "Privacy Policy"
   }
 }

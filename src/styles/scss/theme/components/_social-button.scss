@@ -60,6 +60,14 @@
   background-color: $github-hover-bg;
 }
 
+.btn-twitch:hover {
+  background-color: $twitch-hover-bg;
+}
+
+.btn-youtube:hover {
+  background-color: $youtube-hover-bg;
+}
+
 .color-facebook {
   color: $facebook;
 }
@@ -74,4 +82,12 @@
 
 .color-google {
   color: $google;
+}
+
+.color-twitch {
+  color: $twitch;
+}
+
+.color-youtube {
+  color: $youtube;
 }
