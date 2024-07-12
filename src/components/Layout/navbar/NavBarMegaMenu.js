@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 // import sub components
 import { NavMegaDropdown } from "./";
 import { DarkLightMode } from "../../ui/darklight";
-import { Flags } from "../../ui"
+import { Languages } from "../../ui"
 import { NavBarCart } from "../../cart";
 
 // import data files
@@ -77,7 +77,7 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
                  
                 <NavBarCart />
 
-                <Flags />
+                <Languages />
 
                 <DarkLightMode />
 
@@ -134,10 +134,10 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
                   </ListGroup>
                 :
                   <>
-                    <Link href="/authentication/sign-in" className="btn btn-outline-dark ms-3">
+                    <Link href="/en/authentication/sign-in" className="btn btn-outline-dark ms-3">
                       Sign in
                     </Link>
-                    <Link href="/authentication/sign-up" className="btn btn-dark ms-1">
+                    <Link href="/en/authentication/sign-up" className="btn btn-dark ms-1">
                       Sign up
                     </Link>
                   </>

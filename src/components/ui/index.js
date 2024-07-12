@@ -1,4 +1,4 @@
 export * from './HeroFormLeft'
 export * from './HeroLeftImage'
 export * from './HeroRightImage'
-export * from './Flags'
+export * from './Languages'

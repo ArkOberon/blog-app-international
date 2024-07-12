@@ -35,27 +35,27 @@ const NavbarDefault = () =>{
 			{
 				id: uuid(),
 				menuitem: 'Books',
-				link: '/books'		
+				link: '/en/books'		
 			},
 			{
 				id: uuid(),
 				menuitem: 'About us',
-				link: '/about-us'
+				link: '/en/about-us'
 			},
 			{
 				id: uuid(),
 				menuitem: 'News',
-				link: '/news',		
+				link: '/en/news',		
 			},	
 			{
 				id: uuid(),
 				menuitem: 'Blog',
-				link: '/blog',	
+				link: '/en/blog',	
 			},
 			{
 				id: uuid(),
 				menuitem: 'Contact',
-				link: '/contact',		
+				link: '/en/contact',		
 			}
 		],
 	}
