@@ -7,8 +7,30 @@ import { useTranslations } from 'next-intl';
 // import widget/custom components
 import { HermenautasSEO } from '../../widgets';
 
+// import API functions
+import { loginUser } from '../api/user/loginUser';
+import { decodeParameters, generateToken } from '../../utils/ncryptSecure';
+
 const SignIn = () => {
 	const t = useTranslations('Sign-in');
+
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+
+		const response = await loginUser("ailuro", "12345")
+
+		console.log(response)
+
+		console.log(response.data.loginUser.session)
+
+		const decodeKey = decodeParameters(response.data.loginUser.session)
+
+		console.log(decodeKey)
+
+		const status = await generateToken(decodeKey.CLIENT_KEY, response.data.loginUser.user.id)
+
+		console.log(status)
+	}
 
 	return (
 		<Fragment>
@@ -32,7 +54,7 @@ const SignIn = () => {
 								</span>
 							</div>
 							{/* Form */}
-							<Form>
+							<Form onSubmit={handleSubmit}>
 								<Row>
 									<Col lg={12} md={12} className="mb-3">
 										{/* Username or email */}
