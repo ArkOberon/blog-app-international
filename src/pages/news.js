@@ -18,9 +18,6 @@ const BlogListing = () => {
 			{/* Geeks SEO settings  */}
 			<HermenautasSEO title="Blog | Geeks Nextjs Template" />
 
-			{/* Default Navbar */}
-		{/* 	<NavbarDefault /> */}
-
       {/* Page header */}
       <section className="pt-9 pb-9 bg-white ">
         <Container>

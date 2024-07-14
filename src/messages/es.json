@@ -1,4 +1,10 @@
 {
+  "Navbar": {
+    "sign_in": "Iniciar Sesión",
+    "sign_up": "Registrarse",
+    "link_slug_sign_in": "/autenticacion/iniciar-sesion",
+    "link_slug_sign_up": "/autenticacion/registrarse"
+  },
   "Sign-in": {
     "title": "Iniciar sesión"
   },

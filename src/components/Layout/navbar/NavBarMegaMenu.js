@@ -4,6 +4,7 @@ import { Image, Navbar, Nav, Container, ListGroup, Dropdown } from "react-bootst
 import Link from "next/link";
 import { useMediaQuery } from 'react-responsive';
 import { useRouter } from "next/router";
+import { useTranslations } from 'next-intl';
 
 // import sub components
 import { NavMegaDropdown } from "./";
@@ -18,6 +19,7 @@ import NavbarDefault from "../../../routes/NavbarDefault";
 import useMounted from '../../../hooks/useMounted';
 
 export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }) => {
+  const t = useTranslations('Navbar');
   const { locale } = useRouter()
   const [expandedMenu, setExpandedMenu] = useState(false);
   const hasMounted = useMounted();
@@ -134,11 +136,11 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
                   </ListGroup>
                 :
                   <>
-                    <Link href="/en/authentication/sign-in" className="btn btn-outline-dark ms-3">
-                      Sign in
+                    <Link href={t("link_slug_sign_in")} className="btn btn-outline-dark ms-3">
+                      {t("sign_in")}
                     </Link>
-                    <Link href="/en/authentication/sign-up" className="btn btn-dark ms-1">
-                      Sign up
+                    <Link href={t("link_slug_sign_up")} className="btn btn-dark ms-1">
+                      {t("sign_up")}
                     </Link>
                   </>
                 }
