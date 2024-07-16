@@ -3,25 +3,41 @@ export const locales = ['es', 'en'];
 
 export const pathnames = {
   '/': '/',
-  '/books': {
-    es: '/libros',
-    en: '/books'
+  '/technology': {
+    es: '/tecnologia',
+    en: '/technology'
   },
-  '/about-us': {
-    es: '/nosotros',
-    en: '/about-us'
+  '/industry': {
+    es: '/industria',
+    en: '/industry'
   },
-  '/news': {
-    es: '/noticias',
-    en: '/news'
+  '/health': {
+    es: '/salud',
+    en: '/health'
   },
-  '/blog': {
-    es: '/blog',
-    en: '/blog'
+  '/science': {
+    es: '/ciencia',
+    en: '/science'
   },
-  '/contact': {
-    es: '/contacto',
-    en: '/contact'
+  '/politic': {
+    es: '/politica',
+    en: '/politic'
+  },
+  '/economy': {
+    es: '/economia',
+    en: '/economy'
+  },
+  '/religion': {
+    es: '/religion',
+    en: '/religion'
+  },
+  '/education': {
+    es: '/educacion',
+    en: '/education'
+  },
+  '/investigations': {
+    es: '/investigaciones',
+    en: '/investigations'
   },
   '/authentication/sign-in': {
     es: '/autenticacion/iniciar-sesion',

@@ -1,36 +1,51 @@
-import { Fragment } from "react";
+// import node module libraries
+import React, { Fragment } from 'react';
+import { Col, Row, Container, Form, Button, Nav } from 'react-bootstrap';
+import Link from 'next/link';
 
-// import Home components
-import { HomeStats, HomeHero, HomeRecentPost, HomeFeatures, HomeFeatures4Columns }  from "../components/Home";
-import { HeroFormLeft, HeroLeftImage, HeroRightImage } from "../components/ui"
+// import sub components
+import { BlogCard, BlogCardFullWidth } from '../components/blog';
 
-const Home = () => {
+// import widget/custom components
+import { HermenautasSEO } from '../widgets';
 
-  return (
-    <Fragment>
-      {/* Hero Home banner section */}
-      <HomeHero />
+// import data files
+import BlogArticlesList from '../data/blog/blogArticlesData';
 
-      {/* Various business statistics  */}
-      <HomeStats />
+// import API functions
+import { getAllPosts } from './api/posts/getAllPosts';
 
-      {/* Content  */}
-      <HeroRightImage />
+const Economy = () => {
+  getAllPosts().then((data) => { console.log(data) })
+	return (
+		<Fragment>
+			{/* Geeks SEO settings  */}
+			<HermenautasSEO title="Blog | Geeks Nextjs Template" />     
 
-      <HeroLeftImage />
-      
-      <HomeFeatures4Columns />
+      {/* Content */}
+      <section className="pb-8 bg-white">
+        <Container >
+          <Row>
+            {/* Show first article in full width  */}
+            {BlogArticlesList.filter(function (dataSource) {
+              return dataSource.id === 1;
+            }).map((item, index) => (
+              <Col xl={12} lg={12} md={12} sm={12} key={index}>
+                <BlogCardFullWidth item={item} />
+              </Col>
+            ))}
 
-      {/* Latest post  */}
-      <HomeRecentPost />  
-
-      {/* Features  */}
-      <HomeFeatures />
-
-      {/* CTA newsletter */}  
-      <HeroFormLeft />  
-    </Fragment>   
-  );
+            {/* Show remaining articles in 3 column width  */}
+            {BlogArticlesList.slice(1, 10).map((item, index) => (
+              <Col xl={4} lg={4} md={6} sm={12} key={index} className="d-flex">
+                <BlogCard item={item} />
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+		</Fragment>
+	);
 };
 
-export default Home;
+export default Economy;

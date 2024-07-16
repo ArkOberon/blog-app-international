@@ -5,15 +5,15 @@ import { Col, Row, Container, Form, Button, Card, ListGroup } from 'react-bootst
 import { Search as SearchIcon } from 'react-bootstrap-icons';
 
 // import sub components
-import { BlogCard } from '../components/blog';
+import { BlogCard } from '../../components/blog';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets';
+import { HermenautasSEO } from '../../widgets';
 
 // import data files
-import BlogArticlesList from '../data/blog/blogArticlesData';
+import BlogArticlesList from '../../data/blog/blogArticlesData';
 
-const BlogCategory = () => {
+const Investigations = () => {
 	return (
 		<Fragment>
 			{/* Geeks SEO settings  */}
@@ -213,4 +213,4 @@ const BlogCategory = () => {
 	);
 };
 
-export default BlogCategory;
+export default Investigations;

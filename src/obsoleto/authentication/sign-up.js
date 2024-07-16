@@ -13,7 +13,7 @@ import { LoaderProcess } from '../../components/ui/loaders';
 import { SocialLinks } from '../../components/ui/SocialLinks';
 
 // import API functions
-import { registerUser } from '../api/user/registerUser';
+import { registerUser } from '../../pages/api/user/registerUser';
 
 const SignUp = () => {
 	const t = useTranslations('Sign-up');

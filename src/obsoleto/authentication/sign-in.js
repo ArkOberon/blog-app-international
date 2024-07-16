@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import { HermenautasSEO } from '../../widgets';
 
 // import API functions
-import { loginUser } from '../api/user/loginUser';
+import { loginUser } from '../../pages/api/user/loginUser';
 import { decodeParameters, generateToken } from '../../utils/ncryptSecure';
 
 const SignIn = () => {
@@ -17,7 +17,7 @@ const SignIn = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 
-		const response = await loginUser("ailuro", "12345")
+		const response = await loginUser("ailuro", "1234")
 
 		console.log(response)
 

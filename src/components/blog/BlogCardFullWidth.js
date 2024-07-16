@@ -21,7 +21,7 @@ export const BlogCardFullWidth = ({ item }) => {
 	};
 
 	return (
-		<Card className="mb-4 shadow-lg">
+		<Card className="mb-4 shadow-lg mt-6">
 			<Row className="g-0">
 				{/*  Image */}
 				<Link

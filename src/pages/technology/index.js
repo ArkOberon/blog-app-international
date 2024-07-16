@@ -4,15 +4,15 @@ import { Col, Row, Container, Form, Button, Nav } from 'react-bootstrap';
 import Link from 'next/link';
 
 // import sub components
-import { BlogCard, BlogCardFullWidth } from '../components/blog';
+import { BlogCard, BlogCardFullWidth } from '../../components/blog';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets';
+import { HermenautasSEO } from '../../widgets';
 
 // import data files
-import BlogArticlesList from '../data/blog/blogArticlesData';
+import BlogArticlesList from '../../data/blog/blogArticlesData';
 
-const BlogListing = () => {
+const Technology = () => {
 	return (
 		<Fragment>
 			{/* Geeks SEO settings  */}
@@ -110,4 +110,4 @@ const BlogListing = () => {
 	);
 };
 
-export default BlogListing;
+export default Technology;

@@ -6,56 +6,96 @@ const NavbarDefault = () =>{
 			{},
 			{
 				id: uuid(),
-				menuitem: 'Libros',
-				link: '/libros'		
+				menuitem: 'Tecnología',
+				link: '/tecnologia'		
 			},
 			{
 				id: uuid(),
-				menuitem: 'Nosotros',
-				link: '/nosotros'
+				menuitem: 'Industria',
+				link: '/industria'
 			},
 			{
 				id: uuid(),
-				menuitem: 'Noticias',
-				link: '/noticias',		
+				menuitem: 'Salud',
+				link: '/salud',		
 			},
 			{
 				id: uuid(),
-				menuitem: 'Blog',
-				link: '/blog',	
+				menuitem: 'Ciencia',
+				link: '/ciencia',	
 			},
 			{
 				id: uuid(),
-				menuitem: 'Contacto',
-				link: '/contacto',		
+				menuitem: 'Política',
+				link: '/politica',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Economía',
+				link: '/economia',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Religión',
+				link: '/religion',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Educación',
+				link: '/educacion',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Investigaciones',
+				link: '/investigaciones',		
 			}
 		],
 		"en": [
 			{},
 			{
 				id: uuid(),
-				menuitem: 'Books',
-				link: '/en/books'		
+				menuitem: 'Technology',
+				link: '/en/technology'		
 			},
 			{
 				id: uuid(),
-				menuitem: 'About us',
-				link: '/en/about-us'
+				menuitem: 'Industry',
+				link: '/en/industry'
 			},
 			{
 				id: uuid(),
-				menuitem: 'News',
-				link: '/en/news',		
+				menuitem: 'Health',
+				link: '/en/health',		
 			},	
 			{
 				id: uuid(),
-				menuitem: 'Blog',
-				link: '/en/blog',	
+				menuitem: 'Science',
+				link: '/en/science',	
 			},
 			{
 				id: uuid(),
-				menuitem: 'Contact',
-				link: '/en/contact',		
+				menuitem: 'Politic',
+				link: '/en/politic',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Economy',
+				link: '/en/economy',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Religion',
+				link: '/en/religion',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Education',
+				link: '/en/education',		
+			},
+			{
+				id: uuid(),
+				menuitem: 'Investigations',
+				link: '/en/investigations',		
 			}
 		],
 	}

@@ -20,9 +20,7 @@ export const Languages = () => {
 
   const languages = [
     { label: "Español", value: "es" },
-    { label: "English", value: "en" },
-    { label: "Français", value: "fr" },
-    { label: "Português", value: "pt" }
+    { label: "English", value: "en" }  
   ];
 
   const handleCookie = (newLang) => {

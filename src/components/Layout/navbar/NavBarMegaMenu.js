@@ -25,7 +25,7 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
   const hasMounted = useMounted();
   const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const isLoged = false
+  const isLoged = true
 
   const arrayMenu = NavbarDefault();
   
@@ -77,14 +77,15 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
             <div className="ms-auto mt-3 mt-lg-0">
               <div className="d-flex align-items-center">  
                  
-                <NavBarCart />
+                {/* <NavBarCart /> // Cuando esté listo el sistema se reactiva este componente */}
 
                 <Languages />
 
                 <DarkLightMode />
 
                 {isLoged ? 
-                  <ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">                                          
+                  <></>
+                  /*<ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">                                          
                     <Dropdown as="li" className="ms-2">
                       <Dropdown.Toggle
                         as="a"
@@ -133,7 +134,7 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
                         </Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-                  </ListGroup>
+                  </ListGroup>*/
                 :
                   <>
                     <Link href={t("link_slug_sign_in")} className="btn btn-outline-dark ms-3">
