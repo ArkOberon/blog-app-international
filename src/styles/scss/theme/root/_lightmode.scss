@@ -1,7 +1,7 @@
 :root {
   // body bg
 
-  --#{$prefix}body-bg: #{map-get($grays, "100")};
+  --#{$prefix}body-bg: #{map-get($grays, '100')};
   --#{$prefix}body-color: #{$body-color};
   --#{$prefix}headings-color: #{$gray-800};
   --#{$prefix}navbar-vertical-bg: #{$white};

@@ -19,7 +19,7 @@ export const DefaultNavbar = `
     </Nav>
     </Navbar.Collapse>
 </Navbar>
-    `.trim();
+    `.trim()
 
 export const BrandNavbar = `   
 <Navbar>
@@ -27,7 +27,7 @@ export const BrandNavbar = `
         <Image src={LogoIcon} width="30" height="30" alt="" loading="lazy"/>                                        
     </Navbar.Brand>
 </Navbar> 
-    `.trim();
+    `.trim()
 
 export const ColorSchemesCode = `   
 <Navbar bg="dark" variant="dark">
@@ -60,7 +60,7 @@ export const ColorSchemesCode = `
         </Nav>
     </Container>
 </Navbar>
-`.trim();
-export const NavbarsCode = [DefaultNavbar, BrandNavbar, ColorSchemesCode];
+`.trim()
+export const NavbarsCode = [DefaultNavbar, BrandNavbar, ColorSchemesCode]
 
-export default NavbarsCode;
+export default NavbarsCode

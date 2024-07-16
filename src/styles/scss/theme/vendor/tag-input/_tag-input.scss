@@ -96,7 +96,7 @@ $reactTagMarginPadding: 0.1875em;
       position: absolute;
       top: 50%;
       left: 50%;
-      content: " ";
+      content: ' ';
       height: $reactTagFontSize - 0.1;
       width: 0.15em;
       background-color: $reactTagColorText;
@@ -112,7 +112,7 @@ $reactTagMarginPadding: 0.1875em;
       width: 0;
       &:before,
       &:after {
-        content: "";
+        content: '';
         width: 0;
       }
     }

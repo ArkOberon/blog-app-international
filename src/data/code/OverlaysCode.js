@@ -28,7 +28,7 @@ const Overlays = () => {
     );
 }
 export default Overlays;
-`.trim();
+`.trim()
 
 export const OverlayTriggerCode = `
 <OverlayTrigger
@@ -42,7 +42,7 @@ export const OverlayTriggerCode = `
     >
     <Button variant="primary">Hover me to see</Button>
 </OverlayTrigger>
-`.trim();
+`.trim()
 
 export const TriggerBehaviorCode = `
 const Overlays = () => {
@@ -72,12 +72,12 @@ const Overlays = () => {
     );
 }
 export default Overlays;
-`.trim();
+`.trim()
 
 export const OffcanvasCode = [
-	OverlayBasicCode,
-	OverlayTriggerCode,
-	TriggerBehaviorCode
-];
+  OverlayBasicCode,
+  OverlayTriggerCode,
+  TriggerBehaviorCode,
+]
 
-export default OffcanvasCode;
+export default OffcanvasCode

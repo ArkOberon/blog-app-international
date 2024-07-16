@@ -1,14 +1,14 @@
 // import node module libraries
-import { useState } from "react";
-import { Col, Row, Container, Image } from "react-bootstrap";
-import Link from "next/link";
+import { useState } from 'react'
+import { Col, Row, Container, Image } from 'react-bootstrap'
+import Link from 'next/link'
 
 // import popup youtube video
-import ModalVideo from "react-modal-video";
+import ModalVideo from 'react-modal-video'
 
 export const HomeHero = () => {
-  const [isOpen, setOpen] = useState(false);
-	const [YouTubeURL] = useState('JRzWRZahOVU');
+  const [isOpen, setOpen] = useState(false)
+  const [YouTubeURL] = useState('JRzWRZahOVU')
 
   return (
     <section className="py-lg-16 py-8 bg-white">
@@ -17,7 +17,7 @@ export const HomeHero = () => {
           <Col lg={6} className="mb-6 mb-lg-0">
             <div className="">
               <p className="text-dark mb-4">
-                <i className="fe fe-check icon-xxs icon-shape bg-light-success text-success rounded-circle me-2"></i>{" "}
+                <i className="fe fe-check icon-xxs icon-shape bg-light-success text-success rounded-circle me-2"></i>{' '}
                 Most trusted education platform
               </p>
               <h1 className="display-3 fw-bold mb-3">
@@ -89,7 +89,6 @@ export const HomeHero = () => {
             </div>
           </Col>
         </Row>
-        
       </Container>
     </section>
   )

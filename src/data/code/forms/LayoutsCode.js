@@ -9,7 +9,7 @@ export const FormGroupsCode = `
         <Form.Control type="password" placeholder="Password" />
     </Form.Group>
 </Form>
-`.trim();
+`.trim()
 
 export const FormGridCode = `
 <Form>
@@ -22,7 +22,7 @@ export const FormGridCode = `
         </Col>
     </Row>
 </Form>
-`.trim();
+`.trim()
 
 export const FormGrid2Code = `
 <Form>
@@ -76,7 +76,7 @@ export const FormGrid2Code = `
         Submit
     </Button>
 </Form>
-`.trim();
+`.trim()
 
 export const HorizontalFormCode = `
 <Form>
@@ -134,7 +134,7 @@ export const HorizontalFormCode = `
         </Col>
     </Form.Group>
 </Form>
-`.trim();
+`.trim()
 
 export const HorizontalFormLabelSizingCode = `
 <Form>
@@ -165,7 +165,7 @@ export const HorizontalFormLabelSizingCode = `
         </Col>
     </Row>
 </Form>
-`.trim();
+`.trim()
 
 export const ColumnSizingCode = `
 <Form>
@@ -181,7 +181,7 @@ export const ColumnSizingCode = `
         </Col>
     </Row>
 </Form>
-`.trim();
+`.trim()
 export const AutoSizingCode = `
 <Form>
     <Row className="align-items-center">
@@ -219,7 +219,7 @@ export const AutoSizingCode = `
         </Col>
     </Row>
 </Form>
-`.trim();
+`.trim()
 
 export const AutoSizingMoreCode = `
 <Form>
@@ -247,17 +247,17 @@ export const AutoSizingMoreCode = `
         </Col>
     </Row>
 </Form>
-`.trim();
+`.trim()
 
 export const LayoutsCode = [
-	FormGroupsCode,
-	FormGridCode,
-	FormGrid2Code,
-	HorizontalFormCode,
-	HorizontalFormLabelSizingCode,
-	ColumnSizingCode,
-	AutoSizingCode,
-	AutoSizingMoreCode
-];
+  FormGroupsCode,
+  FormGridCode,
+  FormGrid2Code,
+  HorizontalFormCode,
+  HorizontalFormLabelSizingCode,
+  ColumnSizingCode,
+  AutoSizingCode,
+  AutoSizingMoreCode,
+]
 
-export default LayoutsCode;
+export default LayoutsCode

@@ -13,7 +13,7 @@ export const MenuNavCode = `
         <Nav.Link eventKey="link-2" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav>
-`.trim();
+`.trim()
 
 export const MenuNavFlexCode = `   
 <Nav>
@@ -30,7 +30,7 @@ export const MenuNavFlexCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav> 
-`.trim();
+`.trim()
 
 export const AlignmentCenterCode = `   
 <Nav className="justify-content-center" defaultActiveKey="/#" as="ul">
@@ -47,7 +47,7 @@ export const AlignmentCenterCode = `
         <Nav.Link eventKey="link-2" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav>
-`.trim();
+`.trim()
 
 export const AlignmentRightCode = `   
 <Nav className="justify-content-end" defaultActiveKey="/#" as="ul">
@@ -64,7 +64,7 @@ export const AlignmentRightCode = `
         <Nav.Link eventKey="link-2" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav> 
-`.trim();
+`.trim()
 
 export const VerticalFlexCode = `   
 <Nav defaultActiveKey="/#" className="flex-column" as="ul">
@@ -81,7 +81,7 @@ export const VerticalFlexCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav> 
-`.trim();
+`.trim()
 
 export const VerticalULLICode = `   
 <Nav defaultActiveKey="/#" className="flex-column">
@@ -90,7 +90,7 @@ export const VerticalULLICode = `
     <Nav.Link eventKey="link-2">Link</Nav.Link>
     <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
 </Nav>
-`.trim();
+`.trim()
 
 export const TabsNavCode = `   
 <Nav variant="tabs" defaultActiveKey="#">
@@ -107,7 +107,7 @@ export const TabsNavCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav>  
-`.trim();
+`.trim()
 
 export const PillsNavsCode = `   
 <Nav variant="pills" defaultActiveKey="#">
@@ -124,7 +124,7 @@ export const PillsNavsCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav>  
-`.trim();
+`.trim()
 
 export const FillPillsULLICode = `   
 <Nav fill variant="pills"  defaultActiveKey="#" as="ul">
@@ -141,7 +141,7 @@ export const FillPillsULLICode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav> 
-`.trim();
+`.trim()
 
 export const FillPillsLinkCode = `   
 <Nav fill variant="pills" defaultActiveKey="#">
@@ -158,7 +158,7 @@ export const FillPillsLinkCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav> 
-`.trim();
+`.trim()
 
 export const FillPillsJustifyCode = `   
 <Nav justify variant="pills" defaultActiveKey="#">
@@ -175,7 +175,7 @@ export const FillPillsJustifyCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav> 
-`.trim();
+`.trim()
 
 export const NavsFlexUtilitiesCode = `   
 <Nav fill variant="pills" defaultActiveKey="#" className="flex-column flex-sm-row">
@@ -192,7 +192,7 @@ export const NavsFlexUtilitiesCode = `
         <Nav.Link eventKey="disabled" disabled>Disabled</Nav.Link>
     </Nav.Item>
 </Nav>
-`.trim();
+`.trim()
 
 export const NavsTabsCode = `   
 <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
@@ -215,7 +215,7 @@ export const NavsTabsCode = `
         cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.
     </Tab>
 </Tabs> 
-`.trim();
+`.trim()
 
 export const NavsTabsPillsCode = `  
 <Tabs  variant="pills" defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
@@ -238,7 +238,7 @@ export const NavsTabsPillsCode = `
         cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.
     </Tab>
 </Tabs>
-`.trim();
+`.trim()
 
 export const VerticalPillsCode = `  
 <Tab.Container id="left-tabs-example" defaultActiveKey="home">
@@ -289,24 +289,24 @@ export const VerticalPillsCode = `
         </Col>
     </Row>
 </Tab.Container>
-`.trim();
+`.trim()
 
 export const NavsCode = [
-	MenuNavCode,
-	MenuNavFlexCode,
-	AlignmentCenterCode,
-	AlignmentRightCode,
-	VerticalFlexCode,
-	VerticalULLICode,
-	TabsNavCode,
-	PillsNavsCode,
-	FillPillsULLICode,
-	FillPillsLinkCode,
-	FillPillsJustifyCode,
-	NavsFlexUtilitiesCode,
-	NavsTabsCode,
-	NavsTabsPillsCode,
-	VerticalPillsCode
-];
+  MenuNavCode,
+  MenuNavFlexCode,
+  AlignmentCenterCode,
+  AlignmentRightCode,
+  VerticalFlexCode,
+  VerticalULLICode,
+  TabsNavCode,
+  PillsNavsCode,
+  FillPillsULLICode,
+  FillPillsLinkCode,
+  FillPillsJustifyCode,
+  NavsFlexUtilitiesCode,
+  NavsTabsCode,
+  NavsTabsPillsCode,
+  VerticalPillsCode,
+]
 
-export default NavsCode;
+export default NavsCode

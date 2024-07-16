@@ -73,7 +73,7 @@ function FormExample() {
   }  
 
   render(<FormExample />);
-`.trim();
+`.trim()
 
 export const ServerSideRenderingCode = `
 const { Formik } = formik;
@@ -170,7 +170,7 @@ function FormExample() {
 }
 
 render(<FormExample />);
-`.trim();
+`.trim()
 
 export const ValidationTooltipsCode = `
 const { Formik } = formik;
@@ -275,7 +275,7 @@ function FormExample() {
 }
 
 render(<FormExample />);
-`.trim();
+`.trim()
 
 export const InputGroupValidationCode = `
 <InputGroup hasValidation>
@@ -285,13 +285,13 @@ export const InputGroupValidationCode = `
     Please choose a username.
   </Form.Control.Feedback>
 </InputGroup>
-`.trim();
+`.trim()
 
 export const ValidationCode = [
-	HTML5ValidationCode,
-	ServerSideRenderingCode,
-	ValidationTooltipsCode,
-	InputGroupValidationCode
-];
+  HTML5ValidationCode,
+  ServerSideRenderingCode,
+  ValidationTooltipsCode,
+  InputGroupValidationCode,
+]
 
-export default ValidationCode;
+export default ValidationCode

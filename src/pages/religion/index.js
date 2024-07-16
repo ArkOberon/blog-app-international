@@ -1,22 +1,22 @@
 // import node module libraries
-import React, { Fragment } from 'react';
-import { Col, Row, Container, Form, Button, Nav } from 'react-bootstrap';
-import Link from 'next/link';
+import React, { Fragment } from 'react'
+import { Col, Row, Container, Form, Button, Nav } from 'react-bootstrap'
+import Link from 'next/link'
 
 // import sub components
-import { BlogCard, BlogCardFullWidth } from '../../components/blog';
+import { BlogCard, BlogCardFullWidth } from '../../components/blog'
 
 // import widget/custom components
-import { HermenautasSEO } from '../../widgets';
+import { HermenautasSEO } from '../../widgets'
 
 // import data files
-import BlogArticlesList from '../../data/blog/blogArticlesData';
+import BlogArticlesList from '../../data/blog/blogArticlesData'
 
 const Religion = () => {
-	return (
-		<Fragment>
-			{/* Geeks SEO settings  */}
-			<HermenautasSEO title="Blog | Geeks Nextjs Template" />
+  return (
+    <Fragment>
+      {/* Geeks SEO settings  */}
+      <HermenautasSEO title="Blog | Geeks Nextjs Template" />
 
       {/* Page header */}
       <section className="pt-9 pb-9 bg-white ">
@@ -90,7 +90,7 @@ const Religion = () => {
           <Row>
             {/* Show first article in full width  */}
             {BlogArticlesList.filter(function (dataSource) {
-              return dataSource.id === 1;
+              return dataSource.id === 1
             }).map((item, index) => (
               <Col xl={12} lg={12} md={12} sm={12} key={index}>
                 <BlogCardFullWidth item={item} />
@@ -106,8 +106,8 @@ const Religion = () => {
           </Row>
         </Container>
       </section>
-		</Fragment>
-	);
-};
+    </Fragment>
+  )
+}
 
-export default Religion;
+export default Religion

@@ -11,7 +11,7 @@
   .task-list {
     position: relative;
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       line-height: 110px;
       width: 100%;

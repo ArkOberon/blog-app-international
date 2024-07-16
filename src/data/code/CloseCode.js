@@ -1,22 +1,22 @@
 export const GenericCloseButtonCode = ` 
 <CloseButton className="btn-close"/> 
-`.trim();
+`.trim()
 
 export const DisabledStateCode = ` 
 <CloseButton className="btn-close" disabled />
-`.trim();
+`.trim()
 
 export const WhiteVariantCode = ` 
 <div className="bg-dark p-3">
     <CloseButton className="btn-close" variant="white" />
     <CloseButton className="btn-close" variant="white" disabled />
 </div>
-`.trim();
+`.trim()
 
 export const CollapsesCode = [
-	GenericCloseButtonCode,
-	DisabledStateCode,
-	WhiteVariantCode
-];
+  GenericCloseButtonCode,
+  DisabledStateCode,
+  WhiteVariantCode,
+]
 
-export default CollapsesCode;
+export default CollapsesCode

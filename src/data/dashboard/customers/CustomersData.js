@@ -1,4 +1,3 @@
-
 export const customersData = [
   {
     id: 1,
@@ -9,7 +8,7 @@ export const customersData = [
     address: '3812 Orchard Street, Bloomington, Minnesota 55431',
     location: 'Florida, United States',
     totalOrders: 2,
-    totalSpent: 240
+    totalSpent: 240,
   },
   {
     id: 2,
@@ -20,7 +19,7 @@ export const customersData = [
     address: '3812 Orchard Street, Bloomington, Minnesota 55431',
     location: 'California, United States',
     totalOrders: 1,
-    totalSpent: 199
+    totalSpent: 199,
   },
   {
     id: 3,
@@ -31,7 +30,7 @@ export const customersData = [
     address: '112 Blumenstrasse 105, Bornheim, North Rhine-Westphalia, 53332',
     location: 'North Rhine, Germany',
     totalOrders: 2,
-    totalSpent: 240
+    totalSpent: 240,
   },
   {
     id: 4,
@@ -42,7 +41,7 @@ export const customersData = [
     address: 'Willoughby Ave, 31, Schopolo Pl, Schnapper Rock,Rotorua',
     location: 'Rotorua, New Zealand',
     totalOrders: 3,
-    totalSpent: 325
+    totalSpent: 325,
   },
   {
     id: 5,
@@ -53,7 +52,7 @@ export const customersData = [
     address: '215 Somerton Rd, Melbourne, Victoria, 3048',
     location: 'Gundamulda, Australia',
     totalOrders: 5,
-    totalSpent: 125
+    totalSpent: 125,
   },
   {
     id: 6,
@@ -64,7 +63,7 @@ export const customersData = [
     address: '20 Rue du Cherche-Midi, Gradignan, 75006',
     location: 'Gradignan, France',
     totalOrders: 2,
-    totalSpent: 890
+    totalSpent: 890,
   },
   {
     id: 7,
@@ -75,7 +74,7 @@ export const customersData = [
     address: 'Suite 1740-1632 14 Ave NW, Calgary, Alberta, T2N 1M7',
     location: 'Alberta, Canada',
     totalOrders: 8,
-    totalSpent: 2400
+    totalSpent: 2400,
   },
   {
     id: 8,
@@ -86,7 +85,7 @@ export const customersData = [
     address: '45 Harbour Square, Toronto, Ontario, M5J 2V3',
     location: 'Toronto, Canada',
     totalOrders: 12,
-    totalSpent: 22325
+    totalSpent: 22325,
   },
   {
     id: 9,
@@ -97,7 +96,7 @@ export const customersData = [
     address: '2155 Allison Rd, Vancouver, British Columbia, V6T 1T5',
     location: 'Vancouver, Canada',
     totalOrders: 2,
-    totalSpent: 240
+    totalSpent: 240,
   },
   {
     id: 10,
@@ -108,7 +107,7 @@ export const customersData = [
     address: '12471 Limonite Ave, Mira Loma, California, 91752',
     location: 'California, United States',
     totalOrders: 9,
-    totalSpent: 3240
+    totalSpent: 3240,
   },
   {
     id: 11,
@@ -119,7 +118,7 @@ export const customersData = [
     address: '315 Hood Avenue, California, California(CA), 02110',
     location: 'California, United States',
     totalOrders: 8,
-    totalSpent: 3244
+    totalSpent: 3244,
   },
   {
     id: 12,
@@ -130,8 +129,8 @@ export const customersData = [
     address: 'Suite 1740-1632 15 Ave NW, Calgary, Alberta, T2N 1M7',
     location: 'Alberta, Canada',
     totalOrders: 7,
-    totalSpent: 2340
-  }
-];
+    totalSpent: 2340,
+  },
+]
 
-export default customersData;
+export default customersData

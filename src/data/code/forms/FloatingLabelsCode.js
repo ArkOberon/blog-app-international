@@ -11,7 +11,7 @@ export const DefaultCode = `
         <Form.Control type="password" placeholder="Password" />
     </FloatingLabel>
 </Form>
-`.trim();
+`.trim()
 
 export const TextareasCode = `
 <Form>
@@ -26,7 +26,7 @@ export const TextareasCode = `
         />
     </FloatingLabel>
 </Form>
-`.trim();
+`.trim()
 
 export const SelectsCode = `
 <Form>
@@ -39,7 +39,7 @@ export const SelectsCode = `
         </Form.Select>
     </FloatingLabel>
 </Form>
-`.trim();
+`.trim()
 
 export const LayoutCode = `
 <FloatingLabel controlId="floatingSelectGrid" label="Works with selects">
@@ -50,7 +50,7 @@ export const LayoutCode = `
         <option value="3">Three</option>
     </Form.Select>
 </FloatingLabel>
-`.trim();
+`.trim()
 
 export const CustomizingCode = `
 <Form>
@@ -71,14 +71,14 @@ export const CustomizingCode = `
         <label htmlFor="floatingPasswordCustom">Password</label>
     </Form.Floating>
 </Form>
-`.trim();
+`.trim()
 
 export const FloatingLabelsCode = [
-	DefaultCode,
-	TextareasCode,
-	SelectsCode,
-	LayoutCode,
-	CustomizingCode
-];
+  DefaultCode,
+  TextareasCode,
+  SelectsCode,
+  LayoutCode,
+  CustomizingCode,
+]
 
-export default FloatingLabelsCode;
+export default FloatingLabelsCode

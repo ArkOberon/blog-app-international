@@ -69,12 +69,12 @@
           // opacity: 1;
         }
       }
-      .nav-link[data-bs-toggle="collapse"] {
+      .nav-link[data-bs-toggle='collapse'] {
         position: relative;
 
         &:after {
           display: block;
-          content: "\e92e";
+          content: '\e92e';
           font-family: Feather;
           margin-left: auto;
           transition: 0.5s ease;
@@ -82,7 +82,7 @@
           right: 1.5rem;
         }
       }
-      [aria-expanded="true"].nav-link[data-bs-toggle="collapse"]:after {
+      [aria-expanded='true'].nav-link[data-bs-toggle='collapse']:after {
         transform: rotate(180deg);
         -webkit-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
@@ -229,7 +229,7 @@
         }
       }
 
-      [aria-expanded="true"].nav-link[data-bs-toggle="collapse"] {
+      [aria-expanded='true'].nav-link[data-bs-toggle='collapse'] {
         &:after {
           transform: rotate(360deg) !important;
           transition: all 0.3s ease-in;

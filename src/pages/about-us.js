@@ -1,29 +1,35 @@
 // import node module libraries
-import { Fragment } from 'react';
-import { Container } from 'react-bootstrap';
+import { Fragment } from 'react'
+import { Container } from 'react-bootstrap'
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets';
+import { HermenautasSEO } from '../widgets'
 
 // import sub components
-import { JustifiedGallery, AboutFeaturesList, HeroContent, CTAButton, Stat } from '../components/about-us';
+import {
+  JustifiedGallery,
+  AboutFeaturesList,
+  HeroContent,
+  CTAButton,
+  Stat,
+} from '../components/about-us'
 
 const About = () => {
-	return (
-		<Fragment>
-			{/* Geeks SEO settings  */}
-			<HermenautasSEO title="About us | Geeks Nextjs Template" />
-			
+  return (
+    <Fragment>
+      {/* Geeks SEO settings  */}
+      <HermenautasSEO title="About us | Geeks Nextjs Template" />
+
       <section className="py-10 bg-white">
         <Container>
           {/* Hero Title */}
-           <HeroContent />
+          <HeroContent />
 
           {/* Justified Gallery Section */}
           <JustifiedGallery />
 
           {/* 4 Columns Stat */}
-          <Stat /> 
+          <Stat />
         </Container>
       </section>
 
@@ -32,9 +38,8 @@ const About = () => {
 
       {/* Hero Call to Action */}
       <CTAButton />
+    </Fragment>
+  )
+}
 
-		</Fragment>
-	);
-};
-
-export default About;
+export default About

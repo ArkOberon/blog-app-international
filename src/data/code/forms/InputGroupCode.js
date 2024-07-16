@@ -37,7 +37,7 @@ export const DefaultCode = `
         <FormControl as="textarea" aria-label="With textarea" />
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const SizingCode = `
 <Form>
@@ -59,7 +59,7 @@ export const SizingCode = `
         <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" />
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const CheckboxesRadiosCode = `
 <Form>
@@ -72,7 +72,7 @@ export const CheckboxesRadiosCode = `
         <FormControl aria-label="Text input with radio button" />
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const MultipleInputsCode = `
 <Form>
@@ -82,7 +82,7 @@ export const MultipleInputsCode = `
         <FormControl aria-label="Last name" />
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const MultipleAddonsCode = `
 <Form>
@@ -97,7 +97,7 @@ export const MultipleAddonsCode = `
         <InputGroup.Text>0.00</InputGroup.Text>
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const ButtonAddonsCode = `
 <Form>
@@ -137,7 +137,7 @@ export const ButtonAddonsCode = `
         <Button variant="outline-secondary">Button</Button>
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const ButtonsDropdownsCode = `
 <Form>
@@ -200,7 +200,7 @@ export const ButtonsDropdownsCode = `
         </DropdownButton>
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const SegmentedButtonCode = `
 <Form>
@@ -235,17 +235,17 @@ export const SegmentedButtonCode = `
         </SplitButton>
     </InputGroup>
 </Form>
-`.trim();
+`.trim()
 
 export const InputGroupCode = [
-	DefaultCode,
-	SizingCode,
-	CheckboxesRadiosCode,
-	MultipleInputsCode,
-	MultipleAddonsCode,
-	ButtonAddonsCode,
-	ButtonsDropdownsCode,
-	SegmentedButtonCode
-];
+  DefaultCode,
+  SizingCode,
+  CheckboxesRadiosCode,
+  MultipleInputsCode,
+  MultipleAddonsCode,
+  ButtonAddonsCode,
+  ButtonsDropdownsCode,
+  SegmentedButtonCode,
+]
 
-export default InputGroupCode;
+export default InputGroupCode

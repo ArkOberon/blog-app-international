@@ -21,7 +21,7 @@ const BSOffCanvas = () => {
     );
 }
 export default BSOffCanvas;
-`.trim();
+`.trim()
 
 export const OffCanvasPlacementCode = `
 const BSOffCanvas = () => {
@@ -59,7 +59,7 @@ const BSOffCanvas = () => {
     );
 }
 export default BSOffCanvas;
-`.trim();
+`.trim()
 
 export const OffCanvasBackdropCode = `
 const BSOffCanvas = () => {
@@ -120,12 +120,12 @@ const BSOffCanvas = () => {
     );
 }
 export default BSOffCanvas;
-`.trim();
+`.trim()
 
 export const OffcanvasCode = [
-	OffcanvasBasicCode,
-	OffCanvasPlacementCode,
-	OffCanvasBackdropCode
-];
+  OffcanvasBasicCode,
+  OffCanvasPlacementCode,
+  OffCanvasBackdropCode,
+]
 
-export default OffcanvasCode;
+export default OffcanvasCode

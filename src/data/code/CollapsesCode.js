@@ -20,7 +20,7 @@ const Collapses = () => {
         </Fragment>
     )
 }
-    `.trim();
+    `.trim()
 
 export const FadeCollapses = ` 
 
@@ -45,8 +45,8 @@ const Collapses = () => {
         </Fragment>
     )
 }
-`.trim();
+`.trim()
 
-export const CollapsesCode = [BasicCollapsesCode, FadeCollapses];
+export const CollapsesCode = [BasicCollapsesCode, FadeCollapses]
 
-export default CollapsesCode;
+export default CollapsesCode

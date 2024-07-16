@@ -12,6 +12,6 @@ export const BasicTooltip = `
         <Button variant="secondary" className="me-1 mb-2 mb-lg-0">Tooltip on {placement}</Button>
     </OverlayTrigger>
 ))}  
-`.trim();
+`.trim()
 
-export default BasicTooltip;
+export default BasicTooltip

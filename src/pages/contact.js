@@ -1,27 +1,27 @@
 // import node module libraries
-import { Fragment } from 'react';
-import Link from 'next/link';
-import { Col, Row, Image } from 'react-bootstrap';
+import { Fragment } from 'react'
+import Link from 'next/link'
+import { Col, Row, Image } from 'react-bootstrap'
 
 // import MDI icons
-import Icon from '@mdi/react';
-import { mdiFacebook, mdiTwitter, mdiGithub } from '@mdi/js';
+import Icon from '@mdi/react'
+import { mdiFacebook, mdiTwitter, mdiGithub } from '@mdi/js'
 
 // import BS icons
-import { Telephone, EnvelopeOpen, GeoAlt } from 'react-bootstrap-icons';
+import { Telephone, EnvelopeOpen, GeoAlt } from 'react-bootstrap-icons'
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets';
+import { HermenautasSEO } from '../widgets'
 
 // import sub components
-import { ContactForm } from '../components/contact';
+import { ContactForm } from '../components/contact'
 
 const Contact = () => {
-	return (
-		<Fragment>
-			{/* Geeks SEO settings  */}
-			<HermenautasSEO  title="Contact | Geeks Nextjs Template" />
-			
+  return (
+    <Fragment>
+      {/* Geeks SEO settings  */}
+      <HermenautasSEO title="Contact | Geeks Nextjs Template" />
+
       <section className="bg-white container-fluid">
         <Row className="align-items-center min-vh-100">
           <Col lg={6} md={12} sm={12}>
@@ -29,7 +29,11 @@ const Contact = () => {
               {/* content */}
               <div className="d-flex justify-content-between mb-7 align-items-center">
                 <Link href="/">
-                  <Image src="/images/brand/logo/logo.svg" alt="" className='logo-inverse' />
+                  <Image
+                    src="/images/brand/logo/logo.svg"
+                    alt=""
+                    className="logo-inverse"
+                  />
                 </Link>
               </div>
               <div className="text-dark">
@@ -55,8 +59,8 @@ const Contact = () => {
                     hello@geekui.com
                   </p>
                   <p className="fs-4 ">
-                    <GeoAlt size={17} className="text-primary me-2" /> 2652 Kooter
-                    Lane Charlotte, NC 28263
+                    <GeoAlt size={17} className="text-primary me-2" /> 2652
+                    Kooter Lane Charlotte, NC 28263
                   </p>
                 </div>
 
@@ -88,9 +92,8 @@ const Contact = () => {
           </Col>
         </Row>
       </section>
+    </Fragment>
+  )
+}
 
-		</Fragment>
-	);
-};
-
-export default Contact;
+export default Contact

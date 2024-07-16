@@ -1,8 +1,8 @@
 /**
- * @description Registro de Cliente. 
- * @param {String} email Email del Cliente 
+ * @description Registro de Cliente.
+ * @param {String} email Email del Cliente
  * @param {String} username Nombre de acceso
- * @param {String} password Contraseña del Cliente       
+ * @param {String} password Contraseña del Cliente
  */
 
 export const loginUser = async (username, password) => {
@@ -10,7 +10,7 @@ export const loginUser = async (username, password) => {
     method: 'POST',
     mode: 'cors',
     headers: {
-      'Content-Type': 'application/json'      
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       query: `
@@ -24,9 +24,9 @@ export const loginUser = async (username, password) => {
           }
         }
       `,
-      variables: {        
-        "username": username,
-        "password": password        
+      variables: {
+        username: username,
+        password: password,
       },
     }),
   })

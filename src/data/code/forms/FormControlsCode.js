@@ -9,7 +9,7 @@ export const BasicFormControlCode = `
         <Form.Control as="textarea" rows={3} />
     </Form.Group>
 </Form>
-`.trim();
+`.trim()
 
 export const SizingControlCode = `
 <Form>
@@ -19,7 +19,7 @@ export const SizingControlCode = `
     <br />
     <Form.Control size="sm" type="text" placeholder="Small text" />
 </Form>
- `.trim();
+ `.trim()
 
 export const DisabledControlCode = `
 <Form>
@@ -38,13 +38,13 @@ export const DisabledControlCode = `
         readOnly
     />
 </Form>
- `.trim();
+ `.trim()
 
 export const ReadonlyControlCode = `
 <Form>
     <Form.Control type="text" placeholder="Readonly input here..." readOnly />
 </Form>
- `.trim();
+ `.trim()
 
 export const ReadonlyPlainControlCode = `
 <Form>
@@ -66,7 +66,7 @@ export const ReadonlyPlainControlCode = `
         </Col>
     </Form.Group>
 </Form>
- `.trim();
+ `.trim()
 
 export const FileInputControlCode = `
 <Form>
@@ -91,7 +91,7 @@ export const FileInputControlCode = `
         <Form.Control type="file" size="lg" />
     </Form.Group>
 </Form>
- `.trim();
+ `.trim()
 
 export const ColorControlCode = `
 <Form>
@@ -103,16 +103,16 @@ export const ColorControlCode = `
         title="Choose your color"
     />
 </Form>
- `.trim();
+ `.trim()
 
 export const FormControlsCode = [
-	BasicFormControlCode,
-	SizingControlCode,
-	DisabledControlCode,
-	ReadonlyControlCode,
-	ReadonlyPlainControlCode,
-	FileInputControlCode,
-	ColorControlCode
-];
+  BasicFormControlCode,
+  SizingControlCode,
+  DisabledControlCode,
+  ReadonlyControlCode,
+  ReadonlyPlainControlCode,
+  FileInputControlCode,
+  ColorControlCode,
+]
 
-export default FormControlsCode;
+export default FormControlsCode

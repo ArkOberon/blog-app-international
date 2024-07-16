@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react'
 
 // import node module libraries
-import Head from 'next/head';
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 
@@ -10,33 +10,35 @@ import { Provider } from 'react-redux'
 import { store } from '../store/store'
 
 // import Internationalization (i18n) from nextjs
-import {NextIntlClientProvider} from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl'
 
 // import Layout and theme style scss file
-import Layout from "../components/Layout/Layout"
-import '../styles/scss/theme.scss';
+import Layout from '../components/Layout/Layout'
+import '../styles/scss/theme.scss'
 
 // Import menssages
-import messagesEn from '../messages/en.json';
-import messagesEs from '../messages/es.json';
+import messagesEn from '../messages/en.json'
+import messagesEs from '../messages/es.json'
 
 function App({ Component, pageProps }) {
-  const router = useRouter();
-  const pageURL = process.env.baseURL + router.pathname;
-  const title = "Geeks UI - Nextjs fully responsive template ";
-  const description = "Geeks is a fully responsive and yet modern premium Nextjs template & snippets. Geek is feature-rich Nextjs components and beautifully designed pages that help you create the best possible website and web application projects. Nextjs Snippet "
-  const keywords = "Geeks UI, Nextjs, Next.js, Course, Sass, landing, Marketing, admin themes, Nextjs admin, Nextjs dashboard, ui kit, web app, multipurpose"
-  
-  let messages;
+  const router = useRouter()
+  const pageURL = process.env.baseURL + router.pathname
+  const title = 'Geeks UI - Nextjs fully responsive template '
+  const description =
+    'Geeks is a fully responsive and yet modern premium Nextjs template & snippets. Geek is feature-rich Nextjs components and beautifully designed pages that help you create the best possible website and web application projects. Nextjs Snippet '
+  const keywords =
+    'Geeks UI, Nextjs, Next.js, Course, Sass, landing, Marketing, admin themes, Nextjs admin, Nextjs dashboard, ui kit, web app, multipurpose'
+
+  let messages
   switch (router.locale) {
     case 'en':
-      messages = messagesEn;
-      break;
+      messages = messagesEn
+      break
     case 'es':
-      messages = messagesEs;
-      break;  
+      messages = messagesEs
+      break
     default:
-      messages = messagesEn; 
+      messages = messagesEn
   }
 
   return (
@@ -51,7 +53,7 @@ function App({ Component, pageProps }) {
           <meta name="keywords" content={keywords} />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         </Head>
-        <NextSeo 
+        <NextSeo
           title={title}
           description={description}
           canonical={pageURL}
@@ -74,12 +76,12 @@ function App({ Component, pageProps }) {
           <React.StrictMode>
             <Layout>
               <Component {...pageProps} />
-            </Layout>          
+            </Layout>
           </React.StrictMode>
-        </Provider>      
+        </Provider>
       </Fragment>
     </NextIntlClientProvider>
-  );
+  )
 }
 
 export default App

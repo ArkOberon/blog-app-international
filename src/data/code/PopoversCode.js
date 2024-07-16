@@ -1,9 +1,9 @@
 export const copyAction = (event) => {
-	event.target.innerHTML = 'Copied';
-	setTimeout(() => {
-		event.target.innerHTML = 'Copy';
-	}, 3000);
-};
+  event.target.innerHTML = 'Copied'
+  setTimeout(() => {
+    event.target.innerHTML = 'Copy'
+  }, 3000)
+}
 
 export const DefaultPopoverCode = `   
 <OverlayTrigger trigger="click" placement="right" overlay={
@@ -16,7 +16,7 @@ export const DefaultPopoverCode = `
     }>
     <Button variant="danger">Click to toggle popover</Button>
 </OverlayTrigger>
-`.trim();
+`.trim()
 
 export const FourDirectionsCode = `   
 {['top', 'right', 'bottom', 'left'].map((placement) => (
@@ -36,7 +36,7 @@ export const FourDirectionsCode = `
         <Button variant="secondary" className="me-2 mb-2 mb-lg-0">Popover on {placement}</Button>
     </OverlayTrigger>
 ))}
-`.trim();
+`.trim()
 
 export const DismissableCode = `   
 <OverlayTrigger trigger="focus" placement="right" overlay={
@@ -49,12 +49,12 @@ export const DismissableCode = `
 }>
     <Button variant="danger">Dismissible popover</Button>
 </OverlayTrigger>
-`.trim();
+`.trim()
 
 export const PopoversCode = [
-	DefaultPopoverCode,
-	FourDirectionsCode,
-	DismissableCode
-];
+  DefaultPopoverCode,
+  FourDirectionsCode,
+  DismissableCode,
+]
 
-export default PopoversCode;
+export default PopoversCode

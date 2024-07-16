@@ -16,7 +16,7 @@ export const DefaultCode = `
         </div>
     ))}
 </Form>
-`.trim();
+`.trim()
 
 export const SwitchesCode = `
 <Form>
@@ -32,7 +32,7 @@ export const SwitchesCode = `
         <option>Small select</option>
     </Form.Select>
 </Form>
- `.trim();
+ `.trim()
 
 export const InlineCode = `
  <Form>
@@ -62,14 +62,14 @@ export const InlineCode = `
      </div>
  ))}
 </Form>
-`.trim();
+`.trim()
 
 export const WithoutLabelsCode = `
 <Form>
     <Form.Check aria-label="option 1" />
     <Form.Check type="radio" aria-label="radio 1" />
 </Form>
- `.trim();
+ `.trim()
 export const CustomizingCode = `
  <Form>
  {['checkbox', 'radio'].map((type) => (
@@ -82,14 +82,14 @@ export const CustomizingCode = `
      </div>
  ))}
 </Form>
-`.trim();
+`.trim()
 
 export const ChecksRadiosCode = [
-	DefaultCode,
-	SwitchesCode,
-	InlineCode,
-	WithoutLabelsCode,
-	CustomizingCode
-];
+  DefaultCode,
+  SwitchesCode,
+  InlineCode,
+  WithoutLabelsCode,
+  CustomizingCode,
+]
 
-export default ChecksRadiosCode;
+export default ChecksRadiosCode

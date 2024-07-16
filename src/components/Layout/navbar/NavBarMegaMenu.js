@@ -1,34 +1,44 @@
 // import node module libraries
-import { Fragment, useState } from "react";
-import { Image, Navbar, Nav, Container, ListGroup, Dropdown } from "react-bootstrap";
-import Link from "next/link";
-import { useMediaQuery } from 'react-responsive';
-import { useRouter } from "next/router";
-import { useTranslations } from 'next-intl';
+import { Fragment, useState } from 'react'
+import {
+  Image,
+  Navbar,
+  Nav,
+  Container,
+  ListGroup,
+  Dropdown,
+} from 'react-bootstrap'
+import Link from 'next/link'
+import { useMediaQuery } from 'react-responsive'
+import { useRouter } from 'next/router'
+import { useTranslations } from 'next-intl'
 
 // import sub components
-import { NavMegaDropdown } from "./";
-import { DarkLightMode } from "../../ui/darklight";
-import { Languages } from "../../ui"
-import { NavBarCart } from "../../cart";
+import { NavMegaDropdown } from './'
+import { DarkLightMode } from '../../ui/darklight'
+import { Languages } from '../../ui'
+import { NavBarCart } from '../../cart'
 
 // import data files
-import NavbarDefault from "../../../routes/NavbarDefault";
+import NavbarDefault from '../../../routes/NavbarDefault'
 
 // import hooks
-import useMounted from '../../../hooks/useMounted';
+import useMounted from '../../../hooks/useMounted'
 
-export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }) => {
-  const t = useTranslations('Navbar');
+export const NavbarMegaMenu = ({
+  headerstyle = 'navbar-default',
+  login = false,
+}) => {
+  const t = useTranslations('Navbar')
   const { locale } = useRouter()
-  const [expandedMenu, setExpandedMenu] = useState(false);
-  const hasMounted = useMounted();
-  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
+  const [expandedMenu, setExpandedMenu] = useState(false)
+  const hasMounted = useMounted()
+  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' })
 
   const isLoged = true
 
-  const arrayMenu = NavbarDefault();
-  
+  const arrayMenu = NavbarDefault()
+
   return (
     <Fragment>
       <Navbar
@@ -41,23 +51,28 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
           <div className="d-flex">
             <Navbar.Brand as={Link} href="/">
               <Image src="/images/brand/logo/logo.svg" alt="" />
-            </Navbar.Brand>            
+            </Navbar.Brand>
           </div>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="icon-bar top-bar mt-0"></span>
             <span className="icon-bar middle-bar"></span>
             <span className="icon-bar bottom-bar"></span>
-          </Navbar.Toggle>          
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {arrayMenu[locale].slice(1, 100).map((item, index) => {
                 if (item.children === undefined) {
                   return (
-                    <Nav.Link className="ms-1 dropdown-item" key={index} as={Link} href={item.link}>
+                    <Nav.Link
+                      className="ms-1 dropdown-item"
+                      key={index}
+                      as={Link}
+                      href={item.link}
+                    >
                       {item.menuitem}
                     </Nav.Link>
-                  );
+                  )
                 } else {
                   return (
                     <>
@@ -65,26 +80,26 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
                         item={item}
                         key={index}
                         onClick={(value) => setExpandedMenu(value)}
-                      /> 
+                      />
                     </>
-                  );
+                  )
                 }
-              })}    
+              })}
             </Nav>
 
             {/* Right side quick / shortcut menu  */}
-            
+
             <div className="ms-auto mt-3 mt-lg-0">
-              <div className="d-flex align-items-center">  
-                 
+              <div className="d-flex align-items-center">
                 {/* <NavBarCart /> // Cuando esté listo el sistema se reactiva este componente */}
 
                 <Languages />
 
                 <DarkLightMode />
 
-                {isLoged ? 
+                {isLoged ? (
                   <></>
+                ) : (
                   /*<ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">                                          
                     <Dropdown as="li" className="ms-2">
                       <Dropdown.Toggle
@@ -135,23 +150,28 @@ export const NavbarMegaMenu = ({ headerstyle = "navbar-default", login = false }
                       </Dropdown.Menu>
                     </Dropdown>
                   </ListGroup>*/
-                :
                   <>
-                    <Link href={t("link_slug_sign_in")} className="btn btn-outline-dark ms-3">
-                      {t("sign_in")}
+                    <Link
+                      href={t('link_slug_sign_in')}
+                      className="btn btn-outline-dark ms-3"
+                    >
+                      {t('sign_in')}
                     </Link>
-                    <Link href={t("link_slug_sign_up")} className="btn btn-dark ms-1">
-                      {t("sign_up")}
+                    <Link
+                      href={t('link_slug_sign_up')}
+                      className="btn btn-dark ms-1"
+                    >
+                      {t('sign_up')}
                     </Link>
                   </>
-                }
+                )}
               </div>
             </div>
-            
+
             {/* end of right side quick / shortcut menu  */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Fragment>
-  );
-};
+  )
+}

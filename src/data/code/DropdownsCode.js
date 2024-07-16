@@ -9,7 +9,7 @@ export const BasicDropdownCode = `
         <Dropdown.Item href="#">Something else</Dropdown.Item>
     </Dropdown.Menu>
 </Dropdown> 
-`.trim();
+`.trim()
 
 export const SplitDropdownCode = `   
 <Dropdown as={ButtonGroup}>
@@ -21,7 +21,7 @@ export const SplitDropdownCode = `
         <Dropdown.Item href="#">Something else</Dropdown.Item>
     </Dropdown.Menu>
 </Dropdown>
-`.trim();
+`.trim()
 
 export const DropdownVariantCode = `   
 {['Primary', 'Secondary', 'Success', 'Info', 'Warning', 'Danger'].map(
@@ -42,7 +42,7 @@ export const DropdownVariantCode = `
     </DropdownButton>  
     ),
 )}  
-`.trim();
+`.trim()
 
 export const DropdownSizingCode = `   
 {[DropdownButton, SplitButton].map((DropdownType, idx) => (
@@ -80,7 +80,7 @@ export const DropdownSizingCode = `
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
     </DropdownType>
 ))}
-`.trim();
+`.trim()
 
 export const DirectionsCode = `   
 <div className="mb-2">
@@ -120,7 +120,7 @@ export const DirectionsCode = `
         </SplitButton>
     ))}
 </div>
-`.trim();
+`.trim()
 
 export const MenuAlignmentCode = `   
 <ButtonGroup aria-label="Basic example">
@@ -162,7 +162,7 @@ export const MenuAlignmentCode = `
         </Dropdown.Item>
     </DropdownButton>
 </ButtonGroup>
-`.trim();
+`.trim()
 
 export const ResponsiveMenuAlignmentCode1 = `   
 <ButtonGroup aria-label="Basic example">                               
@@ -179,7 +179,7 @@ export const ResponsiveMenuAlignmentCode1 = `
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
     </DropdownButton>
 </ButtonGroup>
-`.trim();
+`.trim()
 
 export const ResponsiveMenuAlignmentCode2 = `   
 <ButtonGroup aria-label="Basic example">                               
@@ -196,7 +196,7 @@ export const ResponsiveMenuAlignmentCode2 = `
         <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
     </DropdownButton>
 </ButtonGroup>
-`.trim();
+`.trim()
 
 export const MenuContentCode = `   
 <Dropdown.Menu show className="position-static" >
@@ -204,7 +204,7 @@ export const MenuContentCode = `
     <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
     <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
 </Dropdown.Menu> 
-`.trim();
+`.trim()
 
 export const DividersCode = `   
 <Dropdown.Menu show className="position-static">
@@ -214,7 +214,7 @@ export const DividersCode = `
     <Dropdown.Divider />
     <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
 </Dropdown.Menu> 
-`.trim();
+`.trim()
 
 export const FormsCode1 = `   
 <Dropdown.Menu show className="position-static">  
@@ -237,7 +237,7 @@ export const FormsCode1 = `
     <Dropdown.Item >New around here? Sign up</Dropdown.Item>                          
     <Dropdown.Item >Forgot password?</Dropdown.Item>
 </Dropdown.Menu> 
-`.trim();
+`.trim()
 
 export const FormsCode2 = `   
 <Dropdown.Menu show className="position-static">  
@@ -257,21 +257,21 @@ export const FormsCode2 = `
             <Button variant="primary" type="submit">Sign in </Button>
         </Form> 
 </Dropdown.Menu> 
-`.trim();
+`.trim()
 
 export const DropdownsCode = [
-	BasicDropdownCode,
-	SplitDropdownCode,
-	DropdownVariantCode,
-	DropdownSizingCode,
-	DirectionsCode,
-	MenuAlignmentCode,
-	ResponsiveMenuAlignmentCode1,
-	ResponsiveMenuAlignmentCode2,
-	MenuContentCode,
-	DividersCode,
-	FormsCode1,
-	FormsCode2
-];
+  BasicDropdownCode,
+  SplitDropdownCode,
+  DropdownVariantCode,
+  DropdownSizingCode,
+  DirectionsCode,
+  MenuAlignmentCode,
+  ResponsiveMenuAlignmentCode1,
+  ResponsiveMenuAlignmentCode2,
+  MenuContentCode,
+  DividersCode,
+  FormsCode1,
+  FormsCode2,
+]
 
-export default DropdownsCode;
+export default DropdownsCode

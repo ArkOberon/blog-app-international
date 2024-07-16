@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   i18n: {
-    locales: ['es', 'en'],
-    defaultLocale: 'es',    
+    locales: ["es", "en"],
+    defaultLocale: "es",
   },
   reactStrictMode: false,
-  poweredByHeader: false,  
+  poweredByHeader: false,
   experimental: {
     forceSwcTransforms: true,
   },
   webpack(config) {
-    config.experiments = { ...config.experiments, ...{ topLevelAwait: true }}
+    config.experiments = { ...config.experiments, ...{ topLevelAwait: true } };
     config.module.rules.push({
       test: /\.svg$/i,
       use: [
@@ -28,8 +28,8 @@ module.exports = {
           },
         },
       ],
-    })
+    });
 
-    return config
+    return config;
   },
-}
+};

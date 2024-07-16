@@ -19,234 +19,234 @@ ullamcorper.</li><li>Etiam et dolor faucibus libero aliquam tempor.</li></ol></d
 pulvinar. Vivamus ut velitorci. Aenean nec pretium augue. In eu tellusquis urna vestibulum pulvinar. Etiam in elementum lectus, iddignissim mauris. 
 Quisque tempus posuerealiquet.</p></div><br/><div ><h5>Definition list</h5><p>Vestibulum nec porta tortor. Phasellus metus quam, semperut tincidunt sit amet, 
 viverra quis neque.Nullam mattis mollis massa nec pulvinar. Vivamus ut velitorci. Aenean nec pretium augue. In eu tellusquis urna vestibulum pulvinar. 
-Etiam in elementum lectus, iddignissim mauris. Quisque tempus posuerealiquet.</p></div></div>`;
+Etiam in elementum lectus, iddignissim mauris. Quisque tempus posuerealiquet.</p></div></div>`
 
 const GuidesResourcesData = [
-	{
-		id: 1,
-		categoryslug: 'getting-started',
-		title: 'Getting Started',
-		description: 'Get your Help Geeks account set up in just 6 simple steps.',
-		totalarticles: 31,
-		articles: [
-			{
-				id: 11,
-				articleslug: 'what-is-this-geeks-app',
-				articletitle: 'What is this geeks app?',
-				content: articleContent
-			},
-			{
-				id: 12,
-				articleslug: 'start-using-the-geeks-app',
-				articletitle: 'Start using the geeks app?',
-				content: articleContent
-			},
-			{
-				id: 13,
-				articleslug: 'signing-in-to-the-dashboard',
-				articletitle: 'Signing in to the dashboard',
-				content: articleContent
-			},
-			{
-				id: 14,
-				articleslug: 'navigating-within-the-geeks-app',
-				articletitle: 'Navigating within the Geeks app',
-				content: articleContent
-			},
-			{
-				id: 15,
-				articleslug: 'affiliate-with-geeks-app',
-				articletitle: 'Affiliate with geeks app',
-				content: articleContent
-			}
-		]
-	},
-	{
-		id: 2,
-		categoryslug: 'account-management',
-		title: 'Account Management',
-		description:
-			'Managing your account, creating new Users, pricing details, exporting data',
-		totalarticles: 12,
-		articles: [
-			{
-				id: 21,
-				articleslug: 'billing-and-plans-guide',
-				articletitle: 'Billing and Plans Guide',
-				content: articleContent
-			},
-			{
-				id: 22,
-				articleslug: 'manage-your-user-profile',
-				articletitle: 'Manage Your User Profile',
-				content: articleContent
-			},
-			{
-				id: 23,
-				articleslug: 'signing-in-to-the-dashboard',
-				articletitle: 'Signing in to the dashboard',
-				content: articleContent
-			},
-			{
-				id: 24,
-				articleslug: 'whats-new-with-annual-payments',
-				articletitle: "What's New With Annual Payments",
-				content: articleContent
-			},
-			{
-				id: 25,
-				articleslug: 'user-roles-and-permissions',
-				articletitle: 'User Roles and Permissions',
-				content: articleContent
-			}
-		]
-	},
-	{
-		id: 3,
-		title: 'Your Account',
-		categoryslug: 'your-account',
-		description:
-			'Managing your account, creating new Users, pricing details, exporting data',
-		totalarticles: 8,
-		articles: [
-			{
-				id: 31,
-				articleslug: 'changing-your-username',
-				articletitle: 'Changing your username',
-				content: articleContent
-			},
-			{
-				id: 32,
-				articleslug: 'changing-your-email',
-				articletitle: 'Changing your email',
-				content: articleContent
-			},
-			{
-				id: 33,
-				articleslug: 'changing-your-password',
-				articletitle: 'Changing your password',
-				content: articleContent
-			},
-			{
-				id: 34,
-				articleslug: 'account-limits',
-				articletitle: 'Account limits',
-				content: articleContent
-			},
-			{
-				id: 35,
-				articleslug: 'two-factor-authentication',
-				articletitle: 'Two factor authentication',
-				content: articleContent
-			}
-		]
-	},
-	{
-		id: 4,
-		title: 'General Settings',
-		categoryslug: 'general-settings',
-		description: 'Get your Help Geeks account set up in just 6 simple steps.',
-		totalarticles: 6,
-		articles: [
-			{
-				id: 41,
-				articleslug: 'general-settings',
-				articletitle: 'General settings',
-				content: articleContent
-			},
-			{
-				id: 42,
-				articleslug: 'api-settings',
-				articletitle: 'API settings',
-				content: articleContent
-			},
-			{
-				id: 43,
-				articleslug: 'site-settings',
-				articletitle: 'Site settings',
-				content: articleContent
-			},
-			{
-				id: 44,
-				articleslug: 'smtp-settings',
-				articletitle: 'SMTP settings',
-				content: articleContent
-			},
-			{
-				id: 45,
-				articleslug: 'analytics-settings',
-				articletitle: 'Analytics settings',
-				content: articleContent
-			}
-		]
-	},
-	{
-		id: 5,
-		title: 'Payments',
-		categoryslug: 'payments',
-		description: 'Get your Help Geeks account set up in just 6 simple steps.',
-		totalarticles: 5,
-		articles: [
-			{
-				id: 51,
-				articleslug: 'subscriptions',
-				articletitle: 'Subscriptions',
-				content: articleContent
-			},
-			{
-				id: 52,
-				articleslug: 'payment-methods',
-				articletitle: 'Payment methods',
-				content: articleContent
-			},
-			{
-				id: 53,
-				articleslug: 'cancel-payments',
-				articletitle: 'Cancel payments',
-				content: articleContent
-			}
-		]
-	},
-	{
-		id: 6,
-		title: 'Working with Docs',
-		categoryslug: 'working-with-docs',
-		description:
-			'Setting up collections and categories, creating new articles, and using Docs search',
-		totalarticles: 8,
-		articles: [
-			{
-				id: 61,
-				articleslug: 'learn-about-geeks-docs',
-				articletitle: 'Learn about Geeks Docs',
-				content: articleContent
-			},
-			{
-				id: 62,
-				articleslug: 'manage-collections-and-categories',
-				articletitle: 'Manage collections and categories',
-				content: articleContent
-			},
-			{
-				id: 63,
-				articleslug: 'homepage-layout-options',
-				articletitle: 'Homepage layout options',
-				content: articleContent
-			},
-			{
-				id: 64,
-				articleslug: 'docs-style-guide',
-				articletitle: 'Docs Style Guide',
-				content: articleContent
-			},
-			{
-				id: 65,
-				articleslug: 'two-factor-authentication',
-				articletitle: 'Two factor authentication',
-				content: articleContent
-			}
-		]
-	}
-];
+  {
+    id: 1,
+    categoryslug: 'getting-started',
+    title: 'Getting Started',
+    description: 'Get your Help Geeks account set up in just 6 simple steps.',
+    totalarticles: 31,
+    articles: [
+      {
+        id: 11,
+        articleslug: 'what-is-this-geeks-app',
+        articletitle: 'What is this geeks app?',
+        content: articleContent,
+      },
+      {
+        id: 12,
+        articleslug: 'start-using-the-geeks-app',
+        articletitle: 'Start using the geeks app?',
+        content: articleContent,
+      },
+      {
+        id: 13,
+        articleslug: 'signing-in-to-the-dashboard',
+        articletitle: 'Signing in to the dashboard',
+        content: articleContent,
+      },
+      {
+        id: 14,
+        articleslug: 'navigating-within-the-geeks-app',
+        articletitle: 'Navigating within the Geeks app',
+        content: articleContent,
+      },
+      {
+        id: 15,
+        articleslug: 'affiliate-with-geeks-app',
+        articletitle: 'Affiliate with geeks app',
+        content: articleContent,
+      },
+    ],
+  },
+  {
+    id: 2,
+    categoryslug: 'account-management',
+    title: 'Account Management',
+    description:
+      'Managing your account, creating new Users, pricing details, exporting data',
+    totalarticles: 12,
+    articles: [
+      {
+        id: 21,
+        articleslug: 'billing-and-plans-guide',
+        articletitle: 'Billing and Plans Guide',
+        content: articleContent,
+      },
+      {
+        id: 22,
+        articleslug: 'manage-your-user-profile',
+        articletitle: 'Manage Your User Profile',
+        content: articleContent,
+      },
+      {
+        id: 23,
+        articleslug: 'signing-in-to-the-dashboard',
+        articletitle: 'Signing in to the dashboard',
+        content: articleContent,
+      },
+      {
+        id: 24,
+        articleslug: 'whats-new-with-annual-payments',
+        articletitle: "What's New With Annual Payments",
+        content: articleContent,
+      },
+      {
+        id: 25,
+        articleslug: 'user-roles-and-permissions',
+        articletitle: 'User Roles and Permissions',
+        content: articleContent,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Your Account',
+    categoryslug: 'your-account',
+    description:
+      'Managing your account, creating new Users, pricing details, exporting data',
+    totalarticles: 8,
+    articles: [
+      {
+        id: 31,
+        articleslug: 'changing-your-username',
+        articletitle: 'Changing your username',
+        content: articleContent,
+      },
+      {
+        id: 32,
+        articleslug: 'changing-your-email',
+        articletitle: 'Changing your email',
+        content: articleContent,
+      },
+      {
+        id: 33,
+        articleslug: 'changing-your-password',
+        articletitle: 'Changing your password',
+        content: articleContent,
+      },
+      {
+        id: 34,
+        articleslug: 'account-limits',
+        articletitle: 'Account limits',
+        content: articleContent,
+      },
+      {
+        id: 35,
+        articleslug: 'two-factor-authentication',
+        articletitle: 'Two factor authentication',
+        content: articleContent,
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'General Settings',
+    categoryslug: 'general-settings',
+    description: 'Get your Help Geeks account set up in just 6 simple steps.',
+    totalarticles: 6,
+    articles: [
+      {
+        id: 41,
+        articleslug: 'general-settings',
+        articletitle: 'General settings',
+        content: articleContent,
+      },
+      {
+        id: 42,
+        articleslug: 'api-settings',
+        articletitle: 'API settings',
+        content: articleContent,
+      },
+      {
+        id: 43,
+        articleslug: 'site-settings',
+        articletitle: 'Site settings',
+        content: articleContent,
+      },
+      {
+        id: 44,
+        articleslug: 'smtp-settings',
+        articletitle: 'SMTP settings',
+        content: articleContent,
+      },
+      {
+        id: 45,
+        articleslug: 'analytics-settings',
+        articletitle: 'Analytics settings',
+        content: articleContent,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Payments',
+    categoryslug: 'payments',
+    description: 'Get your Help Geeks account set up in just 6 simple steps.',
+    totalarticles: 5,
+    articles: [
+      {
+        id: 51,
+        articleslug: 'subscriptions',
+        articletitle: 'Subscriptions',
+        content: articleContent,
+      },
+      {
+        id: 52,
+        articleslug: 'payment-methods',
+        articletitle: 'Payment methods',
+        content: articleContent,
+      },
+      {
+        id: 53,
+        articleslug: 'cancel-payments',
+        articletitle: 'Cancel payments',
+        content: articleContent,
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Working with Docs',
+    categoryslug: 'working-with-docs',
+    description:
+      'Setting up collections and categories, creating new articles, and using Docs search',
+    totalarticles: 8,
+    articles: [
+      {
+        id: 61,
+        articleslug: 'learn-about-geeks-docs',
+        articletitle: 'Learn about Geeks Docs',
+        content: articleContent,
+      },
+      {
+        id: 62,
+        articleslug: 'manage-collections-and-categories',
+        articletitle: 'Manage collections and categories',
+        content: articleContent,
+      },
+      {
+        id: 63,
+        articleslug: 'homepage-layout-options',
+        articletitle: 'Homepage layout options',
+        content: articleContent,
+      },
+      {
+        id: 64,
+        articleslug: 'docs-style-guide',
+        articletitle: 'Docs Style Guide',
+        content: articleContent,
+      },
+      {
+        id: 65,
+        articleslug: 'two-factor-authentication',
+        articletitle: 'Two factor authentication',
+        content: articleContent,
+      },
+    ],
+  },
+]
 
-export default GuidesResourcesData;
+export default GuidesResourcesData

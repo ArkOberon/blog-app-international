@@ -5,7 +5,7 @@ export const AvatarsCode = `
 <Avatar size="md" type="image" src={Avatar1} className="rounded-circle" status="online" alt="G K" />
 <Avatar size="sm" type="image" src={Avatar1} className="rounded-circle" status="online" alt="G K" />
 <Avatar size="xs" type="image" src={Avatar1} className="rounded-circle" status="online" alt="G K" />
-`.trim();
+`.trim()
 
 export const InitialsCode = `
 <Avatar size="xxl" type="initial" name="G K" className="rounded-circle" status="online" alt="G K" />
@@ -14,7 +14,7 @@ export const InitialsCode = `
 <Avatar size="md" type="initial" name="G K" className="rounded-circle" status="online" alt="G K" />
 <Avatar size="sm" type="initial" name="G K" className="rounded-circle" status="online" alt="G K" />
 <Avatar size="xs" type="initial" name="G K" className="rounded-circle" status="online" alt="G K" />
-`.trim();
+`.trim()
 
 export const StatusIndicator = `
 <Avatar size='xxl' src={Avatar1} type="image" status="online" className="rounded-circle"  />
@@ -23,7 +23,7 @@ export const StatusIndicator = `
 <Avatar size='md' src={Avatar1} type="image" status="online" className="rounded-circle"  />
 <Avatar size='sm' src={Avatar1} type="image" status="away" className="rounded-circle"  />
 <Avatar size='xs' src={Avatar1} type="image" status="online" className="rounded-circle"  />
-`.trim();
+`.trim()
 
 export const AvatarGroups = `
 <div className="d-lg-flex">
@@ -40,7 +40,7 @@ export const AvatarGroups = `
         <Avatar size="lg" type="initial" name="G K" variant="info" className="rounded-circle" />
     </AvatarGroup>
 </div>
-`.trim();
+`.trim()
 
 export const AvatarGroupsTooltip = `
 <div className="d-lg-flex">
@@ -63,7 +63,7 @@ export const AvatarGroupsTooltip = `
         <Avatar size="lg" type="initial" variant="info" className="rounded-circle" name='Nia Sikhone' imgtooltip soft />
     </AvatarGroup>
 </div>
-`.trim();
+`.trim()
 
 export const AvatarShapes = `
 <div className="d-lg-flex">
@@ -76,7 +76,7 @@ export const AvatarShapes = `
         <Avatar size="lg" type="initial" name="G K" variant="warning" className="rounded-circle"  />                                                  
     </div>
 </div> 
-`.trim();
+`.trim()
 
 export const AvatarRatio = `
 <Ratio src={ImgPlaceholder} size="xxl" className="me-1 rounded" /> 
@@ -85,7 +85,7 @@ export const AvatarRatio = `
 <Ratio src={ImgPlaceholder} size="md" className="me-1 rounded" /> 
 <Ratio src={ImgPlaceholder} size="sm" className="me-1 rounded" /> 
 <Ratio src={ImgPlaceholder} size="xs" className="me-1 rounded" /> 
-`.trim();
+`.trim()
 
 export const AvatarDarkColor = `
 <Avatar size="md" type="initial" name="G K" variant="primary" className="rounded-circle"  /> 
@@ -96,7 +96,7 @@ export const AvatarDarkColor = `
 <Avatar size="md" type="initial" name="G K" variant="info" className="rounded-circle"  /> 
 <Avatar size="md" type="initial" name="G K" variant="light" className="rounded-circle text-dark"  /> 
 <Avatar size="md" type="initial" name="G K" variant="dark" className="rounded-circle"  />  
-`.trim();
+`.trim()
 
 export const AvatarSoftColor = `
 <Avatar size="md" type="initial" name="G K" soft variant="primary" className="rounded-circle" /> 
@@ -107,17 +107,17 @@ export const AvatarSoftColor = `
 <Avatar size="md" type="initial" name="G K" soft variant="info" className="rounded-circle" /> 
 <Avatar size="md" type="initial" name="G K" soft variant="light" className="rounded-circle text-dark"  /> 
 <Avatar size="md" type="initial" name="G K" soft variant="dark" className="rounded-circle" /> 
-`.trim();
+`.trim()
 export const AvatarCode = [
-	AvatarsCode,
-	InitialsCode,
-	StatusIndicator,
-	AvatarGroups,
-	AvatarGroupsTooltip,
-	AvatarShapes,
-	AvatarRatio,
-	AvatarDarkColor,
-	AvatarSoftColor
-];
+  AvatarsCode,
+  InitialsCode,
+  StatusIndicator,
+  AvatarGroups,
+  AvatarGroupsTooltip,
+  AvatarShapes,
+  AvatarRatio,
+  AvatarDarkColor,
+  AvatarSoftColor,
+]
 
-export default AvatarCode;
+export default AvatarCode

@@ -4,7 +4,7 @@ export const BasicButtonGroupCode = `
     <Button variant="primary">Middle</Button>
     <Button variant="primary">Right</Button>
 </ButtonGroup>
-`.trim();
+`.trim()
 
 export const GroupLinksCode = `   
 <ButtonGroup aria-label="Basic example" >
@@ -12,7 +12,7 @@ export const GroupLinksCode = `
     <Button variant="primary" href="#">Link</Button>
     <Button variant="primary" href="#">Link</Button>
 </ButtonGroup>
-`.trim();
+`.trim()
 
 export const MixedStylesCode = `   
 <ButtonGroup aria-label="Basic mixed styles example" >
@@ -20,7 +20,7 @@ export const MixedStylesCode = `
     <Button variant="warning" >Middle</Button>
     <Button variant="success" >Right</Button>
 </ButtonGroup> 
-`.trim();
+`.trim()
 
 export const OutlineStylesCode = `   
 <ButtonGroup aria-label="Basic mixed styles example" >
@@ -28,7 +28,7 @@ export const OutlineStylesCode = `
     <Button variant="outline-primary" >Middle</Button>
     <Button variant="outline-primary" >Right</Button>
 </ButtonGroup> 
-`.trim();
+`.trim()
 
 export const CheckboxStyleCode = `   
 <ToggleButtonGroup type="checkbox" defaultValue={[1]} className="mb-2">
@@ -42,7 +42,7 @@ export const CheckboxStyleCode = `
         Checkbox 3 
     </ToggleButton>
 </ToggleButtonGroup> 
-`.trim();
+`.trim()
 
 export const RadioStyleCode = `   
 <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
@@ -56,7 +56,7 @@ export const RadioStyleCode = `
         Radio 3
     </ToggleButton>
 </ToggleButtonGroup> 
-`.trim();
+`.trim()
 
 export const ToolbarStyleCode = `   
 <ButtonToolbar aria-label="Toolbar with button groups">
@@ -70,7 +70,7 @@ export const ToolbarStyleCode = `
         <Button>8</Button>
     </ButtonGroup>
 </ButtonToolbar> 
-`.trim();
+`.trim()
 
 export const ButtonSizingCode = `   
 <ButtonGroup aria-label="Basic example"  size="lg" className="mb-2" >
@@ -94,7 +94,7 @@ export const ButtonSizingCode = `
     <Button variant="primary">Middle</Button>
     <Button variant="primary">Right</Button>
 </ButtonGroup> 
-`.trim();
+`.trim()
 
 export const ButtonNestingCode = `   
 <ButtonGroup>
@@ -105,7 +105,7 @@ export const ButtonNestingCode = `
         <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
     </DropdownButton>
 </ButtonGroup> 
-`.trim();
+`.trim()
 
 export const VerticalButtonCode = `   
 <ButtonGroup vertical>
@@ -130,19 +130,19 @@ export const VerticalButtonCode = `
         <Dropdown.Item eventKey="2">Dropdown link</Dropdown.Item>
     </DropdownButton>
 </ButtonGroup> 
-`.trim();
+`.trim()
 
 export const PaginationsCode = [
-	BasicButtonGroupCode,
-	GroupLinksCode,
-	MixedStylesCode,
-	OutlineStylesCode,
-	CheckboxStyleCode,
-	RadioStyleCode,
-	ToolbarStyleCode,
-	ButtonSizingCode,
-	ButtonNestingCode,
-	VerticalButtonCode
-];
+  BasicButtonGroupCode,
+  GroupLinksCode,
+  MixedStylesCode,
+  OutlineStylesCode,
+  CheckboxStyleCode,
+  RadioStyleCode,
+  ToolbarStyleCode,
+  ButtonSizingCode,
+  ButtonNestingCode,
+  VerticalButtonCode,
+]
 
-export default PaginationsCode;
+export default PaginationsCode

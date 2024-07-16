@@ -7,7 +7,7 @@ export const SimpleAlert = `
 <Alert variant="info" >This is a info alert—check it out!</Alert>
 <Alert variant="light" >This is a light alert—check it out!</Alert>
 <Alert variant="dark" >This is a dark alert—check it out!</Alert>
-    `.trim();
+    `.trim()
 
 export const LinkAlert = `   
 <Alert variant="primary">                                                    
@@ -34,7 +34,7 @@ export const LinkAlert = `
 <Alert variant="dark">                                                    
     This is a dark alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.
 </Alert>
-    `.trim();
+    `.trim()
 
 export const AdditionalAlert = `   
 <Alert variant="success">
@@ -50,7 +50,7 @@ export const AdditionalAlert = `
         and tidy.
     </p>
 </Alert>    
-    `.trim();
+    `.trim()
 
 export const AlertWithIcon = ` 
 // import below bootstrap icons from react-bootstrap-icons library before using those
@@ -60,7 +60,7 @@ import { ExclamationCircleFill, CheckCircleFill, ExclamationTriangleFill } from 
 <Alert variant="success "><CheckCircleFill size={25} className="me-1"  />An example success alert with an icon</Alert>
 <Alert variant="warning"><ExclamationTriangleFill size={25} className="me-1"  />An example warning alert with an icon</Alert>
 <Alert variant="danger"><ExclamationTriangleFill size={25} className="me-1"  />An example danger alert with an icon</Alert>
-`.trim();
+`.trim()
 
 export const DismissingAlert = `   
 const AlertDismissible = () => {
@@ -75,14 +75,14 @@ const AlertDismissible = () => {
     return <Button onClick={() => setShow(true)}>Show Alert</Button>;
 }
 render(<AlertDismissible />);    
-`.trim();
+`.trim()
 
 export const AlertsCode = [
-	SimpleAlert,
-	LinkAlert,
-	AdditionalAlert,
-	AlertWithIcon,
-	DismissingAlert
-];
+  SimpleAlert,
+  LinkAlert,
+  AdditionalAlert,
+  AlertWithIcon,
+  DismissingAlert,
+]
 
-export default AlertsCode;
+export default AlertsCode
