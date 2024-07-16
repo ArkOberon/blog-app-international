@@ -1,16 +1,25 @@
-import React, { Fragment } from 'react'
-import { Col, Row, Container, Form, Button } from 'react-bootstrap'
+import { Fragment } from 'react';
+import { Col, Row, Container, Form, Button } from 'react-bootstrap';
+import {HermenautasSEO} from '../../widgets'
+import { useRouter } from 'next/router'
 
 export const PostList = ({
   title,
   description,
   posts,
   imgUrl,
-  imgAlt,
-  categoryTitle,
+  imgAlt,  
   arrayPrincipalPost,
   arrayPost,
 }) => {
+
+  const router = useRouter()
+  const { pathname, asPath, query } = router
+
+  console.log(pathname)
+  console.log(asPath)
+  console.log(query)
+
   return (
     <Fragment>
       {/* Geeks SEO settings */}
@@ -21,7 +30,6 @@ export const PostList = ({
         imgAlt={imgAlt}
         posts={posts}
       />
-
       {/* Page header */}
       <section className="pt-9 pb-9 bg-white ">
         <Container>
@@ -33,29 +41,33 @@ export const PostList = ({
               sm={12}
             >
               <div className="text-center mb-5">
-                <h1 className=" display-2 fw-bold">{categoryTitle}</h1>
+                <h1 className=" display-2 fw-bold">{title}</h1>
                 <p className="lead">
-                  Our features, journey, tips and us being us. Lorem ipsum dolor
-                  sit amet, accumsan in, tempor dictum neque.
+                  {description}
                 </p>
               </div>
-              {/* Form SOLO PUEDE APARECER SI NO ES LA HOME*/}
-              <Form className="row px-md-20">
-                <Form.Group
-                  className="mb-3 col ps-0 ms-2 ms-md-0"
-                  controlId="formBasicEmail"
-                >
-                  <Form.Control type="email" placeholder="Email Address" />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3 col-auto ps-0"
-                  controlId="formSubmitButton"
-                >
-                  <Button variant="primary" type="submit">
-                    Submit
-                  </Button>
-                </Form.Group>
-              </Form>
+              {/* Form */}
+              {
+                pathname === '/' ? 
+                  <></> 
+                : 
+                <Form className="row px-md-20">
+                  <Form.Group
+                    className="mb-3 col ps-0 ms-2 ms-md-0"
+                    controlId="formBasicEmail"
+                  >
+                    <Form.Control type="email" placeholder="Email Address" />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3 col-auto ps-0"
+                    controlId="formSubmitButton"
+                  >
+                    <Button variant="primary" type="submit">
+                      Submit
+                    </Button>
+                  </Form.Group>
+                </Form>
+              }              
             </Col>
           </Row>
         </Container>
