@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Col, Row, Container, Form, Button, Nav } from 'react-bootstrap'
+import { Col, Row, Container, Form, Button } from 'react-bootstrap'
 
 export const PostList = ({
   title,
