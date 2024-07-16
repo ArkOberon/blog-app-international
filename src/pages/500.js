@@ -6,9 +6,6 @@ import Link from 'next/link';
 // import widget/custom components
 import { HermenautasSEO } from '../widgets';
 
-// import blank layout, header and footer to override default layout 
-import NotFound from '../components/Layout/error/NotFound';
-
 const Error500 = () => {
 	return (
 		<Fragment>
@@ -50,7 +47,5 @@ const Error500 = () => {
 		</Fragment>
 	);
 };
-
-Error404.Layout = NotFound;
 
 export default Error500;
