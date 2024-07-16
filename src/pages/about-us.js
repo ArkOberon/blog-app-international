@@ -1,5 +1,5 @@
 // import node module libraries
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Container } from 'react-bootstrap'
 
 // import widget/custom components

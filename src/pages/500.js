@@ -1,5 +1,5 @@
 // import node module libraries
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Col, Row, Image } from 'react-bootstrap'
 import Link from 'next/link'
 

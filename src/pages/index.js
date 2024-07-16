@@ -1,7 +1,6 @@
 // import node module libraries
 import React, { Fragment } from 'react'
-import { Col, Row, Container, Form, Button, Nav } from 'react-bootstrap'
-import Link from 'next/link'
+import { Col, Row, Container } from 'react-bootstrap'
 
 // import sub components
 import { BlogCard, BlogCardFullWidth } from '../components/blog'
