@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+
+module.exports = {/* eslint-disable-line */
   i18n: {
     locales: ["es", "en"],
     defaultLocale: "es",
@@ -22,7 +23,7 @@ module.exports = {
                 {
                   name: "removeUselessDefs",
                   active: false,
-                },
+                }            
               ],
             },
           },
