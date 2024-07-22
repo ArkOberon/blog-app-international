@@ -1,24 +1,40 @@
-import { Fragment } from 'react';
+// import node module libraries
+import { Fragment, useEffect, useState } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
-import {HermenautasSEO} from '../../widgets'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+
+// import widget/custom components
+import { HermenautasSEO } from '../../widgets';
+import { BlogCard, BlogCardFullWidth } from '../blog';
+
+// import API functions
+import { getAllPostsByCategory } from '../../pages/api/posts/getAllPostsByCategory';
 
 export const PostList = ({
+  locale,
   title,
   description,
-  posts,
   imgUrl,
-  imgAlt,  
-  arrayPrincipalPost,
+  imgAlt,
   arrayPost,
+  categoryId,
 }) => {
+  const [postByCategory, setPostByCategory] = useState('');
+  const router = useRouter();
+  const { pathname } = router;
+  const arrayPostActualLang = arrayPost.filter((item) => item.name === locale);
 
-  const router = useRouter()
-  const { pathname, asPath, query } = router
+  useEffect(() => {
+    if (categoryId) {
+      console.log(categoryId);
+      const postByCategory = async (id) => {
+        const pArrayByCategory = await getAllPostsByCategory(id);
+        setPostByCategory(pArrayByCategory);
+      };
 
-  console.log(pathname)
-  console.log(asPath)
-  console.log(query)
+      postByCategory(categoryId);
+    }
+  }, [categoryId]);
 
   return (
     <Fragment>
@@ -28,29 +44,29 @@ export const PostList = ({
         description={description}
         imgUrl={imgUrl}
         imgAlt={imgAlt}
-        posts={posts}
       />
       {/* Page header */}
-      <section className="pt-9 pb-9 bg-white ">
-        <Container>
-          <Row>
-            <Col
-              lg={{ span: 10, offset: 1 }}
-              xl={{ span: 8, offset: 2 }}
-              md={12}
-              sm={12}
-            >
-              <div className="text-center mb-5">
-                <h1 className=" display-2 fw-bold">{title}</h1>
-                <p className="lead">
-                  {description}
-                </p>
-              </div>
-              {/* Form */}
-              {
-                pathname === '/' ? 
-                  <></> 
-                : 
+      {/* Form */}
+      {pathname === '/' ||
+      pathname === '/en' ||
+      pathname === '/es' ||
+      pathname === '/pt' ||
+      pathname === '/fr' ? (
+        <></>
+      ) : (
+        <section className="pt-9 pb-9 bg-white ">
+          <Container>
+            <Row>
+              <Col
+                lg={{ span: 10, offset: 1 }}
+                xl={{ span: 8, offset: 2 }}
+                md={12}
+                sm={12}
+              >
+                <div className="text-center mb-5">
+                  <h1 className=" display-2 fw-bold">{title}</h1>
+                  <p className="lead">{description}</p>
+                </div>
                 <Form className="row px-md-20">
                   <Form.Group
                     className="mb-3 col ps-0 ms-2 ms-md-0"
@@ -67,36 +83,41 @@ export const PostList = ({
                     </Button>
                   </Form.Group>
                 </Form>
-              }              
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      )}
       {/* Content */}
       <section className="pb-8 bg-white">
         <Container>
           <Row>
             {/* Show first article in full width  */}
-            {arrayPrincipalPost
-              .filter(function (dataSource) {
-                return dataSource.id === 1
-              })
+
+            {arrayPostActualLang[0].children.nodes
+              .filter((item) => item.name === `Principal-${locale}`)
               .map((item, index) => (
                 <Col xl={12} lg={12} md={12} sm={12} key={index}>
-                  <BlogCardFullWidth item={item} />
+                  <BlogCardFullWidth item={item} locale={locale} />
                 </Col>
               ))}
+            {console.log(postByCategory.data?.category.posts.nodes)}
+
+            {postByCategory.data?.category.posts.nodes.map((item, index) => (
+              <Col xl={4} lg={4} md={6} sm={12} key={index} className="d-flex">
+                <BlogCard item={item} locale={locale} />
+              </Col>
+            ))}
 
             {/* Show remaining articles in 3 column width  */}
-            {arrayPost.slice(1, 10).map((item, index) => (
+            {/*arrayPost.slice(1, 10).map((item, index) => (
               <Col xl={4} lg={4} md={6} sm={12} key={index} className="d-flex">
                 <BlogCard item={item} />
               </Col>
-            ))}
+            ))*/}
           </Row>
         </Container>
       </section>
     </Fragment>
-  )
-}
+  );
+};

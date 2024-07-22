@@ -1,31 +1,66 @@
 // import node module libraries
-import React, { Fragment } from 'react';
-import { Col, Row, Container } from 'react-bootstrap';
-
-// import sub components
-import { BlogCard, BlogCardFullWidth } from '../components/blog';
+import { Fragment, useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets';
 import { PostList } from '../components/category';
-
-// import data files
-import BlogArticlesList from '../data/blog/blogArticlesData';
+import { PostListSkeleton } from '../components/ui/loaders/PostListSkeleton';
 
 // import API functions
 import { getAllPosts } from './api/posts/getAllPosts';
 
-const Economy = () => {
-  const a = 1;
-  const p = 2;
-  getAllPosts().then((data) => {
-    console.log(data);
+const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [arrayPost, setArrayPost] = useState({
+    data: {
+      posts: {
+        nodes: [],
+      },
+    },
   });
+
+  const t = useTranslations('Home');
+  const router = useRouter();
+  const { locale } = router;
+  const category = arrayPost.data.categories?.nodes.filter(
+    (item) => item.name === locale
+  );
+
+  useEffect(() => {
+    const postArray = async () => {
+      const pArray = await getAllPosts();
+      setArrayPost(pArray);
+
+      setIsLoading(false);
+    };
+
+    postArray();
+  }, []);
+
+  // SEO Info
+  const title = t('title');
+  const description = t('description');
+  const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
+  const imgAlt = t('img_alt_home');
+
   return (
     <Fragment>
-      <p>{p}</p>
+      {isLoading ? (
+        <PostListSkeleton />
+      ) : (
+        <PostList
+          locale={locale}
+          title={title}
+          description={description}
+          imgUrl={imgUrl}
+          imgAlt={imgAlt}
+          arrayPost={arrayPost.data.categories.nodes}
+          categoryId={category[0].id}
+        />
+      )}
     </Fragment>
   );
 };
 
-export default Economy;
+export default Home;

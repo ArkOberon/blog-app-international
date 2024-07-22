@@ -11,42 +11,54 @@ export const getAllPosts = async () => {
     },
     body: JSON.stringify({
       query: `
-        query GetPosts {
-          posts {
+        query GetCategoriesWithPosts {
+          categories(where: {parent: 0}) {
             nodes {
               id
-              title
-              date
-              featuredImage {
-                node {
-                  mediaItemUrl
-                  title
-                  author {
-                    node {
-                      avatar {
-                        url
+              name
+              children {
+                nodes {
+                  id
+                  name
+                  posts {
+                    nodes {
+                      id
+                      title
+                      featuredImage {
+                        node {
+                          link
+                        }
                       }
-                      firstName
-                      lastName
+                      author {
+                        node {
+                          firstName
+                          lastName
+                          avatar {
+                            url
+                          }
+                        }
+                      }
+                      excerpt
+                      date
+                      categories {
+                        nodes {
+                          name
+                          slug
+                        }
+                      }
+                      slug
                     }
                   }
                 }
               }
-              categories {
-                nodes {
-                  name
-                  id
-                }
-              }
-              excerpt
             }
           }
         }
       `,
     }),
-  })
+  });
 
-  const data = await response.json()
+  const data = await response.json();
 
-  return data
-}
+  return data;
+};

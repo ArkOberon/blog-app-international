@@ -1,9 +1,17 @@
 {
+  "Home": {
+    "title": "Hermenautas - World news daily",
+    "description": "Independent media with accurate and up-to-date information, offering the latest news affecting citizens' freedoms and rights in all areas: economy, technology, health, industry...",
+    "img_alt_home": "Home page hermenautas"
+  },
   "Navbar": {
     "sign_in": "Sign in",
     "sign_up": "Sign up",
     "link_slug_sign_in": "/en/authentication/sign-in",
     "link_slug_sign_up": "/en/authentication/sign-up"
+  },
+  "Process-Loader": {
+    "procesando su solicitud": ""
   },
   "Sign-in": {
     "title": "Sign in"

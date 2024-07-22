@@ -1,33 +1,26 @@
 // import node module libraries
-import { Card, Row, Col, Image } from 'react-bootstrap'
-import Link from 'next/link'
-import PropTypes from 'prop-types'
+import { Card, Row, Col, Image } from 'react-bootstrap';
+import Link from 'next/link';
+import parse from 'html-react-parser';
 
-export const BlogCardFullWidth = ({ item }) => {
-  const CategoryColors = (category) => {
-    switch (category) {
-      case 'Courses':
-        return 'success'
-      case 'Tutorial':
-        return 'warning'
-      case 'Workshop':
-        return 'primary'
-      case 'Company':
-        return 'info'
-      default:
-        return 'primary'
-    }
-  }
+// Custom functionalities
+import { categoryColors } from '../../utils/categoryColor';
+import { decodeHtml } from '../../utils/decodeHTML';
+
+export const BlogCardFullWidth = ({ item, locale }) => {
+  const principalCategory = item.posts.nodes[0].categories.nodes.filter(
+    (item) => item.name !== `Principal-${locale}`
+  );
 
   return (
     <Card className="mb-4 shadow-lg mt-6">
       <Row className="g-0">
         {/*  Image */}
         <Link
-          href={`/blog/${item.slug}`}
+          href={`/${principalCategory[0].slug}/${item.posts.nodes[0].slug}`}
           className="col-lg-8 col-md-12 col-12 bg-cover img-left-rounded"
           style={{
-            background: `url(${item.blogpostimage})`,
+            background: `url(${!item.posts.nodes[0].featuredImage.node.link ? '/default-100.jpg' : item.posts.nodes[0].featuredImage.node.link})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'top center',
@@ -35,7 +28,7 @@ export const BlogCardFullWidth = ({ item }) => {
         >
           <Card.Img
             variant="left"
-            src={item.blogpostimage}
+            src={item.posts.nodes[0].featuredImage.node.link}
             className="img-fluid d-lg-none invisible"
           />
         </Link>
@@ -43,45 +36,41 @@ export const BlogCardFullWidth = ({ item }) => {
           {/*  Card body */}
           <Card.Body>
             <Link
-              href={`/blog/${item.slug}`}
-              className={`fs-5 mb-3 fw-semi-bold d-block text-${CategoryColors(
-                item.category
-              )}`}
+              href={`/${principalCategory[0]?.slug}`}
+              className={`fs-5 mb-3 fw-semi-bold d-block text-${categoryColors(principalCategory[0]?.name)}`}
             >
-              {item.category}
+              {principalCategory[0]?.name}
             </Link>
             <h1 className="mb-2 mb-lg-4">
-              <Link href={`/blog/${item.slug}`} className="text-inherit">
-                {item.title}
+              <Link
+                href={`/${principalCategory[0].slug}/${item.posts.nodes[0].slug}`}
+                className="text-inherit"
+              >
+                {item.posts.nodes[0].title}
               </Link>
             </h1>
-            <p> {item.details} </p>
+            <p> {parse(decodeHtml(item.posts.nodes[0].excerpt))} </p>
             {/*  Media content */}
             <Row className="align-items-center g-0 mt-lg-7 mt-4">
               <Col xs="auto">
                 {/*  Img  */}
                 <Image
-                  src={item.authorimage}
+                  src={item.posts.nodes[0].author.node.avatar.url}
                   alt=""
                   className="rounded-circle avatar-sm me-2"
                 />
               </Col>
               <Col className="col lh-1 ">
-                <h5 className="mb-1">{item.author}</h5>
-                <p className="fs-6 mb-0">{item.postedon}</p>
-              </Col>
-              <Col xs="auto">
-                <p className="fs-6 mb-0">{item.readinglength} Min Read</p>
+                <h5 className="mb-1">
+                  {item.posts.nodes[0].author.node.firstName}{' '}
+                  {item.posts.nodes[0].author.node.lastName}
+                </h5>
+                <p className="fs-6 mb-0">{item.posts.nodes[0].date}</p>
               </Col>
             </Row>
           </Card.Body>
         </Col>
       </Row>
     </Card>
-  )
-}
-
-// Typechecking With PropTypes
-BlogCardFullWidth.propTypes = {
-  item: PropTypes.object.isRequired,
-}
+  );
+};

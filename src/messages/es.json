@@ -1,9 +1,17 @@
 {
+  "Home": {
+    "title": "Hermenautas – Diario de noticias mundial",
+    "description": "Medio de comunicación independiente con información veraz y actualizada, que ofrece las últimas noticas que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
+    "img_alt_home": "Portada hermenautas"
+  },
   "Navbar": {
     "sign_in": "Iniciar Sesión",
     "sign_up": "Registrarse",
     "link_slug_sign_in": "/autenticacion/iniciar-sesion",
     "link_slug_sign_up": "/autenticacion/registrarse"
+  },
+  "Process-Loader": {
+    "procesando_su_solicitud": "Procesando su solicitud..."
   },
   "Sign-in": {
     "title": "Iniciar sesión"
