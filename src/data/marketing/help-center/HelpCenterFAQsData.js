@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const MostAskedFAQs = [
   {
@@ -63,7 +63,7 @@ export const MostAskedFAQs = [
 		squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
 		quinoa nesciunt laborum eiusmod.`,
   },
-]
+];
 
 export const GeneralInquiriesFAQs = [
   {
@@ -97,7 +97,7 @@ export const GeneralInquiriesFAQs = [
 		dolor brunch. Food truck
 		quinoa nesciunt laborum eiusmod.`,
   },
-]
+];
 
 export const SupportFAQs = [
   {
@@ -134,12 +134,12 @@ export const SupportFAQs = [
 		dolor brunch. Food truck
 		quinoa nesciunt laborum eiusmod.`,
   },
-]
+];
 
 export const HelpCenterFAQsData = [
   MostAskedFAQs,
   GeneralInquiriesFAQs,
   SupportFAQs,
-]
+];
 
-export default HelpCenterFAQsData
+export default HelpCenterFAQsData;

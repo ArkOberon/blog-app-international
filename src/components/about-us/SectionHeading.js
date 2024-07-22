@@ -2,7 +2,7 @@
 // Style : H2 title with description
 
 // import node module libraries
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap';
 
 const SectionHeading = ({ title, description }) => {
   return (
@@ -12,7 +12,7 @@ const SectionHeading = ({ title, description }) => {
         <p className="lead">{description}</p>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
-export default SectionHeading
+export default SectionHeading;

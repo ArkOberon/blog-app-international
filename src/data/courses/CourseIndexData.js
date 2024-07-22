@@ -545,7 +545,7 @@ export const CourseIndex = [
         enim porro culpa! Quaerat veritatis veniam corrupti iusto.`,
     topics: [], // It's compulsary to show summary, because it's used for conditional rendering
   },
-]
+];
 
 export const CourseFAQs = [
   {
@@ -581,7 +581,7 @@ export const CourseFAQs = [
         <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way
             to write React components in your markdown.</p>`,
   },
-]
+];
 
 export const Transcripts = [
   {
@@ -633,7 +633,7 @@ export const Transcripts = [
         We're not gonna be doing a deep dive into what GraphQL is or the language specifics. 
         We're also gonna get into MDX. MDX is a way to write React components in your markdown.</p>`,
   },
-]
+];
 
 export const Reviews = [
   {
@@ -675,8 +675,8 @@ export const Reviews = [
     review: `<p>I have really enjoyed this class and learned a lot, found it very
         inspiring and helpful, thank you!<i className="em em-heart_eyes ms-2 fs-6"></i></p>`,
   },
-]
+];
 
-export const CourseIndexData = [CourseIndex, Reviews, Transcripts, CourseFAQs]
+export const CourseIndexData = [CourseIndex, Reviews, Transcripts, CourseFAQs];
 
-export default CourseIndexData
+export default CourseIndexData;

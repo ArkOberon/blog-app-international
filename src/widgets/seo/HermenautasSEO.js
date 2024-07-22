@@ -1,11 +1,11 @@
 // import node module libraries
-import { NextSeo } from 'next-seo'
-import { useRouter } from 'next/router'
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 
 const HermenautasSEO = (props) => {
-  const router = useRouter()
-  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.pathname
-  const { title, description, imgUrl, imgAlt } = props
+  const router = useRouter();
+  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.pathname;
+  const { title, description, imgUrl, imgAlt } = props;
   return (
     <NextSeo
       title={title}
@@ -26,6 +26,6 @@ const HermenautasSEO = (props) => {
         ],
       }}
     />
-  )
-}
-export default HermenautasSEO
+  );
+};
+export default HermenautasSEO;

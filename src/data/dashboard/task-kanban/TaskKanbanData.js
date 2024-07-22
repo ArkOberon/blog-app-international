@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const TeamMembers = [
   {
@@ -61,7 +61,7 @@ export const TeamMembers = [
     name: 'Niman Kant',
     image: '/images/avatar/avatar-14.jpg',
   },
-]
+];
 
 export const TaskKanbanItems = [
   {
@@ -209,4 +209,4 @@ export const TaskKanbanItems = [
       },
     ],
   },
-]
+];

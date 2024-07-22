@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const DeveloperGeeksData = [
   {
@@ -15,5 +15,5 @@ export const DeveloperGeeksData = [
     name: 'Ronald Richards',
     designation: 'Payments Engineer',
   },
-]
-export default DeveloperGeeksData
+];
+export default DeveloperGeeksData;

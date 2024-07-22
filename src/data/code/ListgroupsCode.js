@@ -6,7 +6,7 @@ export const BasicListgroupCode = `
     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const ActiveItemCode = `   
 <ListGroup>
@@ -16,7 +16,7 @@ export const ActiveItemCode = `
     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const DisabledItemsCode = `   
 <ListGroup>
@@ -26,7 +26,7 @@ export const DisabledItemsCode = `
     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const LinksButtonsCode = `   
 <ListGroup defaultActiveKey="#link1">
@@ -36,7 +36,7 @@ export const LinksButtonsCode = `
     <ListGroup.Item action href="#link4">Porta ac consectetur ac</ListGroup.Item>
     <ListGroup.Item action href="#link5" disabled>Vestibulum at eros</ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const ListButtonCode = `   
 <ListGroup defaultActiveKey="#link1">
@@ -46,7 +46,7 @@ export const ListButtonCode = `
     <ListGroup.Item action onClick={alertClicked}>Porta ac consectetur ac</ListGroup.Item>
     <ListGroup.Item action onClick={alertClicked} disabled>Vestibulum at eros</ListGroup.Item>                                
 </ListGroup>
-`.trim()
+`.trim();
 
 export const FlushListgroupCode = `   
 <ListGroup variant="flush">
@@ -56,7 +56,7 @@ export const FlushListgroupCode = `
     <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const HorizontalListgroupCode = `   
 <ListGroup horizontal>
@@ -64,7 +64,7 @@ export const HorizontalListgroupCode = `
     <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
     <ListGroup.Item>Morbi leo risus</ListGroup.Item>                                
 </ListGroup>
-`.trim()
+`.trim();
 
 export const HorizontalListgroupCode2 = `   
 <ListGroup horizontal>
@@ -72,7 +72,7 @@ export const HorizontalListgroupCode2 = `
     <ListGroup.Item className="flex-fill">Dapibus ac facilisis in</ListGroup.Item>
     <ListGroup.Item className="flex-fill">Morbi leo risus</ListGroup.Item>                                
 </ListGroup>
-`.trim()
+`.trim();
 
 export const ContextualClassesCode = `   
 <ListGroup>
@@ -86,7 +86,7 @@ export const ContextualClassesCode = `
     <ListGroup.Item variant="light">This is a Light list group item</ListGroup.Item>
     <ListGroup.Item variant="dark">This is a Dark list group item</ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const WithBadgesCode = `   
 <ListGroup>
@@ -94,7 +94,7 @@ export const WithBadgesCode = `
     <ListGroup.Item className="d-flex justify-content-between" >Dapibus ac facilisis in <Badge bg="primary">2</Badge></ListGroup.Item>
     <ListGroup.Item className="d-flex justify-content-between" >Morbi leo risus <Badge bg="primary">1</Badge></ListGroup.Item>                                
 </ListGroup>
-`.trim()
+`.trim();
 
 export const CustomContentCode = `   
 <ListGroup defaultActiveKey="#link1" >
@@ -123,7 +123,7 @@ export const CustomContentCode = `
         <small>Donec id elit non mi porta.</small>
     </ListGroup.Item>                                
 </ListGroup>
-`.trim()
+`.trim();
 
 export const WithIconCode = `   
 <ListGroup variant="flush">
@@ -148,7 +148,7 @@ export const WithIconCode = `
         Lifetime access
     </ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const GroupWithIconCode = ` 
 // Below import is required to use DotBadge custom component
@@ -190,7 +190,7 @@ export const GroupWithIconCode = `
         <h5>Aug 31, 12:21 PM</h5>
     </ListGroup.Item>
 </ListGroup>
-`.trim()
+`.trim();
 
 export const ListgroupsCode = [
   BasicListgroupCode,
@@ -206,6 +206,6 @@ export const ListgroupsCode = [
   CustomContentCode,
   WithIconCode,
   GroupWithIconCode,
-]
+];
 
-export default ListgroupsCode
+export default ListgroupsCode;

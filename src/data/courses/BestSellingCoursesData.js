@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const BestSellingCoursesData = [
   {
@@ -29,6 +29,6 @@ export const BestSellingCoursesData = [
     sales: 20,
     amount: 1145.23,
   },
-]
+];
 
-export default BestSellingCoursesData
+export default BestSellingCoursesData;

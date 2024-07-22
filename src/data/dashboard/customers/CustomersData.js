@@ -131,6 +131,6 @@ export const customersData = [
     totalOrders: 7,
     totalSpent: 2340,
   },
-]
+];
 
-export default customersData
+export default customersData;

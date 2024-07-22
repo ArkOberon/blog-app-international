@@ -1,10 +1,10 @@
 // import node module libraries
-import Link from 'next/link'
-import { Col, Row } from 'react-bootstrap'
+import Link from 'next/link';
+import { Col, Row } from 'react-bootstrap';
 
 // import MDI icons
-import Icon from '@mdi/react'
-import { mdiFacebook, mdiTwitter, mdiGithub } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiFacebook, mdiTwitter, mdiGithub } from '@mdi/js';
 
 const FooterWithSocialIcons = () => {
   return (
@@ -38,6 +38,6 @@ const FooterWithSocialIcons = () => {
         </Row>
       </Col>
     </Row>
-  )
-}
-export default FooterWithSocialIcons
+  );
+};
+export default FooterWithSocialIcons;

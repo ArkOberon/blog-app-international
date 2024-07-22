@@ -80,6 +80,6 @@ export const TestimonialsList = [
     rating: 4.5,
     color: 'dark',
   },
-]
+];
 
-export default TestimonialsList
+export default TestimonialsList;

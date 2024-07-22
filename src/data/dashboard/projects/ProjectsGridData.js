@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const ProjectsGridData = [
   {
@@ -125,6 +125,6 @@ export const ProjectsGridData = [
     budget: 5200,
     team: [10, 2, 3, 4, 5, 6, 7, 8, 9, 1, 11, 12],
   },
-]
+];
 
-export default ProjectsGridData
+export default ProjectsGridData;

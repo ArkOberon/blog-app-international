@@ -4,29 +4,29 @@ export const DefaultProgressCode = `
 <ProgressBar now={50} className="mb-2" />
 <ProgressBar now={75} className="mb-2" />
 <ProgressBar now={100} className="mb-2" />
-`.trim()
+`.trim();
 
 export const ProgressLabelsCode = `   
 <ProgressBar now={25} label={\`\${25}%\`} />
-`.trim()
+`.trim();
 
 export const ProgressHeightCode = `   
 <ProgressBar now={25} className="mb-2" style={ { height : '1px'}}  />
 <ProgressBar now={25} className="mb-2" style={ { height : '20px'}}  />
-`.trim()
+`.trim();
 
 export const ProgressBackgroundsCode = `   
 <ProgressBar variant="success" now={25} className="mb-2" />
 <ProgressBar variant="info" now={50} className="mb-2" />
 <ProgressBar variant="warning" now={75} className="mb-2" />
 <ProgressBar variant="danger" now={100} className="mb-2" />
-`.trim()
+`.trim();
 
 export const MultipleBarsCode = `   
 <ProgressBar variant="primary" now={15} key={1} className="mb-2" />
 <ProgressBar variant="success" now={30} key={2} className="mb-2" />
 <ProgressBar variant="info" now={20} key={3} className="mb-2" />
-`.trim()
+`.trim();
 
 export const StripedCode = `   
 <ProgressBar striped variant="primary" now={10} className="mb-2" />
@@ -34,11 +34,11 @@ export const StripedCode = `
 <ProgressBar striped variant="info" now={50} className="mb-2" />
 <ProgressBar striped variant="warning" now={75} className="mb-2" />
 <ProgressBar striped variant="danger" now={100} className="mb-2" />
-`.trim()
+`.trim();
 
 export const AnimatedCode = `   
 <ProgressBar animated now={75} />
-`.trim()
+`.trim();
 
 export const ProgressCode = [
   DefaultProgressCode,
@@ -48,6 +48,6 @@ export const ProgressCode = [
   MultipleBarsCode,
   StripedCode,
   AnimatedCode,
-]
+];
 
-export default ProgressCode
+export default ProgressCode;

@@ -1,6 +1,6 @@
 // import node module libraries
-import React, { Fragment } from 'react'
-import Link from 'next/link'
+import React, { Fragment } from 'react';
+import Link from 'next/link';
 import {
   Col,
   Row,
@@ -9,17 +9,17 @@ import {
   Button,
   Card,
   ListGroup,
-} from 'react-bootstrap'
-import { Search as SearchIcon } from 'react-bootstrap-icons'
+} from 'react-bootstrap';
+import { Search as SearchIcon } from 'react-bootstrap-icons';
 
 // import sub components
-import { BlogCard } from '../../components/blog'
+import { BlogCard } from '../../components/blog';
 
 // import widget/custom components
-import { HermenautasSEO } from '../../widgets'
+import { HermenautasSEO } from '../../widgets';
 
 // import data files
-import BlogArticlesList from '../../data/blog/blogArticlesData'
+import BlogArticlesList from '../../data/blog/blogArticlesData';
 
 const Investigations = () => {
   return (
@@ -223,7 +223,7 @@ const Investigations = () => {
         </Container>
       </section>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Investigations
+export default Investigations;

@@ -35,5 +35,5 @@ export const FAQsData = [
     answer:
       'Pellentesque habitant morbi tristique senectus et netus et malesuada fitur eget lacus eu, gravida blandit sem.',
   },
-]
-export default FAQsData
+];
+export default FAQsData;

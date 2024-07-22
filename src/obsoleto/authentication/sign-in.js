@@ -1,39 +1,39 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap'
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { Fragment } from 'react';
+import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 // import widget/custom components
-import { HermenautasSEO } from '../../widgets'
+import { HermenautasSEO } from '../../widgets';
 
 // import API functions
-import { loginUser } from '../../pages/api/user/loginUser'
-import { decodeParameters, generateToken } from '../../utils/ncryptSecure'
+import { loginUser } from '../../pages/api/user/loginUser';
+import { decodeParameters, generateToken } from '../../utils/ncryptSecure';
 
 const SignIn = () => {
-  const t = useTranslations('Sign-in')
+  const t = useTranslations('Sign-in');
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const response = await loginUser('ailuro', '1234')
+    const response = await loginUser('ailuro', '1234');
 
-    console.log(response)
+    console.log(response);
 
-    console.log(response.data.loginUser.session)
+    console.log(response.data.loginUser.session);
 
-    const decodeKey = decodeParameters(response.data.loginUser.session)
+    const decodeKey = decodeParameters(response.data.loginUser.session);
 
-    console.log(decodeKey)
+    console.log(decodeKey);
 
     const status = await generateToken(
       decodeKey.CLIENT_KEY,
       response.data.loginUser.user.id
-    )
+    );
 
-    console.log(status)
-  }
+    console.log(status);
+  };
 
   return (
     <Fragment>
@@ -141,15 +141,15 @@ const SignIn = () => {
         </Col>
       </Row>
     </Fragment>
-  )
-}
+  );
+};
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
       messages: (await import(`../../messages/${locale}.json`)).default,
     },
-  }
+  };
 }
 
-export default SignIn
+export default SignIn;

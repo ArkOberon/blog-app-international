@@ -159,6 +159,6 @@ export const QuizResultsData = [
     score: 74,
     attempts: 3,
   },
-]
+];
 
-export default QuizResultsData
+export default QuizResultsData;

@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 const description = `<div class="mt-6">
 <p style="margin-bottom:3px">
@@ -32,7 +32,7 @@ const description = `<div class="mt-6">
   <p class="mb-0">Cheers!</p>
   <p class="text-dark font-weight-bold mb-0">Leslie
     Alexander</p>                      </div>
-</div>`
+</div>`;
 const MailsData = [
   {
     id: 1,
@@ -562,6 +562,6 @@ const MailsData = [
       },
     ],
   },
-]
+];
 
-export default MailsData
+export default MailsData;

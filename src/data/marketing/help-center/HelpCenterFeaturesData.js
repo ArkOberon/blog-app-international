@@ -1,5 +1,5 @@
-import { v4 as uuid } from 'uuid'
-import { HelpCircle, Book, LifeBuoy } from 'react-feather'
+import { v4 as uuid } from 'uuid';
+import { HelpCircle, Book, LifeBuoy } from 'react-feather';
 
 export const HelpCenterFeaturesData = [
   {
@@ -29,6 +29,6 @@ export const HelpCenterFeaturesData = [
       'The good news is that youre not alone, and youre in the right place. Contact us for more detailed support.',
     linkname: 'Submit a Request',
   },
-]
+];
 
-export default HelpCenterFeaturesData
+export default HelpCenterFeaturesData;

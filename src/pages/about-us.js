@@ -1,9 +1,9 @@
 // import node module libraries
-import React, { Fragment } from 'react'
-import { Container } from 'react-bootstrap'
+import React, { Fragment } from 'react';
+import { Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets'
+import { HermenautasSEO } from '../widgets';
 
 // import sub components
 import {
@@ -12,7 +12,7 @@ import {
   HeroContent,
   CTAButton,
   Stat,
-} from '../components/about-us'
+} from '../components/about-us';
 
 const About = () => {
   return (
@@ -39,7 +39,7 @@ const About = () => {
       {/* Hero Call to Action */}
       <CTAButton />
     </Fragment>
-  )
-}
+  );
+};
 
-export default About
+export default About;

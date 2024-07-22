@@ -19,7 +19,7 @@ ullamcorper.</li><li>Etiam et dolor faucibus libero aliquam tempor.</li></ol></d
 pulvinar. Vivamus ut velitorci. Aenean nec pretium augue. In eu tellusquis urna vestibulum pulvinar. Etiam in elementum lectus, iddignissim mauris. 
 Quisque tempus posuerealiquet.</p></div><br/><div ><h5>Definition list</h5><p>Vestibulum nec porta tortor. Phasellus metus quam, semperut tincidunt sit amet, 
 viverra quis neque.Nullam mattis mollis massa nec pulvinar. Vivamus ut velitorci. Aenean nec pretium augue. In eu tellusquis urna vestibulum pulvinar. 
-Etiam in elementum lectus, iddignissim mauris. Quisque tempus posuerealiquet.</p></div></div>`
+Etiam in elementum lectus, iddignissim mauris. Quisque tempus posuerealiquet.</p></div></div>`;
 
 const GuidesResourcesData = [
   {
@@ -247,6 +247,6 @@ const GuidesResourcesData = [
       },
     ],
   },
-]
+];
 
-export default GuidesResourcesData
+export default GuidesResourcesData;

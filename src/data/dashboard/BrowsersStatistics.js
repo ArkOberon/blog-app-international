@@ -35,6 +35,6 @@ const BrowsersStatistics = [
     logo: '/images/browser-svg/opera.svg',
     percent: 8,
   },
-]
+];
 
-export default BrowsersStatistics
+export default BrowsersStatistics;

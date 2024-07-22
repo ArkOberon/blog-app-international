@@ -80,6 +80,6 @@ export const InstructorReviewsData = [
     rating: 4.5,
     for: 'Getting started - HTML: The Foundations Task...',
   },
-]
+];
 
-export default InstructorReviewsData
+export default InstructorReviewsData;

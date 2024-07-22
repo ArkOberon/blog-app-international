@@ -1,10 +1,10 @@
 // import node module libraries
-import Link from 'next/link'
-import { Row, Col, Image, Container, ListGroup } from 'react-bootstrap'
+import Link from 'next/link';
+import { Row, Col, Image, Container, ListGroup } from 'react-bootstrap';
 
 // import MDI icons
-import Icon from '@mdi/react'
-import { mdiFacebook, mdiTwitter, mdiInstagram } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiFacebook, mdiTwitter, mdiInstagram } from '@mdi/js';
 
 const FooterWithLinks = () => {
   return (
@@ -172,7 +172,7 @@ const FooterWithLinks = () => {
         </Row>
       </Container>
     </footer>
-  )
-}
+  );
+};
 
-export default FooterWithLinks
+export default FooterWithLinks;

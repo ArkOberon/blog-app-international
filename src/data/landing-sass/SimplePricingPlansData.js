@@ -15,7 +15,7 @@ export const free = [
       { feature: 'Support 24/7 hours', active: false },
     ],
   },
-]
+];
 
 export const pro = [
   {
@@ -34,8 +34,8 @@ export const pro = [
       { feature: 'Support 24/7 hours', active: true },
     ],
   },
-]
+];
 
-export const SimplePricingCard = [free, pro]
+export const SimplePricingCard = [free, pro];
 
-export default SimplePricingCard
+export default SimplePricingCard;

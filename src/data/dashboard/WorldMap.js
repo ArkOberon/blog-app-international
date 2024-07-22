@@ -11271,6 +11271,6 @@ const WorldMap = {
     ],
   ],
   bbox: [-180, -55.61183, 180, 83.64513],
-}
+};
 
-export default WorldMap
+export default WorldMap;

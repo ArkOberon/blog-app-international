@@ -1,20 +1,20 @@
 // import node module libraries
-import React, { Fragment } from 'react'
-import Link from 'next/link'
-import { Col, Row, Image } from 'react-bootstrap'
+import React, { Fragment } from 'react';
+import Link from 'next/link';
+import { Col, Row, Image } from 'react-bootstrap';
 
 // import MDI icons
-import Icon from '@mdi/react'
-import { mdiFacebook, mdiTwitter, mdiGithub } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiFacebook, mdiTwitter, mdiGithub } from '@mdi/js';
 
 // import BS icons
-import { Telephone, EnvelopeOpen, GeoAlt } from 'react-bootstrap-icons'
+import { Telephone, EnvelopeOpen, GeoAlt } from 'react-bootstrap-icons';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets'
+import { HermenautasSEO } from '../widgets';
 
 // import sub components
-import { ContactForm } from '../components/contact'
+import { ContactForm } from '../components/contact';
 
 const Contact = () => {
   return (
@@ -93,7 +93,7 @@ const Contact = () => {
         </Row>
       </section>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -6,96 +6,96 @@
  * Add commas to a number
  */
 export const numberWithCommas = (x, decimal = 0) => {
-  return x.toLocaleString('en-US', { minimumFractionDigits: decimal })
-}
+  return x.toLocaleString('en-US', { minimumFractionDigits: decimal });
+};
 
 /**
  * Get the file extension from given file name
  */
 export const getFileExtension = (filename) => {
-  const extension = filename.split('.').pop()
-  return extension
-}
+  const extension = filename.split('.').pop();
+  return extension;
+};
 
 /**
  * Get the random number between min and max value
  */
 export const getRandomNo = (min = 0, max = 100) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 /**
  * Get the color name/value based on given status
  */
 export const getStatusColor = (itemstatus) => {
-  let color = ''
+  let color = '';
   switch (itemstatus) {
     case 'In Progress':
-      color = 'info'
-      break
+      color = 'info';
+      break;
     case 'Pending':
-      color = 'warning'
-      break
+      color = 'warning';
+      break;
     case 'Finished':
-      color = 'success'
-      break
+      color = 'success';
+      break;
     case 'Cancel':
-      color = 'danger'
-      break
+      color = 'danger';
+      break;
     default:
-      color = 'primary'
+      color = 'primary';
   }
-  return color
-}
+  return color;
+};
 
 /**
  * Get the color name/value based on given status
  */
 export const getCategoryColor = (category) => {
-  let color = ''
+  let color = '';
   switch (category) {
     case 'Saas Services':
     case 'Entertainment':
     case 'Extra':
-      color = 'info'
-      break
+      color = 'info';
+      break;
     case 'Design':
-      color = 'warning'
-      break
+      color = 'warning';
+      break;
     case 'Marketing':
-      color = 'success'
-      break
+      color = 'success';
+      break;
     case 'Development':
-      color = 'danger'
-      break
+      color = 'danger';
+      break;
     case 'SEO':
-      color = 'primary'
-      break
+      color = 'primary';
+      break;
     default:
-      color = 'primary'
+      color = 'primary';
   }
-  return color
-}
+  return color;
+};
 
 //get chunk from array
 export const chunk = (arr, chunkSize = 1, cache = []) => {
-  const tmp = [...arr]
-  if (chunkSize <= 0) return cache
-  while (tmp.length) cache.push(tmp.splice(0, chunkSize))
-  return cache
-}
+  const tmp = [...arr];
+  if (chunkSize <= 0) return cache;
+  while (tmp.length) cache.push(tmp.splice(0, chunkSize));
+  return cache;
+};
 
 // function to get time value in hh:mm AM | PM format
 export const getTimeValue = (date) => {
-  var hours = date.getHours()
-  var minutes = date.getMinutes()
-  var ampm = hours >= 12 ? 'PM' : 'AM'
-  hours = hours % 12
-  hours = hours ? hours : 12 // the hour '0' should be '12'
-  minutes = minutes < 10 ? '0' + minutes : minutes
-  var strTime = hours + ':' + minutes + ' ' + ampm
-  return strTime
-}
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  var strTime = hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+};
 
 // function to get date value in Month Name DD, YYYY format
 export const getDateValue = (date) => {
@@ -112,24 +112,24 @@ export const getDateValue = (date) => {
     'Oct',
     'Nov',
     'Dec',
-  ]
-  const yyyy = date.getFullYear()
-  let mm = date.getMonth()
-  let dd = date.getDate()
-  var today = month[mm] + ' ' + dd + ', ' + yyyy
-  return today
-}
+  ];
+  const yyyy = date.getFullYear();
+  let mm = date.getMonth();
+  let dd = date.getDate();
+  var today = month[mm] + ' ' + dd + ', ' + yyyy;
+  return today;
+};
 
 // function to generate slug or ID with slug format
 export const getSlug = (text) => {
-  text = text.toLowerCase()
-  text = text.replace(/ /g, '-').replace(/[^\w-]+/g, '')
-  return text
-}
+  text = text.toLowerCase();
+  text = text.replace(/ /g, '-').replace(/[^\w-]+/g, '');
+  return text;
+};
 
 // function to apply currency symbol with two digits decimal values
 export const convertToCurrency = (value) =>
-  '$' + value.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  '$' + value.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 
 const utils = [
   numberWithCommas,
@@ -141,6 +141,6 @@ const utils = [
   getDateValue,
   getSlug,
   convertToCurrency,
-]
+];
 
-export default utils
+export default utils;

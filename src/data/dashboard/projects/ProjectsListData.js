@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const ProjectsListData = [
   {
@@ -90,6 +90,6 @@ export const ProjectsListData = [
     icon: 'message-square',
     team: [10, 2, 3, 4, 5, 6, 7, 8, 9, 1, 11, 12],
   },
-]
+];
 
-export default ProjectsListData
+export default ProjectsListData;

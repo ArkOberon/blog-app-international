@@ -2,7 +2,7 @@ export const BorderSpinnerCode = `
 <Spinner animation="border" role="status">
     <span className="visually-hidden">Loading...</span>
 </Spinner>
-`.trim()
+`.trim();
 
 export const SpinnersColorsCode = `   
 <Spinner animation="border" variant="primary" className="me-2" />
@@ -13,11 +13,11 @@ export const SpinnersColorsCode = `
 <Spinner animation="border" variant="info" className="me-2" />
 <Spinner animation="border" variant="light" className="me-2" />
 <Spinner animation="border" variant="dark" />
-`.trim()
+`.trim();
 
 export const GrowingSpinnerCode = `   
 <Spinner animation="grow" />
-`.trim()
+`.trim();
 
 export const GrowColorsCode = `   
 <Spinner animation="grow" variant="primary" className="me-2" />
@@ -28,13 +28,13 @@ export const GrowColorsCode = `
 <Spinner animation="grow" variant="info" className="me-2" />
 <Spinner animation="grow" variant="light" className="me-2" />
 <Spinner animation="grow" variant="dark" />
-`.trim()
+`.trim();
 
 export const AlignmentCode = `   
 <Spinner animation="border" role="status" className="m-5">
     <span className="visually-hidden">Loading...</span>
 </Spinner>
-`.trim()
+`.trim();
 
 export const PlacementCenterCode = `   
 <div className="d-flex justify-content-center">
@@ -42,7 +42,7 @@ export const PlacementCenterCode = `
         <span className="visually-hidden">Loading...</span>
     </Spinner>
 </div>
-`.trim()
+`.trim();
 
 export const PlacementLoadingCode = `   
 <div className="d-flex  align-items-center">
@@ -51,13 +51,13 @@ export const PlacementLoadingCode = `
         <span className="visually-hidden">Loading...</span>
     </Spinner>
 </div>
-`.trim()
+`.trim();
 
 export const FloatsCode = `   
 <Spinner animation="border" role="status" className="float-end">
     <span className="visually-hidden">Loading...</span>
 </Spinner>
-`.trim()
+`.trim();
 
 export const TextAlignCode = `   
 <div className="text-center">
@@ -65,17 +65,17 @@ export const TextAlignCode = `
         <span className="visually-hidden">Loading...</span>
     </Spinner>
 </div>
-`.trim()
+`.trim();
 
 export const SizeSpinnersCode = `   
 <Spinner animation="border" size="sm" className="me-2"/> 
 <Spinner animation="grow" size="sm" />
-`.trim()
+`.trim();
 
 export const StyleCSSCode = `   
 <Spinner animation="border" style={{ width: '3rem', height: '3rem' }} className="me-2" />
 <Spinner animation="grow" style={{ width: '3rem', height: '3rem' }} />
-`.trim()
+`.trim();
 
 export const ButtonsCode = `   
 <Button variant="primary" disabled className="me-2">
@@ -98,7 +98,7 @@ export const ButtonsCode = `
     />
     Loading...
 </Button>
-`.trim()
+`.trim();
 
 export const Buttons2Code = `   
 <Button variant="primary" disabled className="me-2">
@@ -121,7 +121,7 @@ export const Buttons2Code = `
     />
     Loading...
 </Button>
-`.trim()
+`.trim();
 
 export const SpinnersCode = [
   BorderSpinnerCode,
@@ -137,6 +137,6 @@ export const SpinnersCode = [
   StyleCSSCode,
   ButtonsCode,
   Buttons2Code,
-]
+];
 
-export default SpinnersCode
+export default SpinnersCode;

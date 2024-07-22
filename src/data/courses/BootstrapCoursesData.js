@@ -144,6 +144,6 @@ export const BootstrapCoursesData = [
     rating: 4.0,
     ratingby: 5300,
   },
-]
+];
 
-export default BootstrapCoursesData
+export default BootstrapCoursesData;

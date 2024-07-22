@@ -2,7 +2,7 @@
 // Style : Features with top icon
 
 // import node module libraries
-import { Fragment } from 'react'
+import { Fragment } from 'react';
 
 const FeatureTopIcon = ({ item }) => {
   return (
@@ -16,6 +16,6 @@ const FeatureTopIcon = ({ item }) => {
       {/*  text */}
       <p className="fs-4">{item.description}</p>
     </Fragment>
-  )
-}
-export default FeatureTopIcon
+  );
+};
+export default FeatureTopIcon;

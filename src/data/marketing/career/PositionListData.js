@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 const PositionListData = [
   {
@@ -91,6 +91,6 @@ const PositionListData = [
       },
     ],
   },
-]
+];
 
-export default PositionListData
+export default PositionListData;

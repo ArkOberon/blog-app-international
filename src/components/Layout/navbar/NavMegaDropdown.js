@@ -1,19 +1,19 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { NavDropdown, Badge } from 'react-bootstrap'
-import { useMediaQuery } from 'react-responsive'
-import Link from 'next/link'
+import { Fragment } from 'react';
+import { NavDropdown, Badge } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 // import hooks
-import useMounted from '../../../hooks/useMounted'
+import useMounted from '../../../hooks/useMounted';
 
 export const NavMegaDropdown = (props) => {
-  const hasMounted = useMounted()
-  const { item, onClick } = props
+  const hasMounted = useMounted();
+  const { item, onClick } = props;
 
   const isDesktop = useMediaQuery({
     query: '(min-width: 1224px)',
-  })
+  });
 
   const getTitle = (item) => {
     return item.badge ? (
@@ -28,8 +28,8 @@ export const NavMegaDropdown = (props) => {
       </Fragment>
     ) : (
       item.menuitem
-    )
-  }
+    );
+  };
 
   const NavbarDesktop = () => {
     return (
@@ -43,7 +43,7 @@ export const NavMegaDropdown = (props) => {
                 {/* Second level menu heading - its not a menu item */}
                 {submenu.header_text}
               </h4>
-            )
+            );
           } else {
             if (submenu.children === undefined) {
               return (
@@ -64,7 +64,7 @@ export const NavMegaDropdown = (props) => {
                     </Badge>
                   )}
                 </NavDropdown.Item>
-              )
+              );
             } else {
               return (
                 <NavDropdown
@@ -91,7 +91,7 @@ export const NavMegaDropdown = (props) => {
                             {submenuitem.description}
                           </p>
                         </Fragment>
-                      )
+                      );
                     } else {
                       if (submenuitem.children === undefined) {
                         return (
@@ -119,7 +119,7 @@ export const NavMegaDropdown = (props) => {
                               </NavDropdown.Item>
                             )}
                           </Fragment>
-                        )
+                        );
                       } else {
                         return (
                           <NavDropdown
@@ -143,22 +143,22 @@ export const NavMegaDropdown = (props) => {
                                     {/* Fourth Level menu item */}
                                     {submenuitem4.menuitem}
                                   </NavDropdown.Item>
-                                )
+                                );
                               }
                             )}
                           </NavDropdown>
-                        )
+                        );
                       }
                     }
                   })}
                 </NavDropdown>
-              )
+              );
             }
           }
         })}
       </NavDropdown>
-    )
-  }
+    );
+  };
 
   const NavbarMobile = () => {
     return (
@@ -172,7 +172,7 @@ export const NavMegaDropdown = (props) => {
                 {/* Second level menu heading - its not a menu item */}
                 {submenu.header_text}
               </h4>
-            )
+            );
           } else {
             if (submenu.children === undefined) {
               return (
@@ -193,7 +193,7 @@ export const NavMegaDropdown = (props) => {
                     </Badge>
                   )}
                 </NavDropdown.Item>
-              )
+              );
             } else {
               return (
                 <NavDropdown
@@ -219,7 +219,7 @@ export const NavMegaDropdown = (props) => {
                             {submenuitem.description}
                           </p>
                         </Fragment>
-                      )
+                      );
                     } else {
                       return (
                         <Fragment key={submenuitemindex}>
@@ -244,21 +244,21 @@ export const NavMegaDropdown = (props) => {
                             </NavDropdown.Item>
                           )}
                         </Fragment>
-                      )
+                      );
                     }
                   })}
                 </NavDropdown>
-              )
+              );
             }
           }
         })}
       </NavDropdown>
-    )
-  }
+    );
+  };
   return (
     <Fragment>
       {/* There is only one setting between NavbarDesktop and NavbarMobile component i.e. show property used with <NavDropdown show> tag */}
       {hasMounted && isDesktop ? <NavbarDesktop /> : <NavbarMobile />}
     </Fragment>
-  )
-}
+  );
+};

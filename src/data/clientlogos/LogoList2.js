@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 const LogoList2 = [
   {
@@ -25,6 +25,6 @@ const LogoList2 = [
     id: uuid(),
     logoimage: '/images/brand/gray-logo-netflix.svg',
   },
-]
+];
 
-export default LogoList2
+export default LogoList2;

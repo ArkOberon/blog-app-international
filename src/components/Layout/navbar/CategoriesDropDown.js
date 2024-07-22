@@ -1,20 +1,20 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Badge, Dropdown } from 'react-bootstrap'
-import { useMediaQuery } from 'react-responsive'
-import Link from 'next/link'
+import { Fragment } from 'react';
+import { Badge, Dropdown } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 // import data files
-import NavbarDefaultRoutes from '../../../routes/NavbarDefault'
+import NavbarDefaultRoutes from '../../../routes/NavbarDefault';
 
 // import hooks
-import useMounted from '../../../hooks/useMounted'
+import useMounted from '../../../hooks/useMounted';
 
 export const CategoriesDropDown = () => {
-  const hasMounted = useMounted()
+  const hasMounted = useMounted();
   const isDesktop = useMediaQuery({
     query: '(min-width: 1224px)',
-  })
+  });
 
   const getTitle = (item) => {
     return item.badge ? (
@@ -31,8 +31,8 @@ export const CategoriesDropDown = () => {
       <Link href={item.link} className="dropdown-item">
         {item.menuitem}
       </Link>
-    )
-  }
+    );
+  };
 
   const NavbarDesktop = () => {
     return (
@@ -56,16 +56,16 @@ export const CategoriesDropDown = () => {
                         {getTitle(submenu)}
                         {/* </Link> */}
                       </Dropdown.Item>
-                    )
+                    );
                   }
                 })}
               </Dropdown.Menu>
             </Dropdown>
-          )
+          );
         })}
       </Fragment>
-    )
-  }
+    );
+  };
   const NavbarMobile = () => {
     return (
       <Fragment>
@@ -86,20 +86,20 @@ export const CategoriesDropDown = () => {
                       <Dropdown.Item as="li" key={submenuindex} bsPrefix=" ">
                         {getTitle(submenu)}
                       </Dropdown.Item>
-                    )
+                    );
                   }
                 })}
               </Dropdown.Menu>
             </Dropdown>
-          )
+          );
         })}
       </Fragment>
-    )
-  }
+    );
+  };
   return (
     <Fragment>
       {/* There is only one setting between NavbarDesktop and NavbarMobile component i.e. show property used with <Dropdown.Menu show> tag */}
       {hasMounted && isDesktop ? <NavbarDesktop /> : <NavbarMobile />}
     </Fragment>
-  )
-}
+  );
+};

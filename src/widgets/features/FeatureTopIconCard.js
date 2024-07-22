@@ -2,10 +2,10 @@
 // Style : Three Columns Features Section
 
 // import node module libraries
-import { Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap';
 
 // import MDI icons
-import Icon from '@mdi/react'
+import Icon from '@mdi/react';
 
 const FeatureTopIconCard = ({ item }) => {
   return (
@@ -18,6 +18,6 @@ const FeatureTopIconCard = ({ item }) => {
         <p className="mb-0">{item.description}</p>
       </Card.Body>
     </Card>
-  )
-}
-export default FeatureTopIconCard
+  );
+};
+export default FeatureTopIconCard;

@@ -8,7 +8,7 @@ export const RegularButtonCode = `
 <Button variant="light" className="me-1">Light</Button> 
 <Button variant="dark" className="me-1">Dark</Button>
 <Button variant="link" className="me-1">Link</Button>
-`.trim()
+`.trim();
 
 export const ButtonTagsCode = `   
 <Button href="#" className="me-1">Link</Button>
@@ -16,7 +16,7 @@ export const ButtonTagsCode = `
 <Button as="input" type="button" value="Input"  className="me-1"/>
 <Button as="input" type="submit" value="Submit"  className="me-1"/>
 <Button as="input" type="reset" value="Reset"  className="me-1"/>
-`.trim()
+`.trim();
 
 export const OutlineButtonsCode = `   
 <Button variant="outline-primary" className="me-1">Primary</Button>
@@ -27,65 +27,65 @@ export const OutlineButtonsCode = `
 <Button variant="outline-info" className="me-1">Info</Button>
 <Button variant="outline-light" className="me-1">Light</Button>
 <Button variant="outline-dark" className="me-1">Dark</Button>
-`.trim()
+`.trim();
 
 export const ButtonSizesCode = `   
 <Button variant="primary" size="lg" className="me-1" >Large button</Button>
 <Button variant="primary" className="me-1">Default button</Button>                          
 <Button variant="primary" size="sm" className="me-1">Small button</Button>
 <Button variant="primary" size="xs" className="me-1">Xtra Small button</Button>
-`.trim()
+`.trim();
 
 export const BlockButtonCode = `   
 <div className="d-grid gap-2">
     <Button variant="primary">Button</Button>
     <Button variant="primary">Button</Button>                          
 </div>
-`.trim()
+`.trim();
 
 export const ResponsiveButtonCode = `   
 <div className="d-grid gap-2 d-md-block">
     <Button variant="primary" className="me-1">Button</Button>
     <Button variant="primary" className="me-1">Button</Button>                          
 </div> 
-`.trim()
+`.trim();
 
 export const BlockButtonWidthCode = `   
 <Button variant="primary">Button</Button>
 <Button variant="primary">Button</Button>  
-`.trim()
+`.trim();
 
 export const ButtonAlignmentCode = `   
 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
     <Button variant="primary">Button</Button>
     <Button variant="primary">Button</Button>                          
 </div> 
-`.trim()
+`.trim();
 
 export const ButtonIconsCode = `   
 <Button variant="primary">Your Text Goes Here <ShoppingBag size="18px" /></Button> 
-`.trim()
+`.trim();
 
 export const ButtonIcons2Code = `   
 <Button variant="primary" className="me-1">+</Button>
 <Button variant="primary"><Spinner animation="border" size="sm"  /></Button> 
-`.trim()
+`.trim();
 
 export const ButtonIconsSizeCode = `   
 <Button variant="primary" size="lg" className="me-1">+</Button>
 <Button variant="primary" className="me-1">+</Button>
 <Button variant="primary" size="sm" className="me-1">+</Button>
-`.trim()
+`.trim();
 
 export const ActiveStateCode = `   
 <Button variant="primary" active className="me-1">Primary button</Button>
 <Button variant="secondary" active  className="me-1">Button</Button>
-`.trim()
+`.trim();
 
 export const DisabledStateCode = `   
 <Button variant="primary" disabled className="me-1">Primary button</Button>
 <Button variant="secondary" disabled className="me-1">Button</Button>
-`.trim()
+`.trim();
 
 export const ToggleStatesCode = `   
 <ToggleButtonGroup type="checkbox" className="mb-2 me-1">
@@ -97,7 +97,7 @@ export const ToggleStatesCode = `
 <ToggleButtonGroup type="checkbox" className="mb-2 me-1" >
     <ToggleButton id="tbg-check-1" value={1} disabled>Disabled toggle button</ToggleButton>                                
 </ToggleButtonGroup>
-`.trim()
+`.trim();
 
 export const ButtonsCode = [
   RegularButtonCode,
@@ -114,6 +114,6 @@ export const ButtonsCode = [
   ActiveStateCode,
   DisabledStateCode,
   ToggleStatesCode,
-]
+];
 
-export default ButtonsCode
+export default ButtonsCode;

@@ -7,7 +7,7 @@ export const BasicExampleCode = `
     </Toast.Header>
     <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
 </Toast>
-`.trim()
+`.trim();
 
 export const TranslucentToastsCode = `   
 <Toast className="mb-4" >
@@ -18,7 +18,7 @@ export const TranslucentToastsCode = `
     </Toast.Header>
     <Toast.Body>See? Just like this.</Toast.Body>
 </Toast>
-`.trim()
+`.trim();
 
 export const StackingCode = `   
 <Toast className="mb-4">
@@ -37,7 +37,7 @@ export const StackingCode = `
     </Toast.Header>
     <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
 </Toast>
-`.trim()
+`.trim();
 
 export const PlacementCode1 = `   
 <div className="mb-3">
@@ -81,7 +81,7 @@ export const PlacementCode1 = `
         </Toast>
     </ToastContainer>
 </div>   
-`.trim()
+`.trim();
 
 export const PlacementCode2 = `   
 <div
@@ -117,7 +117,7 @@ export const PlacementCode2 = `
         </Toast>
     </div>
 </div>
-`.trim()
+`.trim();
 
 export const PlacementCode3 = `   
 <div aria-live="polite" aria-atomic="true" className="d-flex justify-content-center align-items-center" 
@@ -134,7 +134,7 @@ export const PlacementCode3 = `
         <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
     </Toast>
 </div>
-`.trim()
+`.trim();
 
 export const DismissibleCode = `  
 const Toasts = () => {
@@ -178,7 +178,7 @@ const Toasts = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const ToastsCode = [
   BasicExampleCode,
@@ -188,6 +188,6 @@ export const ToastsCode = [
   PlacementCode2,
   PlacementCode3,
   DismissibleCode,
-]
+];
 
-export default ToastsCode
+export default ToastsCode;

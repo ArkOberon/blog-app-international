@@ -1,7 +1,7 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Form } from 'react-bootstrap'
-import PropTypes from 'prop-types'
+import { Fragment } from 'react';
+import { Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 export const FormSelect = ({
   placeholder = '',
@@ -33,12 +33,12 @@ export const FormSelect = ({
             <option key={index} value={item.value} className="text-dark">
               {item.label}
             </option>
-          )
+          );
         })}
       </Form.Select>
     </Fragment>
-  )
-}
+  );
+};
 
 /* FormSelect.propTypes = {
 	placeholder: PropTypes.string.isRequired,
@@ -56,4 +56,4 @@ FormSelect.defaultProps = {
 	name: ''
 }; */
 
-export default FormSelect
+export default FormSelect;

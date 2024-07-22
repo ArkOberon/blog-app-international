@@ -19,7 +19,7 @@ export const starter = [
       { feature: 'Access to support forums' },
     ],
   },
-]
+];
 
 export const individual = [
   {
@@ -42,7 +42,7 @@ export const individual = [
       { feature: '12 / 5 support' },
     ],
   },
-]
+];
 
 export const team = [
   {
@@ -67,8 +67,8 @@ export const team = [
       { feature: '24 / 7 support' },
     ],
   },
-]
+];
 
-export const PricingPlansData = [starter, individual, team]
+export const PricingPlansData = [starter, individual, team];
 
-export default PricingPlansData
+export default PricingPlansData;

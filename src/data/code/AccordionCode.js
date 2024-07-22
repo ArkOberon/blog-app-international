@@ -24,7 +24,7 @@ export const AccordionBasicCode = `
     </Accordion.Body>
   </Accordion.Item>
 </Accordion>
-    `.trim()
+    `.trim();
 
 export const AccordionFlushCode = `
 <Accordion defaultActiveKey="0" flush>
@@ -53,8 +53,8 @@ export const AccordionFlushCode = `
         </Accordion.Body>
     </Accordion.Item>
 </Accordion>
-    `.trim()
+    `.trim();
 
-export const AccordionCode = [AccordionBasicCode, AccordionFlushCode]
+export const AccordionCode = [AccordionBasicCode, AccordionFlushCode];
 
-export default AccordionCode
+export default AccordionCode;

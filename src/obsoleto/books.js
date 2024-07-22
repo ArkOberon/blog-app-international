@@ -1,11 +1,11 @@
 // import node module libraries
-import { Col, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap';
 
 // import custom components
-import { PortfolioItem } from '../components/projects'
+import { PortfolioItem } from '../components/projects';
 
 // import data files
-import PortfolioData from '../data/marketing/portfolio/PortfolioData'
+import PortfolioData from '../data/marketing/portfolio/PortfolioData';
 
 const Books = () => {
   return (
@@ -28,19 +28,19 @@ const Books = () => {
           <Row className="mt-lg-6 g-6">
             <Col md={6}>
               {PortfolioData.slice(0, 3).map((item, index) => {
-                return <PortfolioItem item={item} key={index} />
+                return <PortfolioItem item={item} key={index} />;
               })}
             </Col>
             <Col md={6}>
               {PortfolioData.slice(3, 6).map((item, index) => {
-                return <PortfolioItem item={item} key={index} />
+                return <PortfolioItem item={item} key={index} />;
               })}
             </Col>
           </Row>
         </Container>
       </section>
     </main>
-  )
-}
+  );
+};
 
-export default Books
+export default Books;

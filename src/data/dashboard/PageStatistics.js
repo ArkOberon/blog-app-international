@@ -35,6 +35,6 @@ const PageStatistics = [
     exits: 9,
     views: 253,
   },
-]
+];
 
-export default PageStatistics
+export default PageStatistics;

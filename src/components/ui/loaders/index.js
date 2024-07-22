@@ -1,1 +1,1 @@
-export * from './LoaderProcess'
+export * from './LoaderProcess';

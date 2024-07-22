@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 export const SocialLinks = () => {
   return (
@@ -48,5 +48,5 @@ export const SocialLinks = () => {
         <i className="fab fa-linkedin"></i>
       </Link>
     </div>
-  )
-}
+  );
+};

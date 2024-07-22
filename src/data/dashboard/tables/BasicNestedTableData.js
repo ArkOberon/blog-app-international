@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 const BasicNestedTableData = [
   {
@@ -158,6 +158,6 @@ const BasicNestedTableData = [
       },
     ],
   },
-]
+];
 
-export default BasicNestedTableData
+export default BasicNestedTableData;

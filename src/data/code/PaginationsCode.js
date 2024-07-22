@@ -6,7 +6,7 @@ export const DefaultPaginationCode = `
     <Pagination.Item>{3}</Pagination.Item>      
     <Pagination.Next>Next</Pagination.Next>
 </Pagination>
-`.trim()
+`.trim();
 
 export const PaginationWithIconsCode = `   
 <Pagination>
@@ -18,7 +18,7 @@ export const PaginationWithIconsCode = `
     <Pagination.Next><ChevronRight size="18px"  /></Pagination.Next>
     <Pagination.Last><ChevronsRight size="18px" /></Pagination.Last> 
 </Pagination>
-`.trim()
+`.trim();
 
 export const DisabledActiveCode = `   
 <Pagination>
@@ -28,7 +28,7 @@ export const DisabledActiveCode = `
     <Pagination.Item>{3}</Pagination.Item>      
     <Pagination.Next>Next</Pagination.Next>
 </Pagination>
-`.trim()
+`.trim();
 
 export const PaginationSizingCode = `   
 <Pagination size="lg">                                
@@ -36,7 +36,7 @@ export const PaginationSizingCode = `
     <Pagination.Item >{2}</Pagination.Item>                                
     <Pagination.Item>{3}</Pagination.Item>                                      
 </Pagination>
-`.trim()
+`.trim();
 
 export const PaginationSizingSmallCode = `   
 <Pagination size="sm">                                
@@ -44,7 +44,7 @@ export const PaginationSizingSmallCode = `
     <Pagination.Item >{2}</Pagination.Item>                                
     <Pagination.Item>{3}</Pagination.Item>                                      
 </Pagination>
-`.trim()
+`.trim();
 
 export const AlignmentCode = `   
 <Pagination className="justify-content-center">
@@ -54,7 +54,7 @@ export const AlignmentCode = `
     <Pagination.Item>{3}</Pagination.Item>      
     <Pagination.Next>Next</Pagination.Next>
 </Pagination>
-`.trim()
+`.trim();
 
 export const JustifyContentEndCode = `   
 <Pagination className="justify-content-end">
@@ -64,7 +64,7 @@ export const JustifyContentEndCode = `
     <Pagination.Item>{3}</Pagination.Item>      
     <Pagination.Next>Next</Pagination.Next>
 </Pagination>
-`.trim()
+`.trim();
 
 export const PaginationsCode = [
   DefaultPaginationCode,
@@ -74,6 +74,6 @@ export const PaginationsCode = [
   PaginationSizingSmallCode,
   AlignmentCode,
   JustifyContentEndCode,
-]
+];
 
-export default PaginationsCode
+export default PaginationsCode;

@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const UpcomingTaskListData = [
   {
@@ -46,6 +46,6 @@ export const UpcomingTaskListData = [
     status: 'In Review',
     statuscolor: 'primary',
   },
-]
+];
 
-export default UpcomingTaskListData
+export default UpcomingTaskListData;

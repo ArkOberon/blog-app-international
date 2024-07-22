@@ -119,6 +119,6 @@ export const WithdrawHistoryData = [
     date: 'June 4, 2020',
     method: 'Amex',
   },
-]
+];
 
-export default WithdrawHistoryData
+export default WithdrawHistoryData;

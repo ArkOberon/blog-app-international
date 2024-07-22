@@ -29,7 +29,7 @@ export const BasicTableCode = `
         </tr>
     </tbody>
 </Table>
-`.trim()
+`.trim();
 
 export const DarkTableCode = `   
 <Table variant="dark" className="text-nowrap">
@@ -62,7 +62,7 @@ export const DarkTableCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const TableHeadCode = `   
 <Table className="text-nowrap">
@@ -125,7 +125,7 @@ export const TableHeadCode = `
         </tr>
     </tbody>
 </Table>
-`.trim()
+`.trim();
 
 export const StripedTableCode = `   
 <Table striped className="text-nowrap">
@@ -158,7 +158,7 @@ export const StripedTableCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const TableVariantCode = `   
 <Table variant="success" className="text-nowrap">
@@ -191,7 +191,7 @@ export const TableVariantCode = `
         </tr>
     </tbody>
 </Table>  
-`.trim()
+`.trim();
 
 export const BorderedTableCode = `   
 <Table bordered className="text-nowrap">
@@ -223,7 +223,7 @@ export const BorderedTableCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const BorderlessTableCode = `   
 <Table borderless className="text-nowrap">
@@ -255,7 +255,7 @@ export const BorderlessTableCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const HoverableRowsCode = `   
 <Table hover className="text-nowrap">
@@ -287,7 +287,7 @@ export const HoverableRowsCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const SmallTableCode = `   
 <Table size="sm" className="text-nowrap">
@@ -319,7 +319,7 @@ export const SmallTableCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const ContextualClassesCode = `   
 <Table className="text-nowrap">
@@ -383,7 +383,7 @@ export const ContextualClassesCode = `
         </tr>
     </tbody>
 </Table> 
-`.trim()
+`.trim();
 
 export const ResponsiveTableCode = `   
 <Table responsive className="text-nowrap">
@@ -440,7 +440,7 @@ export const ResponsiveTableCode = `
         </tr>
     </tbody>
 </Table>  
-`.trim()
+`.trim();
 
 export const TablesCode = [
   BasicTableCode,
@@ -454,6 +454,6 @@ export const TablesCode = [
   SmallTableCode,
   ContextualClassesCode,
   ResponsiveTableCode,
-]
+];
 
-export default TablesCode
+export default TablesCode;

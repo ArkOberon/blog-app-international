@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const RecentActivityData = [
   {
@@ -29,6 +29,6 @@ export const RecentActivityData = [
     activitybrief: `Jitu send email to update design for client Geeks UI.`,
     icon: 'mail',
   },
-]
+];
 
-export default RecentActivityData
+export default RecentActivityData;

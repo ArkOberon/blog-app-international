@@ -292,6 +292,6 @@ export const ProductsData = [
       },
     ],
   },
-]
+];
 
-export default ProductsData
+export default ProductsData;

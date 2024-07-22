@@ -1,65 +1,65 @@
 // import node module libraries
-import { Fragment, useEffect, useState } from 'react'
-import { Col, Row, Card, Form, Button, Image, Toast } from 'react-bootstrap'
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/router'
-import parse from 'html-react-parser'
-import PasswordStrengthBar from 'react-password-strength-bar'
+import { Fragment, useEffect, useState } from 'react';
+import { Col, Row, Card, Form, Button, Image, Toast } from 'react-bootstrap';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
+import parse from 'html-react-parser';
+import PasswordStrengthBar from 'react-password-strength-bar';
 
 // import widget/custom components
-import { HermenautasSEO } from '../../widgets'
-import { LoaderProcess } from '../../components/ui/loaders'
-import { SocialLinks } from '../../components/ui/SocialLinks'
+import { HermenautasSEO } from '../../widgets';
+import { LoaderProcess } from '../../components/ui/loaders';
+import { SocialLinks } from '../../components/ui/SocialLinks';
 
 // import API functions
-import { registerUser } from '../../pages/api/user/registerUser'
+import { registerUser } from '../../pages/api/user/registerUser';
 
 const SignUp = () => {
-  const t = useTranslations('Sign-up')
-  const [submit, setSubmit] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [errors, setErrors] = useState(false)
-  const [passwordStrength, setPasswordStrength] = useState('')
-  const router = useRouter()
+  const t = useTranslations('Sign-up');
+  const [submit, setSubmit] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errors, setErrors] = useState(false);
+  const [passwordStrength, setPasswordStrength] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     if (submit) {
-      router.push(`${t('redirect_link_slug')}`)
+      router.push(`${t('redirect_link_slug')}`);
     }
-  }, [submit])
+  }, [submit]);
 
   const handleChangeInput = (e) => {
-    const { value } = e.target
+    const { value } = e.target;
 
-    setPasswordStrength(value)
-  }
+    setPasswordStrength(value);
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    setIsLoading(true)
+    setIsLoading(true);
 
     const response = await registerUser(
       e.target.username.value,
       e.target.email.value,
       e.target.password.value
-    )
+    );
 
     if (response.errors) {
-      setErrors(response.errors)
-      return
+      setErrors(response.errors);
+      return;
     } else {
-      setIsLoading(false)
-      setSubmit(true)
+      setIsLoading(false);
+      setSubmit(true);
     }
-  }
+  };
 
   const decodeHtml = (html) => {
-    const textArea = document.createElement('textarea')
-    textArea.innerHTML = html
-    return textArea.value
-  }
+    const textArea = document.createElement('textarea');
+    textArea.innerHTML = html;
+    return textArea.value;
+  };
 
   return (
     <Fragment>
@@ -170,7 +170,7 @@ const SignUp = () => {
         </Col>
       </Row>
     </Fragment>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

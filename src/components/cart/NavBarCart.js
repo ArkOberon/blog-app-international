@@ -1,22 +1,22 @@
 // import node module libraries
-import { useState } from 'react'
-import { ListGroup, Dropdown, Button } from 'react-bootstrap'
-import { useMediaQuery } from 'react-responsive'
-import items from '../../data/cart/products-cart.json'
-import { CartOverviewItem } from './CartOverviewItem'
+import { useState } from 'react';
+import { ListGroup, Dropdown, Button } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+import items from '../../data/cart/products-cart.json';
+import { CartOverviewItem } from './CartOverviewItem';
 
 // import hooks
-import useMounted from '../../hooks/useMounted'
+import useMounted from '../../hooks/useMounted';
 
 export const NavBarCart = () => {
-  const hasMounted = useMounted()
-  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' })
+  const hasMounted = useMounted();
+  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen)
-  }
+    setDropdownOpen(!dropdownOpen);
+  };
 
   return (
     <div className="mr-4">
@@ -87,5 +87,5 @@ export const NavBarCart = () => {
         </Dropdown>
       </ListGroup>
     </div>
-  )
-}
+  );
+};

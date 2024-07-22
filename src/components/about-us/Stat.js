@@ -1,13 +1,13 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Fragment } from 'react';
+import { Col, Row } from 'react-bootstrap';
 
 // import sub components
-import SectionHeading from './SectionHeading'
+import SectionHeading from './SectionHeading';
 
 export const Stat = () => {
-  const title = 'Our core values'
-  const description = `Geeks is the leading global marketplace for teaching and learning, connecting millions of students to the skills they need to succeed.`
+  const title = 'Our core values';
+  const description = `Geeks is the leading global marketplace for teaching and learning, connecting millions of students to the skills they need to succeed.`;
 
   const counters = [
     {
@@ -30,7 +30,7 @@ export const Stat = () => {
       title: 'Course enrollments',
       value: '380M',
     },
-  ]
+  ];
   return (
     <Fragment>
       <SectionHeading title={title} description={description} />
@@ -44,9 +44,9 @@ export const Stat = () => {
                 <p className="text-uppercase text-muted">{item.title}</p>
               </div>
             </Col>
-          )
+          );
         })}
       </Row>
     </Fragment>
-  )
-}
+  );
+};

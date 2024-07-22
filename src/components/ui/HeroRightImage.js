@@ -1,17 +1,17 @@
 // import node module libraries
-import { Col, Row, Image } from 'react-bootstrap'
+import { Col, Row, Image } from 'react-bootstrap';
 
 // import MDI icons
-import Icon from '@mdi/react'
-import { mdiStar, mdiLifebuoy, mdiFileDocument } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiStar, mdiLifebuoy, mdiFileDocument } from '@mdi/js';
 
 // import widget/custom components
-import { SectionHeadingLeftBold } from '../../widgets'
+import { SectionHeadingLeftBold } from '../../widgets';
 
 export const HeroRightImage = () => {
-  const title = 'The most powerful design for web projects'
-  const subtitle = 'Bullet point Features'
-  const description = `Donec eget enim volutpat punar turpis at elementum neque.`
+  const title = 'The most powerful design for web projects';
+  const subtitle = 'Bullet point Features';
+  const description = `Donec eget enim volutpat punar turpis at elementum neque.`;
 
   const features = [
     {
@@ -35,7 +35,7 @@ export const HeroRightImage = () => {
       description:
         'Nullam sagittis metus ut lorem efficitur in bibendum augue pharetra.',
     },
-  ]
+  ];
   return (
     <Row className="align-items-center">
       <Col lg={6} md={12} xs={12}>
@@ -66,7 +66,7 @@ export const HeroRightImage = () => {
                     <p className="mb-0 fs-4">{item.description}</p>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -82,5 +82,5 @@ export const HeroRightImage = () => {
         </div>
       </Col>
     </Row>
-  )
-}
+  );
+};

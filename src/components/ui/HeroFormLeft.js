@@ -1,5 +1,5 @@
 // import node module libraries
-import { Row, Col, Image, Form, Button, Container } from 'react-bootstrap'
+import { Row, Col, Image, Form, Button, Container } from 'react-bootstrap';
 
 export const HeroFormLeft = () => {
   return (
@@ -49,5 +49,5 @@ export const HeroFormLeft = () => {
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

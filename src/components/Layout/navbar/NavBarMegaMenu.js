@@ -1,5 +1,5 @@
 // import node module libraries
-import { Fragment, useState } from 'react'
+import { Fragment, useState } from 'react';
 import {
   Image,
   Navbar,
@@ -7,37 +7,37 @@ import {
   Container,
   ListGroup,
   Dropdown,
-} from 'react-bootstrap'
-import Link from 'next/link'
-import { useMediaQuery } from 'react-responsive'
-import { useRouter } from 'next/router'
-import { useTranslations } from 'next-intl'
+} from 'react-bootstrap';
+import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
+import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 
 // import sub components
-import { NavMegaDropdown } from './'
-import { DarkLightMode } from '../../ui/darklight'
-import { Languages } from '../../ui'
-import { NavBarCart } from '../../cart'
+import { NavMegaDropdown } from './';
+import { DarkLightMode } from '../../ui/darklight';
+import { Languages } from '../../ui';
+import { NavBarCart } from '../../cart';
 
 // import data files
-import NavbarDefault from '../../../routes/NavbarDefault'
+import NavbarDefault from '../../../routes/NavbarDefault';
 
 // import hooks
-import useMounted from '../../../hooks/useMounted'
+import useMounted from '../../../hooks/useMounted';
 
 export const NavbarMegaMenu = ({
   headerstyle = 'navbar-default',
   login = false,
 }) => {
-  const t = useTranslations('Navbar')
-  const { locale } = useRouter()
-  const [expandedMenu, setExpandedMenu] = useState(false)
-  const hasMounted = useMounted()
-  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' })
+  const t = useTranslations('Navbar');
+  const { locale } = useRouter();
+  const [expandedMenu, setExpandedMenu] = useState(false);
+  const hasMounted = useMounted();
+  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const isLoged = true
+  const isLoged = true;
 
-  const arrayMenu = NavbarDefault()
+  const arrayMenu = NavbarDefault();
 
   return (
     <Fragment>
@@ -72,7 +72,7 @@ export const NavbarMegaMenu = ({
                     >
                       {item.menuitem}
                     </Nav.Link>
-                  )
+                  );
                 } else {
                   return (
                     <>
@@ -82,7 +82,7 @@ export const NavbarMegaMenu = ({
                         onClick={(value) => setExpandedMenu(value)}
                       />
                     </>
-                  )
+                  );
                 }
               })}
             </Nav>
@@ -173,5 +173,5 @@ export const NavbarMegaMenu = ({
         </Container>
       </Navbar>
     </Fragment>
-  )
-}
+  );
+};

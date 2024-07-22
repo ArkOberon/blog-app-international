@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const AppIntegrationData = [
   {
@@ -37,6 +37,6 @@ export const AppIntegrationData = [
     appname: 'HubSpot',
     content: 'Full platform of marketing,sales, other service.',
   },
-]
+];
 
-export default AppIntegrationData
+export default AppIntegrationData;

@@ -449,5 +449,5 @@ export const OrdersData = [
     order_status: 'Return',
     total: 998,
   },
-]
-export default OrdersData
+];
+export default OrdersData;

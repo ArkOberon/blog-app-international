@@ -299,8 +299,8 @@ export const courses = [
     status: 1,
     action: 1,
   },
-]
+];
 
-export const CoursesCategoryData = [courses]
+export const CoursesCategoryData = [courses];
 
-export default CoursesCategoryData
+export default CoursesCategoryData;

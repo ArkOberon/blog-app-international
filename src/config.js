@@ -1,5 +1,5 @@
-export const defaultLocale = 'es'
-export const locales = ['es', 'en']
+export const defaultLocale = 'es';
+export const locales = ['es', 'en'];
 
 export const pathnames = {
   '/': '/',
@@ -47,11 +47,11 @@ export const pathnames = {
     es: '/autenticacion/registrarse',
     en: '/authentication/sign-up',
   },
-}
+};
 
-export const localePrefix = 'never'
+export const localePrefix = 'never';
 
-export const port = process.env.NEXT_PUBLIC_PORT || 3000
+export const port = process.env.NEXT_PUBLIC_PORT || 3000;
 export const host = process.env.NEXT_PUBLIC_HOST_URL
   ? `https://${process.env.NEXT_PUBLIC_HOST_URL}`
-  : `http://localhost:${port}`
+  : `http://localhost:${port}`;

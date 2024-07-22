@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const CustomersTestimonialsData = [
   {
@@ -15,5 +15,5 @@ export const CustomersTestimonialsData = [
     name: 'Bernhar',
     designation: 'Geeks UI Customer',
   },
-]
-export default CustomersTestimonialsData
+];
+export default CustomersTestimonialsData;

@@ -347,6 +347,6 @@ export const MessagesData = [
       },
     ],
   },
-]
+];
 
-export default MessagesData
+export default MessagesData;

@@ -10,7 +10,7 @@ export const SlidesOnlyCode = `
         <Image className="d-block w-100" src="https://fakeimg.pl/1140x350/?text=Image%20Placeholder" alt="Third slide"/>                                    
     </Carousel.Item>
 </Carousel>
-`.trim()
+`.trim();
 
 export const WithControlCode = `   
 <Carousel indicators={false}>
@@ -24,7 +24,7 @@ export const WithControlCode = `
         <Image className="d-block w-100" src="https://fakeimg.pl/1140x350/?text=Image%20Placeholder" alt="Third slide"/>                                    
     </Carousel.Item>                               
 </Carousel>
-`.trim()
+`.trim();
 
 export const WithIndicatorsCode = `   
 <Carousel indicators>
@@ -38,7 +38,7 @@ export const WithIndicatorsCode = `
         <Image className="d-block w-100" src="https://fakeimg.pl/1140x350/?text=Image%20Placeholder" alt="Third slide"/>                                    
     </Carousel.Item>  
 </Carousel>
-`.trim()
+`.trim();
 
 export const WithCaptionCode = `   
 function ControlledCarousel() {
@@ -77,7 +77,7 @@ function ControlledCarousel() {
     
 }
 render(<ControlledCarousel />);
-`.trim()
+`.trim();
 
 export const CrossfadeCode = `   
 <Carousel fade indicators={false}>
@@ -91,7 +91,7 @@ export const CrossfadeCode = `
         <Image className="d-block w-100" src="https://fakeimg.pl/1140x350/?text=Image%20Placeholder" alt="Third slide"/>                                    
     </Carousel.Item>
 </Carousel>
-`.trim()
+`.trim();
 
 export const IndividualCode = `   
 <Carousel indicators={false}>
@@ -105,7 +105,7 @@ export const IndividualCode = `
         <Image className="d-block w-100" src="https://fakeimg.pl/1140x350/?text=Image%20Placeholder" alt="Third slide" />                                    
     </Carousel.Item>
 </Carousel>
-`.trim()
+`.trim();
 
 export const DarkVariantCode = `   
 <Carousel variant="dark">
@@ -131,7 +131,7 @@ export const DarkVariantCode = `
         </Carousel.Caption>
     </Carousel.Item>
 </Carousel>
-`.trim()
+`.trim();
 
 export const CarouselsCode = [
   SlidesOnlyCode,
@@ -141,6 +141,6 @@ export const CarouselsCode = [
   CrossfadeCode,
   IndividualCode,
   DarkVariantCode,
-]
+];
 
-export default CarouselsCode
+export default CarouselsCode;

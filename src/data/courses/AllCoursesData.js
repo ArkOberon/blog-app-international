@@ -199,7 +199,7 @@ export const allcourses = [
     status: 'Live',
     action: 1,
   },
-]
+];
 
 export const allapprovedcourses = [
   {
@@ -322,7 +322,7 @@ export const allapprovedcourses = [
     status: 'Live',
     action: 1,
   },
-]
+];
 
 export const allpendingcourses = [
   {
@@ -435,11 +435,11 @@ export const allpendingcourses = [
     status: 'Pending',
     action: 1,
   },
-]
+];
 export const AllCoursesData = [
   allcourses,
   allapprovedcourses,
   allpendingcourses,
-]
+];
 
-export default AllCoursesData
+export default AllCoursesData;

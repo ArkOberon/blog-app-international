@@ -1,40 +1,40 @@
 // import node module libraries
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
-import { ListGroup, Dropdown } from 'react-bootstrap'
-import { useMediaQuery } from 'react-responsive'
-import Cookies from 'js-cookie'
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { ListGroup, Dropdown } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+import Cookies from 'js-cookie';
 
 // import hooks
-import useMounted from '../../hooks/useMounted'
+import useMounted from '../../hooks/useMounted';
 
 export const Languages = () => {
-  const router = useRouter()
-  const { pathname, asPath, query } = router
-  const browserLanguage = router.locale
+  const router = useRouter();
+  const { pathname, asPath, query } = router;
+  const browserLanguage = router.locale;
 
-  const [selectLang, setSelectLang] = useState(browserLanguage)
-  const hasMounted = useMounted()
-  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' })
+  const [selectLang, setSelectLang] = useState(browserLanguage);
+  const hasMounted = useMounted();
+  const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
   const regionName = new Intl.DisplayNames([`${selectLang}`], {
     type: 'language',
-  })
+  });
 
   const languages = [
     { label: 'Español', value: 'es' },
     { label: 'English', value: 'en' },
-  ]
+  ];
 
   const handleCookie = (newLang) => {
-    Cookies.set('NEXT_LOCALE', newLang, { expires: 365 })
-    setSelectLang(newLang)
+    Cookies.set('NEXT_LOCALE', newLang, { expires: 365 });
+    setSelectLang(newLang);
 
     // Construye la nueva URL con el prefijo del idioma seleccionado
-    const newPath = `/${newLang}${asPath}`
+    const newPath = `/${newLang}${asPath}`;
 
     // Reemplaza la ruta actual con la nueva, incluyendo el prefijo del idioma
-    router.push({ pathname, query }, newPath, { locale: newLang })
-  }
+    router.push({ pathname, query }, newPath, { locale: newLang });
+  };
 
   return (
     <div className="mr-4">
@@ -86,5 +86,5 @@ export const Languages = () => {
         </Dropdown>
       </ListGroup>
     </div>
-  )
-}
+  );
+};

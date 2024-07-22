@@ -3,8 +3,8 @@ export const BasicRangeCode = `
     <Form.Label>Range</Form.Label>
     <Form.Range />
 </Form>
-`.trim()
+`.trim();
 
-export const RangeControlCode = [BasicRangeCode]
+export const RangeControlCode = [BasicRangeCode];
 
-export default RangeControlCode
+export default RangeControlCode;

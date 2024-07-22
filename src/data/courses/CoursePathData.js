@@ -152,6 +152,6 @@ export const CoursePathData = [
     courses: 5,
     hours: 16,
   },
-]
+];
 
-export default CoursePathData
+export default CoursePathData;

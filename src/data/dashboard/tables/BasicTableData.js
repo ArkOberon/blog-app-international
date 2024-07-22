@@ -153,6 +153,6 @@ const BasicTableData = [
       },
     ],
   },
-]
+];
 
-export default BasicTableData
+export default BasicTableData;

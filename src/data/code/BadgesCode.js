@@ -5,13 +5,13 @@ export const SimpleBadgeCode = `
 <h4> Example heading <Badge bg="secondary">New</Badge></h4>
 <h5> Example heading <Badge bg="secondary">New</Badge> </h5>
 <h6> Example heading <Badge bg="secondary">New</Badge></h6>
-`.trim()
+`.trim();
 
 export const BadgeWithButtonCode = `   
 <Button variant="primary">
     Notifications <Badge bg="light" className="text-primary">4</Badge>                                        
 </Button>
-`.trim()
+`.trim();
 
 export const PillBadgesCode = `   
 <Badge pill bg="primary"  className="me-1">primary</Badge>
@@ -22,7 +22,7 @@ export const PillBadgesCode = `
 <Badge pill bg="info"  className="me-1">info</Badge>
 <Badge pill bg="light" text="dark" className="me-1">light</Badge>
 <Badge pill bg="dark"  className="me-1">dark</Badge>
-`.trim()
+`.trim();
 
 export const DotBadgeCode = `   
 <DotBadge bg="primary" >Primary</DotBadge>                                             
@@ -33,13 +33,13 @@ export const DotBadgeCode = `
 <DotBadge bg="info" >Info</DotBadge>    
 <DotBadge bg="light" >Light</DotBadge>    
 <DotBadge bg="dark" >Dark</DotBadge>  
-`.trim()
+`.trim();
 
 export const PaginationsCode = [
   SimpleBadgeCode,
   BadgeWithButtonCode,
   PillBadgesCode,
   DotBadgeCode,
-]
+];
 
-export default PaginationsCode
+export default PaginationsCode;

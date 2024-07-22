@@ -1,10 +1,10 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Col, Row, Image } from 'react-bootstrap'
-import Link from 'next/link'
+import { Fragment } from 'react';
+import { Col, Row, Image } from 'react-bootstrap';
+import Link from 'next/link';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets'
+import { HermenautasSEO } from '../widgets';
 
 const Error404 = () => {
   return (
@@ -49,7 +49,7 @@ const Error404 = () => {
         </Col>
       </Row>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Error404
+export default Error404;

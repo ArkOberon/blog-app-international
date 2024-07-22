@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 const jobDetails = `
 <div class="mt-6">
@@ -55,7 +55,7 @@ const jobDetails = `
         <li> Work From Home</li>
     </ul>
 </div>
-`
+`;
 export const JobsListingData = [
   {
     id: uuid(),
@@ -217,6 +217,6 @@ export const JobsListingData = [
     jobApplicants: 2316,
     jobDetails: jobDetails,
   },
-]
+];
 
-export default JobsListingData
+export default JobsListingData;

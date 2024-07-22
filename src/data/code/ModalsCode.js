@@ -13,7 +13,7 @@ export const SampleExamplesCode = `
     </Modal.Footer>
   </Modal.Dialog>
 </div>
-`.trim()
+`.trim();
 
 export const LiveDemoCode = ` 
 const Modals = () => {   
@@ -41,7 +41,7 @@ const Modals = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const LongContentCode = ` 
 const Modals = () => {   
@@ -106,7 +106,7 @@ const Modals = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const ScrollableModalCode = `   
 const Modals = () => {      
@@ -171,7 +171,7 @@ const Modals = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const VerticallyCenteredCode = `   
 const Modals = () => {      
@@ -210,7 +210,7 @@ const Modals = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const TooltipsPopoversCode = `  
 const Modals = () => {          
@@ -267,7 +267,7 @@ const Modals = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const OptionalSizesCode = ` 
 const Modals = () => {          
@@ -308,7 +308,7 @@ const Modals = () => {
         </Fragment>
     )
 }
-`.trim()
+`.trim();
 
 export const ModalsCode = [
   SampleExamplesCode,
@@ -318,6 +318,6 @@ export const ModalsCode = [
   VerticallyCenteredCode,
   TooltipsPopoversCode,
   OptionalSizesCode,
-]
+];
 
-export default ModalsCode
+export default ModalsCode;

@@ -79,6 +79,6 @@ export const SkillCoursesData = [
     rating: 4.7,
     votes: 75,
   },
-]
+];
 
-export default SkillCoursesData
+export default SkillCoursesData;

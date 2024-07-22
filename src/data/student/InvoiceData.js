@@ -55,6 +55,6 @@ const InvoiceData = [
     status: 'Complete',
     pdf: '/images/pdf/invoiceFile.pdf',
   },
-]
+];
 
-export default InvoiceData
+export default InvoiceData;

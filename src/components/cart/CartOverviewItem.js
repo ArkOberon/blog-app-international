@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 export const CartOverviewItem = ({ toggleDropdown, item }) => {
   return (
@@ -31,5 +31,5 @@ export const CartOverviewItem = ({ toggleDropdown, item }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

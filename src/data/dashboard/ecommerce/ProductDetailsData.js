@@ -32,7 +32,7 @@ export const ProductDetails = [
         <p>We'll dive into GraphQL, the fundamentals of GraphQL. We're only gonna use the pieces of it that we need to build in Gatsby. We're not gonna be doing a deep dive into what GraphQL is or the language specifics. We're also gonna get into MDX. MDX is a way
             to write React components in your markdown.</p>`,
   },
-]
+];
 
 export const Reviews = [
   {
@@ -57,8 +57,8 @@ export const Reviews = [
     rating: 4.5,
     review: `<p>Excellent shoes with original logo , Thanks Geeks UI , Buy these shoes without any tension.</p>`,
   },
-]
+];
 
-export const ProductDetailsData = [ProductDetails, Reviews]
+export const ProductDetailsData = [ProductDetails, Reviews];
 
-export default ProductDetailsData
+export default ProductDetailsData;

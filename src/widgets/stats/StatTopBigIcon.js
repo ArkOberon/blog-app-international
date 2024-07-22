@@ -1,5 +1,5 @@
 export const StatTopBigIcon = (props) => {
-  const { value, title, iconName, colorVariant } = props
+  const { value, title, iconName, colorVariant } = props;
 
   return (
     <div className="py-7 text-center">
@@ -11,7 +11,7 @@ export const StatTopBigIcon = (props) => {
         <span>{title}</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default StatTopBigIcon
+export default StatTopBigIcon;

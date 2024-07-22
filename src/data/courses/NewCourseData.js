@@ -15,6 +15,6 @@ export const NewCourseData = [
     id: 4,
     title: 'Our Sample Website',
   },
-]
+];
 
-export default NewCourseData
+export default NewCourseData;

@@ -41,6 +41,6 @@ export const PortfolioData = [
     title: 'Jar Mockup',
     link: '/marketing/portfolio/single/',
   },
-]
+];
 
-export default PortfolioData
+export default PortfolioData;

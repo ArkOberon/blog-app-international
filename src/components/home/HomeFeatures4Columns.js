@@ -2,16 +2,16 @@
 // Style : Four Columns Features Section
 
 // import node module libraries
-import { Col, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { SectionHeadingCenter, FeatureTopIcon } from '../../widgets'
+import { SectionHeadingCenter, FeatureTopIcon } from '../../widgets';
 
 export const HomeFeatures4Columns = () => {
-  const title = 'Build better skills,faster'
-  const subtitle = 'Why Learn with Geeks'
+  const title = 'Build better skills,faster';
+  const subtitle = 'Why Learn with Geeks';
   const description = `Explore new skills, deepen existing passions, and get lost in creativity. What you find
-    just might surprise and inspire you.`
+    just might surprise and inspire you.`;
 
   const features = [
     {
@@ -38,7 +38,7 @@ export const HomeFeatures4Columns = () => {
       title: 'Upskill your organization',
       description: `Etiam dignissim est tristique ex porta, bibendum commodo.`,
     },
-  ]
+  ];
 
   return (
     <section className="py-8 py-lg-18 bg-white">
@@ -54,10 +54,10 @@ export const HomeFeatures4Columns = () => {
               <Col lg={3} md={6} sm={12} key={index}>
                 <FeatureTopIcon item={item} />
               </Col>
-            )
+            );
           })}
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

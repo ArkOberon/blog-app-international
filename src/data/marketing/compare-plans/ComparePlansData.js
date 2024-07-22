@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const ComparePlansData = [
   {
@@ -61,6 +61,6 @@ export const ComparePlansData = [
       { feature: '24 / 7 support' },
     ],
   },
-]
+];
 
-export default ComparePlansData
+export default ComparePlansData;

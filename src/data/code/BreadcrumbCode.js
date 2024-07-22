@@ -11,6 +11,6 @@ export const BasicBreadcrumb = `
     <Breadcrumb.Item href="#">Library</Breadcrumb.Item>
     <Breadcrumb.Item active>Data</Breadcrumb.Item>
 </Breadcrumb>
-    `.trim()
+    `.trim();
 
-export default BasicBreadcrumb
+export default BasicBreadcrumb;

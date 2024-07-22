@@ -119,6 +119,6 @@ export const ProjectTeamMembersData = [
     image: '/images/avatar/avatar-17.jpg',
     topic: 'Web Development',
   },
-]
+];
 
-export default ProjectTeamMembersData
+export default ProjectTeamMembersData;

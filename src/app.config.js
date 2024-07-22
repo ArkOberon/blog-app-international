@@ -6,5 +6,5 @@ export const settings = {
   theme: {
     skin: 'light', // possible values are light, dark
   },
-}
-export default { settings }
+};
+export default { settings };

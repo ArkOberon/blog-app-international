@@ -179,6 +179,6 @@ export const allcourses = [
     instructor_image: '/images/avatar/avatar-10.jpg',
     enrolled: 22500,
   },
-]
+];
 
-export const CategorySingleData = [allcourses]
+export const CategorySingleData = [allcourses];

@@ -1,6 +1,6 @@
 // import node module libraries
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const AuthLayout = (props) => {
   return (
@@ -9,6 +9,6 @@ const AuthLayout = (props) => {
         <Container className="d-flex flex-column">{props.children}</Container>
       </section>
     </main>
-  )
-}
-export default AuthLayout
+  );
+};
+export default AuthLayout;

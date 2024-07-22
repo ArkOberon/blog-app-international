@@ -449,6 +449,6 @@ const EmployeeData = [
     start_date: '3/6/2022',
     salary: 283367,
   },
-]
+];
 
-export default EmployeeData
+export default EmployeeData;

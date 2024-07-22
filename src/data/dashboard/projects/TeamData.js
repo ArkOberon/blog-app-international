@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const TeamData = [
   {
@@ -121,6 +121,6 @@ export const TeamData = [
     image: '/images/avatar/avatar-17.jpg',
     topic: 'Web Development',
   },
-]
+];
 
-export default TeamData
+export default TeamData;

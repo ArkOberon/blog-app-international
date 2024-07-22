@@ -71,6 +71,6 @@ const OurTeamData = [
     designation: 'Developer',
     image: '/images/avatar/avatar-12.jpg',
   },
-]
+];
 
-export default OurTeamData
+export default OurTeamData;

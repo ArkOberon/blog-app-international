@@ -151,6 +151,6 @@ export const MyCoursesData = [
     rating: 4.5,
     votes: 3250,
   },
-]
+];
 
-export default MyCoursesData
+export default MyCoursesData;

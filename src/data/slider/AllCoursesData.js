@@ -503,6 +503,6 @@ export const AllCoursesData = [
     trending: false,
     progress: 95,
   },
-]
+];
 
-export default AllCoursesData
+export default AllCoursesData;

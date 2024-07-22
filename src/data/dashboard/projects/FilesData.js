@@ -269,6 +269,6 @@ export const filesdata = [
     uploadedby: 'Kristin Watson',
     action: 1,
   },
-]
+];
 
-export const FilesData = [filesdata]
+export const FilesData = [filesdata];

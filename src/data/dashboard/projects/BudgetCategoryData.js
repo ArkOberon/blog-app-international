@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const BudgetCategoryData = [
   {
@@ -44,6 +44,6 @@ export const BudgetCategoryData = [
     percentage: 3.5,
     total: 2000,
   },
-]
+];
 
-export default BudgetCategoryData
+export default BudgetCategoryData;

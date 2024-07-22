@@ -1,30 +1,30 @@
 // import node module libraries
-import { Col, Row, Image, ListGroup } from 'react-bootstrap'
+import { Col, Row, Image, ListGroup } from 'react-bootstrap';
 
 // import MDI icons
-import Icon from '@mdi/react'
-import { mdiCheckCircle } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiCheckCircle } from '@mdi/js';
 
 // import widget/custom components
-import { SectionHeadingLeftBold } from '../../widgets'
+import { SectionHeadingLeftBold } from '../../widgets';
 
 export const HeroLeftImage = () => {
-  const title = 'Build the sites you want with Geeks UI you love'
-  const subtitle = 'Build fast, launch faster'
+  const title = 'Build the sites you want with Geeks UI you love';
+  const subtitle = 'Build fast, launch faster';
   const description =
-    'Mauris interdum leo vel eleifend fringilla nibh elit interdc nunc elementum nisi.'
+    'Mauris interdum leo vel eleifend fringilla nibh elit interdc nunc elementum nisi.';
 
   const featurescol1 = [
     { content: 'Earnings' },
     { content: 'Conversion Rates' },
     { content: 'Top security' },
-  ]
+  ];
 
   const featurescol2 = [
     { content: 'High converting' },
     { content: 'Easy to use' },
     { content: '200+ Integrations' },
-  ]
+  ];
 
   return (
     <Row className="align-items-center">
@@ -64,7 +64,7 @@ export const HeroLeftImage = () => {
                       />{' '}
                       {item.content}
                     </ListGroup.Item>
-                  )
+                  );
                 })}
               </ListGroup>
             </Col>
@@ -85,7 +85,7 @@ export const HeroLeftImage = () => {
                       />{' '}
                       {item.content}
                     </ListGroup.Item>
-                  )
+                  );
                 })}
               </ListGroup>
             </Col>
@@ -93,5 +93,5 @@ export const HeroLeftImage = () => {
         </div>
       </Col>
     </Row>
-  )
-}
+  );
+};

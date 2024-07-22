@@ -108,6 +108,6 @@ const NotificationData = [
     icon: 'Award',
     colorClass: 'warning',
   },
-]
+];
 
-export default NotificationData
+export default NotificationData;

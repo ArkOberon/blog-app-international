@@ -219,7 +219,7 @@ export const allposts = [
     status: 'Draft',
     action: 1,
   },
-]
+];
 
 // All Published Post list
 
@@ -279,7 +279,7 @@ export const allPublishedPosts = [
     status: 'Published',
     action: 1,
   },
-]
+];
 
 // All Scheduled Post List
 
@@ -339,7 +339,7 @@ export const allScheduledPosts = [
     status: 'Scheduled',
     action: 1,
   },
-]
+];
 
 // All Draft Posts List
 
@@ -421,7 +421,7 @@ export const allDraftPosts = [
     status: 'Draft',
     action: 1,
   },
-]
+];
 
 // all Deleted Post List
 
@@ -459,7 +459,7 @@ export const allDeletedPosts = [
     status: 'Deleted',
     action: 1,
   },
-]
+];
 
 export const AllPostsData = [
   allposts,
@@ -467,4 +467,4 @@ export const AllPostsData = [
   allScheduledPosts,
   allDraftPosts,
   allDeletedPosts,
-]
+];

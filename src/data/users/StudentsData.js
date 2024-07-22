@@ -219,6 +219,6 @@ export const StudentsList = [
     progress: 30,
     questionasked: 6,
   },
-]
+];
 
-export const StudentsData = [StudentsList]
+export const StudentsData = [StudentsList];

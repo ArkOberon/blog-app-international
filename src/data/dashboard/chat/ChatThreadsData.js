@@ -104,6 +104,6 @@ export const ChatThreadsData = [
     type: 'user',
     read: true,
   },
-]
+];
 
-export default ChatThreadsData
+export default ChatThreadsData;

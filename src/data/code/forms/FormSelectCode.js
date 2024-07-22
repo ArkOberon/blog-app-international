@@ -7,7 +7,7 @@ export const DefaultSelectCode = `
         <option value="3">Three</option>
     </Form.Select>
 </Form>
-`.trim()
+`.trim();
 
 export const SizingSelectCode = `
 <Form>
@@ -23,8 +23,8 @@ export const SizingSelectCode = `
         <option>Small select</option>
     </Form.Select>
 </Form>
- `.trim()
+ `.trim();
 
-export const FormSelectCode = [DefaultSelectCode, SizingSelectCode]
+export const FormSelectCode = [DefaultSelectCode, SizingSelectCode];
 
-export default FormSelectCode
+export default FormSelectCode;

@@ -167,6 +167,6 @@ export const UsersList = [
     joined: '7 July, 2020',
     status: 'Online',
   },
-]
+];
 
-export const UsersData = [UsersList]
+export const UsersData = [UsersList];

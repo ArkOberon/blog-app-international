@@ -1,21 +1,21 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Col, Row, Container, Tab, Nav } from 'react-bootstrap'
+import { Fragment } from 'react';
+import { Col, Row, Container, Tab, Nav } from 'react-bootstrap';
 
 // import widget/custom components
-import { PostCard } from '../../widgets'
+import { PostCard } from '../../widgets';
 
 // import data files
-import { AllCoursesData } from '../../data/slider/AllCoursesData'
+import { AllCoursesData } from '../../data/slider/AllCoursesData';
 
 // import hooks
-import useMounted from '../../hooks/useMounted'
+import useMounted from '../../hooks/useMounted';
 
 export const HomeRecentPost = () => {
-  const hasMounted = useMounted()
-  const tabs = ['Development', 'Design', 'Marketing', 'Business', 'Health']
+  const hasMounted = useMounted();
+  const tabs = ['Development', 'Design', 'Marketing', 'Business', 'Health'];
   let min,
-    max = 0
+    max = 0;
   return (
     <Fragment>
       <section className="pb-lg-14 pb-8 bg-white">
@@ -45,13 +45,13 @@ export const HomeRecentPost = () => {
                           {tab}
                         </Nav.Link>
                       </Nav.Item>
-                    )
+                    );
                   })}
                 </Nav>
                 <Tab.Content>
                   {tabs.map((tab, index) => {
-                    min = Math.floor(Math.random() * 16)
-                    max = min + 8
+                    min = Math.floor(Math.random() * 16);
+                    max = min + 8;
                     return (
                       <Tab.Pane
                         eventKey={tab}
@@ -66,7 +66,7 @@ export const HomeRecentPost = () => {
                           ))}
                         </Row>
                       </Tab.Pane>
-                    )
+                    );
                   })}
                 </Tab.Content>
               </Tab.Container>
@@ -75,5 +75,5 @@ export const HomeRecentPost = () => {
         </Container>
       </section>
     </Fragment>
-  )
-}
+  );
+};

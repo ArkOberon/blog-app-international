@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 export const cartSlice = createSlice({
   name: 'cart',
@@ -51,36 +51,36 @@ export const cartSlice = createSlice({
     removeItemFromCart(state, action) {
       state.cartItems = state.cartItems.filter(
         (product) => product.id !== action.payload
-      )
+      );
     },
     updateCart(state, action) {
       let index = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
-      )
-      let currentItem = state.cartItems[index]
-      currentItem.quantity = action.payload.quantity
-      currentItem.totalPrice = currentItem.price * action.payload.quantity
+      );
+      let currentItem = state.cartItems[index];
+      currentItem.quantity = action.payload.quantity;
+      currentItem.totalPrice = currentItem.price * action.payload.quantity;
       state.totalQuantity = state.cartItems.reduce(
         (total, item) => total + item.quantity,
         0
-      )
+      );
     },
     updateCartSubTotal(state, action) {
-      state.cartSummary.subTotal = action.payload
+      state.cartSummary.subTotal = action.payload;
       state.totalQuantity = state.cartItems.reduce(
         (total, item) => total + item.quantity,
         0
-      )
+      );
     },
     updateCartTaxAmount(state, action) {
-      state.cartSummary.taxAmount = action.payload
+      state.cartSummary.taxAmount = action.payload;
     },
     applyCoupon(state, action) {
-      ;(state.cartSummary.coupon = action.payload.coupon),
-        (state.cartSummary.discount = action.payload.discount)
+      (state.cartSummary.coupon = action.payload.coupon),
+        (state.cartSummary.discount = action.payload.discount);
     },
   },
-})
+});
 
 export const {
   addItemToCart,
@@ -89,6 +89,6 @@ export const {
   updateCartSubTotal,
   updateCartTaxAmount,
   applyCoupon,
-} = cartSlice.actions
+} = cartSlice.actions;
 
-export default cartSlice.reducer
+export default cartSlice.reducer;

@@ -47,6 +47,6 @@ export const ActivityData = [
     reviews: 11230,
     status: 'offline',
   },
-]
+];
 
-export default ActivityData
+export default ActivityData;

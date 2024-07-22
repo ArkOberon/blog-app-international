@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const JobCategoriesData = [
   {
@@ -49,6 +49,6 @@ export const JobCategoriesData = [
     category: 'Finance',
     stat: '5k Jobs',
   },
-]
+];
 
-export default JobCategoriesData
+export default JobCategoriesData;

@@ -32,9 +32,9 @@ const theme = {
   darkInfo: 'var(--geeks-dark-info)',
   transparent: 'transparent',
   borderColor: 'var(--geeks-border-color)',
-}
+};
 /** Traffic Chart Series and options used in Dashboard Overview page  */
-export const TrafficChartSeries = [44, 55, 41]
+export const TrafficChartSeries = [44, 55, 41];
 export const TrafficChartOptions = {
   dataLabels: { enabled: !1 },
   labels: ['Direct', 'Referral', 'Organic'],
@@ -66,7 +66,7 @@ export const TrafficChartOptions = {
       },
     },
   ],
-}
+};
 
 /** Earnings Chart Series and options used in Dashboard Overview page  */
 
@@ -75,7 +75,7 @@ export const EarningsChartSeries = [
     name: 'Current Month',
     data: [10, 20, 15, 25, 18, 28, 22, 32, 24, 34, 26, 38],
   },
-]
+];
 export const EarningsChartOptions = {
   height: 'auto',
   labels: [
@@ -116,7 +116,7 @@ export const EarningsChartOptions = {
   yaxis: {
     labels: {
       formatter: function (e) {
-        return e + 'k'
+        return e + 'k';
       },
       style: { fontSize: '13px', fontWeight: 400, colors: theme.gray500 },
       offsetX: -15,
@@ -169,7 +169,7 @@ export const EarningsChartOptions = {
       },
     },
   ],
-}
+};
 
 /** Session Chart Series and options used in Dashboard Analytics page  */
 
@@ -187,7 +187,7 @@ export const SessionChartSeries = [
     name: 'Total Visits',
     data: [2200, 1e3, 3400, 900, 500, 2500, 3e3, 1e3, 2500],
   },
-]
+];
 
 export const SessionChartOptions = {
   chart: {
@@ -258,21 +258,21 @@ export const SessionChartOptions = {
       {
         title: {
           formatter: function (e) {
-            return e + ' (mins)'
+            return e + ' (mins)';
           },
         },
       },
       {
         title: {
           formatter: function (e) {
-            return e + ' per session'
+            return e + ' per session';
           },
         },
       },
       {
         title: {
           formatter: function (e) {
-            return e
+            return e;
           },
         },
       },
@@ -286,7 +286,7 @@ export const SessionChartOptions = {
     { breakpoint: 2500, options: { chart: { height: 470 } } },
     { breakpoint: 3000, options: { chart: { height: 450 } } },
   ],
-}
+};
 
 /** Active Users Chart Series and options used in Dashboard Analytics page  */
 
@@ -297,7 +297,7 @@ export const ActiveUserChartSeries = [
       41, 65, 63, 25, 44, 12, 36, 39, 25, 44, 42, 36, 54,
     ],
   },
-]
+];
 export const ActiveUserChartOptions = {
   chart: { type: 'bar', height: 302, sparkline: { enabled: !0 } },
   states: {
@@ -317,7 +317,7 @@ export const ActiveUserChartOptions = {
     y: {
       title: {
         formatter: function (e) {
-          return 'Active User'
+          return 'Active User';
         },
       },
     },
@@ -330,11 +330,11 @@ export const ActiveUserChartOptions = {
     { breakpoint: 2500, options: { chart: { height: 400 } } },
     { breakpoint: 3000, options: { chart: { height: 450 } } },
   ],
-}
+};
 
 /** Traffic Channel Chart Series and options used in Dashboard Analytics page  */
 
-export const TrafficChannelChartSeries = [60, 55, 12, 17]
+export const TrafficChannelChartSeries = [60, 55, 12, 17];
 export const TrafficChannelChartOptions = {
   labels: ['Organic Search', 'Direct', 'Refferrals', 'Social Media'],
   colors: [theme.primary, theme.success, theme.danger, theme.warning],
@@ -351,11 +351,11 @@ export const TrafficChannelChartOptions = {
     { breakpoint: 2500, options: { chart: { height: 350 } } },
     { breakpoint: 3000, options: { chart: { height: 500 } } },
   ],
-}
+};
 
 /** Operating System Chart Series and options used in Dashboard Analytics page  */
 
-export const OperatingSystemChartSeries = [55, 88, 80, 75]
+export const OperatingSystemChartSeries = [55, 88, 80, 75];
 export const OperatingSystemChartOptions = {
   labels: ['Window', 'macOS', 'Linux', 'Android'],
   chart: { type: 'polarArea', height: 350 },
@@ -384,12 +384,12 @@ export const OperatingSystemChartOptions = {
     { breakpoint: 2500, options: { chart: { height: 350 } } },
     { breakpoint: 3000, options: { chart: { height: 500 } } },
   ],
-}
+};
 
 /** User Chart Series and options used in Dashboard Analytics -> StartRightChart component */
 export const UserChartSeries = [
   { name: 'User', data: [28, 40, 36, 52, 38, 60, 55] },
-]
+];
 export const UserChartOptions = {
   chart: {
     height: 60,
@@ -415,12 +415,12 @@ export const UserChartOptions = {
   xaxis: { labels: { show: !1 }, axisBorder: { show: !1 } },
   yaxis: [{ y: 0, offsetX: 0, offsetY: 0, padding: { left: 0, right: 0 } }],
   tooltip: { x: { show: !1 } },
-}
+};
 
 /** Visitor Chart Series and options used in Dashboard Analytics -> StartRightChart component */
 export const VisitorChartSeries = [
   { name: 'User', data: [28, 40, 36, 52, 38, 60, 55] },
-]
+];
 export const VisitorChartOptions = {
   chart: {
     height: 60,
@@ -448,12 +448,12 @@ export const VisitorChartOptions = {
   xaxis: { labels: { show: !1 }, axisBorder: { show: !1 } },
   yaxis: [{ y: 0, offsetX: 0, offsetY: 0, padding: { left: 0, right: 0 } }],
   tooltip: { x: { show: !1 } },
-}
+};
 
 /** Bounce Chart Series and options used in Dashboard Analytics -> StartRightChart component */
 export const BounceChartSeries = [
   { name: 'Bonus Rate', data: [28, 40, 36, 52, 38, 60, 55] },
-]
+];
 export const BounceChartOptions = {
   chart: {
     height: 60,
@@ -469,12 +469,12 @@ export const BounceChartOptions = {
   xaxis: { labels: { show: !1 }, axisBorder: { show: !1 } },
   yaxis: [{ y: 0, offsetX: 0, offsetY: 0, padding: { left: 0, right: 0 } }],
   tooltip: { x: { show: !1 } },
-}
+};
 
 /** Average Visit Time Chart Series and options used in Dashboard Analytics -> StartRightChart component */
 export const AverageVisitTimeChartSeries = [
   { name: 'User', data: [28, 40, 36, 52, 38, 60, 55] },
-]
+];
 export const AverageVisitTimeChartOptions = {
   chart: {
     height: 60,
@@ -500,11 +500,11 @@ export const AverageVisitTimeChartOptions = {
   xaxis: { labels: { show: !1 }, axisBorder: { show: !1 } },
   yaxis: [{ y: 0, offsetX: 0, offsetY: 0, padding: { left: 0, right: 0 } }],
   tooltip: { x: { show: !1 } },
-}
+};
 
 /** Order Column Chart Series and options used in Front side Instructor Dashboard page */
 
-export const OrderColumnChartSeries = [{ data: [4, 6, 5, 3, 5, 6, 8, 9] }]
+export const OrderColumnChartSeries = [{ data: [4, 6, 5, 3, 5, 6, 8, 9] }];
 export const OrderColumnChartOptions = {
   chart: { toolbar: { show: !1 }, type: 'bar', height: 272 },
   colors: [theme.primary],
@@ -552,17 +552,17 @@ export const OrderColumnChartOptions = {
   tooltip: {
     y: {
       formatter: function (e) {
-        return e + ' sales '
+        return e + ' sales ';
       },
     },
     marker: { show: !0 },
   },
-}
+};
 
 /** Order Column Chart Series and options used in Front side Instructor Dashboard page */
 export const PayoutChartSeries = [
   { name: 'Inflation', data: [40, 20, 50, 80, 65] },
-]
+];
 
 export const PayoutChartOptions = {
   chart: { height: 150, type: 'bar', toolbar: { show: !1 } },
@@ -580,12 +580,12 @@ export const PayoutChartOptions = {
     tooltip: { enabled: !0 },
   },
   yaxis: { show: !1 },
-}
+};
 
 /** Total Earning Chart  Series and options used in Front side Instructor Dashboard page */
 export const TotalEarningChartSeries = [
   { data: [50, 80, 5, 90, 12, 150, 12, 80, 150] },
-]
+];
 export const TotalEarningChartOptions = {
   chart: { width: 130, type: 'line', toolbar: { show: !1 } },
   colors: [theme.primary],
@@ -605,7 +605,7 @@ export const TotalEarningChartOptions = {
   yaxis: { labels: { show: !1 } },
   grid: { show: !1 },
   tooltip: { enabled: !1 },
-}
+};
 
 /** Budget Expense Chart series and options used in dashboard project budget page  *
  *  added in v1.2.0
@@ -613,7 +613,7 @@ export const TotalEarningChartOptions = {
 
 export const BudgetExpenseChartSeries = [
   { name: 'Series 1', data: [90, 32, 30, 40, 100, 20] },
-]
+];
 export const BudgetExpenseChartOptions = {
   stroke: { show: !0, width: 2, colors: [theme.primary], dashArray: 0 },
   fill: { colors: '#754ffe', opacity: 0.4 },
@@ -677,12 +677,12 @@ export const BudgetExpenseChartOptions = {
       },
     },
   ],
-}
+};
 
 /** overall progress chart  Series and options used in Front side Instructor Dashboard page
  *   added in v1.2.0 for /dashboard/projects/single/overview page
  */
-export const OverallProgressChartSeries = [75]
+export const OverallProgressChartSeries = [75];
 export const OverallProgressChartOptions = {
   chart: { height: 350, type: 'radialBar', toolbar: { show: false } },
   colors: [theme.primary, theme.warning],
@@ -726,7 +726,7 @@ export const OverallProgressChartOptions = {
         },
         value: {
           formatter: function (val) {
-            return parseInt(val) + '%'
+            return parseInt(val) + '%';
           },
           color: theme.dark,
           fontSize: '48px',
@@ -752,7 +752,7 @@ export const OverallProgressChartOptions = {
   stroke: {
     lineCap: 'round',
   },
-}
+};
 
 /** task summary chart series and options used in dashboard page
  *   added in v1.2.0 for /dashboard/projects/single/task page
@@ -768,7 +768,7 @@ export const TaskSummaryChartSeries = [
     type: 'line',
     data: [20, 32, 28, 50, 38, 35, 49],
   },
-]
+];
 export const TaskSummaryChartOptions = {
   chart: { height: 350, type: 'line', toolbar: { show: false } },
   plotOptions: {
@@ -821,12 +821,12 @@ export const TaskSummaryChartOptions = {
     },
   },
   grid: { borderColor: theme.borderColor },
-}
+};
 
 /** task completion status chart series and options used in dashboard page
  *   added in v1.2.0 for /dashboard/projects/single/task page
  */
-export const TaskStatusChartSeries = [75, 25]
+export const TaskStatusChartSeries = [75, 25];
 export const TaskStatusChartOptions = {
   dataLabels: { enabled: false },
   labels: ['Completed', 'Incomplete'],
@@ -884,12 +884,12 @@ export const TaskStatusChartOptions = {
       },
     },
   ],
-}
+};
 
 /** task by sections chart series and options used in dashboard page
  *   added in v1.2.0 for /dashboard/projects/single/task page
  */
-export const TaskSectionChartSeries = [44, 65, 89, 75]
+export const TaskSectionChartSeries = [44, 65, 89, 75];
 export const TaskSectionChartOptions = {
   series: [44, 65, 89, 75],
   chart: {
@@ -925,7 +925,7 @@ export const TaskSectionChartOptions = {
           fontSize: '24px',
           fontWeight: 600,
           formatter: function (val) {
-            return val
+            return val;
           },
         },
         total: {
@@ -934,7 +934,7 @@ export const TaskSectionChartOptions = {
           fontSize: '12px',
           formatter: function (w) {
             // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-            return 273
+            return 273;
           },
         },
       },
@@ -946,7 +946,7 @@ export const TaskSectionChartOptions = {
   },
   labels: ['Design', 'Frontend', 'Development', 'Issues'],
   colors: [theme.primary, theme.success, theme.info, theme.warning],
-}
+};
 
 export const ChartData = [
   TrafficChartSeries,
@@ -995,6 +995,6 @@ export const ChartData = [
 
   TaskSectionChartSeries,
   TaskSectionChartOptions,
-]
+];
 
-export default ChartData
+export default ChartData;

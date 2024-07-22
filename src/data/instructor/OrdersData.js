@@ -119,6 +119,6 @@ export const OrdersData = [
     date: 'June 4, 2020',
     method: 'Amex',
   },
-]
+];
 
-export default OrdersData
+export default OrdersData;

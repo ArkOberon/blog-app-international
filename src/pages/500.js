@@ -1,10 +1,10 @@
 // import node module libraries
-import React, { Fragment } from 'react'
-import { Col, Row, Image } from 'react-bootstrap'
-import Link from 'next/link'
+import React, { Fragment } from 'react';
+import { Col, Row, Image } from 'react-bootstrap';
+import Link from 'next/link';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets'
+import { HermenautasSEO } from '../widgets';
 
 const Error500 = () => {
   return (
@@ -49,7 +49,7 @@ const Error500 = () => {
         </Col>
       </Row>
     </Fragment>
-  )
-}
+  );
+};
 
-export default Error500
+export default Error500;

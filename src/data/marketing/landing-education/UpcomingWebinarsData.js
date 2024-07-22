@@ -20,6 +20,6 @@ export const UpcomingWebinarsData = [
     date: 'November 10, 2023',
     time: '10:00 PM IST',
   },
-]
+];
 
-export default UpcomingWebinarsData
+export default UpcomingWebinarsData;

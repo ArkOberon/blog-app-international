@@ -35,6 +35,6 @@ const Notification = [
     time: '1:56 PM',
     message: `You earn new certificate for complete the Javascript Beginner course.`,
   },
-]
+];
 
-export default Notification
+export default Notification;

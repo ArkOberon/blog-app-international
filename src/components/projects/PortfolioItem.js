@@ -1,12 +1,12 @@
 // import node module libraries
-import Link from 'next/link'
-import { Image } from 'react-bootstrap'
+import Link from 'next/link';
+import { Image } from 'react-bootstrap';
 
 // import bootstrap icons
-import { ArrowUpRight } from 'react-bootstrap-icons'
+import { ArrowUpRight } from 'react-bootstrap-icons';
 
 export const PortfolioItem = (props) => {
-  const { item } = props
+  const { item } = props;
   return (
     <div className="mb-6">
       {/*  portfolio image  */}
@@ -41,5 +41,5 @@ export const PortfolioItem = (props) => {
         <span>{item.category}</span>
       </div>
     </div>
-  )
-}
+  );
+};

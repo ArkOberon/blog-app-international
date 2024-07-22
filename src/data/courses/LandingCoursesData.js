@@ -39,7 +39,7 @@ export const InstructorsList = [
     link: '#',
     rating: 4.5,
   },
-]
+];
 
 export const TestimonialsList = [
   {
@@ -115,7 +115,7 @@ export const TestimonialsList = [
       'Sed pretium risus magna, ac efficitur nunc rutrum imperdiet. Vivamus sed ante sed mi fermentum tempus. Nullam finibus augue eget felis efficitur semper.',
     rating: 4.5,
   },
-]
-export const LandingCoursesData = [InstructorsList, TestimonialsList]
+];
+export const LandingCoursesData = [InstructorsList, TestimonialsList];
 
-export default LandingCoursesData
+export default LandingCoursesData;

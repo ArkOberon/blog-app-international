@@ -299,6 +299,6 @@ export const InstructorData = [
         As a creative resident at Figma explored the city of the future and how new technologies like AI, 
         voice control, and augmented reality will change our interfaces.`,
   },
-]
+];
 
-export default InstructorData
+export default InstructorData;

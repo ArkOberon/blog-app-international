@@ -5,7 +5,7 @@ import {
   mdiLinkedin,
   mdiGithub,
   mdiYoutube,
-} from '@mdi/js'
+} from '@mdi/js';
 
 export const SocialMediaTrafficData = [
   {
@@ -56,6 +56,6 @@ export const SocialMediaTrafficData = [
     percent: 10,
     progressbarvariant: 'primary',
   },
-]
+];
 
-export default SocialMediaTrafficData
+export default SocialMediaTrafficData;

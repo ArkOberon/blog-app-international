@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const shoppingCartData = [
   {
@@ -31,4 +31,4 @@ export const shoppingCartData = [
     product_title: 'Apple airpods',
     price: 65.29,
   },
-]
+];

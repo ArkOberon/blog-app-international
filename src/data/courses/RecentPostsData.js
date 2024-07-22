@@ -139,6 +139,6 @@ export const recentposts = [
     rating: 4.5,
     votes: 3250,
   },
-]
+];
 
-export const RecentPostsData = [recentposts]
+export const RecentPostsData = [recentposts];

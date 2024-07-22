@@ -1,5 +1,5 @@
 // import node module libraries
-import { Image } from 'react-bootstrap'
+import { Image } from 'react-bootstrap';
 
 export const JustifiedGallery = () => {
   const GalleryImages = [
@@ -27,7 +27,7 @@ export const JustifiedGallery = () => {
       id: 6,
       image: '/images/about/geeksui-img-6.jpg',
     },
-  ]
+  ];
   return (
     <section className="gallery mb-12">
       {GalleryImages.map((item, index) => {
@@ -42,8 +42,8 @@ export const JustifiedGallery = () => {
               className="gallery__img rounded-3"
             />
           </figure>
-        )
+        );
       })}
     </section>
-  )
-}
+  );
+};

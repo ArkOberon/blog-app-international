@@ -1,5 +1,5 @@
-const date = new Date()
-const month = ('0' + (date.getMonth() + 1)).slice(-2)
+const date = new Date();
+const month = ('0' + (date.getMonth() + 1)).slice(-2);
 
 export const EventsData = [
   {
@@ -41,6 +41,6 @@ export const EventsData = [
       description: 'Lorem ipsum dolor sit tempor inci',
     },
   },
-]
+];
 
-export default EventsData
+export default EventsData;

@@ -1,6 +1,6 @@
 // import MDI icons
-import Icon from '@mdi/react'
-import { mdiLabelVariant, mdiLabel } from '@mdi/js'
+import Icon from '@mdi/react';
+import { mdiLabelVariant, mdiLabel } from '@mdi/js';
 
 const MailSidebarData = [
   {
@@ -61,6 +61,6 @@ const MailSidebarData = [
     icon: <Icon path={mdiLabel} size={0.6} className="text-success me-2" />,
     link: '#',
   },
-]
+];
 
-export default MailSidebarData
+export default MailSidebarData;

@@ -1,14 +1,14 @@
 // import node module libraries
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap';
 import {
   LightningChargeFill,
   ChatFill,
   CloudFill,
   GridFill,
-} from 'react-bootstrap-icons'
+} from 'react-bootstrap-icons';
 
 // import widget/custom components
-import { FeatureTopIcon2, SectionHeadingLeft2 } from '../../widgets'
+import { FeatureTopIcon2, SectionHeadingLeft2 } from '../../widgets';
 
 export const HomeFeatures = () => {
   const features = [
@@ -36,7 +36,7 @@ export const HomeFeatures = () => {
       title: 'Well-integrated',
       description: `Praesent dolor velit, porta id pharetra quis, rutrum vitae velit. In ut neque qnas tristique imperdiet porta.`,
     },
-  ]
+  ];
 
   return (
     <section className="pb-8 pb-lg-12 bg-white">
@@ -65,7 +65,7 @@ export const HomeFeatures = () => {
                       >
                         <FeatureTopIcon2 item={item} />
                       </Col>
-                    )
+                    );
                   })}
                 </Row>
               </Col>
@@ -75,5 +75,5 @@ export const HomeFeatures = () => {
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

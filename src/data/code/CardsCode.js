@@ -9,13 +9,13 @@ export const BasicCardCode = `
         <Button variant="primary">Go somewhere</Button>
     </Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const CardBodyCode = `   
 <Card>
     <Card.Body>This is some text within a card body.</Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const TitlesTextLinksCode = `   
 <Card style={{ width: '18rem' }}>
@@ -29,7 +29,7 @@ export const TitlesTextLinksCode = `
         <Card.Link href="#">Another Link</Card.Link>
     </Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const ListGroups1Code = `   
 <Card style={{ width: '18rem' }}>
@@ -39,7 +39,7 @@ export const ListGroups1Code = `
     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
   </ListGroup>
 </Card>
-`.trim()
+`.trim();
 
 export const ListGroups2Code = `   
 <Card style={{ width: '18rem' }}>
@@ -50,7 +50,7 @@ export const ListGroups2Code = `
     <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
   </ListGroup>
 </Card>
-`.trim()
+`.trim();
 
 export const CardImagesCode = `   
 <Card style={{ width: '18rem' }}>
@@ -61,7 +61,7 @@ export const CardImagesCode = `
         </Card.Text>
     </Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const KitchenSinkCode = `   
 <Card style={{ width: '18rem' }}>
@@ -82,7 +82,7 @@ export const KitchenSinkCode = `
         <Card.Link href="#">Another Link</Card.Link>
     </Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const HeaderFooterCode = `   
 <Card>
@@ -95,7 +95,7 @@ export const HeaderFooterCode = `
         <Button variant="primary">Go somewhere</Button>
     </Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const HeaderFooterCode2 = `   
 <Card className="text-center">
@@ -109,7 +109,7 @@ export const HeaderFooterCode2 = `
     </Card.Body>
     <Card.Footer className="text-muted">2 days ago</Card.Footer>
 </Card>
-`.trim()
+`.trim();
 
 export const TextAlignmentCode = `   
 <Card style={{ width: '18rem' }}>
@@ -141,7 +141,7 @@ export const TextAlignmentCode = `
         <Button variant="primary">Go somewhere</Button>
     </Card.Body>
 </Card>
-`.trim()
+`.trim();
 
 export const ImagesTopBottomCode = `   
 <Card>
@@ -171,7 +171,7 @@ export const ImagesTopBottomCode = `
     </Card.Body>
     <Card.Img variant="bottom" src="https://fakeimg.pl/640x360/?text=Image Placeholder" />
 </Card>
-`.trim()
+`.trim();
 
 export const ImageOverlaysCode = `   
 <Card className="bg-dark text-white">
@@ -185,7 +185,7 @@ export const ImageOverlaysCode = `
         <Card.Text>Last updated 3 mins ago</Card.Text>
     </Card.ImgOverlay>
 </Card>
-`.trim()
+`.trim();
 
 export const CardsCode = [
   BasicCardCode,
@@ -200,6 +200,6 @@ export const CardsCode = [
   TextAlignmentCode,
   ImagesTopBottomCode,
   ImageOverlaysCode,
-]
+];
 
-export default CardsCode
+export default CardsCode;

@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const AdditionalFeaturesData = [
   {
@@ -96,6 +96,6 @@ export const AdditionalFeaturesData = [
       },
     ],
   },
-]
+];
 
-export default AdditionalFeaturesData
+export default AdditionalFeaturesData;

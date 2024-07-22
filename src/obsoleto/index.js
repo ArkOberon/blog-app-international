@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment } from 'react';
 
 // import Home components
 import {
@@ -7,8 +7,8 @@ import {
   HomeRecentPost,
   HomeFeatures,
   HomeFeatures4Columns,
-} from '../components/Home'
-import { HeroFormLeft, HeroLeftImage, HeroRightImage } from '../components/ui'
+} from '../components/Home';
+import { HeroFormLeft, HeroLeftImage, HeroRightImage } from '../components/ui';
 
 const Home = () => {
   return (
@@ -35,7 +35,7 @@ const Home = () => {
       {/* CTA newsletter */}
       <HeroFormLeft />
     </Fragment>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

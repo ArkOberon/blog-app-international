@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const CourseDescriptionList = [
   {
@@ -46,7 +46,7 @@ export const CourseDescriptionList = [
     courselink: '#',
     coursechapterid: 4,
   },
-]
+];
 
 export const FAQList = [
   {
@@ -73,7 +73,7 @@ export const FAQList = [
     content:
       'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.',
   },
-]
+];
 
 export const TestimonialsList = [
   {
@@ -94,8 +94,12 @@ export const TestimonialsList = [
       'Lorem ipsum dolor sit amet, consectetur adipi scing elit. Sed vel felis imperdiet, lacinia metus malesuada diamamus rutrum turpis leo, id tincidunt magna sodales.',
     color: 'info',
   },
-]
+];
 
-export const LeadCourseData = [CourseDescriptionList, TestimonialsList, FAQList]
+export const LeadCourseData = [
+  CourseDescriptionList,
+  TestimonialsList,
+  FAQList,
+];
 
-export default LeadCourseData
+export default LeadCourseData;

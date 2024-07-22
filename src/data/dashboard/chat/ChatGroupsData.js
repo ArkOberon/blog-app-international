@@ -17,5 +17,5 @@ export const ChatGroupsData = [
       },
     ],
   },
-]
-export default ChatGroupsData
+];
+export default ChatGroupsData;

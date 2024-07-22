@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const UpcomingDeadlinesData = [
   {
@@ -41,6 +41,6 @@ export const UpcomingDeadlinesData = [
     deadline: '25 Jan, 2022',
     workload: '8',
   },
-]
+];
 
-export default UpcomingDeadlinesData
+export default UpcomingDeadlinesData;

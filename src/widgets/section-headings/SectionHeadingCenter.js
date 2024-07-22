@@ -2,7 +2,7 @@
 // title, subtitle with description in centered aligned
 
 // import node module libraries
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap';
 
 const SectionHeadingCenter = ({ title, subtitle, description }) => {
   return (
@@ -15,7 +15,7 @@ const SectionHeadingCenter = ({ title, subtitle, description }) => {
         <p className="lead">{description}</p>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
-export default SectionHeadingCenter
+export default SectionHeadingCenter;

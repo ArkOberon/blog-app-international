@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const CompanyReviewsData = [
   {
@@ -41,6 +41,6 @@ export const CompanyReviewsData = [
     review:
       'Pros include job security, employee benefits like healthcare, professional and skill development assistance and friendly culture. Campus is picturesque and is a treat to work from. Company transport is available. Projects are very good.',
   },
-]
+];
 
-export default CompanyReviewsData
+export default CompanyReviewsData;

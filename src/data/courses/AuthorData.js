@@ -42,6 +42,6 @@ export const AuthorData = [
     about_author: `Bree Head developer, architect, occasional designer, and frequent speaker. 
         He’s passionate about building tools, systems, and create high-performance teams and apps.`,
   },
-]
+];
 
-export default AuthorData
+export default AuthorData;

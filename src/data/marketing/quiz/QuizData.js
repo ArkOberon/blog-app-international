@@ -1,5 +1,5 @@
 // import node module libraries
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const QuizData = [
   {
@@ -147,6 +147,6 @@ export const QuizData = [
     correctAnswer: 1,
     point: 20,
   },
-]
+];
 
-export default QuizData
+export default QuizData;

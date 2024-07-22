@@ -2,8 +2,8 @@
 // Style : Call To Action
 
 // import node module libraries
-import { Col, Row, Container, Image } from 'react-bootstrap'
-import Link from 'next/link'
+import { Col, Row, Container, Image } from 'react-bootstrap';
+import Link from 'next/link';
 
 export const CTAButton = () => {
   return (
@@ -44,5 +44,5 @@ export const CTAButton = () => {
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

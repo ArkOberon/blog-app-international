@@ -1,8 +1,8 @@
 // import node module libraries
-import { Col, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container } from 'react-bootstrap';
 
 // import widget/custom components
-import { StatTopBigIcon } from '../../widgets'
+import { StatTopBigIcon } from '../../widgets';
 
 export const HomeStats = () => {
   return (
@@ -56,5 +56,5 @@ export const HomeStats = () => {
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

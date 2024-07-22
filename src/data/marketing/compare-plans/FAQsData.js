@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const FAQsData = [
   {
@@ -25,6 +25,6 @@ export const FAQsData = [
     answer:
       'Dolor lorem ipsum sit amet consectetur adipisicing elit. Perspiciatis magnam dolorem.',
   },
-]
+];
 
-export default FAQsData
+export default FAQsData;

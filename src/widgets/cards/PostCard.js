@@ -1,26 +1,26 @@
 // import node module libraries
-import Link from 'next/link'
-import { Image, Card, Badge, Row, Col } from 'react-bootstrap'
+import Link from 'next/link';
+import { Image, Card, Badge, Row, Col } from 'react-bootstrap';
 
 // import widget/custom components
-import { Ratings } from '../../widgets'
+import { Ratings } from '../../widgets';
 
 // import utility file
-import { numberWithCommas } from '../../helper/utils'
+import { numberWithCommas } from '../../helper/utils';
 
 const PostCard = ({ item }) => {
   const badgeBG = () => {
     switch (item.level) {
       case 'Intermediate':
-        return 'info-soft'
+        return 'info-soft';
       case 'Beginner':
-        return 'success-soft'
+        return 'success-soft';
       case 'Advance':
-        return 'danger-soft'
+        return 'danger-soft';
       default:
-        return 'primary-soft'
+        return 'primary-soft';
     }
-  }
+  };
 
   return (
     <Card className="mb-4 card-hover">
@@ -72,7 +72,7 @@ const PostCard = ({ item }) => {
         </Row>
       </Card.Footer>
     </Card>
-  )
-}
+  );
+};
 
-export default PostCard
+export default PostCard;

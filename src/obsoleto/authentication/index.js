@@ -1,14 +1,14 @@
 // import node module libraries
-import { Fragment } from 'react'
-import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap'
-import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { Fragment } from 'react';
+import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 // import widget/custom components
-import { HermenautasSEO } from '../../widgets'
+import { HermenautasSEO } from '../../widgets';
 
 const Authentication = () => {
-  const t = useTranslations('Sing-in')
+  const t = useTranslations('Sing-in');
 
   return (
     <Fragment>
@@ -116,15 +116,15 @@ const Authentication = () => {
         </Col>
       </Row>
     </Fragment>
-  )
-}
+  );
+};
 
 export async function getStaticProps({ locale }) {
   return {
     props: {
       messages: (await import(`../../messages/${locale}.json`)).default,
     },
-  }
+  };
 }
 
-export default Authentication
+export default Authentication;

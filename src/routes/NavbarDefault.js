@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 const NavbarDefault = () => {
   const menu = {
@@ -98,9 +98,9 @@ const NavbarDefault = () => {
         link: '/en/investigations',
       },
     ],
-  }
+  };
 
-  return menu
-}
+  return menu;
+};
 
-export default NavbarDefault
+export default NavbarDefault;

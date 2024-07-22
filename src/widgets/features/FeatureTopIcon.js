@@ -14,6 +14,6 @@ const FeatureTopIcon = ({ item }) => {
         <p className="fs-4">{item.description}</p>
       </div>
     </div>
-  )
-}
-export default FeatureTopIcon
+  );
+};
+export default FeatureTopIcon;

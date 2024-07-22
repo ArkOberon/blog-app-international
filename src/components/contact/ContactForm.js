@@ -1,15 +1,15 @@
 // import node module libraries
-import { Col, Row, Form, Button } from 'react-bootstrap'
+import { Col, Row, Form, Button } from 'react-bootstrap';
 
 // import widget/custom components
-import { FormSelect } from '../../widgets'
+import { FormSelect } from '../../widgets';
 
 export const ContactForm = () => {
   const contactReason = [
     { value: 'Design', label: 'Design' },
     { value: 'Development', label: 'Development' },
     { value: 'Other', label: 'Other' },
-  ]
+  ];
 
   return (
     <div className="px-4 px-xl-20 py-8 py-lg-0">
@@ -90,5 +90,5 @@ export const ContactForm = () => {
         </Form>
       </div>
     </div>
-  )
-}
+  );
+};

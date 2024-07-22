@@ -1,4 +1,4 @@
-import { v4 as uuid } from 'uuid'
+import { v4 as uuid } from 'uuid';
 
 export const ComapniesListData = [
   {
@@ -168,6 +168,6 @@ export const ComapniesListData = [
     jobPosting: '180+',
     featured: true,
   },
-]
+];
 
-export default ComapniesListData
+export default ComapniesListData;
