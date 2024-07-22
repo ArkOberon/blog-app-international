@@ -3,32 +3,26 @@ import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import parse from 'html-react-parser';
+import { useFormatter } from 'next-intl';
 
 // Custom functionalities
 import { categoryColors } from '../../utils/categoryColor';
 import { decodeHtml } from '../../utils/decodeHTML';
 
 export const BlogCard = ({ item, locale }) => {
-  const CategoryColors = (category) => {
-    switch (category) {
-      case 'Courses':
-        return 'success';
-      case 'Tutorial':
-        return 'primary';
-      case 'Workshop':
-        return 'warning';
-      case 'Company':
-        return 'info';
-      default:
-        return 'primary';
-    }
-  };
-
+  const format = useFormatter();
   const categorie = item.categories.nodes.filter(
     (item) => item.name !== locale
   );
-  console.log(item);
-  console.log(categorie[0]);
+
+  const dateTime = new Date(item.date);
+
+  const postDate = format.dateTime(dateTime, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
   return (
     <Card className="mb-4 shadow-lg">
       <Link href={`/${categorie[0].slug}/${item.slug}`}>
@@ -70,7 +64,7 @@ export const BlogCard = ({ item, locale }) => {
             <h5 className="mb-1">
               {item.author.node.firstName} {item.author.node.lastName}
             </h5>
-            <p className="fs-6 mb-0">{item.date}</p>
+            <p className="fs-6 mb-0">{postDate}</p>
           </Col>
         </Row>
       </Card.Body>

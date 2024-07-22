@@ -2,15 +2,25 @@
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
 import parse from 'html-react-parser';
+import { useFormatter } from 'next-intl';
 
 // Custom functionalities
 import { categoryColors } from '../../utils/categoryColor';
 import { decodeHtml } from '../../utils/decodeHTML';
 
 export const BlogCardFullWidth = ({ item, locale }) => {
+  const format = useFormatter();
   const principalCategory = item.posts.nodes[0].categories.nodes.filter(
     (item) => item.name !== `Principal-${locale}`
   );
+
+  const dateTime = new Date(item.posts.nodes[0].date);
+
+  const postDate = format.dateTime(dateTime, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
 
   return (
     <Card className="mb-4 shadow-lg mt-6">
@@ -65,7 +75,7 @@ export const BlogCardFullWidth = ({ item, locale }) => {
                   {item.posts.nodes[0].author.node.firstName}{' '}
                   {item.posts.nodes[0].author.node.lastName}
                 </h5>
-                <p className="fs-6 mb-0">{item.posts.nodes[0].date}</p>
+                <p className="fs-6 mb-0">{postDate}</p>
               </Col>
             </Row>
           </Card.Body>
