@@ -1,5 +1,5 @@
 /**
- * @description Registro de Cliente.
+ * @description Realizar GET de todo los post según el idioma
  */
 
 export const getAllPosts = async () => {

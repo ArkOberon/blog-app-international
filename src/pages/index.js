@@ -40,6 +40,7 @@ const Home = () => {
 
   // SEO Info
   const title = t('title');
+  const titleCategory = t('title_category');
   const description = t('description');
   const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
   const imgAlt = t('img_alt_home');
@@ -52,6 +53,7 @@ const Home = () => {
         <PostList
           locale={locale}
           title={title}
+          titleCategory={titleCategory}
           description={description}
           imgUrl={imgUrl}
           imgAlt={imgAlt}

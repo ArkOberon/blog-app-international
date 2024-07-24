@@ -27,6 +27,10 @@ export const pathnames = {
     es: '/economia',
     en: '/economy',
   },
+  '/economy/[slug]': {
+    es: '/economia/[slug]',
+    en: '/economy/[slug]',
+  },
   '/religion': {
     es: '/religion',
     en: '/religion',

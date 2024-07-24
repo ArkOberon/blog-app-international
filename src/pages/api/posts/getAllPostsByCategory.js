@@ -1,5 +1,5 @@
 /**
- * @description Realizar GET de todo los post segúb el idioma
+ * @description Realizar GET de todo los post según el idioma y una categoría específica
  */
 
 export const getAllPostsByCategory = async (id) => {

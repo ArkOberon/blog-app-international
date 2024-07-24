@@ -49,7 +49,6 @@ function App({ Component, pageProps }) {
     >
       <Fragment>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="keywords" content={keywords} />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         </Head>

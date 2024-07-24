@@ -11,8 +11,9 @@ import { decodeHtml } from '../../utils/decodeHTML';
 
 export const BlogCard = ({ item, locale }) => {
   const format = useFormatter();
+
   const categorie = item.categories.nodes.filter(
-    (item) => item.name !== locale
+    (item) => item.name !== locale && !/Portada|Principal/.test(item.name)
   );
 
   const dateTime = new Date(item.date);

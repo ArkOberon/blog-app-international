@@ -13,6 +13,7 @@ import { getAllPostsByCategory } from '../../pages/api/posts/getAllPostsByCatego
 export const PostList = ({
   locale,
   title,
+  titleCategory,
   description,
   imgUrl,
   imgAlt,
@@ -26,7 +27,6 @@ export const PostList = ({
 
   useEffect(() => {
     if (categoryId) {
-      console.log(categoryId);
       const postByCategory = async (id) => {
         const pArrayByCategory = await getAllPostsByCategory(id);
         setPostByCategory(pArrayByCategory);
@@ -35,6 +35,23 @@ export const PostList = ({
       postByCategory(categoryId);
     }
   }, [categoryId]);
+
+  let filterPrincipal =
+    pathname === '/' ||
+    pathname === '/en' ||
+    pathname === '/es' ||
+    pathname === '/pt' ||
+    pathname === '/fr'
+      ? 'Principal'
+      : 'Portada';
+  let filterCategory =
+    pathname === '/' ||
+    pathname === '/en' ||
+    pathname === '/es' ||
+    pathname === '/pt' ||
+    pathname === '/fr'
+      ? 'Home'
+      : titleCategory;
 
   return (
     <Fragment>
@@ -64,7 +81,7 @@ export const PostList = ({
                 sm={12}
               >
                 <div className="text-center mb-5">
-                  <h1 className=" display-2 fw-bold">{title}</h1>
+                  <h1 className=" display-2 fw-bold">{titleCategory}</h1>
                   <p className="lead">{description}</p>
                 </div>
                 <Form className="row px-md-20">
@@ -94,20 +111,75 @@ export const PostList = ({
           <Row>
             {/* Show first article in full width  */}
 
-            {arrayPostActualLang[0].children.nodes
-              .filter((item) => item.name === `Principal-${locale}`)
-              .map((item, index) => (
-                <Col xl={12} lg={12} md={12} sm={12} key={index}>
-                  <BlogCardFullWidth item={item} locale={locale} />
-                </Col>
-              ))}
-            {console.log(postByCategory.data?.category.posts.nodes)}
+            {filterCategory === 'Home'
+              ? arrayPostActualLang[0].children.nodes
+                  .filter(
+                    (item) => item.name === `${filterPrincipal}-${locale}`
+                  )
+                  .map((item, index) => (
+                    <Col xl={12} lg={12} md={12} sm={12} key={index}>
+                      <BlogCardFullWidth item={item} locale={locale} />
+                    </Col>
+                  ))
+              : arrayPostActualLang[0].children.nodes
+                  .filter(
+                    (item) =>
+                      item.name === filterCategory &&
+                      item.posts.nodes[0].categories.nodes.some(
+                        (category) =>
+                          category.name === `${filterPrincipal}-${locale}`
+                      )
+                  )
+                  .map((item, index) => (
+                    <Col xl={12} lg={12} md={12} sm={12} key={index}>
+                      <BlogCardFullWidth item={item} locale={locale} />
+                    </Col>
+                  ))}
 
-            {postByCategory.data?.category.posts.nodes.map((item, index) => (
-              <Col xl={4} lg={4} md={6} sm={12} key={index} className="d-flex">
-                <BlogCard item={item} locale={locale} />
-              </Col>
-            ))}
+            {filterCategory === 'Home'
+              ? postByCategory.data?.category.posts.nodes
+                  .filter(
+                    (item) =>
+                      !item.categories.nodes.some(
+                        (category) =>
+                          category.name === `${filterPrincipal}-${locale}`
+                      )
+                  )
+                  .map((item, index) => (
+                    <Col
+                      xl={4}
+                      lg={4}
+                      md={6}
+                      sm={12}
+                      key={index}
+                      className="d-flex"
+                    >
+                      <BlogCard item={item} locale={locale} />
+                    </Col>
+                  ))
+              : postByCategory.data?.category.posts.nodes
+                  .filter(
+                    (item) =>
+                      item.categories.nodes.some(
+                        (category) => category.name === filterCategory
+                      ) &&
+                      !item.categories.nodes.some(
+                        (category) =>
+                          category.name === `${filterPrincipal}-${locale}`
+                      )
+                  )
+                  .map((item, index) => (
+                    <Col
+                      xl={4}
+                      lg={4}
+                      md={6}
+                      sm={12}
+                      key={index}
+                      className="d-flex"
+                    >
+                      <BlogCard item={item} locale={locale} />
+                    </Col>
+                  ))}
 
             {/* Show remaining articles in 3 column width  */}
             {/*arrayPost.slice(1, 10).map((item, index) => (

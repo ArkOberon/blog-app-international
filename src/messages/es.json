@@ -1,8 +1,15 @@
 {
+  "Economy": {
+    "title": "Economía – Hermenautas",
+    "title_category": "Economía",
+    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
+    "img_alt_home": "Portada Economía Hermenautas"
+  },
   "Home": {
     "title": "Hermenautas – Diario de noticias mundial",
+    "title_category": "Hermenautas",
     "description": "Medio de comunicación independiente con información veraz y actualizada, que ofrece las últimas noticas que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
-    "img_alt_home": "Portada hermenautas"
+    "img_alt_home": "Portada Hermenautas"
   },
   "Navbar": {
     "sign_in": "Iniciar Sesión",
