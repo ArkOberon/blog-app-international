@@ -51,7 +51,7 @@ export const BlogCard = ({ item, locale }) => {
             {item.title}
           </Link>
         </h3>
-        <p>{parse(decodeHtml(item.excerpt))} </p>
+        {parse(decodeHtml(item.excerpt))}
         {/*  Media content  */}
         <Row className="align-items-center g-0 mt-4">
           <Col xs="auto">

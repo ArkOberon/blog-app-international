@@ -1,14 +1,17 @@
 // import node module libraries
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, useEffect, useState, useRef } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 
 // import widget/custom components
 import { HermenautasSEO } from '../../widgets';
 import { BlogCard, BlogCardFullWidth } from '../blog';
+import { LoaderProcess } from '../ui/loaders';
 
 // import API functions
 import { getAllPostsByCategory } from '../../pages/api/posts/getAllPostsByCategory';
+import { addSubscriberToList } from '../../pages/api/email/addSubscriber';
 
 export const PostList = ({
   locale,
@@ -19,9 +22,13 @@ export const PostList = ({
   imgAlt,
   arrayPost,
   categoryId,
+  listId = 4,
 }) => {
   const [postByCategory, setPostByCategory] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const emailRef = useRef(null);
   const router = useRouter();
+  const t = useTranslations('NewsletterForm');
   const { pathname } = router;
   const arrayPostActualLang = arrayPost.filter((item) => item.name === locale);
 
@@ -52,6 +59,19 @@ export const PostList = ({
     pathname === '/fr'
       ? 'Home'
       : titleCategory;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const email = emailRef.current.value;
+    const response = await addSubscriberToList(email, listId, titleCategory);
+
+    if (response.errors) {
+      return;
+    } else {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <Fragment>
@@ -84,22 +104,31 @@ export const PostList = ({
                   <h1 className=" display-2 fw-bold">{titleCategory}</h1>
                   <p className="lead">{description}</p>
                 </div>
-                <Form className="row px-md-20">
-                  <Form.Group
-                    className="mb-3 col ps-0 ms-2 ms-md-0"
-                    controlId="formBasicEmail"
-                  >
-                    <Form.Control type="email" placeholder="Email Address" />
-                  </Form.Group>
-                  <Form.Group
-                    className="mb-3 col-auto ps-0"
-                    controlId="formSubmitButton"
-                  >
-                    <Button variant="primary" type="submit">
-                      Submit
-                    </Button>
-                  </Form.Group>
-                </Form>
+                {isLoading ? (
+                  <LoaderProcess />
+                ) : (
+                  <Form className="row px-md-20" onSubmit={handleSubmit}>
+                    <Form.Group
+                      className="mb-3 col ps-0 ms-2 ms-md-0"
+                      controlId="formBasicEmail"
+                    >
+                      <Form.Control
+                        ref={emailRef}
+                        type="email"
+                        placeholder={t('placeholder')}
+                        required
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3 col-auto ps-0"
+                      controlId="formSubmitButton"
+                    >
+                      <Button variant="primary" type="submit">
+                        {t('submit')}
+                      </Button>
+                    </Form.Group>
+                  </Form>
+                )}
               </Col>
             </Row>
           </Container>
@@ -180,13 +209,6 @@ export const PostList = ({
                       <BlogCard item={item} locale={locale} />
                     </Col>
                   ))}
-
-            {/* Show remaining articles in 3 column width  */}
-            {/*arrayPost.slice(1, 10).map((item, index) => (
-              <Col xl={4} lg={4} md={6} sm={12} key={index} className="d-flex">
-                <BlogCard item={item} />
-              </Col>
-            ))*/}
           </Row>
         </Container>
       </section>

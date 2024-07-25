@@ -1,6 +1,6 @@
 // import node module libraries
 import { Card, Row, Col, Container } from 'react-bootstrap';
-import Link from 'next/link';
+
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -13,31 +13,16 @@ export const PostListSkeleton = () => {
             <Card className="mb-4 shadow-lg mt-6">
               <Row className="g-0">
                 {/*  Image */}
-                <Link
-                  href="/"
-                  className="col-lg-8 col-md-12 col-12 bg-cover img-left-rounded"
-                  style={{
-                    background: `url()`,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'top center',
-                  }}
-                >
-                  <Skeleton height={331} />
-                </Link>
+
+                <Skeleton height={331} />
+
                 <Col lg={4} md={12} sm={12}>
                   {/*  Card body */}
                   <Card.Body>
-                    <Link
-                      href="/"
-                      className={`fs-5 mb-3 fw-semi-bold d-block text-a`}
-                    >
-                      <Skeleton height={20} />
-                    </Link>
+                    <Skeleton height={20} />
+
                     <h1 className="mb-2 mb-lg-4">
-                      <Link href="/" className="text-inherit">
-                        <Skeleton height={20} />
-                      </Link>
+                      <Skeleton height={20} />
                     </h1>
                     <p>
                       <Skeleton height={20} />
@@ -72,21 +57,14 @@ export const PostListSkeleton = () => {
             .map((_, index) => (
               <Col xl={4} lg={4} md={6} sm={12} className="d-flex" key={index}>
                 <Card className="mb-4 shadow-lg">
-                  <Link href="/" passHref legacyBehavior>
-                    <Skeleton height={300} width={404} />
-                  </Link>
+                  <Skeleton height={300} width={404} />
+
                   {/* Card body  */}
                   <Card.Body>
-                    <Link
-                      href="/"
-                      className={`fs-5 fw-semi-bold d-block mb-3 text-a`}
-                    >
-                      <Skeleton height={20} />
-                    </Link>
+                    <Skeleton height={20} />
+
                     <h3>
-                      <Link href="/" className="text-inherit">
-                        <Skeleton height={20} />
-                      </Link>
+                      <Skeleton height={20} />
                     </h3>
                     <p>
                       {' '}

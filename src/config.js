@@ -39,6 +39,10 @@ export const pathnames = {
     es: '/educacion',
     en: '/education',
   },
+  '/education/[slug]': {
+    es: '/education/[slug]',
+    en: '/education/[slug]',
+  },
   '/investigations': {
     es: '/investigaciones',
     en: '/investigations',

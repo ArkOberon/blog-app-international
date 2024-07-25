@@ -2,16 +2,22 @@
   "AuthorSection": {
     "share": "Comparte:"
   },
-  "Economy": {
-    "title": "Economía – Hermenautas",
-    "title_category": "Economía",
+  "Education": {
+    "title": "Educación – Hermenautas",
+    "title_category": "Educación",
     "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
     "img_alt_home": "Portada Economía Hermenautas"
   },
+  "Economy": {
+    "title": "Economía – Hermenautas",
+    "title_category": "Economía",
+    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura.",
+    "img_alt_home": "Portada Economía Hermenautas"
+  },
   "Home": {
-    "title": "Hermenautas – Diario de noticias mundial",
+    "title": "Editorial Hermenautas – Diario de noticias mundial",
     "title_category": "Hermenautas",
-    "description": "Medio de comunicación independiente con información veraz y actualizada, que ofrece las últimas noticas que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
+    "description": "Empresa editorial independiente con información veraz y actualizada, que ofrece las últimas noticias que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
     "img_alt_home": "Portada Hermenautas"
   },
   "Navbar": {
@@ -19,6 +25,12 @@
     "sign_up": "Registrarse",
     "link_slug_sign_in": "/autenticacion/iniciar-sesion",
     "link_slug_sign_up": "/autenticacion/registrarse"
+  },
+  "NewsletterForm": {
+    "sign_up_for_our_newsletter": "Subscríbete a nuestro boletín semanal",
+    "join_our_newsletter": "Suscríbete a nuestro boletín y recibe contenido especial en tu bandeja de entrada.",
+    "submit": "Suscribirse",
+    "placeholder": "Dirección de correo electrónico"
   },
   "Process-Loader": {
     "procesando_su_solicitud": "Procesando su solicitud..."

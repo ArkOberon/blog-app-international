@@ -1,11 +1,16 @@
 // import node module libraries
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
+import parse from 'html-react-parser';
+
+// Custom functionalities
+import { decodeHtml } from '../../utils/decodeHTML';
 
 const HermenautasSEO = (props) => {
   const router = useRouter();
-  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.pathname;
+  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
   const { title, description, imgUrl, imgAlt } = props;
+  const parseDescription = parse(decodeHtml(description));
 
   return (
     <NextSeo
@@ -15,7 +20,7 @@ const HermenautasSEO = (props) => {
       openGraph={{
         url: pageURL,
         title: title,
-        description: description,
+        description: parseDescription[0].props?.children || description,
         site_name: process.env.NEXT_PUBLIC_SITE_NAME,
         images: [
           {

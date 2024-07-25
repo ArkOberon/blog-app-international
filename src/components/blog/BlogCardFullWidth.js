@@ -59,7 +59,7 @@ export const BlogCardFullWidth = ({ item, locale }) => {
                 {item.posts.nodes[0].title}
               </Link>
             </h1>
-            <p> {parse(decodeHtml(item.posts.nodes[0].excerpt))} </p>
+            {parse(decodeHtml(item.posts.nodes[0].excerpt))}
             {/*  Media content */}
             <Row className="align-items-center g-0 mt-lg-7 mt-4">
               <Col xs="auto">
