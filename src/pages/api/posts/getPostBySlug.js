@@ -25,16 +25,19 @@ export const getPostBySlug = async (slug) => {
             featuredImage {
               node {
                 link
+                altText
               }
             }
             categories {
               nodes {
                 name
+                slug
               }
             }
             content
             date
             title
+            excerpt
           }
         }
       `,

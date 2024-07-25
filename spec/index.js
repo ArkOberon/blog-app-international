@@ -7,8 +7,8 @@ import {
   HomeRecentPost,
   HomeFeatures,
   HomeFeatures4Columns,
-} from '../components/Home';
-import { HeroFormLeft, HeroLeftImage, HeroRightImage } from '../components/ui';
+} from '../../frontend/src/components/Home';
+import { HeroFormLeft, HeroLeftImage, HeroRightImage } from '../../frontend/src/components/ui';
 
 const Home = () => {
   return (

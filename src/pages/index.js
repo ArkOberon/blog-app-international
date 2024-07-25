@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 // import widget/custom components
 import { PostList } from '../components/category';
-import { PostListSkeleton } from '../components/ui/loaders/PostListSkeleton';
+import { PostListSkeleton } from '../components/ui/loaders';
 
 // import API functions
 import { getAllPosts } from './api/posts/getAllPosts';
