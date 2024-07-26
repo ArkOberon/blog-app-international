@@ -26,11 +26,6 @@ const NavbarDefault = () => {
       },
       {
         id: uuid(),
-        menuitem: 'Política',
-        link: '/politica',
-      },
-      {
-        id: uuid(),
         menuitem: 'Economía',
         link: '/economia',
       },
@@ -71,11 +66,6 @@ const NavbarDefault = () => {
         id: uuid(),
         menuitem: 'Science',
         link: '/en/science',
-      },
-      {
-        id: uuid(),
-        menuitem: 'Politic',
-        link: '/en/politic',
       },
       {
         id: uuid(),

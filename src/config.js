@@ -7,21 +7,33 @@ export const pathnames = {
     es: '/tecnologia',
     en: '/technology',
   },
+  '/technology/[slug]': {
+    es: '/tecnologia/[slug]',
+    en: '/technology/[slug]',
+  },
   '/industry': {
     es: '/industria',
     en: '/industry',
+  },
+  '/industry/[slug]': {
+    es: '/industria/[slug]',
+    en: '/industry/[slug]',
   },
   '/health': {
     es: '/salud',
     en: '/health',
   },
+  '/health/[slug]': {
+    es: '/salud/[slug]',
+    en: '/health/[slug]',
+  },
   '/science': {
     es: '/ciencia',
     en: '/science',
   },
-  '/politic': {
-    es: '/politica',
-    en: '/politic',
+  '/science/[slug]': {
+    es: '/ciencia/[slug]',
+    en: '/science/[slug]',
   },
   '/economy': {
     es: '/economia',
@@ -32,20 +44,24 @@ export const pathnames = {
     en: '/economy/[slug]',
   },
   '/religion': {
-    es: '/religion',
-    en: '/religion',
+    es: '/religion-es',
+    en: '/religion-en',
   },
   '/education': {
     es: '/educacion',
     en: '/education',
   },
   '/education/[slug]': {
-    es: '/education/[slug]',
+    es: '/educacion/[slug]',
     en: '/education/[slug]',
   },
   '/investigations': {
     es: '/investigaciones',
     en: '/investigations',
+  },
+  '/investigations/[slug]': {
+    es: '/investigaciones/[slug]',
+    en: '/investigations/[slug]',
   },
   '/authentication/sign-in': {
     es: '/autenticacion/iniciar-sesion',

@@ -25,51 +25,57 @@ export const BlogCard = ({ item, locale }) => {
   });
 
   return (
-    <Card className="mb-4 shadow-lg">
-      <Link href={`/${categorie[0].slug}/${item.slug}`}>
-        <Card.Img
-          variant="top"
-          src={item.featuredImage?.node.link}
-          className="rounded-top-md img-fluid"
-        />
-      </Link>
-      {/* Card body  */}
-      <Card.Body>
-        <Link
-          href={`/${categorie[0].slug}`}
-          className={`fs-5 fw-semi-bold d-block mb-3 text-${categoryColors(
-            categorie[0].name
-          )}`}
-        >
-          {categorie[0].name}
-        </Link>
-        <h3>
-          <Link
-            href={`/${categorie[0].slug}/${item.slug}`}
-            className="text-inherit"
-          >
-            {item.title}
-          </Link>
-        </h3>
-        {parse(decodeHtml(item.excerpt))}
-        {/*  Media content  */}
-        <Row className="align-items-center g-0 mt-4">
-          <Col xs="auto">
-            <Image
-              src={item.author.node.avatar.url}
-              alt=""
-              className="rounded-circle avatar-sm me-2"
+    <>
+      {categorie && categorie.length === 0 ? (
+        <></>
+      ) : (
+        <Card className="mb-4 shadow-lg">
+          <Link href={`/${categorie[0]?.slug}/${item.slug}`}>
+            <Card.Img
+              variant="top"
+              src={item.featuredImage?.node.link}
+              className="rounded-top-md img-fluid"
             />
-          </Col>
-          <Col className="col lh-1">
-            <h5 className="mb-1">
-              {item.author.node.firstName} {item.author.node.lastName}
-            </h5>
-            <p className="fs-6 mb-0">{postDate}</p>
-          </Col>
-        </Row>
-      </Card.Body>
-    </Card>
+          </Link>
+          {/* Card body  */}
+          <Card.Body>
+            <Link
+              href={`/${categorie[0]?.slug}`}
+              className={`fs-5 fw-semi-bold d-block mb-3 text-${categoryColors(
+                categorie[0].name
+              )}`}
+            >
+              {categorie[0]?.name}
+            </Link>
+            <h3>
+              <Link
+                href={`/${categorie[0]?.slug}/${item.slug}`}
+                className="text-inherit"
+              >
+                {item.title}
+              </Link>
+            </h3>
+            {parse(decodeHtml(item.excerpt))}
+            {/*  Media content  */}
+            <Row className="align-items-center g-0 mt-4">
+              <Col xs="auto">
+                <Image
+                  src={item.author.node.avatar.url}
+                  alt=""
+                  className="rounded-circle avatar-sm me-2"
+                />
+              </Col>
+              <Col className="col lh-1">
+                <h5 className="mb-1">
+                  {item.author.node.firstName} {item.author.node.lastName}
+                </h5>
+                <p className="fs-6 mb-0">{postDate}</p>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+      )}
+    </>
   );
 };
 

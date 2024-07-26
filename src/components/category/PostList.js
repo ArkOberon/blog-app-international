@@ -154,9 +154,9 @@ export const PostList = ({
                   .filter(
                     (item) =>
                       item.name === filterCategory &&
-                      item.posts.nodes[0].categories.nodes.some(
+                      item.posts.nodes[0]?.categories.nodes.some(
                         (category) =>
-                          category.name === `${filterPrincipal}-${locale}`
+                          category.name !== `${filterPrincipal}-${locale}`
                       )
                   )
                   .map((item, index) => (

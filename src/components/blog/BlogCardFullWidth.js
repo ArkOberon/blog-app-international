@@ -3,6 +3,7 @@ import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
 import parse from 'html-react-parser';
 import { useFormatter } from 'next-intl';
+import { useRouter } from 'next/router';
 
 // Custom functionalities
 import { categoryColors } from '../../utils/categoryColor';
@@ -10,8 +11,20 @@ import { decodeHtml } from '../../utils/decodeHTML';
 
 export const BlogCardFullWidth = ({ item, locale }) => {
   const format = useFormatter();
+  const router = useRouter();
+  const { pathname } = router;
+
+  let filterPrincipal =
+    pathname === '/' ||
+    pathname === '/en' ||
+    pathname === '/es' ||
+    pathname === '/pt' ||
+    pathname === '/fr'
+      ? 'Principal'
+      : 'Portada';
+
   const principalCategory = item.posts.nodes[0].categories.nodes.filter(
-    (item) => item.name !== `Principal-${locale}`
+    (item) => item.name !== `${filterPrincipal}-${locale}`
   );
 
   const dateTime = new Date(item.posts.nodes[0].date);
