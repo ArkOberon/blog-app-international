@@ -17,7 +17,7 @@ import { useTranslations } from 'next-intl';
 import { NavMegaDropdown } from './';
 import { DarkLightMode } from '../../ui/darklight';
 import { Languages } from '../../ui';
-import { NavBarCart } from '../../cart';
+/* import { NavBarCart } from '../../cart'; */
 
 // import data files
 import NavbarDefault from '../../../routes/NavbarDefault';
@@ -25,17 +25,14 @@ import NavbarDefault from '../../../routes/NavbarDefault';
 // import hooks
 import useMounted from '../../../hooks/useMounted';
 
-export const NavbarMegaMenu = ({
-  headerstyle = 'navbar-default',
-  login = false,
-}) => {
+export const NavbarMegaMenu = () => {
   const t = useTranslations('Navbar');
   const { locale } = useRouter();
   const [expandedMenu, setExpandedMenu] = useState(false);
   const hasMounted = useMounted();
   const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const isLoged = true;
+  const isLoged = false;
 
   const arrayMenu = NavbarDefault();
 
@@ -50,7 +47,11 @@ export const NavbarMegaMenu = ({
         <Container fluid className="px-0 ps-2">
           <div className="d-flex">
             <Navbar.Brand as={Link} href="/">
-              <Image src="/images/brand/logo/logo.svg" alt="" />
+              <Image
+                src="/images/brand/logo/logo-oficial-hermenautas.svg"
+                height={40}
+                alt=""
+              />
             </Navbar.Brand>
           </div>
 
@@ -65,7 +66,7 @@ export const NavbarMegaMenu = ({
                 if (item.children === undefined) {
                   return (
                     <Nav.Link
-                      className="ms-1 dropdown-item"
+                      className="ms-1 dropdown-item fs-4"
                       key={index}
                       as={Link}
                       href={item.link}
@@ -97,60 +98,70 @@ export const NavbarMegaMenu = ({
 
                 <DarkLightMode />
 
-                {isLoged ? (
+                {!isLoged ? (
                   <></>
                 ) : (
-                  /*<ListGroup as="ul" bsPrefix='navbar-nav' className="navbar-right-wrap ms-2 d-flex nav-top-wrap">                                          
-                    <Dropdown as="li" className="ms-2">
-                      <Dropdown.Toggle
-                        as="a"
-                        bsPrefix=' '
-                        className="rounded-circle"
-                        id="dropdownUser"
-                      >
-                        <div className="avatar avatar-md avatar-indicators avatar-online">
-                          <Image alt="avatar" src='/images/avatar/avatar-1.jpg' className="rounded-circle" />
-                        </div>
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu
-                        className="dashboard-dropdown dropdown-menu-end mt-4 py-0"
-                        align="end"
-                        aria-labelledby="dropdownUser"
-                        show={hasMounted && isDesktop ? true : false}
-                      >
-                        <Dropdown.Item className="mt-3">
-                          <div className="d-flex">
-                            <div className="avatar avatar-md avatar-indicators avatar-online">
-                              <Image
-                                alt="avatar"
-                                src='/images/avatar/avatar-1.jpg'
-                                className="rounded-circle"
-                              />
-                            </div>
-                            <div className="ms-3 lh-1">
-                              <h5 className="mb-1">Annette Black</h5>
-                              <p className="mb-0 text-muted">annette@geeksui.com</p>
-                            </div>
-                          </div>
-                        </Dropdown.Item>
-                        <Dropdown.Divider />
-                        <Dropdown.Item eventKey="2">
-                          <i className="fe fe-user me-2"></i> Profile
-                        </Dropdown.Item>
-                        <Dropdown.Item eventKey="3">
-                          <i className="fe fe-star me-2"></i> Subscription
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                          <i className="fe fe-settings me-2"></i> Settings
-                        </Dropdown.Item>
-                        <Dropdown.Divider />
-                        <Dropdown.Item className="mb-3">
-                          <i className="fe fe-power me-2"></i> Sign Out
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                  </ListGroup>*/
                   <>
+                    <ListGroup
+                      as="ul"
+                      bsPrefix="navbar-nav"
+                      className="navbar-right-wrap ms-2 d-flex nav-top-wrap"
+                    >
+                      <Dropdown as="li" className="ms-2">
+                        <Dropdown.Toggle
+                          as="a"
+                          bsPrefix=" "
+                          className="rounded-circle"
+                          id="dropdownUser"
+                        >
+                          <div className="avatar avatar-md avatar-indicators avatar-online">
+                            <Image
+                              alt="avatar"
+                              src="/images/avatar/avatar-1.jpg"
+                              className="rounded-circle"
+                            />
+                          </div>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu
+                          className="dashboard-dropdown dropdown-menu-end mt-4 py-0"
+                          align="end"
+                          aria-labelledby="dropdownUser"
+                          show={hasMounted && isDesktop ? true : false}
+                        >
+                          <Dropdown.Item className="mt-3">
+                            <div className="d-flex">
+                              <div className="avatar avatar-md avatar-indicators avatar-online">
+                                <Image
+                                  alt="avatar"
+                                  src="/images/avatar/avatar-1.jpg"
+                                  className="rounded-circle"
+                                />
+                              </div>
+                              <div className="ms-3 lh-1">
+                                <h5 className="mb-1">Annette Black</h5>
+                                <p className="mb-0 text-muted">
+                                  annette@geeksui.com
+                                </p>
+                              </div>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Divider />
+                          <Dropdown.Item eventKey="2">
+                            <i className="fe fe-user me-2"></i> Profile
+                          </Dropdown.Item>
+                          <Dropdown.Item eventKey="3">
+                            <i className="fe fe-star me-2"></i> Subscription
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <i className="fe fe-settings me-2"></i> Settings
+                          </Dropdown.Item>
+                          <Dropdown.Divider />
+                          <Dropdown.Item className="mb-3">
+                            <i className="fe fe-power me-2"></i> Sign Out
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </ListGroup>
                     <Link
                       href={t('link_slug_sign_in')}
                       className="btn btn-outline-dark ms-3"

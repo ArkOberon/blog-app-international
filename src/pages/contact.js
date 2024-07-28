@@ -30,7 +30,7 @@ const Contact = () => {
               <div className="d-flex justify-content-between mb-7 align-items-center">
                 <Link href="/">
                   <Image
-                    src="/images/brand/logo/logo.svg"
+                    src="/images/brand/logo/logo-oficial-hermenautas.svg"
                     alt=""
                     className="logo-inverse"
                   />

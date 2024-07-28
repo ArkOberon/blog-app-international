@@ -2,9 +2,8 @@
 import Link from 'next/link';
 import { Row, Col, Image, Container, ListGroup } from 'react-bootstrap';
 
-// import MDI icons
-import Icon from '@mdi/react';
-import { mdiFacebook, mdiTwitter, mdiInstagram } from '@mdi/js';
+// import widget/custom components
+import { SocialLinks } from '../../ui';
 
 const FooterWithLinks = () => {
   return (
@@ -15,7 +14,7 @@ const FooterWithLinks = () => {
             {/* about company  */}
             <div className="mb-4">
               <Image
-                src="/images/brand/logo/logo.svg"
+                src="/images/brand/logo/logo-oficial-hermenautas.svg"
                 alt=""
                 className="logo-inverse"
               />
@@ -26,17 +25,7 @@ const FooterWithLinks = () => {
                   framework.
                 </p>
                 {/* social media */}
-                <div className="fs-4 mt-4">
-                  <Link href="#" className="mdi mdi-facebook text-muted me-2">
-                    <Icon path={mdiFacebook} size={0.7} />
-                  </Link>
-                  <Link href="#" className="mdi mdi-twitter text-muted me-2">
-                    <Icon path={mdiTwitter} size={0.7} />
-                  </Link>
-                  <Link href="#" className="mdi mdi-instagram text-muted ">
-                    <Icon path={mdiInstagram} size={0.7} />
-                  </Link>
-                </div>
+                <SocialLinks />
               </div>
             </div>
           </Col>
@@ -150,7 +139,7 @@ const FooterWithLinks = () => {
         <Row className="align-items-center g-0 border-top py-2 mt-6">
           {/* Desc  */}
           <Col lg={4} md={5} sm={12}>
-            <span>© 2023 Geeks-UI, Inc. All Rights Reserved</span>
+            <span>© 2024 Hermenautas SL. All Rights Reserved</span>
           </Col>
           {/*  Links  */}
           <Col lg={8} md={7} sm={12} className="d-md-flex justify-content-end">

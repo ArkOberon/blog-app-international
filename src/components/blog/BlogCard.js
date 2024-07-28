@@ -47,14 +47,14 @@ export const BlogCard = ({ item, locale }) => {
             >
               {categorie[0]?.name}
             </Link>
-            <h3>
+            <h2>
               <Link
                 href={`/${categorie[0]?.slug}/${item.slug}`}
                 className="text-inherit"
               >
                 {item.title}
               </Link>
-            </h3>
+            </h2>
             {parse(decodeHtml(item.excerpt))}
             {/*  Media content  */}
             <Row className="align-items-center g-0 mt-4">

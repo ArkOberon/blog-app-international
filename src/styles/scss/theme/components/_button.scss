@@ -152,18 +152,18 @@
 
 // btn ghost
 .btn-ghost {
-  --geeks-btn-font-weight: 600;
-  --geeks-btn-color: var(--#{$prefix}gray-400);
-  --geeks-btn-bg: transparent;
-  --geeks-btn-border-color: transparent;
-  --geeks-btn-border-radius: 0.5rem;
-  --geeks-btn-hover-color: var(--#{$prefix}gray-600);
-  --geeks-btn-hover-bg: var(--#{$prefix}btn-ghost-bg);
-  --geeks-btn-hover-border-color: var(--#{$prefix}btn-ghost-bg);
-  --geeks-btn-focus-shadow-rgb: var(--bd-gray-300-rgb);
-  --geeks-btn-active-color: var(--#{$prefix}btn-hover-color);
-  --geeks-btn-active-bg: var(--#{$prefix}btn-ghost-bg);
-  --geeks-btn-active-border-color: var(--#{$prefix}btn-ghost-bg);
+  --hermenautas-btn-font-weight: 600;
+  --hermenautas-btn-color: var(--#{$prefix}gray-400);
+  --hermenautas-btn-bg: transparent;
+  --hermenautas-btn-border-color: transparent;
+  --hermenautas-btn-border-radius: 0.5rem;
+  --hermenautas-btn-hover-color: var(--#{$prefix}gray-600);
+  --hermenautas-btn-hover-bg: var(--#{$prefix}btn-ghost-bg);
+  --hermenautas-btn-hover-border-color: var(--#{$prefix}btn-ghost-bg);
+  --hermenautas-btn-focus-shadow-rgb: var(--bd-gray-300-rgb);
+  --hermenautas-btn-active-color: var(--#{$prefix}btn-hover-color);
+  --hermenautas-btn-active-bg: var(--#{$prefix}btn-ghost-bg);
+  --hermenautas-btn-active-border-color: var(--#{$prefix}btn-ghost-bg);
 }
 
 // checkbox icon button for ecommerce

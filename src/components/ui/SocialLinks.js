@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-export const SocialLinks = () => {
+export const SocialLinks = ({ textCenter }) => {
   return (
-    <div className="mt-4 text-center">
+    <div className={`mt-4 ${textCenter ? 'text-center' : ''}`}>
       {/* Twitter */}
       <Link
         href="https://x.com/hermenautasl"

@@ -41,7 +41,7 @@ export const BlogCardFullWidth = ({ item, locale }) => {
         {/*  Image */}
         <Link
           href={`/${principalCategory[0].slug}/${item.posts.nodes[0].slug}`}
-          className="col-lg-8 col-md-12 col-12 bg-cover img-left-rounded"
+          className="col-lg-5 col-md-12 col-12 bg-cover img-left-rounded"
           style={{
             background: `url(${!item.posts.nodes[0].featuredImage.node.link ? '/default-100.jpg' : item.posts.nodes[0].featuredImage.node.link})`,
             backgroundRepeat: 'no-repeat',
@@ -55,7 +55,7 @@ export const BlogCardFullWidth = ({ item, locale }) => {
             className="img-fluid d-lg-none invisible"
           />
         </Link>
-        <Col lg={4} md={12} sm={12}>
+        <Col lg={7} md={12} sm={12}>
           {/*  Card body */}
           <Card.Body>
             <Link
