@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const CartOverviewItem = ({ toggleDropdown, item }) => {
   return (
     <div className="navbar-cart-product mt-3">
       <div className="d-flex align-items-center">
         <a onClick={() => toggleDropdown()}>
-          <img
+          <Image
             className="img-fluid navbar-cart-product-image"
             src={item.img}
             alt="..."

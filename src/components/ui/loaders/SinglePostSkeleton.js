@@ -1,6 +1,6 @@
 // import node module libraries
 import React, { Fragment } from 'react';
-import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
+import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';

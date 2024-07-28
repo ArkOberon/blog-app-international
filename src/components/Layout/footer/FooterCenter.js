@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 // import widget/custom components
-import { SocialLinks } from '../../ui';
+/* import { SocialLinks } from '../../ui'; */
 
 const FooterCenter = () => {
   const t = useTranslations('Footer');
