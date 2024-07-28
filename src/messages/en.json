@@ -1,8 +1,58 @@
 {
+  "AuthorSection": {
+    "share": "Share:"
+  },
+  "Education": {
+    "title": "Education – Hermenautas",
+    "title_category": "Education",
+    "description": "Latest news and tips relevant to education.",
+    "img_alt_home": "Home Economics - Hermenautas"
+  },
+  "Economy": {
+    "title": "Economy – Hermenautas",
+    "title_category": "Economy",
+    "description": "All the world economic information.",
+    "img_alt_home": "Home Economics - Hermenautas"
+  },
+  "Footer": {
+    "description": "Creemos que la información es un poder que sustenta todas las libertades civiles. La imprenta marcó el comienzo de una nueva era en la historia de la comunicación y la prensa libre jugará un papel determinante en nuestra época actual. Ahora más que nunca, existe la necesidad imperiosa de ofrecer publicaciones sin censura.",
+    "company": "Company",
+    "about": "About us",
+    "contact": "Contact",
+    "cookies_policies": "Cookies Policies",
+    "privacy_policies": "Privacy Policy",
+    "terms_of_services": "Terms of Services",
+    "link_slug_company": "/company",
+    "link_slug_about": "/about-us",
+    "link_slug_contact": "/contact",
+    "link_slug_cookies_policies": "/cookies-policies",
+    "link_slug_privacy_policies": "privacy-policies",
+    "link_slug_terms_of_services": "/terms-of-services",
+    "all_rights_reserved": "All rights reserved"
+  },
+  "Health": {
+    "title": "Health",
+    "title_category": "Health",
+    "description": "All the information about health.",
+    "img_alt_home": "Home Health - Hermenautas"
+  },
   "Home": {
-    "title": "Hermenautas - World news daily",
-    "description": "Independent media with accurate and up-to-date information, offering the latest news affecting citizens' freedoms and rights in all areas: economy, technology, health, industry...",
-    "img_alt_home": "Home page hermenautas"
+    "title": "Editorial Hermenautas – World news daily",
+    "title_category": "Hermenautas",
+    "description": "Empresa editorial independiente con información veraz y actualizada, que ofrece las últimas noticias que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
+    "img_alt_home": "Home - Hermenautas"
+  },
+  "Industry": {
+    "title": "Industry – Hermenautas",
+    "title_category": "Industry",
+    "description": "All the information about the industry.",
+    "img_alt_home": "Home Industry - Hermenautas"
+  },
+  "Investigations": {
+    "title": "Investigations – Hermenautas",
+    "title_category": "Investigations",
+    "description": "All about research.",
+    "img_alt_home": "Home Investigations Hermenautas"
   },
   "Navbar": {
     "sign_in": "Sign in",
@@ -10,8 +60,26 @@
     "link_slug_sign_in": "/en/authentication/sign-in",
     "link_slug_sign_up": "/en/authentication/sign-up"
   },
+  "NewsletterForm": {
+    "sign_up_for_our_newsletter": "Subscribe to our weekly newsletter",
+    "join_our_newsletter": "Subscribe to our newsletter and receive special content in your inbox.",
+    "submit": "Subscribe",
+    "placeholder": "Email address"
+  },
   "Process-Loader": {
-    "procesando su solicitud": ""
+    "procesando_su_solicitud": "Processing your request..."
+  },
+  "Religion": {
+    "title": "Religion – World News Journal",
+    "title_category": "Religion",
+    "description": "All information about religion.",
+    "img_alt_home": "Home Religion Hermenautas"
+  },
+  "Science": {
+    "title": "Science – Hermenautas",
+    "title_category": "Science",
+    "description": "All the information about science.",
+    "img_alt_home": "Home Science - Hermenautas"
   },
   "Sign-in": {
     "title": "Sign in"
@@ -31,5 +99,11 @@
     "terms_of_services": "Terms of Services",
     "and": "and",
     "privacy_policy": "Privacy Policy"
+  },
+  "Technology": {
+    "title": "Technology – Hermenautas",
+    "title_category": "Technology",
+    "description": "All the information about technology.",
+    "img_alt_home": "Home Technology – Hermenautas"
   }
 }

@@ -43,7 +43,7 @@ const FooterCenter = () => {
             {/* <SocialLinks /> */}
           </Col>
           <Col className="mt-5 fs-6" lg={8} md={12} sm={12}>
-            <span>© 2024 Hermenautas SL. All Rights Reserved</span>
+            <span>© 2024 Hermenautas SL. {t('all_rights_reserved')}</span>
           </Col>
         </Row>
       </Container>
