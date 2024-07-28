@@ -3,7 +3,7 @@ import React, { Fragment, useEffect } from 'react';
 
 // import layouts
 import { NavbarMegaMenu } from './navbar/NavBarMegaMenu';
-import FooterWithLinks from './footer/FooterWithLinks';
+import FooterCenter from './footer/FooterCenter';
 
 const Layout = (props) => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Layout = (props) => {
     <Fragment>
       <NavbarMegaMenu login />
       <main>{props.children}</main>
-      <FooterWithLinks bgColor="bg-light" />
+      <FooterCenter bgColor="bg-light" />
     </Fragment>
   );
 };

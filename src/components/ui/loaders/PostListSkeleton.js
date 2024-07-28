@@ -13,42 +13,8 @@ export const PostListSkeleton = () => {
             <Card className="mb-4 shadow-lg mt-6">
               <Row className="g-0">
                 {/*  Image */}
-
                 <Skeleton height={331} />
-
-                <Col lg={4} md={12} sm={12}>
-                  {/*  Card body */}
-                  <Card.Body>
-                    <Skeleton height={20} />
-
-                    <h1 className="mb-2 mb-lg-4">
-                      <Skeleton height={20} />
-                    </h1>
-                    <p>
-                      <Skeleton height={20} />
-                    </p>
-                    {/*  Media content */}
-                    <Row className="align-items-center g-0 mt-lg-7 mt-4">
-                      <Col xs="auto" className="ml-3">
-                        {/*  Img  */}
-                        <Skeleton height={50} width={50} />
-                      </Col>
-                      <Col className="col lh-1">
-                        <h5 className="mb-1">
-                          <Skeleton height={20} width={160} />
-                        </h5>
-                        <p className="fs-6 mb-0">
-                          <Skeleton height={20} width={100} />
-                        </p>
-                      </Col>
-                      <Col xs="auto">
-                        <p className="fs-6 mb-0">
-                          <Skeleton height={20} width={100} />
-                        </p>
-                      </Col>
-                    </Row>
-                  </Card.Body>
-                </Col>
+                <Col lg={4} md={12} sm={12}></Col>
               </Row>
             </Card>
           </Col>

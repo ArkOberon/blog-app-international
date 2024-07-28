@@ -1,11 +1,14 @@
 // import node module libraries
 import Link from 'next/link';
 import { Row, Col, Image, Container, ListGroup } from 'react-bootstrap';
+import { useTranslations } from 'next-intl';
 
 // import widget/custom components
 import { SocialLinks } from '../../ui';
 
 const FooterWithLinks = () => {
+  const t = useTranslations('Footer');
+
   return (
     <footer className="pt-lg-10 pt-5 footer bg-white">
       <Container>
@@ -15,15 +18,12 @@ const FooterWithLinks = () => {
             <div className="mb-4">
               <Image
                 src="/images/brand/logo/logo-oficial-hermenautas.svg"
-                alt=""
+                alt="Logo Hermenautas"
+                height={50}
                 className="logo-inverse"
               />
-              <div className="mt-4">
-                <p>
-                  Geek is feature-rich components and beautifully Bootstrap
-                  UIKit for developers, built with bootstrap responsive
-                  framework.
-                </p>
+              <div className="mt-4 fs-5">
+                <p>{t('description')}</p>
                 {/* social media */}
                 <SocialLinks />
               </div>
@@ -32,7 +32,7 @@ const FooterWithLinks = () => {
           <Col lg={{ span: 2, offset: 1 }} md={3} sm={6}>
             <div className="mb-4">
               {/* list */}
-              <h3 className="fw-bold mb-3">Company</h3>
+              <h3 className="fw-bold mb-3">{t('company')}</h3>
               <ListGroup
                 as="ul"
                 bsPrefix="list-unstyled"
@@ -40,7 +40,7 @@ const FooterWithLinks = () => {
               >
                 <ListGroup.Item as="li" bsPrefix=" ">
                   <Link href="#" className="nav-link">
-                    About
+                    {t('about')}
                   </Link>
                 </ListGroup.Item>
                 <ListGroup.Item as="li" bsPrefix=" ">
@@ -138,7 +138,7 @@ const FooterWithLinks = () => {
         </Row>
         <Row className="align-items-center g-0 border-top py-2 mt-6">
           {/* Desc  */}
-          <Col lg={4} md={5} sm={12}>
+          <Col lg={4} md={5} sm={12} className="fs-6">
             <span>© 2024 Hermenautas SL. All Rights Reserved</span>
           </Col>
           {/*  Links  */}

@@ -14,6 +14,22 @@
     "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura.",
     "img_alt_home": "Portada Economía Hermenautas"
   },
+  "Footer": {
+    "description": "Creemos que la información es un poder que sustenta todas las libertades civiles. La imprenta marcó el comienzo de una nueva era en la historia de la comunicación y la prensa libre jugará un papel determinante en nuestra época actual. Ahora más que nunca, existe la necesidad imperiosa de ofrecer publicaciones sin censura.",
+    "company": "Corporativo",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cookies_policies": "Política de Cookies",
+    "privacy_policies": "Política de Privacidad",
+    "terms_of_services": "Términos de Servicio",
+    "link_slug_company": "/corporativo",
+    "link_slug_about": "/sobre-nosotros",
+    "link_slug_contact": "/contacto",
+    "link_slug_cookies_policies": "/politicas-de-cookies",
+    "link_slug_privacy_policies": "/politicas-de-privacidad",
+    "link_slug_terms_of_services": "/terminos-del-servicio",
+    "all_rights_reserved": "Todos los derechos reservados"
+  },
   "Health": {
     "title": "Salud – Hermenautas",
     "title_category": "Salud",
