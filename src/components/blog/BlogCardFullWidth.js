@@ -1,4 +1,5 @@
 // import node module libraries
+import { useEffect } from 'react';
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
 import parse from 'html-react-parser';
@@ -23,11 +24,18 @@ export const BlogCardFullWidth = ({ item, locale }) => {
       ? 'Principal'
       : 'Portada';
 
-  const principalCategory = item.posts.nodes[0].categories.nodes.filter(
-    (item) => item.name !== `${filterPrincipal}-${locale}`
-  );
+  const principalCategory =
+    item.posts.nodes[0]?.categories.nodes.filter(
+      (item) => item.name !== `${filterPrincipal}-${locale}`
+    ) || '';
 
-  const dateTime = new Date(item.posts.nodes[0].date);
+  useEffect(() => {
+    if (!principalCategory) {
+      router.push('/404');
+    }
+  }, [principalCategory]);
+
+  const dateTime = new Date(item.posts.nodes[0]?.date);
 
   const postDate = format.dateTime(dateTime, {
     year: 'numeric',
@@ -40,10 +48,10 @@ export const BlogCardFullWidth = ({ item, locale }) => {
       <Row className="g-0">
         {/*  Image */}
         <Link
-          href={`/${principalCategory[0].slug}/${item.posts.nodes[0].slug}`}
+          href={`/${principalCategory[0]?.slug}/${item.posts.nodes[0]?.slug}`}
           className="col-lg-5 col-md-12 col-12 bg-cover img-left-rounded"
           style={{
-            background: `url(${!item.posts.nodes[0].featuredImage.node.link ? '/default-100.jpg' : item.posts.nodes[0].featuredImage.node.link})`,
+            background: `url(${!item.posts.nodes[0]?.featuredImage.node.link ? '/default-100.jpg' : item.posts.nodes[0]?.featuredImage.node.link})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'top center',
@@ -51,7 +59,7 @@ export const BlogCardFullWidth = ({ item, locale }) => {
         >
           <Card.Img
             variant="left"
-            src={item.posts.nodes[0].featuredImage.node.link}
+            src={item.posts.nodes[0]?.featuredImage.node.link}
             className="img-fluid d-lg-none invisible"
           />
         </Link>
@@ -66,27 +74,27 @@ export const BlogCardFullWidth = ({ item, locale }) => {
             </Link>
             <h1 className="mb-2 mb-lg-4">
               <Link
-                href={`/${principalCategory[0].slug}/${item.posts.nodes[0].slug}`}
+                href={`/${principalCategory[0]?.slug}/${item.posts.nodes[0]?.slug}`}
                 className="text-inherit"
               >
-                {item.posts.nodes[0].title}
+                {item.posts.nodes[0]?.title}
               </Link>
             </h1>
-            {parse(decodeHtml(item.posts.nodes[0].excerpt))}
+            {parse(decodeHtml(item.posts.nodes[0]?.excerpt))}
             {/*  Media content */}
             <Row className="align-items-center g-0 mt-lg-7 mt-4">
               <Col xs="auto">
                 {/*  Img  */}
                 <Image
-                  src={item.posts.nodes[0].author.node.avatar.url}
+                  src={item.posts.nodes[0]?.author.node.avatar.url}
                   alt=""
                   className="rounded-circle avatar-sm me-2"
                 />
               </Col>
               <Col className="col lh-1 ">
                 <h5 className="mb-1">
-                  {item.posts.nodes[0].author.node.firstName}{' '}
-                  {item.posts.nodes[0].author.node.lastName}
+                  {item.posts.nodes[0]?.author.node.firstName}{' '}
+                  {item.posts.nodes[0]?.author.node.lastName}
                 </h5>
                 <p className="fs-6 mb-0">{postDate}</p>
               </Col>

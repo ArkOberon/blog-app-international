@@ -5,13 +5,13 @@
   "Education": {
     "title": "Educación – Hermenautas",
     "title_category": "Educación",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
+    "description": "Últimas noticias y consejos relevantes sobre la educación.",
     "img_alt_home": "Portada Economía Hermenautas"
   },
   "Economy": {
     "title": "Economía – Hermenautas",
     "title_category": "Economía",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura.",
+    "description": "Toda la información económica mundial.",
     "img_alt_home": "Portada Economía Hermenautas"
   },
   "Footer": {
@@ -33,8 +33,8 @@
   "Health": {
     "title": "Salud – Hermenautas",
     "title_category": "Salud",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
-    "img_alt_home": "Portada Economía Hermenautas"
+    "description": "Toda la información sobre salud.",
+    "img_alt_home": "Portada Salud Hermenautas"
   },
   "Home": {
     "title": "Editorial Hermenautas – Diario de noticias mundial",
@@ -45,14 +45,14 @@
   "Industry": {
     "title": "Industria – Hermenautas",
     "title_category": "Industria",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
-    "img_alt_home": "Portada Economía Hermenautas"
+    "description": "Toda la información sobre industria.",
+    "img_alt_home": "Portada Industria Hermenautas"
   },
   "Investigations": {
     "title": "Investigaciones – Hermenautas",
     "title_category": "Investigaciones",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
-    "img_alt_home": "Portada Economía Hermenautas"
+    "description": "Toda sobre investigaciones.",
+    "img_alt_home": "Portada Investigaciones Hermenautas"
   },
   "Navbar": {
     "sign_in": "Iniciar Sesión",
@@ -72,14 +72,14 @@
   "Religion": {
     "title": "Religión – Diario de noticias mundial",
     "title_category": "Religión",
-    "description": "Empresa editorial independiente con información veraz y actualizada, que ofrece las últimas noticias que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
-    "img_alt_home": "Portada Hermenautas"
+    "description": "Toda la información sobre religión.",
+    "img_alt_home": "Portada Religión Hermenautas"
   },
   "Science": {
     "title": "Ciencia – Hermenautas",
     "title_category": "Ciencia",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
-    "img_alt_home": "Portada Economía Hermenautas"
+    "description": "Toda la información sobre ciencia.",
+    "img_alt_home": "Portada Ciencia Hermenautas"
   },
   "Sign-in": {
     "title": "Iniciar sesión"
@@ -103,7 +103,7 @@
   "Technology": {
     "title": "Tecnología – Hermenautas",
     "title_category": "Tecnología",
-    "description": "Toda la información económica sin filtros. Toda la actualidad del mercado. Te mostramos los planes presentes y futuros de la agenda globalista sin censura",
-    "img_alt_home": "Portada Economía Hermenautas"
+    "description": "Toda la información sobre tecnología",
+    "img_alt_home": "Portada Tecnología Hermenautas"
   }
 }
