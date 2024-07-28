@@ -1,5 +1,6 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 // import layouts
 import { NavbarMegaMenu } from './navbar/NavBarMegaMenu';
@@ -12,7 +13,10 @@ const Layout = (props) => {
   return (
     <Fragment>
       <NavbarMegaMenu login />
-      <main>{props.children}</main>
+      <main>
+        {props.children}
+        <Analytics />
+      </main>
       <FooterCenter bgColor="bg-light" />
     </Fragment>
   );
