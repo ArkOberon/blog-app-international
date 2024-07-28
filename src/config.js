@@ -3,6 +3,7 @@ export const locales = ['es', 'en'];
 
 export const pathnames = {
   '/': '/',
+  '/404': '/404',
   '/technology': {
     es: '/tecnologia',
     en: '/technology',

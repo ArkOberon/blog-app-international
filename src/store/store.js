@@ -5,7 +5,6 @@ import cartSlice from '../store/cartSlice';
 export const store = configureStore({
   reducer: {
     app: appSlice,
-
     cart: cartSlice,
   },
 });

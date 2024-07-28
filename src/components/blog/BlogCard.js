@@ -55,7 +55,7 @@ export const BlogCard = ({ item, locale }) => {
                 {item.title}
               </Link>
             </h2>
-            {parse(decodeHtml(item.excerpt))}
+            <div className="fs-4">{parse(decodeHtml(item.excerpt))}</div>
             {/*  Media content  */}
             <Row className="align-items-center g-0 mt-4">
               <Col xs="auto">
@@ -69,7 +69,7 @@ export const BlogCard = ({ item, locale }) => {
                 <h5 className="mb-1">
                   {item.author.node.firstName} {item.author.node.lastName}
                 </h5>
-                <p className="fs-6 mb-0">{postDate}</p>
+                <p className="fs-5 mb-0">{postDate}</p>
               </Col>
             </Row>
           </Card.Body>
