@@ -50,7 +50,7 @@ function App({ Component, pageProps }) {
       <Fragment>
         <Head>
           <meta name="keywords" content={keywords} />
-          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
         </Head>
         <NextSeo
           title={title}
