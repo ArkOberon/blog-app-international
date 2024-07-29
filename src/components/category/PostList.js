@@ -134,6 +134,7 @@ export const PostList = ({
         <Container>
           <Row>
             {/* Show first article in full width  */}
+
             {arrayPostActualLang[0].children.nodes
               .filter((item) => item.name === `${filterPrincipal}-${locale}`)
               .map((item, index) => (
@@ -143,27 +144,66 @@ export const PostList = ({
                     locale={locale}
                     filterPrincipal={filterPrincipal}
                     oposeCategory={oposeCategory}
+                    titleCategory={titleCategory}
                   />
                 </Col>
               ))}
-            {postByCategory.data?.category.posts.nodes
-              .filter(
-                (item) =>
-                  !item.categories.nodes.some(
-                    (category) =>
-                      category.name === `${filterPrincipal}-${locale}`
+            {filterPrincipal === 'Portada'
+              ? postByCategory.data?.category.posts.nodes
+                  .filter(
+                    (item) =>
+                      !item.categories.nodes.some(
+                        (category) =>
+                          category.name === `${filterPrincipal}-${locale}`
+                      ) &&
+                      item.categories.nodes.some(
+                        (category) => category.name === titleCategory
+                      )
                   )
-              )
-              .map((item, idx) => (
-                <Col xl={4} lg={4} md={6} sm={12} className="d-flex" key={idx}>
-                  <BlogCard
-                    item={item}
-                    locale={locale}
-                    filterPrincipal={filterPrincipal}
-                    oposeCategory={oposeCategory}
-                  />
-                </Col>
-              ))}
+                  .map((item, idx) => (
+                    <Col
+                      xl={4}
+                      lg={4}
+                      md={6}
+                      sm={12}
+                      className="d-flex"
+                      key={idx}
+                    >
+                      <BlogCard
+                        item={item}
+                        locale={locale}
+                        filterPrincipal={filterPrincipal}
+                        oposeCategory={oposeCategory}
+                        titleCategory={titleCategory}
+                      />
+                    </Col>
+                  ))
+              : postByCategory.data?.category.posts.nodes
+                  .filter(
+                    (item) =>
+                      !item.categories.nodes.some(
+                        (category) =>
+                          category.name === `${filterPrincipal}-${locale}`
+                      )
+                  )
+                  .map((item, idx) => (
+                    <Col
+                      xl={4}
+                      lg={4}
+                      md={6}
+                      sm={12}
+                      className="d-flex"
+                      key={idx}
+                    >
+                      <BlogCard
+                        item={item}
+                        locale={locale}
+                        filterPrincipal={filterPrincipal}
+                        oposeCategory={oposeCategory}
+                        titleCategory={titleCategory}
+                      />
+                    </Col>
+                  ))}
           </Row>
         </Container>
       </section>
