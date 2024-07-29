@@ -43,23 +43,6 @@ export const PostList = ({
     }
   }, [categoryId]);
 
-  let filterPrincipal =
-    pathname === '/' ||
-    pathname === '/en' ||
-    pathname === '/es' ||
-    pathname === '/pt' ||
-    pathname === '/fr'
-      ? 'Principal'
-      : 'Portada';
-  let filterCategory =
-    pathname === '/' ||
-    pathname === '/en' ||
-    pathname === '/es' ||
-    pathname === '/pt' ||
-    pathname === '/fr'
-      ? 'Home'
-      : titleCategory;
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -72,6 +55,18 @@ export const PostList = ({
       setIsLoading(false);
     }
   };
+
+  const filterPrincipal =
+    pathname === '/' ||
+    pathname === '/en' ||
+    pathname === '/es' ||
+    pathname === '/pt' ||
+    pathname === '/fr'
+      ? 'Principal'
+      : 'Portada';
+
+  const oposeCategory =
+    filterPrincipal === 'Principal' ? 'Portada' : 'Principal';
 
   return (
     <Fragment>
@@ -139,76 +134,36 @@ export const PostList = ({
         <Container>
           <Row>
             {/* Show first article in full width  */}
-
-            {filterCategory === 'Home'
-              ? arrayPostActualLang[0].children.nodes
-                  .filter(
-                    (item) => item.name === `${filterPrincipal}-${locale}`
+            {arrayPostActualLang[0].children.nodes
+              .filter((item) => item.name === `${filterPrincipal}-${locale}`)
+              .map((item, index) => (
+                <Col xl={12} lg={12} md={12} sm={12} key={index}>
+                  <BlogCardFullWidth
+                    item={item}
+                    locale={locale}
+                    filterPrincipal={filterPrincipal}
+                    oposeCategory={oposeCategory}
+                  />
+                </Col>
+              ))}
+            {postByCategory.data?.category.posts.nodes
+              .filter(
+                (item) =>
+                  !item.categories.nodes.some(
+                    (category) =>
+                      category.name === `${filterPrincipal}-${locale}`
                   )
-                  .map((item, index) => (
-                    <Col xl={12} lg={12} md={12} sm={12} key={index}>
-                      <BlogCardFullWidth item={item} locale={locale} />
-                    </Col>
-                  ))
-              : arrayPostActualLang[0].children.nodes
-                  .filter(
-                    (item) =>
-                      item.name === filterCategory &&
-                      item.posts.nodes[0]?.categories.nodes.some(
-                        (category) =>
-                          category.name !== `${filterPrincipal}-${locale}`
-                      )
-                  )
-                  .map((item, index) => (
-                    <Col xl={12} lg={12} md={12} sm={12} key={index}>
-                      <BlogCardFullWidth item={item} locale={locale} />
-                    </Col>
-                  ))}
-
-            {filterCategory === 'Home'
-              ? postByCategory.data?.category.posts.nodes
-                  .filter(
-                    (item) =>
-                      !item.categories.nodes.some(
-                        (category) =>
-                          category.name === `${filterPrincipal}-${locale}`
-                      )
-                  )
-                  .map((item, index) => (
-                    <Col
-                      xl={4}
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      key={index}
-                      className="d-flex"
-                    >
-                      <BlogCard item={item} locale={locale} />
-                    </Col>
-                  ))
-              : postByCategory.data?.category.posts.nodes
-                  .filter(
-                    (item) =>
-                      item.categories.nodes.some(
-                        (category) => category.name === filterCategory
-                      ) &&
-                      !item.categories.nodes.some(
-                        (category) =>
-                          category.name === `${filterPrincipal}-${locale}`
-                      )
-                  )
-                  .map((item, index) => (
-                    <Col
-                      xl={4}
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      key={index}
-                      className="d-flex"
-                    >
-                      <BlogCard item={item} locale={locale} />
-                    </Col>
-                  ))}
+              )
+              .map((item, idx) => (
+                <Col xl={4} lg={4} md={6} sm={12} className="d-flex" key={idx}>
+                  <BlogCard
+                    item={item}
+                    locale={locale}
+                    filterPrincipal={filterPrincipal}
+                    oposeCategory={oposeCategory}
+                  />
+                </Col>
+              ))}
           </Row>
         </Container>
       </section>

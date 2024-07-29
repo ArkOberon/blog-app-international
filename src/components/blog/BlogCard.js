@@ -9,11 +9,14 @@ import { useFormatter } from 'next-intl';
 import { categoryColors } from '../../utils/categoryColor';
 import { decodeHtml } from '../../utils/decodeHTML';
 
-export const BlogCard = ({ item, locale }) => {
+export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
   const format = useFormatter();
 
   const categorie = item.categories.nodes.filter(
-    (item) => item.name !== locale && !/Portada|Principal/.test(item.name)
+    (item) =>
+      item.name !== `${filterPrincipal}-${locale}` &&
+      item.name !== `${oposeCategory}-${locale}` &&
+      item.name !== locale
   );
 
   const dateTime = new Date(item.date);

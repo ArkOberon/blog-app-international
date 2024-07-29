@@ -10,24 +10,21 @@ import { useRouter } from 'next/router';
 import { categoryColors } from '../../utils/categoryColor';
 import { decodeHtml } from '../../utils/decodeHTML';
 
-export const BlogCardFullWidth = ({ item, locale }) => {
+export const BlogCardFullWidth = ({
+  item,
+  locale,
+  filterPrincipal,
+  oposeCategory,
+}) => {
   const format = useFormatter();
   const router = useRouter();
-  const { pathname } = router;
 
-  let filterPrincipal =
-    pathname === '/' ||
-    pathname === '/en' ||
-    pathname === '/es' ||
-    pathname === '/pt' ||
-    pathname === '/fr'
-      ? 'Principal'
-      : 'Portada';
-
-  const principalCategory =
-    item.posts.nodes[0]?.categories.nodes.filter(
-      (item) => item.name !== `${filterPrincipal}-${locale}`
-    ) || '';
+  const principalCategory = item.posts.nodes[0]?.categories.nodes.filter(
+    (item) =>
+      item.name !== `${filterPrincipal}-${locale}` &&
+      item.name !== `${oposeCategory}-${locale}` &&
+      item.name !== locale
+  );
 
   useEffect(() => {
     if (!principalCategory) {
