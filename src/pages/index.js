@@ -65,4 +65,4 @@ const Home = () => {
   );
 };
 
-export default ComingSoon;
+export default Home;
