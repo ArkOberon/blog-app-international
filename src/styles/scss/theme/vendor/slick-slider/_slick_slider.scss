@@ -1,5 +1,5 @@
-@import "slick.scss";
-@import "slick-theme.scss";
+@import 'slick.scss';
+@import 'slick-theme.scss';
 
 /** slick custom style */
 .carousel-indicators li {
@@ -49,8 +49,8 @@
   }
 
   &:before {
-    font-family: "Feather" !important;
-    content: "\e930";
+    font-family: 'Feather' !important;
+    content: '\e930';
     color: var(--#{$prefix}gray-400);
     font-size: 19px;
     top: 22%;
@@ -81,8 +81,8 @@
   }
 
   &:before {
-    font-family: "Feather" !important;
-    content: "\e92f";
+    font-family: 'Feather' !important;
+    content: '\e92f';
     color: var(--#{$prefix}gray-400);
     font-size: 19px;
     top: 22%;

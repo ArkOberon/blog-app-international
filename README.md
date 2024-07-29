@@ -1,40 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Hermenautas Store
 
-## Getting Started
+Aplicación Frontend que combina un diario digital de noticias junto con un catálogo de productos y servicios editoriales para la [`Web Oficial de Hermenautas`](https://hermenautas.com/).
 
-First, run the development server:
+**Índice**
+
+1. [Realizando la Instalación](#id1)
+2. [Variables de Entorno](#id2)
+3. [Gestión de traducciones](#id3)
+4. [Control de Versiones Automatizadas](#id4)
+
+
+## **1. Realizando la Instalación** <div id='id1' />
+
+La aplicación ha sido desarrollada con [`ReactJS`](https://react.dev/learn)usando el metaframework [`NextJS`](https://nextjs.org/docs). Se usó [`create-next-app`](https://nextjs.org/docs/getting-started/installation) por lo que requiere de tener instalado NodeJS. Para poder usar el repositorio en un entorno local de desarrollo se requiere:
+
+Ejecutar comando de instalación de paquetes de package.json:
+
+```bash
+npm install
+
+```
+
+Ejecutar comando para iniciar servidor en modo desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+# IMPORTANTE: En el modo desarrollo local, NextJS se encarga de realizar la build
+# automáticamente, es por esto que NO SE DEBE EJECUTAR el comando npm run build
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## **2. Variables de Entorno** <div id='id2' />
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Para un correcto funcionamiento de la APP se deben utilizar las variables de entorno. Crear un archivo **.env.local** en la carpeta raíz del repositorio (**IMPORTANTE:** Debe quedar al mismo nivel que el archivo package.json o el README.md. No insertar en /src ni en ninguna otra carpeta existente.)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+# IMPORTANTE: Estas variables son solo para el entorno local de desarrollo.
+# No usar para la rama Master ni para la rama Dev.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Copiar y pegar las siguientes variables en el interior del archivo **.env.local**
 
-## Learn More
+```env
+# .env
 
-To learn more about Next.js, take a look at the following resources:
+#
+# API URL
+#
+NEXT_PUBLIC_API_URL = "https://api.hermenautas.es/v1"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#
+# HOST WEB URL
+#
+NEXT_PUBLIC_SITE_NAME = "Hermenautas"
+NEXT_PUBLIC_HOST_URL = "http://localhost:3000"
+NEXT_PUBLIC_PORT = 3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
+## **3. Gestión de las traducciones** <div id='id3' />
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para gestionar las traducciones usamos la dependencia de [`next-intl`](https://next-intl-docs-git-feat-next-13-rsc-next-intl.vercel.app/) y lo integramos a la plataforma de [`crowdin`](https://crowdin.com/) con la que podemos sincronizar todas las traducciones de nuestros frontends sin necesidad de enviar información manualmente al equipo de traducciones.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Todas las traducciones al español se registran en la carpeta "messenger" en el archivo es.json
+
+Para poder usar adecuadamente el middleware de crowdin se deben seguir las instrucciones de instalación del [`Crowdin CLI`](https://crowdin.github.io/crowdin-cli/installation)
+
+Una vez instalado puedes el push para enviar el archivo es.json al equipo de traducción
+
+```bash
+crowdin push
+```
+
+Cuando el equipo haya terminado de traducir puedes usar el pull para obtener todos los archivos traducidos en todos los idiomas
+```bash
+crowdin pull
+```
+
+## **4. Control de Versiones Automatizadas** <div id='id4' />
+
+### ¿Cómo realizar commits?
+
+Para agregar un commit, introducir el siguiente comando:
+
+```bash
+git commit -a
+```
+
+Se abre una nueva terminal en VIM.
+
+Escribir la tipología del commit: fix, feat, docs, etc. (Siguiendo los parámetros establecidos en el package.json lineas 70 a la 85).
+
+EJEMPLO
+```bash
+fix: este es una corrección de un bug
+```
+
+```bash
+feat: esta es una actualización importante
+```
+
+Salir de terminal usando ctrl+c
+
+```bash
+:wq
+```
+
+Ejecutar release-it
+
+```bash
+npm run release
+```
+
+Configurar release conforme a lo que se requiera en cada momento
+Para +Info consultar la [`Documentación Oficial`](https://github.com/release-it/release-it)
+

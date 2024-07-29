@@ -1,5 +1,5 @@
 // Color system
-$prefix: "geeks-";
+$prefix: 'hermenautas-';
 $prefix: $prefix !default;
 
 $white: #fff !default;
@@ -18,29 +18,28 @@ $black: #000 !default;
 $grays: () !default;
 $grays: map-merge(
   (
-    "black": $black,
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900,
-    "1000": $gray-1000,
-
-    "white": $white,
+    'black': $black,
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+    '1000': $gray-1000,
+    'white': $white,
   ),
   $grays
 );
 
-$primary: #754ffe !default;
-$secondary: #64748b !default;
-$success: #38a169 !default;
-$info: #0ea5e9 !default;
+$primary: #d10056 !default;
+$secondary: #331832 !default;
+$success: #c6d8d3 !default;
+$info: #f9ddd6 !default;
 $warning: #f59e0b !default;
-$danger: #dc2626 !default;
+$danger: #f0544f !default;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
@@ -63,28 +62,28 @@ $dark-info: #51a0c2 !default; // NEW
 $white: $white !default;
 
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger,
-  "light": $light,
-  "dark": $dark,
-  "white": $white,
-  "light-primary": $light-primary,
-  "light-danger": $light-danger,
-  "light-info": $light-info,
-  "light-warning": $light-warning,
-  "light-secondary": $light-secondary,
-  "light-success": $light-success,
-  "light-dark": $light-dark,
-  "dark-primary": $dark-primary,
-  "dark-warning": $dark-warning,
-  "dark-info": $dark-info,
-  "dark-danger": $dark-danger,
-  "dark-success": $dark-success,
-  "dark-secondary": $dark-secondary,
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+  'white': $white,
+  'light-primary': $light-primary,
+  'light-danger': $light-danger,
+  'light-info': $light-info,
+  'light-warning': $light-warning,
+  'light-secondary': $light-secondary,
+  'light-success': $light-success,
+  'light-dark': $light-dark,
+  'dark-primary': $dark-primary,
+  'dark-warning': $dark-warning,
+  'dark-info': $dark-info,
+  'dark-danger': $dark-danger,
+  'dark-success': $dark-success,
+  'dark-secondary': $dark-secondary,
 );
 
 // theme soft colors map
@@ -93,15 +92,15 @@ $soft-alpha: 0.3;
 $theme-soft-colors: () !default;
 $theme-soft-colors: map-merge(
   (
-    "white-soft": rgba($white, $soft-alpha),
-    "primary-soft": rgba($primary, $soft-alpha),
-    "secondary-soft": rgba($secondary, $soft-alpha),
-    "success-soft": rgba($success, $soft-alpha),
-    "info-soft": rgba($info, $soft-alpha),
-    "warning-soft": rgba($warning, $soft-alpha),
-    "danger-soft": rgba($danger, $soft-alpha),
-    "light-soft": rgba($light, $soft-alpha),
-    "dark-soft": rgba($dark, $soft-alpha),
+    'white-soft': rgba($white, $soft-alpha),
+    'primary-soft': rgba($primary, $soft-alpha),
+    'secondary-soft': rgba($secondary, $soft-alpha),
+    'success-soft': rgba($success, $soft-alpha),
+    'info-soft': rgba($info, $soft-alpha),
+    'warning-soft': rgba($warning, $soft-alpha),
+    'danger-soft': rgba($danger, $soft-alpha),
+    'light-soft': rgba($light, $soft-alpha),
+    'dark-soft': rgba($dark, $soft-alpha),
   ),
   $theme-soft-colors
 );
@@ -120,10 +119,11 @@ $text-muted: $gray-500 !default;
 // Typography
 // Font, line-height, and color for body text, headings, and more.
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Inter", "sans-serif" !default;
+$font-family-sans-serif: 'Source Sans 3', 'sans-serif' !default;
+$font-family-serif: 'Source Serif 4', 'serif' !default;
 $font-family-base: $font-family-sans-serif !default;
-$font-family-heading: $font-family-sans-serif;
-$font-size-base: 0.875rem !default;
+$font-family-heading: $font-family-serif !default;
+$font-size-base: 1.3rem !default;
 
 // Font Weight
 $font-weight-thin: 100 !default;
@@ -145,7 +145,7 @@ $link-decoration: none !default;
 
 // Line height
 $line-height-base: 1.6 !default;
-$line-height-1: 1 !default;
+$line-height-1: 0.1 !default;
 $line-height-2: 2 !default;
 $line-height-sm: 1.2 !default;
 $line-height-md: 1.6 !default;
@@ -158,8 +158,8 @@ $text-muted: $gray-500 !default;
 $enable-rfs: false !default;
 
 // Typography
-$h1-font-size: 2rem !default;
-$h2-font-size: 1.5rem !default;
+$h1-font-size: 3.5rem !default;
+$h2-font-size: 2.5rem !default;
 $h3-font-size: 1.25rem !default;
 $h4-font-size: 1rem !default;
 $h5-font-size: 0.875rem !default;
@@ -178,7 +178,7 @@ $font-sizes: (
 // scss-docs-start headings-variables
 $headings-font-family: $font-family-heading !default;
 $headings-font-weight: 600 !default;
-$headings-line-height: 1.5 !default;
+$headings-line-height: 1 !default;
 // $headings-color: $gray-800 !default;
 $headings-color: var(--#{$prefix}headings-color) !default;
 
@@ -287,7 +287,7 @@ $container-max-widths: (
 ) !default;
 // scss-docs-end container-max-widths
 
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+@include _assert-ascending($container-max-widths, '$container-max-widths');
 
 // Spacing
 //
@@ -481,10 +481,14 @@ $instagram-hover-bg: #5851db;
 $google-hover-bg: #ea4335;
 $linkedin-hover-bg: #0077b5;
 $github-hover-bg: #4078c0;
+$twitch-hover-bg: #9146ff;
+$youtube-hover-bg: #ff0000;
 $facebook: #4267b2;
 $twitter: #1da1f2;
 $github: #000000;
 $google: #db3236;
+$twitch: #9146ff;
+$youtube: #ff0000;
 // Close
 
 // scss-docs-start close-variables

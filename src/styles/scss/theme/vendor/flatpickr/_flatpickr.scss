@@ -79,7 +79,7 @@
     display: block;
     pointer-events: none;
     border: solid transparent;
-    content: "";
+    content: '';
     height: 0;
     width: 0;
     left: 22px;
@@ -91,7 +91,7 @@
     display: block;
     pointer-events: none;
     border: solid transparent;
-    content: "";
+    content: '';
     height: 0;
     width: 0;
     left: 22px;
@@ -353,7 +353,7 @@
     }
     &:after {
       display: block;
-      content: "";
+      content: '';
       position: absolute;
     }
     svg {
@@ -1054,7 +1054,7 @@ span.flatpickr-weekday {
   display: -webkit-flex;
   display: -ms-flexbox;
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }

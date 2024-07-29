@@ -2,72 +2,87 @@
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import parse from 'html-react-parser';
+import { useFormatter } from 'next-intl';
 
-export const BlogCard = ({ item }) => {
+// Custom functionalities
+import { categoryColors } from '../../utils/categoryColor';
+import { decodeHtml } from '../../utils/decodeHTML';
 
-	const CategoryColors = (category) => {
-		switch (category) {
-			case 'Courses':
-				return 'success';
-			case 'Tutorial':
-				return 'primary';
-			case 'Workshop':
-				return 'warning';
-			case 'Company':
-				return 'info';
-			default:
-				return 'primary';
-		}
-	};
+export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
+  const format = useFormatter();
 
-	return (
-		<Card className="mb-4 shadow-lg">
-			<Link href={`/blog/${item.slug}`} passHref legacyBehavior>
-				<Card.Img
-					variant="top"
-					src={item.blogpostimage}
-					className="rounded-top-md img-fluid"
-				/>
-			</Link>
-			{/* Card body  */}
-			<Card.Body>
-				<Link
-					href="#"
-					className={`fs-5 fw-semi-bold d-block mb-3 text-${CategoryColors(
-						item.category
-					)}`}>
-					{item.category}
-				</Link>
-				<h3>
-					<Link href={`/blog/${item.slug}`} className="text-inherit">
-						{item.title}
-					</Link>
-				</h3>
-				<p> {item.details} </p>
-				{/*  Media content  */}
-				<Row className="align-items-center g-0 mt-4">
-					<Col xs="auto">
-						<Image
-							src={item.authorimage}
-							alt=""
-							className="rounded-circle avatar-sm me-2"
-						/>
-					</Col>
-					<Col className="col lh-1">
-						<h5 className="mb-1">{item.authorname}</h5>
-						<p className="fs-6 mb-0">{item.postedon}</p>
-					</Col>
-					<Col xs="auto">
-						<p className="fs-6 mb-0">{item.readinglength} Min Read</p>
-					</Col>
-				</Row>
-			</Card.Body>
-		</Card>
-	);
+  const categorie = item.categories.nodes.filter(
+    (item) =>
+      item.name !== `${filterPrincipal}-${locale}` &&
+      item.name !== `${oposeCategory}-${locale}` &&
+      item.name !== locale
+  );
 
+  const dateTime = new Date(item.date);
+
+  const postDate = format.dateTime(dateTime, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+
+  return (
+    <>
+      {categorie && categorie.length === 0 ? (
+        <></>
+      ) : (
+        <Card className="mb-4 shadow-lg">
+          <Link href={`/${categorie[0]?.slug}/${item.slug}`}>
+            <Card.Img
+              variant="top"
+              src={item.featuredImage?.node.link}
+              className="rounded-top-md img-fluid"
+            />
+          </Link>
+          {/* Card body  */}
+          <Card.Body>
+            <Link
+              href={`/${categorie[0]?.slug}`}
+              className={`fs-5 fw-semi-bold d-block mb-3 text-${categoryColors(
+                categorie[0].name
+              )}`}
+            >
+              {categorie[0]?.name}
+            </Link>
+            <h2>
+              <Link
+                href={`/${categorie[0]?.slug}/${item.slug}`}
+                className="text-inherit"
+              >
+                {item.title}
+              </Link>
+            </h2>
+            <div className="fs-4">{parse(decodeHtml(item.excerpt))}</div>
+            {/*  Media content  */}
+            <Row className="align-items-center g-0 mt-4">
+              <Col xs="auto">
+                <Image
+                  src={item.author.node.avatar.url}
+                  alt=""
+                  className="rounded-circle avatar-sm me-2"
+                />
+              </Col>
+              <Col className="col lh-1">
+                <h5 className="mb-1">
+                  {item.author.node.firstName} {item.author.node.lastName}
+                </h5>
+                <p className="fs-5 mb-0">{postDate}</p>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+      )}
+    </>
+  );
 };
 
 // Typechecking With PropTypes
 BlogCard.propTypes = {
-	item: PropTypes.object.isRequired
+  item: PropTypes.object.isRequired,
 };

@@ -130,8 +130,8 @@
 .dropdown-toggle::after {
   margin-left: 0.255em;
   vertical-align: 0.255em;
-  font-family: "Feather" !important;
-  content: "\e92e";
+  font-family: 'Feather' !important;
+  content: '\e92e';
   border-top: 0rem;
   border-right: 0rem;
   border-bottom: 0;
@@ -144,8 +144,8 @@
   display: inline-block;
   margin-left: 0.255em;
   vertical-align: 0.255em;
-  font-family: "Feather" !important;
-  content: "\e931";
+  font-family: 'Feather' !important;
+  content: '\e931';
   border-top: 0rem;
   border-right: 0rem;
   border-bottom: 0;
@@ -157,8 +157,8 @@
   display: inline-block;
   margin-left: 0.255em;
   vertical-align: 0.255em;
-  font-family: "Feather" !important;
-  content: "\e930";
+  font-family: 'Feather' !important;
+  content: '\e930';
   border-top: 0rem;
   border-right: 0rem;
   border-bottom: 0;
@@ -169,8 +169,8 @@
 .dropstart .dropdown-toggle::before {
   display: inline-block;
   margin-right: 0.255em;
-  font-family: "Feather" !important;
-  content: "\e92f";
+  font-family: 'Feather' !important;
+  content: '\e92f';
   border-top: 0rem;
   border-right: 0rem;
   border-bottom: 0;
@@ -241,11 +241,11 @@
 #category-dropdown-menu-button {
   padding: 0px !important;
   &::after {
-    content: "" !important;
+    content: '' !important;
   }
 }
 #category-dropdown-menu-button-mobile {
   &::after {
-    content: "" !important;
+    content: '' !important;
   }
 }

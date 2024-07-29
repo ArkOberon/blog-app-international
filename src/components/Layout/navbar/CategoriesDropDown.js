@@ -1,19 +1,19 @@
 // import node module libraries
-import { Fragment } from "react";
-import { Badge, Dropdown } from "react-bootstrap";
-import { useMediaQuery } from "react-responsive";
-import Link from "next/link";
+import { Fragment } from 'react';
+import { Badge, Dropdown } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 // import data files
-import NavbarDefaultRoutes from "../../../routes/NavbarDefault";
+import NavbarDefaultRoutes from '../../../routes/NavbarDefault';
 
 // import hooks
-import useMounted from "../../../hooks/useMounted";
+import useMounted from '../../../hooks/useMounted';
 
 export const CategoriesDropDown = () => {
   const hasMounted = useMounted();
   const isDesktop = useMediaQuery({
-    query: "(min-width: 1224px)",
+    query: '(min-width: 1224px)',
   });
 
   const getTitle = (item) => {
@@ -22,7 +22,7 @@ export const CategoriesDropDown = () => {
         {item.menuitem}
         <Badge
           className="ms-1"
-          bg={item.badgecolor ? item.badgecolor : "primary"}
+          bg={item.badgecolor ? item.badgecolor : 'primary'}
         >
           {item.badge}
         </Badge>

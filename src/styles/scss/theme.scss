@@ -1,37 +1,37 @@
 /* Theme: Geeks */
 
-// Inter Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Source Sans y Source Serif Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 // Font Awesome
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css');
 
 // Material Icons
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 // Feathers CSS for Before Icon
-@import url("/fonts/feather/feather.css");
+@import url('/fonts/feather/feather.css');
 
 // Bootstrap functions
-@import "~bootstrap/scss/functions";
+@import '~bootstrap/scss/functions';
 
 // User Variables
-@import "user-variables";
+@import 'user-variables';
 
 // theme variables
-@import "theme/variables";
+@import 'theme/variables';
 
 //utilities
-@import "theme/utilities";
+@import 'theme/utilities';
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 // Root
-@import "theme/root";
+@import 'theme/root';
 
 // Theme
-@import "theme/theme";
+@import 'theme/theme';
 
 // User
-@import "user";
+@import 'user';

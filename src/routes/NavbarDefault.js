@@ -1,66 +1,96 @@
 import { v4 as uuid } from 'uuid';
 
-const NavbarDefault = () =>{ 
-	const menu = {
-		"es": [
-			{},
-			{
-				id: uuid(),
-				menuitem: 'Libros',
-				link: '/libros'		
-			},
-			{
-				id: uuid(),
-				menuitem: 'Nosotros',
-				link: '/nosotros'
-			},
-			{
-				id: uuid(),
-				menuitem: 'Noticias',
-				link: '/noticias',		
-			},
-			{
-				id: uuid(),
-				menuitem: 'Blog',
-				link: '/blog',	
-			},
-			{
-				id: uuid(),
-				menuitem: 'Contacto',
-				link: '/contacto',		
-			}
-		],
-		"en": [
-			{},
-			{
-				id: uuid(),
-				menuitem: 'Books',
-				link: '/books'		
-			},
-			{
-				id: uuid(),
-				menuitem: 'About us',
-				link: '/about-us'
-			},
-			{
-				id: uuid(),
-				menuitem: 'News',
-				link: '/news',		
-			},	
-			{
-				id: uuid(),
-				menuitem: 'Blog',
-				link: '/blog',	
-			},
-			{
-				id: uuid(),
-				menuitem: 'Contact',
-				link: '/contact',		
-			}
-		],
-	}
+const NavbarDefault = () => {
+  const menu = {
+    es: [
+      {},
+      {
+        id: uuid(),
+        menuitem: 'Tecnología',
+        link: '/tecnologia',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Industria',
+        link: '/industria',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Salud',
+        link: '/salud',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Ciencia',
+        link: '/ciencia',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Economía',
+        link: '/economia',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Religión',
+        link: '/religion',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Educación',
+        link: '/educacion',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Investigaciones',
+        link: '/investigaciones',
+      },
+    ],
+    en: [
+      {},
+      {
+        id: uuid(),
+        menuitem: 'Technology',
+        link: '/en/technology',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Industry',
+        link: '/en/industry',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Health',
+        link: '/en/health',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Science',
+        link: '/en/science',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Economy',
+        link: '/en/economy',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Religion',
+        link: '/en/religion',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Education',
+        link: '/en/education',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Investigations',
+        link: '/en/investigations',
+      },
+    ],
+  };
 
-	return menu
+  return menu;
 };
 
 export default NavbarDefault;

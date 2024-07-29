@@ -1,5 +1,109 @@
 {
-  "Sing-in": {
+  "AuthorSection": {
+    "share": "Comparte:"
+  },
+  "Education": {
+    "title": "Educación – Hermenautas",
+    "title_category": "Educación",
+    "description": "Últimas noticias y consejos relevantes sobre la educación.",
+    "img_alt_home": "Portada Educación Hermenautas"
+  },
+  "Economy": {
+    "title": "Economía – Hermenautas",
+    "title_category": "Economía",
+    "description": "Toda la información económica mundial.",
+    "img_alt_home": "Portada Economía Hermenautas"
+  },
+  "Footer": {
+    "description": "Creemos que la información es un poder que sustenta todas las libertades civiles. La imprenta marcó el comienzo de una nueva era en la historia de la comunicación y la prensa libre jugará un papel determinante en nuestra época actual. Ahora más que nunca, existe la necesidad imperiosa de ofrecer publicaciones sin censura.",
+    "company": "Corporativo",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cookies_policies": "Política de Cookies",
+    "privacy_policies": "Política de Privacidad",
+    "terms_of_services": "Términos de Servicio",
+    "link_slug_company": "/corporativo",
+    "link_slug_about": "/sobre-nosotros",
+    "link_slug_contact": "/contacto",
+    "link_slug_cookies_policies": "/politicas-de-cookies",
+    "link_slug_privacy_policies": "/politicas-de-privacidad",
+    "link_slug_terms_of_services": "/terminos-del-servicio",
+    "all_rights_reserved": "Todos los derechos reservados"
+  },
+  "Health": {
+    "title": "Salud – Hermenautas",
+    "title_category": "Salud",
+    "description": "Toda la información sobre salud.",
+    "img_alt_home": "Portada Salud Hermenautas"
+  },
+  "Home": {
+    "title": "Editorial Hermenautas – Diario de noticias mundial",
+    "title_category": "Hermenautas",
+    "description": "Empresa editorial independiente con información veraz y actualizada, que ofrece las últimas noticias que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...",
+    "img_alt_home": "Portada Hermenautas"
+  },
+  "Industry": {
+    "title": "Industria – Hermenautas",
+    "title_category": "Industria",
+    "description": "Toda la información sobre industria.",
+    "img_alt_home": "Portada Industria Hermenautas"
+  },
+  "Investigations": {
+    "title": "Investigaciones – Hermenautas",
+    "title_category": "Investigaciones",
+    "description": "Toda sobre investigaciones.",
+    "img_alt_home": "Portada Investigaciones Hermenautas"
+  },
+  "Navbar": {
+    "sign_in": "Iniciar Sesión",
+    "sign_up": "Registrarse",
+    "link_slug_sign_in": "/autenticacion/iniciar-sesion",
+    "link_slug_sign_up": "/autenticacion/registrarse"
+  },
+  "NewsletterForm": {
+    "sign_up_for_our_newsletter": "Subscríbete a nuestro boletín semanal",
+    "join_our_newsletter": "Suscríbete a nuestro boletín y recibe contenido especial en tu bandeja de entrada.",
+    "submit": "Suscribirse",
+    "placeholder": "Dirección de correo electrónico"
+  },
+  "Process-Loader": {
+    "procesando_su_solicitud": "Procesando su solicitud..."
+  },
+  "Religion": {
+    "title": "Religión – Diario de noticias mundial",
+    "title_category": "Religión",
+    "description": "Toda la información sobre religión.",
+    "img_alt_home": "Portada Religión Hermenautas"
+  },
+  "Science": {
+    "title": "Ciencia – Hermenautas",
+    "title_category": "Ciencia",
+    "description": "Toda la información sobre ciencia.",
+    "img_alt_home": "Portada Ciencia Hermenautas"
+  },
+  "Sign-in": {
     "title": "Iniciar sesión"
+  },
+  "Sign-up": {
+    "title": "Registrarse",
+    "already_have_an_account": "¿Ya tienes una cuenta?",
+    "sign_in": "Iniciar sesión",
+    "redirect_link_slug": "/autenticacion/iniciar-sesion",
+    "sign_up": "Registrarse",
+    "username": "Nombre de usuario",
+    "email": "Correo electrónico",
+    "email_address_here": "Dirección de correo electrónico",
+    "password": "Contraseña",
+    "your_password": "Tu contraseña",
+    "i_agree_to_the_terms": "Estoy de acuerdo con los",
+    "terms_of_services": "Términos de Servicio",
+    "and": "y la",
+    "privacy_policy": "Política de Privacidad"
+  },
+  "Technology": {
+    "title": "Tecnología – Hermenautas",
+    "title_category": "Tecnología",
+    "description": "Toda la información sobre tecnología",
+    "img_alt_home": "Portada Tecnología Hermenautas"
   }
 }

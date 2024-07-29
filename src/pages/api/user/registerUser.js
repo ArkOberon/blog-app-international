@@ -1,8 +1,8 @@
 /**
- * @description Registro de Cliente. 
- * @param {String} email Email del Cliente 
+ * @description Registro de Cliente.
+ * @param {String} email Email del Cliente
  * @param {String} username Nombre de acceso
- * @param {String} password Contraseña del Cliente       
+ * @param {String} password Contraseña del Cliente
  */
 
 export const registerUser = async (username, email, password) => {
@@ -10,7 +10,7 @@ export const registerUser = async (username, email, password) => {
     method: 'POST',
     mode: 'cors',
     headers: {
-      'Content-Type': 'application/json'      
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       query: `
@@ -25,12 +25,12 @@ export const registerUser = async (username, email, password) => {
       variables: {
         username: username,
         email: email,
-        password: password
+        password: password,
       },
     }),
-  })
+  });
 
-  const data = await response.json()
+  const data = await response.json();
 
-  return data
-}
+  return data;
+};

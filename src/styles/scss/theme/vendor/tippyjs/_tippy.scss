@@ -1,7 +1,7 @@
 // Tippy scss
 // animation
 
-.tippy-box[data-animation="fade"][data-state="hidden"] {
+.tippy-box[data-animation='fade'][data-state='hidden'] {
   opacity: 0;
 }
 [data-tippy-root] {
@@ -18,7 +18,7 @@
   outline: 0;
   transition-property: transform, visibility, opacity;
 }
-.tippy-box[data-placement^="top"] {
+.tippy-box[data-placement^='top'] {
   > .tippy-arrow {
     bottom: 0;
     &:before {
@@ -30,7 +30,7 @@
     }
   }
 }
-.tippy-box[data-placement^="bottom"] {
+.tippy-box[data-placement^='bottom'] {
   > .tippy-arrow {
     top: 0;
     &:before {
@@ -42,7 +42,7 @@
     }
   }
 }
-.tippy-box[data-placement^="left"] {
+.tippy-box[data-placement^='left'] {
   > .tippy-arrow {
     right: 0;
     &:before {
@@ -53,7 +53,7 @@
     }
   }
 }
-.tippy-box[data-placement^="right"] {
+.tippy-box[data-placement^='right'] {
   > .tippy-arrow {
     left: 0;
     &:before {
@@ -64,7 +64,7 @@
     }
   }
 }
-.tippy-box[data-inertia][data-state="visible"] {
+.tippy-box[data-inertia][data-state='visible'] {
   transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
 }
 .tippy-arrow {
@@ -72,7 +72,7 @@
   height: 16px;
   color: #333;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     border-color: transparent;
     border-style: solid;

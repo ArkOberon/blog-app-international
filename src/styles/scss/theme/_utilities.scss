@@ -3,20 +3,20 @@
 // Extended from Bootstrap
 //
 
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/variables-dark";
-@import "~bootstrap/scss/maps";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/utilities/api";
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/variables-dark';
+@import '~bootstrap/scss/maps';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/utilities/api';
 
 $utilities: () !default;
 
 $utilities: map-merge(
   $utilities,
   (
-    "font-weight": (
+    'font-weight': (
       property: font-weight,
       class: fw,
       values: (
@@ -29,7 +29,7 @@ $utilities: map-merge(
         bolder: $font-weight-bolder,
       ),
     ),
-    "line-height": (
+    'line-height': (
       property: line-height,
       class: lh,
       values: (
@@ -42,7 +42,7 @@ $utilities: map-merge(
         lg: $line-height-lg,
       ),
     ),
-    "letter-spacing": (
+    'letter-spacing': (
       property: letter-spacing,
       class: ls,
       values: (
@@ -55,7 +55,7 @@ $utilities: map-merge(
         xxl: $letter-spacing-xxl,
       ),
     ),
-    "width": (
+    'width': (
       property: width,
       responsive: true,
       class: w,
@@ -76,7 +76,7 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "max-width": (
+    'max-width': (
       property: max-width,
       responsive: true,
       class: mw,
@@ -91,7 +91,7 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "viewport-width": (
+    'viewport-width': (
       property: width,
       responsive: true,
       class: vw,
@@ -99,7 +99,7 @@ $utilities: map-merge(
         100: 100vw,
       ),
     ),
-    "min-viewport-width": (
+    'min-viewport-width': (
       property: min-width,
       responsive: true,
       class: min-vw,
@@ -107,7 +107,7 @@ $utilities: map-merge(
         100: 100vw,
       ),
     ),
-    "height": (
+    'height': (
       property: height,
       responsive: true,
       class: h,
@@ -135,7 +135,7 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "max-height": (
+    'max-height': (
       property: max-height,
       responsive: true,
       class: mh,
@@ -150,7 +150,7 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    "viewport-height": (
+    'viewport-height': (
       property: height,
       responsive: true,
       class: vh,
@@ -158,7 +158,7 @@ $utilities: map-merge(
         100: 100vh,
       ),
     ),
-    "min-viewport-height": (
+    'min-viewport-height': (
       property: min-height,
       responsive: true,
       class: min-vh,
@@ -166,7 +166,7 @@ $utilities: map-merge(
         100: 100vh,
       ),
     ),
-    "z-index": (
+    'z-index': (
       property: z-index,
       class: z,
       values: (
@@ -179,7 +179,7 @@ $utilities: map-merge(
         5: 5,
       ),
     ),
-    "negative-z-index": (
+    'negative-z-index': (
       property: z-index,
       class: zn,
       values: (
@@ -190,64 +190,64 @@ $utilities: map-merge(
         5: -5,
       ),
     ),
-    "rounded-top-md": (
+    'rounded-top-md': (
       property: border-top-left-radius border-top-right-radius,
       class: rounded-top-md,
       values: (
         null: $border-radius-md,
       ),
     ),
-    "rounded-end-md": (
+    'rounded-end-md': (
       property: border-top-right-radius border-bottom-right-radius,
       class: rounded-end-md,
       values: (
         null: $border-radius-md,
       ),
     ),
-    "rounded-bottom-md": (
+    'rounded-bottom-md': (
       property: border-bottom-right-radius border-bottom-left-radius,
       class: rounded-bottom-md,
       values: (
         null: $border-radius-md,
       ),
     ),
-    "rounded-start-md": (
+    'rounded-start-md': (
       property: border-bottom-left-radius border-top-left-radius,
       class: rounded-start-md,
       values: (
         null: $border-radius-md,
       ),
     ),
-    "color": (
+    'color': (
       property: color,
       class: text,
       local-vars: (
-        "text-opacity": 1,
+        'text-opacity': 1,
       ),
       values:
         map-merge(
           $utilities-text-colors,
           (
-            "gray-100": $gray-100,
-            "gray-200": $gray-200,
-            "gray-300": $gray-300,
-            "gray-400": $gray-400,
-            "gray-500": $gray-500,
-            "gray-600": $gray-600,
-            "gray-700": $gray-700,
-            "gray-800": $gray-800,
-            "gray-900": $gray-900,
-            "gray-1000": $gray-1000,
-            "white": $white,
-            "body": $body-color,
-            "muted": $text-muted,
-            "black-50": rgba($black, 0.5),
-            "white-50": rgba($white, 0.5),
-            "reset": inherit,
+            'gray-100': $gray-100,
+            'gray-200': $gray-200,
+            'gray-300': $gray-300,
+            'gray-400': $gray-400,
+            'gray-500': $gray-500,
+            'gray-600': $gray-600,
+            'gray-700': $gray-700,
+            'gray-800': $gray-800,
+            'gray-900': $gray-900,
+            'gray-1000': $gray-1000,
+            'white': $white,
+            'body': $body-color,
+            'muted': $text-muted,
+            'black-50': rgba($black, 0.5),
+            'white-50': rgba($white, 0.5),
+            'reset': inherit,
           )
         ),
     ),
-    "text-opacity": (
+    'text-opacity': (
       css-var: true,
       class: text-opacity,
       values: (
@@ -258,36 +258,36 @@ $utilities: map-merge(
       ),
     ),
     // scss-docs-end utils-color
-    "background-color":
+    'background-color':
       (
         property: background-color,
         class: bg,
         // responsive: true,
         local-vars:
           (
-            "bg-opacity": 1,
+            'bg-opacity': 1,
           ),
         values:
           map-merge(
             $theme-colors,
             (
-              "gray-100": $gray-100,
-              "gray-200": $gray-200,
-              "gray-300": $gray-300,
-              "gray-400": $gray-400,
-              "gray-500": $gray-500,
-              "gray-600": $gray-600,
-              "gray-700": $gray-700,
-              "gray-800": $gray-800,
-              "gray-900": $gray-900,
-              "gray-1000": $gray-1000,
-              "body": $body-bg,
-              "white": $white,
-              "transparent": transparent,
+              'gray-100': $gray-100,
+              'gray-200': $gray-200,
+              'gray-300': $gray-300,
+              'gray-400': $gray-400,
+              'gray-500': $gray-500,
+              'gray-600': $gray-600,
+              'gray-700': $gray-700,
+              'gray-800': $gray-800,
+              'gray-900': $gray-900,
+              'gray-1000': $gray-1000,
+              'body': $body-bg,
+              'white': $white,
+              'transparent': transparent,
             )
           ),
       ),
-    "bg-opacity": (
+    'bg-opacity': (
       css-var: true,
       class: bg-opacity,
       values: (
@@ -298,7 +298,7 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    "smooth-shadow": (
+    'smooth-shadow': (
       property: box-shadow,
       class: smooth-shadow,
       values: (
@@ -307,19 +307,19 @@ $utilities: map-merge(
         lg: $box-shadow-smooth-lg,
       ),
     ),
-    "border-color": (
+    'border-color': (
       property: border-color,
       class: border,
       values:
         map-merge(
           $theme-colors,
           (
-            "white": $white,
-            "gray-800": $gray-800,
+            'white': $white,
+            'gray-800': $gray-800,
           )
         ),
     ),
-    "flex": (
+    'flex': (
       responsive: true,
       property: flex,
       values: (
@@ -328,7 +328,7 @@ $utilities: map-merge(
         none: none,
       ),
     ),
-    "min-height": (
+    'min-height': (
       property: min-height,
       class: min-h,
       values: (
@@ -336,7 +336,7 @@ $utilities: map-merge(
         0: 0%,
       ),
     ),
-    "border": (
+    'border': (
       property: border,
       responsive: true,
       values: (
@@ -345,7 +345,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-start": (
+    'border-start': (
       property: border-left,
       class: border-start,
       responsive: true,
@@ -355,7 +355,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-end": (
+    'border-end': (
       property: border-right,
       class: border-end,
       responsive: true,
@@ -365,7 +365,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-top": (
+    'border-top': (
       property: border-top,
       class: border-top,
       responsive: true,
@@ -375,7 +375,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-bottom": (
+    'border-bottom': (
       property: border-bottom,
       class: border-bottom,
       responsive: true,
@@ -385,7 +385,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "rounded": (
+    'rounded': (
       property: border-radius,
       class: rounded,
       responsive: true,
@@ -400,7 +400,7 @@ $utilities: map-merge(
         pill: $border-radius-pill,
       ),
     ),
-    "white-space": (
+    'white-space': (
       property: white-space,
       class: text,
       responsive: true,
@@ -413,12 +413,12 @@ $utilities: map-merge(
 );
 
 // Utilities classes
-@import "./utilities/_icon-shape.scss";
-@import "./utilities/_type.scss";
-@import "./utilities/_text.scss";
-@import "./utilities/_collapse.scss";
-@import "./utilities/_background.scss";
-@import "./utilities/_border.scss";
-@import "./utilities/_overflow.scss";
-@import "./utilities/_gradient.scss";
-@import "./utilities/_sizing.scss";
+@import './utilities/_icon-shape.scss';
+@import './utilities/_type.scss';
+@import './utilities/_text.scss';
+@import './utilities/_collapse.scss';
+@import './utilities/_background.scss';
+@import './utilities/_border.scss';
+@import './utilities/_overflow.scss';
+@import './utilities/_gradient.scss';
+@import './utilities/_sizing.scss';

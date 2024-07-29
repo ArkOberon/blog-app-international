@@ -1,2 +1,2 @@
-export * from './NavBarCart'
-export * from './CartOverviewItem'
+export * from './NavBarCart';
+export * from './CartOverviewItem';

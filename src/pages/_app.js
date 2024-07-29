@@ -1,41 +1,58 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
 // import node module libraries
 import Head from 'next/head';
-import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
 // import provider and store from redux state management.
-import { Provider } from 'react-redux'
-import { store } from '../store/store'
+import { Provider } from 'react-redux';
+import { store } from '../store/store';
 
 // import Internationalization (i18n) from nextjs
-import {NextIntlClientProvider} from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 
 // import Layout and theme style scss file
-import Layout from "../components/Layout/Layout"
+import Layout from '../components/Layout/Layout';
 import '../styles/scss/theme.scss';
+
+// Import menssages
+import messagesEn from '../messages/en.json';
+import messagesEs from '../messages/es.json';
 
 function App({ Component, pageProps }) {
   const router = useRouter();
   const pageURL = process.env.baseURL + router.pathname;
-  const title = "Geeks UI - Nextjs fully responsive template ";
-  const description = "Geeks is a fully responsive and yet modern premium Nextjs template & snippets. Geek is feature-rich Nextjs components and beautifully designed pages that help you create the best possible website and web application projects. Nextjs Snippet "
-  const keywords = "Geeks UI, Nextjs, Next.js, Course, Sass, landing, Marketing, admin themes, Nextjs admin, Nextjs dashboard, ui kit, web app, multipurpose"
+  const title = 'Hermenautas – Diario de noticias mundial';
+  const description =
+    'Medio de comunicación independiente con información veraz y actualizada, que ofrece las últimas noticas que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...';
+  const keywords =
+    'Noticias, Diario, Mundial, Medio de comunicación, Salud, Tecnología, Ciencia, Economía, Industria, Educación, Política, Religión, Investigaciones';
+
+  let messages;
+  switch (router.locale) {
+    case 'en':
+      messages = messagesEn;
+      break;
+    case 'es':
+      messages = messagesEs;
+      break;
+    default:
+      messages = messagesEn;
+  }
 
   return (
     <NextIntlClientProvider
       locale={router.locale}
       timeZone="Europe/Brussels"
-      messages={pageProps.messages}
+      messages={messages}
     >
       <Fragment>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="keywords" content={keywords} />
           <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
         </Head>
-        <NextSeo 
+        <NextSeo
           title={title}
           description={description}
           canonical={pageURL}
@@ -43,13 +60,13 @@ function App({ Component, pageProps }) {
             url: pageURL,
             title: title,
             description: description,
-            site_name: process.env.siteName,
+            site_name: process.env.NEXT_PUBLIC_SITE_NAME,
             images: [
               {
-                url: '/images/og/geeks-ui-next-js-default-og-image.jpg',
+                url: '/images/og/og-hermenautas.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Geeks UI NextJS',
+                alt: 'Portada Hermenautas',
               },
             ],
           }}
@@ -58,12 +75,12 @@ function App({ Component, pageProps }) {
           <React.StrictMode>
             <Layout>
               <Component {...pageProps} />
-            </Layout>          
+            </Layout>
           </React.StrictMode>
-        </Provider>      
+        </Provider>
       </Fragment>
     </NextIntlClientProvider>
   );
 }
 
-export default App
+export default App;

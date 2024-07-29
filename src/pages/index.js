@@ -1,129 +1,68 @@
 // import node module libraries
-import React, { Fragment, useEffect, useState } from 'react';
-import {
-	Col,
-	Row,
-	Container,
-	Image,
-	Form,
-	Button,
-	ListGroup
-} from 'react-bootstrap';
+import { Fragment, useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 
 // import widget/custom components
-import { HermenautasSEO } from '../widgets';
+import { PostList } from '../components/category';
+import { PostListSkeleton } from '../components/ui/loaders';
 
-// import hooks
-import useMounted from '../hooks/useMounted';
+// import API functions
+import { getAllPosts } from './api/posts/getAllPosts';
 
-const ComingSoon = () => {
-	const hasMounted = useMounted();
+const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [arrayPost, setArrayPost] = useState({
+    data: {
+      posts: {
+        nodes: [],
+      },
+    },
+  });
 
-	const calculateTimeLeft = () => {
-		let launchdate = '2024-12-4';
-		const difference = +new Date(launchdate) - +new Date();
-		let timeLeft = {};
-		if (difference > 0) {
-			timeLeft = {
-				days: Math.floor(difference / (1000 * 60 * 60 * 24)).toLocaleString(
-					'en-US',
-					{ minimumIntegerDigits: 2, useGrouping: false }
-				),
-				hours: Math.floor((difference / (1000 * 60 * 60)) % 24).toLocaleString(
-					'en-US',
-					{ minimumIntegerDigits: 2, useGrouping: false }
-				),
-				minutes: Math.floor((difference / 1000 / 60) % 60).toLocaleString(
-					'en-US',
-					{ minimumIntegerDigits: 2, useGrouping: false }
-				),
-				seconds: Math.floor((difference / 1000) % 60).toLocaleString('en-US', {
-					minimumIntegerDigits: 2,
-					useGrouping: false
-				})
-			};
-		}
-		return timeLeft;
-	};
+  const t = useTranslations('Home');
+  const router = useRouter();
+  const { locale } = router;
+  const category = arrayPost.data.categories?.nodes.filter(
+    (item) => item.name === locale
+  );
 
-	const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-	const timerComponents = [];
+  useEffect(() => {
+    const postArray = async () => {
+      const pArray = await getAllPosts();
+      setArrayPost(pArray);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setTimeLeft(calculateTimeLeft());
-		}, 1000);
-	});
+      setIsLoading(false);
+    };
 
-	Object.keys(timeLeft).forEach((interval, index) => {
-		if (!timeLeft[interval]) {
-			return;
-		}
-		timerComponents.push(
-			<ListGroup.Item
-				as="li"
-				bsPrefix="list-inline-item"
-				key={index}
-				className="me-md-5"
-			>
-				<span className="days display-4 fw-bold  text-primary">
-					{timeLeft[interval]}
-				</span>
-				<p className="fs-4 mb-0">{interval}</p>
-			</ListGroup.Item>
-		);
-	});
+    postArray();
+  }, []);
 
-	return (
-		<Fragment>
-			{/* Geeks SEO settings  */}
-			<HermenautasSEO title="Coming soon | Hermenautas" />
+  // SEO Info
+  const title = t('title');
+  const titleCategory = t('title_category');
+  const description = t('description');
+  const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
+  const imgAlt = t('img_alt_home');
 
-			{/* Page Content */}
-			<div className="bg-white">
-				<Container className="d-flex flex-column">
-					<Row className="align-items-center justify-content-center g-0 py-lg-22 py-10">
-						{/* Docs */}
-						<Col
-							xl={{ span: 5, offset: 1 }}
-							lg={6}
-							md={12}
-							sm={12}
-							className="text-center text-lg-start"
-						>
-							<h1 className="display-3 mb-2 fw-bold">We&apos;re coming soon.</h1>
-							<p className="mb-4 fs-4">
-								Our website is under construction. We&apos;ll be here soon with our
-								new awesome site, subscribe to be notified.
-							</p>
-							<div className="countdown">
-								<ListGroup as="ul" bsPrefix="list-inline">
-									{timerComponents.length && hasMounted ? (
-										timerComponents
-									) : (
-										<ListGroup.Item as="li" bsPrefix="list-inline-item">
-											<h1 className="text-danger">Time&apos;s up!</h1>{' '}
-										</ListGroup.Item>
-									)}
-								</ListGroup>
-							</div>
-							<hr className="my-4" />							
-						</Col>
-						{/* img */}
-						<Col
-							xl={{ span: 5, offset: 1 }}
-							lg={6}
-							md={12}
-							sm={12}
-							className="mt-8 mt-lg-0"
-						>
-							<Image src="/images/background/comingsoon.svg" alt="" className="w-100" />
-						</Col>
-					</Row>
-				</Container>
-			</div>
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      {isLoading ? (
+        <PostListSkeleton />
+      ) : (
+        <PostList
+          locale={locale}
+          title={title}
+          titleCategory={titleCategory}
+          description={description}
+          imgUrl={imgUrl}
+          imgAlt={imgAlt}
+          arrayPost={arrayPost.data.categories.nodes}
+          categoryId={category[0].id}
+        />
+      )}
+    </Fragment>
+  );
 };
 
 export default ComingSoon;

@@ -35,14 +35,14 @@
     }
   }
   &:before {
-    font-family: "slick";
+    font-family: 'slick';
     font-size: 20px;
     line-height: 1;
     opacity: 0.75;
     color: var(--#{$prefix}white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: "←";
+    content: '←';
   }
 }
 .slick-next {
@@ -80,14 +80,14 @@
     }
   }
   &:before {
-    font-family: "slick";
+    font-family: 'slick';
     font-size: 20px;
     line-height: 1;
     opacity: 0.75;
     color: var(--#{$prefix}white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: "→";
+    content: '→';
   }
 }
 .slick-prev.slick-disabled {
@@ -100,19 +100,19 @@
     opacity: 0.25;
   }
 }
-[dir="rtl"] {
+[dir='rtl'] {
   .slick-prev {
     right: -25px;
     left: auto;
     &:before {
-      content: "→";
+      content: '→';
     }
   }
   .slick-next {
     right: auto;
     left: -25px;
     &:before {
-      content: "←";
+      content: '←';
     }
   }
 }
@@ -161,7 +161,7 @@
         }
       }
       &:before {
-        font-family: "slick";
+        font-family: 'slick';
         font-size: 6px;
         line-height: 20px;
         position: absolute;
@@ -169,7 +169,7 @@
         left: 0;
         width: 20px;
         height: 20px;
-        content: "•";
+        content: '•';
         text-align: center;
         opacity: 0.25;
         color: var(--#{$prefix}black);

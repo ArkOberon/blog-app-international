@@ -1,7 +1,7 @@
 // Accordions
 
 .accordion-flush {
-  a[aria-expanded="true"] {
+  a[aria-expanded='true'] {
     color: var(--#{$prefix}primary);
   }
 }
