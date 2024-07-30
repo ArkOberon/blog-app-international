@@ -1,5 +1,12 @@
 
 
+## [0.2.2](///compare/0.2.0...0.2.2) (2024-07-30)
+
+
+### Bug Fixes
+
+* agrega el Speedinsights corrige pequeños bugs d9f3f6c
+
 ## [0.2.1](///compare/0.2.0...0.2.1) (2024-07-29)
 
 
