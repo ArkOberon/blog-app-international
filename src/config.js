@@ -52,14 +52,6 @@ export const pathnames = {
     es: '/religion-es/[slug]',
     en: '/religion-en/[slug]',
   },
-  '/education': {
-    es: '/educacion',
-    en: '/education',
-  },
-  '/education/[slug]': {
-    es: '/educacion/[slug]',
-    en: '/education/[slug]',
-  },
   '/authentication/sign-in': {
     es: '/autenticacion/iniciar-sesion',
     en: '/authentication/sign-in',
