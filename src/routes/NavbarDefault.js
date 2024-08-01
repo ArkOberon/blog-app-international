@@ -39,11 +39,6 @@ const NavbarDefault = () => {
         menuitem: 'Educación',
         link: '/educacion',
       },
-      {
-        id: uuid(),
-        menuitem: 'Investigaciones',
-        link: '/investigaciones',
-      },
     ],
     en: [
       {},
@@ -81,11 +76,6 @@ const NavbarDefault = () => {
         id: uuid(),
         menuitem: 'Education',
         link: '/en/education',
-      },
-      {
-        id: uuid(),
-        menuitem: 'Investigations',
-        link: '/en/investigations',
       },
     ],
   };

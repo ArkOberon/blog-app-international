@@ -6,7 +6,7 @@
     "title": "Education – Hermenautas",
     "title_category": "Education",
     "description": "Latest news and tips relevant to education.",
-    "img_alt_home": "Home Economics - Hermenautas"
+    "img_alt_home": "Portada Educación Hermenautas"
   },
   "Economy": {
     "title": "Economy – Hermenautas",
@@ -47,12 +47,6 @@
     "title_category": "Industry",
     "description": "All the information about the industry.",
     "img_alt_home": "Home Industry - Hermenautas"
-  },
-  "Investigations": {
-    "title": "Investigations – Hermenautas",
-    "title_category": "Investigations",
-    "description": "All about research.",
-    "img_alt_home": "Home Investigations Hermenautas"
   },
   "Navbar": {
     "sign_in": "Sign in",
@@ -104,6 +98,6 @@
     "title": "Technology – Hermenautas",
     "title_category": "Technology",
     "description": "All the information about technology.",
-    "img_alt_home": "Home Technology – Hermenautas"
+    "img_alt_home": "Portada Tecnología Hermenautas"
   }
 }

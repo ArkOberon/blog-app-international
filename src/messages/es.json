@@ -48,12 +48,6 @@
     "description": "Toda la información sobre industria.",
     "img_alt_home": "Portada Industria Hermenautas"
   },
-  "Investigations": {
-    "title": "Investigaciones – Hermenautas",
-    "title_category": "Investigaciones",
-    "description": "Toda sobre investigaciones.",
-    "img_alt_home": "Portada Investigaciones Hermenautas"
-  },
   "Navbar": {
     "sign_in": "Iniciar Sesión",
     "sign_up": "Registrarse",

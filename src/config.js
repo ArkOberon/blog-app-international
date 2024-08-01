@@ -60,14 +60,6 @@ export const pathnames = {
     es: '/educacion/[slug]',
     en: '/education/[slug]',
   },
-  '/investigations': {
-    es: '/investigaciones',
-    en: '/investigations',
-  },
-  '/investigations/[slug]': {
-    es: '/investigaciones/[slug]',
-    en: '/investigations/[slug]',
-  },
   '/authentication/sign-in': {
     es: '/autenticacion/iniciar-sesion',
     en: '/authentication/sign-in',
