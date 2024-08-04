@@ -7,7 +7,7 @@ import { useFormatter } from 'next-intl';
 // Global Variables
 import { defaultImage } from '../../global';
 
-export const AuthorAndSharing = ({ data, date }) => {
+export const AuthorAndSharing = ({ data, date, lastComponent }) => {
   const format = useFormatter();
   const t = useTranslations('AuthorSection');
 
@@ -32,10 +32,14 @@ export const AuthorAndSharing = ({ data, date }) => {
           />
         )}
         <div className="ms-2 lh-1">
-          <h5 className="mb-1 ">
+          <h3 className="mb-1 text-primary">
             {data.firstName} {data.lastName}
-          </h5>
-          <span className="text-primary">{postDate}</span>
+          </h3>
+          {lastComponent ? (
+            <p className="fs-6">{data.description}</p>
+          ) : (
+            <span className="text-primary">{postDate}</span>
+          )}
         </div>
       </div>
       <div>

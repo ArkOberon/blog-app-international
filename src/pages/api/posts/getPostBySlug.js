@@ -20,6 +20,7 @@ export const getPostBySlug = async (slug) => {
                 avatar {
                   url
                 }
+                description
               }
             }
             featuredImage {

@@ -92,7 +92,11 @@ export const Article = () => {
                     <h1 className="display-3 fw-bold mb-4">{post?.title}</h1>
                   </div>
                   {/* Author */}
-                  <AuthorAndSharing data={post?.author.node} date={post.date} />
+                  <AuthorAndSharing
+                    data={post?.author.node}
+                    date={post.date}
+                    lastComponent={false}
+                  />
                 </Col>
               </Row>
               <Row className="justify-content-center">
@@ -119,7 +123,11 @@ export const Article = () => {
                   <div>{parse(decodeHtml(post.content))}</div>
                   <hr className="mt-8 mb-5" />
                   {/* Author */}
-                  <AuthorAndSharing data={post?.author.node} date={post.date} />
+                  <AuthorAndSharing
+                    data={post?.author.node}
+                    date={post.date}
+                    lastComponent={true}
+                  />
                   {/* Subscribe to Newsletter */}
                   <NewsletterForm
                     categoryName={`${post?.categories.nodes.filter((item) => item.name !== locale && item.name !== `Principal-${locale}` && item.name !== `Portada-${locale}`)[0].name}`}
