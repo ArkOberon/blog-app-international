@@ -34,6 +34,11 @@ const NavbarDefault = () => {
         menuitem: 'Religión',
         link: '/religion',
       },
+      {
+        id: uuid(),
+        menuitem: 'Documentales',
+        link: '/documentales',
+      },
     ],
     en: [
       {},
@@ -66,6 +71,11 @@ const NavbarDefault = () => {
         id: uuid(),
         menuitem: 'Religion',
         link: '/en/religion',
+      },
+      {
+        id: uuid(),
+        menuitem: 'Documentaries',
+        link: '/documentaries',
       },
     ],
   };

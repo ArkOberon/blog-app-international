@@ -52,6 +52,14 @@ export const pathnames = {
     es: '/religion-es/[slug]',
     en: '/religion-en/[slug]',
   },
+  '/documentaries': {
+    es: '/documentales',
+    en: '/documentaries',
+  },
+  '/documentaries/[slug]': {
+    es: '/documentales/[slug]',
+    en: '/documentaries/[slug]',
+  },
   '/authentication/sign-in': {
     es: '/autenticacion/iniciar-sesion',
     en: '/authentication/sign-in',
