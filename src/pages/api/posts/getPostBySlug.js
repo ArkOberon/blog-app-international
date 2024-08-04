@@ -40,6 +40,15 @@ export const getPostBySlug = async (slug) => {
             date
             title
             excerpt
+            tags {
+              nodes {
+                name
+              }
+            }
+            texto {
+              idYoutube
+              iframeCode
+            }
           }
         }
       `,

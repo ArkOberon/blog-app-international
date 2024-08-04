@@ -4,3 +4,5 @@ export * from './BlogCard';
 export * from './BlogCardFullWidth';
 export * from './Article';
 export * from './DocumentaryCard';
+export * from './VideoYouTube';
+export * from './DescriptionTab';

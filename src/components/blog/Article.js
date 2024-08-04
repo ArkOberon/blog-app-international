@@ -1,6 +1,6 @@
 // import node module libraries
 import { Fragment, useEffect, useState } from 'react';
-import { Col, Row, Container, Image } from 'react-bootstrap';
+import { Col, Row, Container, Image, Card } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import parse from 'html-react-parser';
@@ -9,6 +9,7 @@ import parse from 'html-react-parser';
 import { AuthorAndSharing, NewsletterForm } from '.';
 import { HermenautasSEO } from '../../widgets';
 import { SinglePostSkeleton } from '../ui/loaders';
+import { VideoYouTube } from '../blog';
 
 // import API functions
 import { getPostBySlug } from '../../pages/api/posts/getPostBySlug';
@@ -23,6 +24,7 @@ export const Article = () => {
       postBy: {},
     },
   });
+
   const post = article?.data.postBy;
   const router = useRouter();
   const { query, locale } = router;
@@ -44,6 +46,44 @@ export const Article = () => {
     <Fragment>
       {isLoading ? (
         <SinglePostSkeleton />
+      ) : post.tags.nodes[0]?.name === 'video' ? (
+        <section className="py-lg-5 py-5">
+          <Container>
+            {/*  Video section  */}
+            <Row>
+              <Col lg={12} md={12} sm={12} className="mb-5">
+                {!post.texto.idYoutube ? (
+                  parse(decodeHtml(post.texto.iframeCode))
+                ) : (
+                  <div
+                    className="rounded-3 position-relative w-100 d-block overflow-hidden p-0"
+                    style={{ height: '600px' }}
+                  >
+                    <VideoYouTube videoId={post.texto.idYoutube} height="600" />
+                  </div>
+                )}
+              </Col>
+            </Row>
+            {/*  Content  */}
+            <Row>
+              <Col xl={8} lg={12} md={12} sm={12} className="mb-4 mb-xl-0">
+                <div className="d-flex justify-content-between align-items-center">
+                  <h1 className="fw-semi-bold mb-2">{post.title}</h1>
+                </div>
+                <div className="mt-5">{parse(decodeHtml(post.content))}</div>
+              </Col>
+              <Col xl={4} lg={12} md={12} sm={12}>
+                <Card>
+                  <Image
+                    src={post.featuredImage.node.link}
+                    alt={post.featuredImage.node.altText}
+                    className="rounded-3"
+                  />
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       ) : (
         <section className="py-4 py-lg-8 pb-14 bg-white ">
           <Container>
@@ -100,7 +140,7 @@ export const Article = () => {
                 </Col>
               </Row>
               <Row className="justify-content-center">
-                {/* Image */}
+                {/* Image or Video*/}
                 <Col
                   xl={10}
                   lg={10}
@@ -108,13 +148,21 @@ export const Article = () => {
                   sm={12}
                   className="mb-6 text-center"
                 >
-                  <Image
-                    src={post.featuredImage.node.link}
-                    width={850}
-                    alt={post.featuredImage.node.altText}
-                    className="img-fluid rounded-3"
-                  />
-                  <p className="fs-6 mt-3">{post.featuredImage.node.title}</p>
+                  {post.tags.nodes[0]?.name === 'vlog' ? (
+                    <></>
+                  ) : (
+                    <>
+                      <Image
+                        src={post.featuredImage.node.link}
+                        width={850}
+                        alt={post.featuredImage.node.altText}
+                        className="img-fluid rounded-3"
+                      />
+                      <p className="fs-6 mt-3">
+                        {post.featuredImage.node.title}
+                      </p>
+                    </>
+                  )}
                 </Col>
               </Row>
               <Row className="justify-content-center">

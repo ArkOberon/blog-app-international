@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 // import widget/custom components
 import { PageHeadingBriefinfo } from '../../components/ui';
 import { PostListSkeleton } from '../../components/ui/loaders';
+
 // import sub components
 import { DocumentaryCard } from '../../components/blog';
 
