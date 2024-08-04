@@ -8,6 +8,9 @@ import { useFormatter } from 'next-intl';
 import { categoryColors } from '../../utils/categoryColor';
 import { decodeHtml } from '../../utils/decodeHTML';
 
+// Global Variables
+import { defaultImage } from '../../global';
+
 export const BlogCardFullWidth = ({
   item,
   locale,
@@ -94,11 +97,17 @@ export const BlogCardFullWidth = ({
                 <Row className="align-items-center g-0 mt-lg-7 mt-4">
                   <Col xs="auto">
                     {/*  Img  */}
-                    <Image
-                      src={principalPost[0]?.author.node.avatar.url}
-                      alt=""
-                      className="rounded-circle avatar-sm me-2"
-                    />
+                    {principalPost[0]?.author.node.avatar.url.includes(
+                      defaultImage
+                    ) ? (
+                      <></>
+                    ) : (
+                      <Image
+                        src={principalPost[0]?.author.node.avatar.url}
+                        alt=""
+                        className="rounded-circle avatar-sm me-2"
+                      />
+                    )}
                   </Col>
                   <Col className="col lh-1 ">
                     <h5 className="mb-1">

@@ -70,7 +70,7 @@ export const PostList = ({
 
   return (
     <Fragment>
-      {/* Geeks SEO settings */}
+      {/* Hermenautas SEO settings */}
       <HermenautasSEO
         title={title}
         description={description}

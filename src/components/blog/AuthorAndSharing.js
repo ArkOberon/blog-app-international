@@ -4,7 +4,10 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useFormatter } from 'next-intl';
 
-export const AuthorAndSharing = ({ data, date }) => {
+// Global Variables
+import { defaultImage } from '../../global';
+
+export const AuthorAndSharing = ({ data, date, lastComponent }) => {
   const format = useFormatter();
   const t = useTranslations('AuthorSection');
 
@@ -19,16 +22,24 @@ export const AuthorAndSharing = ({ data, date }) => {
   return (
     <div className="d-flex justify-content-between align-items-center mb-5">
       <div className="d-flex align-items-center">
-        <Image
-          src={data.avatar.url}
-          alt=""
-          className="rounded-circle avatar-md"
-        />
+        {data.avatar.url.includes(defaultImage) ? (
+          <></>
+        ) : (
+          <Image
+            src={data.avatar.url}
+            alt=""
+            className="rounded-circle avatar-md"
+          />
+        )}
         <div className="ms-2 lh-1">
-          <h5 className="mb-1 ">
+          <h3 className="mb-1 text-primary">
             {data.firstName} {data.lastName}
-          </h5>
-          <span className="text-primary">{postDate}</span>
+          </h3>
+          {lastComponent ? (
+            <p className="fs-6">{data.description}</p>
+          ) : (
+            <span className="text-primary">{postDate}</span>
+          )}
         </div>
       </div>
       <div>

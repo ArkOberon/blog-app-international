@@ -1,4 +1,4 @@
-/**d
+/**
  * @description Realizar GET de cualquier post individualmente según su slug
  */
 
@@ -20,12 +20,14 @@ export const getPostBySlug = async (slug) => {
                 avatar {
                   url
                 }
+                description
               }
             }
             featuredImage {
               node {
                 link
                 altText
+                title
               }
             }
             categories {
@@ -38,6 +40,15 @@ export const getPostBySlug = async (slug) => {
             date
             title
             excerpt
+            tags {
+              nodes {
+                name
+              }
+            }
+            texto {
+              idYoutube
+              iframeCode
+            }
           }
         }
       `,

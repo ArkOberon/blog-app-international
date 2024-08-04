@@ -1,5 +1,12 @@
 
 
+## [0.3.0](///compare/0.2.4...0.3.0) (2024-08-04)
+
+
+### Features
+
+* mejora sistema de videos para documentales 994d6f7
+
 ## [0.2.4](///compare/0.2.3...0.2.4) (2024-08-01)
 
 
