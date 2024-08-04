@@ -110,6 +110,7 @@ export const Article = () => {
                     alt={post.featuredImage.node.altText}
                     className="img-fluid rounded-3"
                   />
+                  <p className="fs-6 mt-3">{post.featuredImage.node.title}</p>
                 </Col>
               </Row>
               <Row className="justify-content-center">
