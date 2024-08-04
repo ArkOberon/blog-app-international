@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useFormatter } from 'next-intl';
 
+// Global Variables
+import { defaultImage } from '../../global';
+
 export const AuthorAndSharing = ({ data, date }) => {
   const format = useFormatter();
   const t = useTranslations('AuthorSection');
@@ -19,11 +22,15 @@ export const AuthorAndSharing = ({ data, date }) => {
   return (
     <div className="d-flex justify-content-between align-items-center mb-5">
       <div className="d-flex align-items-center">
-        <Image
-          src={data.avatar.url}
-          alt=""
-          className="rounded-circle avatar-md"
-        />
+        {data.avatar.url.includes(defaultImage) ? (
+          <></>
+        ) : (
+          <Image
+            src={data.avatar.url}
+            alt=""
+            className="rounded-circle avatar-md"
+          />
+        )}
         <div className="ms-2 lh-1">
           <h5 className="mb-1 ">
             {data.firstName} {data.lastName}

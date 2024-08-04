@@ -9,9 +9,11 @@ import { useFormatter } from 'next-intl';
 import { categoryColors } from '../../utils/categoryColor';
 import { decodeHtml } from '../../utils/decodeHTML';
 
+// Global Variables
+import { defaultImage } from '../../global';
+
 export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
   const format = useFormatter();
-
   const categorie = item.categories.nodes.filter(
     (item) =>
       item.name !== `${filterPrincipal}-${locale}` &&
@@ -62,11 +64,15 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
             {/*  Media content  */}
             <Row className="align-items-center g-0 mt-4">
               <Col xs="auto">
-                <Image
-                  src={item.author.node.avatar.url}
-                  alt=""
-                  className="rounded-circle avatar-sm me-2"
-                />
+                {item.author.node.avatar.url.includes(defaultImage) ? (
+                  <></>
+                ) : (
+                  <Image
+                    src={item.author.node.avatar.url}
+                    alt=""
+                    className="rounded-circle avatar-sm me-2"
+                  />
+                )}
               </Col>
               <Col className="col lh-1">
                 <h5 className="mb-1">
