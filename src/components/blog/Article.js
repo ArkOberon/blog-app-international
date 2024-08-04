@@ -106,6 +106,7 @@ export const Article = () => {
                 >
                   <Image
                     src={post.featuredImage.node.link}
+                    width={850}
                     alt={post.featuredImage.node.altText}
                     className="img-fluid rounded-3"
                   />
