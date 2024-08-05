@@ -1,5 +1,12 @@
 
 
+## [0.3.1](///compare/0.3.0...0.3.1) (2024-08-05)
+
+
+### Bug Fixes
+
+* corrige pequeño bug de listados de post 601d87c
+
 ## [0.3.0](///compare/0.2.4...0.3.0) (2024-08-04)
 
 

@@ -31,6 +31,9 @@ export const PostList = ({
   const t = useTranslations('NewsletterForm');
   const { pathname } = router;
   const arrayPostActualLang = arrayPost.filter((item) => item.name === locale);
+  const arrayPostActualCategory = arrayPostActualLang[0].children.nodes.filter(
+    (item) => item.name === titleCategory
+  );
 
   useEffect(() => {
     if (categoryId) {
@@ -148,8 +151,9 @@ export const PostList = ({
                   />
                 </Col>
               ))}
+
             {filterPrincipal === 'Portada'
-              ? postByCategory.data?.category.posts.nodes
+              ? arrayPostActualCategory[0].posts.nodes
                   .filter(
                     (item) =>
                       !item.categories.nodes.some(

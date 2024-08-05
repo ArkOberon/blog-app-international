@@ -2,11 +2,13 @@
   "AuthorSection": {
     "share": "Share:"
   },
-  "Education": {
-    "title": "Education – Hermenautas",
-    "title_category": "Education",
-    "description": "Latest news and tips relevant to education.",
-    "img_alt_home": "Portada Educación Hermenautas"
+  "Documentaries": {
+    "title": "Documentaries – Hermenautas",
+    "title_category": "Documentaries",
+    "subtitle_h2": "List of documentaries",
+    "description": "Great documentaries on science, nature, history, religion, etc.",
+    "text_body": "Check out our latest documentaries",
+    "img_alt_home": "Portada Documentales Hermenautas"
   },
   "Economy": {
     "title": "Economy – Hermenautas",
