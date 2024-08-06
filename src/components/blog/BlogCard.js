@@ -34,13 +34,24 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
       {categorie && categorie.length === 0 ? (
         <></>
       ) : (
-        <Card className="mb-4 shadow-lg">
+        <Card className="mb-4">
           <Link href={`/${categorie[0]?.slug}/${item.slug}`}>
-            <Card.Img
-              variant="top"
-              src={item.featuredImage?.node.link}
-              className="rounded-top-md img-fluid"
-            />
+            {item.tags.nodes.some((tag) => tag.name === 'vlog') ? (
+              <div className="image-container">
+                <Card.Img
+                  variant="top"
+                  src={item.featuredImage?.node.link}
+                  className="rounded-top-md img-fluid"
+                />
+                <i className="fe fe-play-circle play-icon"></i>
+              </div>
+            ) : (
+              <Card.Img
+                variant="top"
+                src={item.featuredImage?.node.link}
+                className="rounded-top-md img-fluid"
+              />
+            )}
           </Link>
           {/* Card body  */}
           <Card.Body>

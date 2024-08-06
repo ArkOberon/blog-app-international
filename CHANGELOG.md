@@ -1,5 +1,12 @@
 
 
+## [0.3.2](///compare/0.3.1...0.3.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* corrección de estilos de los Card a9bff4f
+
 ## [0.3.1](///compare/0.3.0...0.3.1) (2024-08-05)
 
 

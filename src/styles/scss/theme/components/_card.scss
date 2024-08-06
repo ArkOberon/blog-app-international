@@ -6,7 +6,21 @@
 
 .card {
   border: 0rem;
-  box-shadow: $box-shadow-sm;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* o block, dependiendo de tu layout */
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 87px;
+  color: white;
+  cursor: pointer;
 }
 
 // Img left rounded for card

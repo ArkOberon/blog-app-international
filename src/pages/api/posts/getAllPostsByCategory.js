@@ -12,7 +12,7 @@ export const getAllPostsByCategory = async (id) => {
     body: JSON.stringify({
       query: `
         query GetAllPostsByCategory($id: ID!) {
-          category(id: $id) {            
+          category(id: $id) {
             name
             posts {
               nodes {
@@ -41,6 +41,11 @@ export const getAllPostsByCategory = async (id) => {
                   node {
                     link
                     title
+                  }
+                }
+                tags {
+                  nodes {
+                    name
                   }
                 }
               }
