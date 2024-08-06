@@ -52,12 +52,12 @@ export const BlogCardFullWidth = ({
       {!principalCategory ? (
         <></>
       ) : (
-        <Card className="mb-4 shadow-lg mt-6">
+        <Card className="mb-4 mt-6">
           <Row className="g-0">
             {/*  Image */}
             <Link
               href={`/${principalCategory[0]?.slug}/${principalPost[0]?.slug}`}
-              className="col-lg-5 col-md-12 col-12 bg-cover img-left-rounded"
+              className="col-lg-5 col-md-12 col-12 bg-cover img-left-rounded image-container"
               style={{
                 background: `url(${!principalPost[0].featuredImage ? '/default-100.jpg' : principalPost[0]?.featuredImage.node.link})`,
                 backgroundRepeat: 'no-repeat',
@@ -65,15 +65,21 @@ export const BlogCardFullWidth = ({
                 backgroundPosition: 'top center',
               }}
             >
-              <Card.Img
-                variant="left"
-                src={
-                  !principalPost[0].featuredImage
-                    ? '/default-100.jpg'
-                    : principalPost[0].featuredImage.node.link
-                }
-                className="img-fluid d-lg-none invisible"
-              />
+              {principalPost[0].tags.nodes.some(
+                (tag) => tag.name === 'vlog'
+              ) ? (
+                <i className="fe fe-play-circle play-icon"></i>
+              ) : (
+                <Card.Img
+                  variant="left"
+                  src={
+                    !principalPost[0].featuredImage
+                      ? '/default-100.jpg'
+                      : principalPost[0].featuredImage.node.link
+                  }
+                  className="img-fluid d-lg-none invisible"
+                />
+              )}
             </Link>
             <Col lg={7} md={12} sm={12}>
               {/*  Card body */}

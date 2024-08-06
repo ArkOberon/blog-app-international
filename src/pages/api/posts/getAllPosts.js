@@ -47,6 +47,11 @@ export const getAllPosts = async () => {
                         }
                       }
                       slug
+                      tags {
+                        nodes {
+                          name
+                        }
+                      }
                     }
                   }
                 }
