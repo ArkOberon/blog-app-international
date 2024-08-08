@@ -13,24 +13,25 @@ import { DocumentaryCard } from '../../components/blog';
 
 // import API functions
 import { getAllPosts } from '../api/posts/getAllPosts';
-import { getAllPostsByCategory } from '../../pages/api/posts/getAllPostsByCategory';
 
 const Documentaries = () => {
   const t = useTranslations('Documentaries');
   const [isLoading, setIsLoading] = useState(true);
-  const [categoryReady, setCategoryReady] = useState(false);
-  const [postByCategory, setPostByCategory] = useState('');
   const [arrayPost, setArrayPost] = useState({
     data: {
-      posts: {
+      categories: {
         nodes: [],
       },
     },
   });
   const router = useRouter();
   const { locale, asPath } = router;
-  const category = arrayPost.data.categories?.nodes.filter(
+
+  const arrayPostActualLang = arrayPost.data.categories.nodes.filter(
     (item) => item.name === locale
+  );
+  const arrayPostActualCategory = arrayPostActualLang[0]?.children.nodes.filter(
+    (item) => item.name === 'Documentales' || item.name === 'Documentaries'
   );
 
   useEffect(() => {
@@ -43,18 +44,6 @@ const Documentaries = () => {
 
     postArray();
   }, []);
-
-  useEffect(() => {
-    if (category && !categoryReady) {
-      const postByCategory = async (id) => {
-        const pArrayByCategory = await getAllPostsByCategory(id);
-        setPostByCategory(pArrayByCategory);
-      };
-
-      postByCategory(category[0].id);
-      setCategoryReady(true);
-    }
-  }, [category]);
 
   return (
     <Fragment>
@@ -79,7 +68,7 @@ const Documentaries = () => {
                 </Col>
               </Row>
               <Row className="mb-6">
-                {postByCategory.data?.category.posts.nodes
+                {arrayPostActualCategory[0].posts.nodes
                   .filter((item) =>
                     item.categories.nodes.some(
                       (category) => category.name === `${t('title_category')}`
