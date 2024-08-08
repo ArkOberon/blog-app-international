@@ -2,12 +2,10 @@
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import parse from 'html-react-parser';
 import { useFormatter } from 'next-intl';
 
 // Custom functionalities
 import { categoryColors } from '../../utils/categoryColor';
-import { decodeHtml } from '../../utils/decodeHTML';
 
 // Global Variables
 import { defaultImage } from '../../global';
@@ -71,7 +69,6 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
                 {item.title}
               </Link>
             </h2>
-            <div className="fs-4">{parse(decodeHtml(item.excerpt))}</div>
             {/*  Media content  */}
             <Row className="align-items-center g-0 mt-4">
               <Col xs="auto">

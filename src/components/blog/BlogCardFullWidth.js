@@ -1,12 +1,10 @@
 // import node module libraries
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
-import parse from 'html-react-parser';
 import { useFormatter } from 'next-intl';
 
 // Custom functionalities
 import { categoryColors } from '../../utils/categoryColor';
-import { decodeHtml } from '../../utils/decodeHTML';
 
 // Global Variables
 import { defaultImage } from '../../global';
@@ -98,7 +96,6 @@ export const BlogCardFullWidth = ({
                     {principalPost[0]?.title}
                   </Link>
                 </h1>
-                {parse(decodeHtml(principalPost[0]?.excerpt))}
                 {/*  Media content */}
                 <Row className="align-items-center g-0 mt-lg-7 mt-4">
                   <Col xs="auto">
