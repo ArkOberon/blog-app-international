@@ -1,5 +1,13 @@
 
 
+## [0.4.2](///compare/0.4.1...0.4.2) (2024-08-13)
+
+
+### Bug Fixes
+
+* masonry css files c0a1f43
+* masonry effect en listados 6f8e1f8
+
 ## [0.4.1](///compare/0.4.0...0.4.1) (2024-08-13)
 
 
