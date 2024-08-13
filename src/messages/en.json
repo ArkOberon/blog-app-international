@@ -1,6 +1,7 @@
 {
   "AuthorSection": {
-    "share": "Share:"
+    "share": "Share:",
+    "share_link": "Share this article on your social networks:"
   },
   "Documentaries": {
     "title": "Documentaries – Hermenautas",
@@ -60,7 +61,14 @@
     "sign_up_for_our_newsletter": "Subscribe to our weekly newsletter",
     "join_our_newsletter": "Subscribe to our newsletter and receive special content in your inbox.",
     "submit": "Subscribe",
-    "placeholder": "Email address"
+    "placeholder": "Email address",
+    "no_share": "Your email address won't be shared and you can unsubscribe at any time."
+  },
+  "News": {
+    "title": "News – Hermenautas",
+    "title_category": "News",
+    "description": "All current information",
+    "img_alt_home": "Home News Hermenautas"
   },
   "Process-Loader": {
     "procesando_su_solicitud": "Processing your request..."

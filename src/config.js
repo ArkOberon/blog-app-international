@@ -16,7 +16,7 @@ export const pathnames = {
     es: '/actualidad',
     en: '/news',
   },
-  '/actualidad/[slug]': {
+  '/news/[slug]': {
     es: '/actualidad/[slug]',
     en: '/news/[slug]',
   },

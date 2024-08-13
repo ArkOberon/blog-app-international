@@ -105,27 +105,30 @@ export const PostList = ({
                 {isLoading ? (
                   <LoaderProcess />
                 ) : (
-                  <Form className="row px-md-20" onSubmit={handleSubmit}>
-                    <Form.Group
-                      className="mb-3 col ps-0 ms-2 ms-md-0"
-                      controlId="formBasicEmail"
-                    >
-                      <Form.Control
-                        ref={emailRef}
-                        type="email"
-                        placeholder={t('placeholder')}
-                        required
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      className="mb-3 col-auto ps-0"
-                      controlId="formSubmitButton"
-                    >
-                      <Button variant="primary" type="submit">
-                        {t('submit')}
-                      </Button>
-                    </Form.Group>
-                  </Form>
+                  <>
+                    <Form className="row px-md-20" onSubmit={handleSubmit}>
+                      <Form.Group
+                        className="mb-3 col ps-0 ms-2 ms-md-0"
+                        controlId="formBasicEmail"
+                      >
+                        <Form.Control
+                          ref={emailRef}
+                          type="email"
+                          placeholder={t('placeholder')}
+                          required
+                        />
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3 col-auto ps-0"
+                        controlId="formSubmitButton"
+                      >
+                        <Button variant="primary" type="submit">
+                          {t('submit')}
+                        </Button>
+                      </Form.Group>
+                    </Form>
+                    <div className="text-center fs-6">{t('no_share')}</div>
+                  </>
                 )}
               </Col>
             </Row>

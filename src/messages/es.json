@@ -61,7 +61,8 @@
     "sign_up_for_our_newsletter": "Subscríbete a nuestro boletín semanal",
     "join_our_newsletter": "Suscríbete a nuestro boletín y recibe contenido especial en tu bandeja de entrada.",
     "submit": "Suscribirse",
-    "placeholder": "Dirección de correo electrónico"
+    "placeholder": "Dirección de correo electrónico",
+    "no_share": "Su dirección de correo electrónico no se compartirá y podrá darse de baja en cualquier momento."
   },
   "News": {
     "title": "Actualidad – Hermenautas",
