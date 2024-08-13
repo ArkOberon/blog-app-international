@@ -35,7 +35,7 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
   const { asPath } = router;
 
   const t = useTranslations('AuthorSection');
-  const shareUrl = asPath;
+  const shareUrl = `https://hermenautas.com${asPath}`;
   const dateTime = new Date(date);
 
   const postDate = format.dateTime(dateTime, {
