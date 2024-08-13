@@ -1,5 +1,12 @@
 
 
+## [0.4.1](///compare/0.4.0...0.4.1) (2024-08-13)
+
+
+### Bug Fixes
+
+* agrega frase privacidad en newsletter cf36ec0
+
 ## [0.4.0](///compare/0.3.2...0.4.0) (2024-08-13)
 
 
