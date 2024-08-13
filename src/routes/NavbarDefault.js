@@ -6,6 +6,11 @@ const NavbarDefault = () => {
       {},
       {
         id: uuid(),
+        menuitem: 'Actualidad',
+        link: '/actualidad',
+      },
+      {
+        id: uuid(),
         menuitem: 'Tecnología',
         link: '/tecnologia',
       },
@@ -42,6 +47,11 @@ const NavbarDefault = () => {
     ],
     en: [
       {},
+      {
+        id: uuid(),
+        menuitem: 'News',
+        link: '/news',
+      },
       {
         id: uuid(),
         menuitem: 'Technology',

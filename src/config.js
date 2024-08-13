@@ -12,6 +12,14 @@ export const pathnames = {
     es: '/tecnologia/[slug]',
     en: '/technology/[slug]',
   },
+  '/news': {
+    es: '/actualidad',
+    en: '/news',
+  },
+  '/actualidad/[slug]': {
+    es: '/actualidad/[slug]',
+    en: '/news/[slug]',
+  },
   '/industry': {
     es: '/industria',
     en: '/industry',

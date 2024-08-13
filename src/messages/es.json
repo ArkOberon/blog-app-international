@@ -63,6 +63,12 @@
     "submit": "Suscribirse",
     "placeholder": "Dirección de correo electrónico"
   },
+  "News": {
+    "title": "Actualidad – Hermenautas",
+    "title_category": "Actualidad",
+    "description": "Toda la información actual",
+    "img_alt_home": "Portada Actualidad Hermenautas"
+  },
   "Process-Loader": {
     "procesando_su_solicitud": "Procesando su solicitud..."
   },
