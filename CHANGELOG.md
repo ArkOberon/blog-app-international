@@ -1,5 +1,12 @@
 
 
+## [0.4.0](///compare/0.3.2...0.4.0) (2024-08-13)
+
+
+### Features
+
+* mejora en el sistema de share y actualidad aa83538
+
 ## [0.3.2](///compare/0.3.1...0.3.2) (2024-08-06)
 
 
