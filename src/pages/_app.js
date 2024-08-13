@@ -17,7 +17,7 @@ import Layout from '../components/Layout/Layout';
 import '../styles/scss/theme.scss';
 import '../styles/css/masonry.css';
 
-// Import menssages
+// Import messages
 import messagesEn from '../messages/en.json';
 import messagesEs from '../messages/es.json';
 
