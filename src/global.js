@@ -1,1 +1,1 @@
-export const defaultImage = 'https://secure.gravatar.com/avatar/';
+export const defaultImage = '/avatar/';

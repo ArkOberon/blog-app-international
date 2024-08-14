@@ -64,7 +64,12 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
             {data.firstName} {data.lastName}
           </h3>
           {lastComponent ? (
-            <p className="fs-6">{data.description}</p>
+            <p
+              className="fs-6"
+              style={{ paddingRight: '23px', wordWrap: 'break-word' }}
+            >
+              {data.description}
+            </p>
           ) : (
             <span className="text-primary">{postDate}</span>
           )}
