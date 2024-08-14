@@ -66,7 +66,7 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
           {lastComponent ? (
             <p
               className="fs-6"
-              style={{ paddingRight: '23px', wordWrap: 'break-word' }}
+              style={{ paddingRight: '123px', wordWrap: 'break-word' }}
             >
               {data.description}
             </p>
