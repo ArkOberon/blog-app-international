@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState, useRef } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
+import Masonry from 'react-masonry-css';
 
 // import widget/custom components
 import { HermenautasSEO } from '../../widgets';
@@ -71,6 +72,13 @@ export const PostList = ({
   const oposeCategory =
     filterPrincipal === 'Principal' ? 'Portada' : 'Principal';
 
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 3,
+    700: 2,
+    500: 1,
+  };
+
   return (
     <Fragment>
       {/* Hermenautas SEO settings */}
@@ -105,27 +113,30 @@ export const PostList = ({
                 {isLoading ? (
                   <LoaderProcess />
                 ) : (
-                  <Form className="row px-md-20" onSubmit={handleSubmit}>
-                    <Form.Group
-                      className="mb-3 col ps-0 ms-2 ms-md-0"
-                      controlId="formBasicEmail"
-                    >
-                      <Form.Control
-                        ref={emailRef}
-                        type="email"
-                        placeholder={t('placeholder')}
-                        required
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      className="mb-3 col-auto ps-0"
-                      controlId="formSubmitButton"
-                    >
-                      <Button variant="primary" type="submit">
-                        {t('submit')}
-                      </Button>
-                    </Form.Group>
-                  </Form>
+                  <>
+                    <Form className="row px-md-20" onSubmit={handleSubmit}>
+                      <Form.Group
+                        className="mb-3 col ps-0 ms-2 ms-md-0"
+                        controlId="formBasicEmail"
+                      >
+                        <Form.Control
+                          ref={emailRef}
+                          type="email"
+                          placeholder={t('placeholder')}
+                          required
+                        />
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3 col-auto ps-0"
+                        controlId="formSubmitButton"
+                      >
+                        <Button variant="primary" type="submit">
+                          {t('submit')}
+                        </Button>
+                      </Form.Group>
+                    </Form>
+                    <div className="text-center fs-6">{t('no_share')}</div>
+                  </>
                 )}
               </Col>
             </Row>
@@ -151,63 +162,52 @@ export const PostList = ({
                   />
                 </Col>
               ))}
-
-            {filterPrincipal === 'Portada'
-              ? arrayPostActualCategory[0].posts.nodes
-                  .filter(
-                    (item) =>
-                      !item.categories.nodes.some(
-                        (category) =>
-                          category.name === `${filterPrincipal}-${locale}`
-                      ) &&
-                      item.categories.nodes.some(
-                        (category) => category.name === titleCategory
-                      )
-                  )
-                  .map((item, idx) => (
-                    <Col
-                      xl={4}
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className="d-flex"
-                      key={idx}
-                    >
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid"
+              columnClassName="my-masonry-grid_column"
+            >
+              {filterPrincipal === 'Portada'
+                ? arrayPostActualCategory[0].posts.nodes
+                    .filter(
+                      (item) =>
+                        !item.categories.nodes.some(
+                          (category) =>
+                            category.name === `${filterPrincipal}-${locale}`
+                        ) &&
+                        item.categories.nodes.some(
+                          (category) => category.name === titleCategory
+                        )
+                    )
+                    .map((item, idx) => (
                       <BlogCard
+                        key={idx}
                         item={item}
                         locale={locale}
                         filterPrincipal={filterPrincipal}
                         oposeCategory={oposeCategory}
                         titleCategory={titleCategory}
                       />
-                    </Col>
-                  ))
-              : postByCategory.data?.category.posts.nodes
-                  .filter(
-                    (item) =>
-                      !item.categories.nodes.some(
-                        (category) =>
-                          category.name === `${filterPrincipal}-${locale}`
-                      )
-                  )
-                  .map((item, idx) => (
-                    <Col
-                      xl={4}
-                      lg={4}
-                      md={6}
-                      sm={12}
-                      className="d-flex"
-                      key={idx}
-                    >
+                    ))
+                : postByCategory.data?.category.posts.nodes
+                    .filter(
+                      (item) =>
+                        !item.categories.nodes.some(
+                          (category) =>
+                            category.name === `${filterPrincipal}-${locale}`
+                        )
+                    )
+                    .map((item, idx) => (
                       <BlogCard
+                        key={idx}
                         item={item}
                         locale={locale}
                         filterPrincipal={filterPrincipal}
                         oposeCategory={oposeCategory}
                         titleCategory={titleCategory}
                       />
-                    </Col>
-                  ))}
+                    ))}
+            </Masonry>
           </Row>
         </Container>
       </section>

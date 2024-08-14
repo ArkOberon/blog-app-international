@@ -1,5 +1,39 @@
 
 
+## [0.4.2](///compare/0.4.1...0.4.2) (2024-08-13)
+
+
+### Bug Fixes
+
+* masonry css files c0a1f43
+* masonry effect en listados 6f8e1f8
+
+## [0.4.1](///compare/0.4.0...0.4.1) (2024-08-13)
+
+
+### Bug Fixes
+
+* agrega frase privacidad en newsletter cf36ec0
+
+## [0.4.0](///compare/0.3.2...0.4.0) (2024-08-13)
+
+
+### Features
+
+* mejora en el sistema de share y actualidad aa83538
+
+
+### Bug Fixes
+
+* agrega categoria actualidad 59ace1e
+
+## [0.4.0](///compare/0.3.2...0.4.0) (2024-08-13)
+
+
+### Features
+
+* mejora en el sistema de share y actualidad aa83538
+
 ## [0.3.2](///compare/0.3.1...0.3.2) (2024-08-06)
 
 
