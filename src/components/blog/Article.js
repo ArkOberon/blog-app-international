@@ -129,7 +129,7 @@ export const Article = () => {
                       </Link>
                     )}
 
-                    <h1 className="display-3 fw-bold mb-4">{post?.title}</h1>
+                    <h1 className="fw-bold mb-4">{post?.title}</h1>
                   </div>
                   {/* Author */}
                   <AuthorAndSharing

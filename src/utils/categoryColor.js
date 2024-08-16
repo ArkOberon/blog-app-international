@@ -1,23 +1,23 @@
 export const categoryColors = (category) => {
   switch (category) {
     case 'Tecnología':
-      return 'primary';
+      return 'warning';
     case 'Industria':
       return 'warning';
     case 'Salud':
-      return 'success';
+      return 'primary';
     case 'Ciencia':
-      return 'info';
-    case 'Política':
+      return 'primary';
+    case 'Actualidad':
       return 'warning';
     case 'Economía':
-      return 'primary';
+      return 'warning';
     case 'Religión':
-      return 'info';
+      return 'primary';
     case 'Educación':
       return 'primary';
-    case 'Investigaciones':
-      return 'info';
+    case 'Documentales':
+      return 'warning';
     default:
       return 'primary';
   }
