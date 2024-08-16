@@ -78,28 +78,33 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
           )}
         </div>
       </div>
-      <div>
-        <span className="ms-2 text-muted">{t('share')}</span>
 
-        <Link href="#" className="ms-2 text-muted" onClick={handleShow}>
-          <i className="fe fe-share-2"></i>
-        </Link>
-        <Link
-          href="https://www.facebook.com/hermenautasoficial/"
-          className="ms-2 text-muted"
-        >
-          <i className="fab fa-facebook"></i>
-        </Link>
-        <Link href="https://x.com/hermenautasl" className="ms-2 text-muted">
-          <i className="fab fa-twitter"></i>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/company/hermenautas-sl/"
-          className="ms-2 text-muted"
-        >
-          <i className="fab fa-linkedin"></i>
-        </Link>
-      </div>
+      {data.description ? (
+        <></>
+      ) : (
+        <div>
+          <span className="ms-2 text-muted">{t('share')}</span>
+
+          <Link href="#" className="ms-2 text-muted" onClick={handleShow}>
+            <i className="fe fe-share-2"></i>
+          </Link>
+          <Link
+            href="https://www.facebook.com/hermenautasoficial/"
+            className="ms-2 text-muted"
+          >
+            <i className="fab fa-facebook"></i>
+          </Link>
+          <Link href="https://x.com/hermenautasl" className="ms-2 text-muted">
+            <i className="fab fa-twitter"></i>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/hermenautas-sl/"
+            className="ms-2 text-muted"
+          >
+            <i className="fab fa-linkedin"></i>
+          </Link>
+        </div>
+      )}
       {
         <Modal
           show={show}
