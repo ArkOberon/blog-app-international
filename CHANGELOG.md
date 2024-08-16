@@ -1,5 +1,12 @@
 
 
+## [0.4.4](///compare/0.4.3...0.4.4) (2024-08-16)
+
+
+### Bug Fixes
+
+* mejora calidad del responsive 7199fe7
+
 ## [0.4.3](///compare/0.4.2...0.4.3) (2024-08-16)
 
 
