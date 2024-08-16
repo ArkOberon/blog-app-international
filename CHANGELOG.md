@@ -1,5 +1,16 @@
 
 
+## [0.4.3](///compare/0.4.2...0.4.3) (2024-08-16)
+
+
+### Bug Fixes
+
+* aumenta padding descripcion 8a42e92
+* corrige error botones share pie de post 88a0531
+* corrige idioma ventana modal share 383ae4d
+* corrige tamaño de la descripcion 14887aa
+* mejora padding descripcion autor d7781f8
+
 ## [0.4.2](///compare/0.4.1...0.4.2) (2024-08-13)
 
 
