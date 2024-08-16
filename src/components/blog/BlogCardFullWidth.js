@@ -88,7 +88,7 @@ export const BlogCardFullWidth = ({
                 >
                   {principalCategory[0]?.name}
                 </Link>
-                <h1 className="mb-2 mb-lg-4">
+                <h1 className="mb-2 mb-lg-4" style={{ wordBreak: 'keep-all' }}>
                   <Link
                     href={`/${principalCategory[0]?.slug}/${principalPost[0]?.slug}`}
                     className="text-inherit"

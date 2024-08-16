@@ -1,5 +1,12 @@
 
 
+## [0.4.5](///compare/0.4.4...0.4.5) (2024-08-16)
+
+
+### Bug Fixes
+
+* ajusta estilos para mejorar texto responsive 7ab4566
+
 ## [0.4.4](///compare/0.4.3...0.4.4) (2024-08-16)
 
 
