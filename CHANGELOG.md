@@ -1,5 +1,12 @@
 
 
+## [0.4.6](///compare/0.4.5...0.4.6) (2024-08-16)
+
+
+### Bug Fixes
+
+* oculta todos los overflow de los loaders bda6d6e
+
 ## [0.4.5](///compare/0.4.4...0.4.5) (2024-08-16)
 
 
