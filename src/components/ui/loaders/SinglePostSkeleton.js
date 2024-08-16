@@ -1,6 +1,6 @@
 // import node module libraries
 import React, { Fragment } from 'react';
-import { Col, Row, Container, Form, Button } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 
 import Link from 'next/link';
 import Skeleton from 'react-loading-skeleton';
@@ -32,7 +32,7 @@ export const SinglePostSkeleton = () => {
             <Row className="justify-content-center">
               <Col xl={8} lg={8} md={12} sm={12} className="mb-2">
                 {/* Blog Content */}
-                <div>
+                <div style={{ overflow: 'hidden' }}>
                   <Skeleton height={12} width={500} />
                   <Skeleton height={12} width={600} />
                   <Skeleton height={12} width={500} />
@@ -42,39 +42,6 @@ export const SinglePostSkeleton = () => {
                   <Skeleton height={12} width={400} />
                   <Skeleton height={12} width={500} />
                   <Skeleton height={12} width={600} />
-                </div>
-                <hr className="mt-8 mb-5" />
-                {/* Author */}
-
-                {/* Subscribe to Newsletter */}
-                <div className="py-12">
-                  <div className="text-center mb-6">
-                    <h2 className="display-4 fw-bold">
-                      Sign up for our Newsletter
-                    </h2>
-                    <p className="mb-0 lead">
-                      Join our newsletter and get resources, curated content,
-                      and design inspiration delivered straight to your inbox.
-                    </p>
-                  </div>
-                  {/* Form */}
-                  <Form className="row px-md-20">
-                    <Form.Group
-                      className="mb-3 col ps-0 ms-2 ms-md-0"
-                      controlId="formBasicEmail"
-                    >
-                      <Form.Control type="email" placeholder="Email Address" />
-                    </Form.Group>
-                    <Form.Group
-                      className="mb-3 col-auto ps-0"
-                      controlId="formSubmitButton"
-                    >
-                      <Button variant="primary" type="submit">
-                        {' '}
-                        Submit
-                      </Button>
-                    </Form.Group>
-                  </Form>
                 </div>
               </Col>
             </Row>

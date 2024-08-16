@@ -61,7 +61,7 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
             >
               {categorie[0]?.name}
             </Link>
-            <h2>
+            <h2 style={{ wordBreak: 'keep-all' }}>
               <Link
                 href={`/${categorie[0]?.slug}/${item.slug}`}
                 className="text-inherit"
