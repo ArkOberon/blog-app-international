@@ -21,9 +21,8 @@ export const SinglePostSkeleton = () => {
                   >
                     <Skeleton height={12} width={100} />
                   </Link>
-                  <h1 className="display-3 fw-bold mb-4">
-                    <Skeleton height={22} width={460} />
-                  </h1>
+
+                  <Skeleton height={22} width={460} />
                 </div>
                 {/* Author */}
                 <Skeleton height={12} width={160} />
@@ -35,14 +34,14 @@ export const SinglePostSkeleton = () => {
                 {/* Blog Content */}
                 <div>
                   <Skeleton height={12} width={500} />
-                  <Skeleton height={12} width={900} />
-                  <Skeleton height={12} width={700} />
-                  <Skeleton height={12} width={800} />
                   <Skeleton height={12} width={600} />
                   <Skeleton height={12} width={500} />
+                  <Skeleton height={12} width={600} />
+                  <Skeleton height={12} width={500} />
+                  <Skeleton height={12} width={600} />
                   <Skeleton height={12} width={400} />
-                  <Skeleton height={12} width={700} />
-                  <Skeleton height={12} width={800} />
+                  <Skeleton height={12} width={500} />
+                  <Skeleton height={12} width={600} />
                 </div>
                 <hr className="mt-8 mb-5" />
                 {/* Author */}

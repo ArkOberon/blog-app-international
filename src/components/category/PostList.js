@@ -164,7 +164,7 @@ export const PostList = ({
               ))}
             <Masonry
               breakpointCols={breakpointColumnsObj}
-              className="my-masonry-grid"
+              className="my-masonry-grid mt-8"
               columnClassName="my-masonry-grid_column"
             >
               {filterPrincipal === 'Portada'

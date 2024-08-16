@@ -48,35 +48,6 @@ export const getStatusColor = (itemstatus) => {
   return color;
 };
 
-/**
- * Get the color name/value based on given status
- */
-export const getCategoryColor = (category) => {
-  let color = '';
-  switch (category) {
-    case 'Saas Services':
-    case 'Entertainment':
-    case 'Extra':
-      color = 'info';
-      break;
-    case 'Design':
-      color = 'warning';
-      break;
-    case 'Marketing':
-      color = 'success';
-      break;
-    case 'Development':
-      color = 'danger';
-      break;
-    case 'SEO':
-      color = 'primary';
-      break;
-    default:
-      color = 'primary';
-  }
-  return color;
-};
-
 //get chunk from array
 export const chunk = (arr, chunkSize = 1, cache = []) => {
   const tmp = [...arr];

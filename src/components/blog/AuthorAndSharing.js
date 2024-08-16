@@ -64,34 +64,39 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
             {data.firstName} {data.lastName}
           </h3>
           {lastComponent ? (
-            <p className="fs-6">{data.description}</p>
+            <p>{data.description}</p>
           ) : (
             <span className="text-primary">{postDate}</span>
           )}
         </div>
       </div>
-      <div>
-        <span className="ms-2 text-muted">{t('share')}</span>
 
-        <Link href="#" className="ms-2 text-muted" onClick={handleShow}>
-          <i className="fe fe-share-2"></i>
-        </Link>
-        <Link
-          href="https://www.facebook.com/hermenautasoficial/"
-          className="ms-2 text-muted"
-        >
-          <i className="fab fa-facebook"></i>
-        </Link>
-        <Link href="https://x.com/hermenautasl" className="ms-2 text-muted">
-          <i className="fab fa-twitter"></i>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/company/hermenautas-sl/"
-          className="ms-2 text-muted"
-        >
-          <i className="fab fa-linkedin"></i>
-        </Link>
-      </div>
+      {data.description && lastComponent ? (
+        <></>
+      ) : (
+        <div>
+          <span className="ms-2 text-muted">{t('share')}</span>
+
+          <Link href="#" className="ms-2 text-muted" onClick={handleShow}>
+            <i className="fe fe-share-2"></i>
+          </Link>
+          <Link
+            href="https://www.facebook.com/hermenautasoficial/"
+            className="ms-2 text-muted"
+          >
+            <i className="fab fa-facebook"></i>
+          </Link>
+          <Link href="https://x.com/hermenautasl" className="ms-2 text-muted">
+            <i className="fab fa-twitter"></i>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/hermenautas-sl/"
+            className="ms-2 text-muted"
+          >
+            <i className="fab fa-linkedin"></i>
+          </Link>
+        </div>
+      )}
       {
         <Modal
           show={show}
@@ -148,7 +153,7 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-              Cerrar
+              {t('close')}
             </Button>
           </Modal.Footer>
         </Modal>
