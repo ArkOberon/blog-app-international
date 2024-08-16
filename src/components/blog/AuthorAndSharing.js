@@ -79,7 +79,7 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
         </div>
       </div>
 
-      {data.description ? (
+      {data.description && lastComponent ? (
         <></>
       ) : (
         <div>
@@ -161,7 +161,7 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
-              Cerrar
+              {t('close')}
             </Button>
           </Modal.Footer>
         </Modal>
