@@ -9,7 +9,10 @@ import 'react-loading-skeleton/dist/skeleton.css';
 export const SinglePostSkeleton = () => {
   return (
     <Fragment>
-      <section className="py-4 py-lg-8 pb-14 bg-white ">
+      <section
+        className="py-4 py-lg-8 pb-14 bg-white"
+        style={{ overflow: 'hidden' }}
+      >
         <Container>
           <Fragment>
             <Row className="justify-content-center">
