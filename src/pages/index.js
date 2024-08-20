@@ -2,6 +2,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
 // import widget/custom components
 import { PostList } from '../components/category';
@@ -41,6 +42,7 @@ const Home = ({ postArray }) => {
   const description = t('description');
   const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
   const imgAlt = t('img_alt_home');
+  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
 
   useEffect(() => {
     if (postArray) {
@@ -49,22 +51,49 @@ const Home = ({ postArray }) => {
   }, []);
 
   return (
-    <Fragment>
-      {isLoading ? (
-        <PostListSkeleton />
-      ) : (
-        <PostList
-          locale={locale}
-          title={title}
-          titleCategory={titleCategory}
-          description={description}
-          imgUrl={imgUrl}
-          imgAlt={imgAlt}
-          arrayPost={postArray.data.categories.nodes}
-          categoryId={category[0].id}
-        />
-      )}
-    </Fragment>
+    <>
+      {/* Hermenautas SEO settings */}
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={pageURL}
+        openGraph={{
+          url: pageURL,
+          title: title,
+          description: description,
+          site_name: process.env.NEXT_PUBLIC_SITE_NAME,
+          images: [
+            {
+              url: imgUrl,
+              width: 1200,
+              height: 630,
+              alt: imgAlt,
+            },
+          ],
+        }}
+        twitter={{
+          handle: '@hermenautasTM',
+          cardType: 'summary_large_image',
+        }}
+      />
+
+      <Fragment>
+        {isLoading ? (
+          <PostListSkeleton />
+        ) : (
+          <PostList
+            locale={locale}
+            title={title}
+            titleCategory={titleCategory}
+            description={description}
+            imgUrl={imgUrl}
+            imgAlt={imgAlt}
+            arrayPost={postArray.data.categories.nodes}
+            categoryId={category[0].id}
+          />
+        )}
+      </Fragment>
+    </>
   );
 };
 
