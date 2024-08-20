@@ -9,18 +9,24 @@ import { decodeHtml } from '../../utils/decodeHTML';
 const HermenautasSEO = (props) => {
   const router = useRouter();
   const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
-  const { title, description, imgUrl, imgAlt } = props;
+  const { title, description, imgUrl, imgAlt, typePage } = props;
+
+  //console.log(description)
   const parseDescription = parse(decodeHtml(description));
+  const selectDescription =
+    typePage === 'article'
+      ? parseDescription[0].props?.children
+      : parseDescription;
 
   return (
     <NextSeo
       title={title}
-      description={parseDescription[0].props?.children}
+      description={selectDescription}
       canonical={pageURL}
       openGraph={{
         url: pageURL,
         title: title,
-        description: parseDescription[0].props?.children,
+        description: selectDescription,
         site_name: process.env.NEXT_PUBLIC_SITE_NAME,
         images: [
           {

@@ -42,6 +42,9 @@ export const Article = () => {
     }
   }, [slug]);
 
+  // SEO data
+  const typePage = 'article';
+
   return (
     <Fragment>
       {isLoading ? (
@@ -94,6 +97,7 @@ export const Article = () => {
                 description={post?.excerpt}
                 imgUrl={post?.featuredImage.node.link}
                 imgAlt={post?.featuredImage.node.altText}
+                typePage={typePage}
               />
 
               <Row className="justify-content-center">
