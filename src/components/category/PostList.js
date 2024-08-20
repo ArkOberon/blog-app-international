@@ -4,8 +4,6 @@ import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
 import Masonry from 'react-masonry-css';
-import parse from 'html-react-parser';
-import { NextSeo } from 'next-seo';
 
 // import widget/custom components
 import { BlogCard, BlogCardFullWidth } from '../blog';
@@ -17,11 +15,8 @@ import { addSubscriberToList } from '../../pages/api/email/addSubscriber';
 
 export const PostList = ({
   locale,
-  title,
   titleCategory,
   description,
-  imgUrl,
-  imgAlt,
   arrayPost,
   categoryId,
   listId = 4,
@@ -79,162 +74,131 @@ export const PostList = ({
     700: 2,
     500: 1,
   };
-
-  const parseDescription = parse(description);
-  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
-
   return (
-    <>
-      {/* Hermenautas SEO settings */}
-      <NextSeo
-        title={title}
-        description={parseDescription}
-        canonical={pageURL}
-        openGraph={{
-          url: pageURL,
-          title: title,
-          description: parseDescription,
-          site_name: process.env.NEXT_PUBLIC_SITE_NAME,
-          images: [
-            {
-              url: imgUrl,
-              width: 1200,
-              height: 630,
-              alt: imgAlt,
-            },
-          ],
-        }}
-        twitter={{
-          handle: '@hermenautasTM',
-          cardType: 'summary_large_image',
-        }}
-      />
-
-      <Fragment>
-        {/* Page header */}
-        {/* Form */}
-        {pathname === '/' ||
-        pathname === '/en' ||
-        pathname === '/es' ||
-        pathname === '/pt' ||
-        pathname === '/fr' ? (
-          <></>
-        ) : (
-          <section className="pt-9 pb-9 bg-white ">
-            <Container>
-              <Row>
-                <Col
-                  lg={{ span: 10, offset: 1 }}
-                  xl={{ span: 8, offset: 2 }}
-                  md={12}
-                  sm={12}
-                >
-                  <div className="text-center mb-5">
-                    <h1 className=" display-2 fw-bold">{titleCategory}</h1>
-                    <p className="lead">{description}</p>
-                  </div>
-                  {isLoading ? (
-                    <LoaderProcess />
-                  ) : (
-                    <>
-                      <Form className="row px-md-20" onSubmit={handleSubmit}>
-                        <Form.Group
-                          className="mb-3 col ps-0 ms-2 ms-md-0"
-                          controlId="formBasicEmail"
-                        >
-                          <Form.Control
-                            ref={emailRef}
-                            type="email"
-                            placeholder={t('placeholder')}
-                            required
-                          />
-                        </Form.Group>
-                        <Form.Group
-                          className="mb-3 col-auto ps-0"
-                          controlId="formSubmitButton"
-                        >
-                          <Button variant="primary" type="submit">
-                            {t('submit')}
-                          </Button>
-                        </Form.Group>
-                      </Form>
-                      <div className="text-center fs-6">{t('no_share')}</div>
-                    </>
-                  )}
-                </Col>
-              </Row>
-            </Container>
-          </section>
-        )}
-        {/* Content */}
-        <section className="pb-8 bg-white">
+    <Fragment>
+      {/* Page header */}
+      {/* Form */}
+      {pathname === '/' ||
+      pathname === '/en' ||
+      pathname === '/es' ||
+      pathname === '/pt' ||
+      pathname === '/fr' ? (
+        <></>
+      ) : (
+        <section className="pt-9 pb-9 bg-white ">
           <Container>
             <Row>
-              {/* Show first article in full width  */}
-
-              {arrayPostActualLang[0].children.nodes
-                .filter((item) => item.name === `${filterPrincipal}-${locale}`)
-                .map((item, index) => (
-                  <Col xl={12} lg={12} md={12} sm={12} key={index}>
-                    <BlogCardFullWidth
-                      item={item}
-                      locale={locale}
-                      filterPrincipal={filterPrincipal}
-                      oposeCategory={oposeCategory}
-                      titleCategory={titleCategory}
-                    />
-                  </Col>
-                ))}
-              <Masonry
-                breakpointCols={breakpointColumnsObj}
-                className="my-masonry-grid mt-8"
-                columnClassName="my-masonry-grid_column"
+              <Col
+                lg={{ span: 10, offset: 1 }}
+                xl={{ span: 8, offset: 2 }}
+                md={12}
+                sm={12}
               >
-                {filterPrincipal === 'Portada'
-                  ? arrayPostActualCategory[0].posts.nodes
-                      .filter(
-                        (item) =>
-                          !item.categories.nodes.some(
-                            (category) =>
-                              category.name === `${filterPrincipal}-${locale}`
-                          ) &&
-                          item.categories.nodes.some(
-                            (category) => category.name === titleCategory
-                          )
-                      )
-                      .map((item, idx) => (
-                        <BlogCard
-                          key={idx}
-                          item={item}
-                          locale={locale}
-                          filterPrincipal={filterPrincipal}
-                          oposeCategory={oposeCategory}
-                          titleCategory={titleCategory}
+                <div className="text-center mb-5">
+                  <h1 className=" display-2 fw-bold">{titleCategory}</h1>
+                  <p className="lead">{description}</p>
+                </div>
+                {isLoading ? (
+                  <LoaderProcess />
+                ) : (
+                  <>
+                    <Form className="row px-md-20" onSubmit={handleSubmit}>
+                      <Form.Group
+                        className="mb-3 col ps-0 ms-2 ms-md-0"
+                        controlId="formBasicEmail"
+                      >
+                        <Form.Control
+                          ref={emailRef}
+                          type="email"
+                          placeholder={t('placeholder')}
+                          required
                         />
-                      ))
-                  : postByCategory.data?.category.posts.nodes
-                      .filter(
-                        (item) =>
-                          !item.categories.nodes.some(
-                            (category) =>
-                              category.name === `${filterPrincipal}-${locale}`
-                          )
-                      )
-                      .map((item, idx) => (
-                        <BlogCard
-                          key={idx}
-                          item={item}
-                          locale={locale}
-                          filterPrincipal={filterPrincipal}
-                          oposeCategory={oposeCategory}
-                          titleCategory={titleCategory}
-                        />
-                      ))}
-              </Masonry>
+                      </Form.Group>
+                      <Form.Group
+                        className="mb-3 col-auto ps-0"
+                        controlId="formSubmitButton"
+                      >
+                        <Button variant="primary" type="submit">
+                          {t('submit')}
+                        </Button>
+                      </Form.Group>
+                    </Form>
+                    <div className="text-center fs-6">{t('no_share')}</div>
+                  </>
+                )}
+              </Col>
             </Row>
           </Container>
         </section>
-      </Fragment>
-    </>
+      )}
+      {/* Content */}
+      <section className="pb-8 bg-white">
+        <Container>
+          <Row>
+            {/* Show first article in full width  */}
+
+            {arrayPostActualLang[0].children.nodes
+              .filter((item) => item.name === `${filterPrincipal}-${locale}`)
+              .map((item, index) => (
+                <Col xl={12} lg={12} md={12} sm={12} key={index}>
+                  <BlogCardFullWidth
+                    item={item}
+                    locale={locale}
+                    filterPrincipal={filterPrincipal}
+                    oposeCategory={oposeCategory}
+                    titleCategory={titleCategory}
+                  />
+                </Col>
+              ))}
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="my-masonry-grid mt-8"
+              columnClassName="my-masonry-grid_column"
+            >
+              {filterPrincipal === 'Portada'
+                ? arrayPostActualCategory[0].posts.nodes
+                    .filter(
+                      (item) =>
+                        !item.categories.nodes.some(
+                          (category) =>
+                            category.name === `${filterPrincipal}-${locale}`
+                        ) &&
+                        item.categories.nodes.some(
+                          (category) => category.name === titleCategory
+                        )
+                    )
+                    .map((item, idx) => (
+                      <BlogCard
+                        key={idx}
+                        item={item}
+                        locale={locale}
+                        filterPrincipal={filterPrincipal}
+                        oposeCategory={oposeCategory}
+                        titleCategory={titleCategory}
+                      />
+                    ))
+                : postByCategory.data?.category.posts.nodes
+                    .filter(
+                      (item) =>
+                        !item.categories.nodes.some(
+                          (category) =>
+                            category.name === `${filterPrincipal}-${locale}`
+                        )
+                    )
+                    .map((item, idx) => (
+                      <BlogCard
+                        key={idx}
+                        item={item}
+                        locale={locale}
+                        filterPrincipal={filterPrincipal}
+                        oposeCategory={oposeCategory}
+                        titleCategory={titleCategory}
+                      />
+                    ))}
+            </Masonry>
+          </Row>
+        </Container>
+      </section>
+    </Fragment>
   );
 };
