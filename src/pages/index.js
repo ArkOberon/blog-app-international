@@ -10,19 +10,28 @@ import { PostListSkeleton } from '../components/ui/loaders';
 // import API functions
 import { getAllPosts } from './api/posts/getAllPosts';
 
-const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [arrayPost, setArrayPost] = useState({
-    data: {
-      posts: {
-        nodes: [],
-      },
+export async function getServerSideProps() {
+  const postArray = await getAllPosts();
+
+  if (!postArray) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      postArray,
     },
-  });
+  };
+}
+
+const Home = ({ postArray }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const t = useTranslations('Home');
   const router = useRouter();
   const { locale } = router;
-  const category = arrayPost.data.categories?.nodes.filter(
+  const category = postArray.data.categories?.nodes.filter(
     (item) => item.name === locale
   );
 
@@ -34,14 +43,9 @@ const Home = () => {
   const imgAlt = t('img_alt_home');
 
   useEffect(() => {
-    const postArray = async () => {
-      const pArray = await getAllPosts();
-      setArrayPost(pArray);
-
+    if (postArray) {
       setIsLoading(false);
-    };
-
-    postArray();
+    }
   }, []);
 
   return (
@@ -56,7 +60,7 @@ const Home = () => {
           description={description}
           imgUrl={imgUrl}
           imgAlt={imgAlt}
-          arrayPost={arrayPost.data.categories.nodes}
+          arrayPost={postArray.data.categories.nodes}
           categoryId={category[0].id}
         />
       )}
