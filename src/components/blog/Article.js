@@ -4,47 +4,31 @@ import { Col, Row, Container, Image, Card } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import parse from 'html-react-parser';
-import { NextSeo } from 'next-seo';
 
 // import widget/custom components
 import { AuthorAndSharing, NewsletterForm } from '.';
-/* import { HermenautasSEO } from '../../widgets'; */
+import { HermenautasSEO } from '../../widgets';
 import { SinglePostSkeleton } from '../ui/loaders';
 import { VideoYouTube } from '../blog';
-
-// import API functions
-import { getPostBySlug } from '../../pages/api/posts/getPostBySlug';
 
 // Custom functionalities
 import { decodeHtml } from '../../utils/decodeHTML';
 
-export const Article = () => {
+export const Article = ({ actualPost }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [article, setArticle] = useState({
-    data: {
-      postBy: {},
-    },
-  });
 
-  const post = article?.data.postBy;
+  const post = actualPost?.data.postBy;
   const router = useRouter();
-  const { query, locale } = router;
-  const slug = query.slug;
+  const { locale } = router;
 
   useEffect(() => {
-    if (slug) {
-      const post = async (slug) => {
-        const actualPost = await getPostBySlug(slug);
-        setArticle(actualPost);
-        setIsLoading(false);
-      };
-
-      post(slug);
+    if (actualPost) {
+      setIsLoading(false);
     }
-  }, [slug]);
+  }, [actualPost]);
 
   // SEO data
-  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
+  const typePage = 'article';
 
   return (
     <Fragment>
@@ -93,38 +77,12 @@ export const Article = () => {
           <Container>
             <Fragment>
               {/* Hermenautas SEO settings  */}
-              {/* <HermenautasSEO
+              <HermenautasSEO
                 title={post?.title}
                 description={post?.excerpt}
                 imgUrl={post?.featuredImage.node.link}
                 imgAlt={post?.featuredImage.node.altText}
                 typePage={typePage}
-              /> */}
-              <NextSeo
-                title={post?.title}
-                description={
-                  parse(decodeHtml(post?.excerpt))[0].props?.children
-                }
-                canonical={pageURL}
-                openGraph={{
-                  url: pageURL,
-                  title: post?.title,
-                  description: parse(decodeHtml(post?.excerpt))[0].props
-                    ?.children,
-                  site_name: process.env.NEXT_PUBLIC_SITE_NAME,
-                  images: [
-                    {
-                      url: post?.featuredImage.node.link,
-                      width: 1200,
-                      height: 630,
-                      alt: post?.featuredImage.node.altText,
-                    },
-                  ],
-                }}
-                twitter={{
-                  handle: '@hermenautasTM',
-                  cardType: 'summary_large_image',
-                }}
               />
 
               <Row className="justify-content-center">
