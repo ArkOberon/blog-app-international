@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 // import node module libraries
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { DefaultSeo } from 'next-seo';
+/* import { DefaultSeo } from 'next-seo'; */
 
 // import provider and store from redux state management.
 import { Provider } from 'react-redux';
@@ -23,10 +23,10 @@ import messagesEs from '../messages/es.json';
 
 function App({ Component, pageProps }) {
   const router = useRouter();
-  const pageURL = process.env.baseURL + router.pathname;
+  /* const pageURL = process.env.baseURL + router.pathname;
   const title = 'Hermenautas – Diario de noticias mundial';
   const description =
-    'Medio de comunicación independiente con información veraz y actualizada, que ofrece las últimas noticas que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...';
+    'Medio de comunicación independiente con información veraz y actualizada, que ofrece las últimas noticas que afectan a las libertades y los derechos de los ciudadanos en todos los ámbitos: economía, tecnología, salud, industria...'; */
   const keywords =
     'Noticias, Diario, Mundial, Medio de comunicación, Salud, Tecnología, Ciencia, Economía, Industria, Educación, Política, Religión, Investigaciones';
 
@@ -53,7 +53,7 @@ function App({ Component, pageProps }) {
           <meta name="keywords" content={keywords} />
           <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
         </Head>
-        <DefaultSeo
+        {/* <DefaultSeo
           title={title}
           description={description}
           canonical={pageURL}
@@ -71,7 +71,7 @@ function App({ Component, pageProps }) {
               },
             ],
           }}
-        />
+        /> */}
         <Provider store={store}>
           <React.StrictMode>
             <Layout>
