@@ -15,21 +15,25 @@ const HermenautasSEO = (props) => {
   return (
     <NextSeo
       title={title}
-      description={description}
+      description={parseDescription[0].props?.children}
       canonical={pageURL}
       openGraph={{
         url: pageURL,
         title: title,
-        description: parseDescription[0].props?.children || description,
+        description: parseDescription[0].props?.children,
         site_name: process.env.NEXT_PUBLIC_SITE_NAME,
         images: [
           {
-            url: imgUrl ? imgUrl : '/images/og/og-hermenautas.jpg',
+            url: imgUrl,
             width: 1200,
             height: 630,
             alt: imgAlt,
           },
         ],
+      }}
+      twitter={{
+        handle: '@hermenautasTM',
+        cardType: 'summary_large_image',
       }}
     />
   );
