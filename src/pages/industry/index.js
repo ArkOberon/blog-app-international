@@ -2,6 +2,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
 // import widget/custom components
 import { PostList } from '../../components/category';
@@ -10,58 +11,86 @@ import { PostListSkeleton } from '../../components/ui/loaders/PostListSkeleton';
 // import API functions
 import { getAllPosts } from '../api/posts/getAllPosts';
 
-const Industry = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [arrayPost, setArrayPost] = useState({
-    data: {
-      posts: {
-        nodes: [],
-      },
-    },
-  });
+export async function getServerSideProps() {
+  const postArray = await getAllPosts();
 
+  if (!postArray) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      postArray,
+    },
+  };
+}
+
+const Industry = ({ postArray }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const t = useTranslations('Industry');
   const router = useRouter();
   const { locale } = router;
-  const category = arrayPost.data.categories?.nodes.filter(
+  const category = postArray.data.categories?.nodes.filter(
     (item) => item.name === locale
   );
 
   useEffect(() => {
-    const postArray = async () => {
-      const pArray = await getAllPosts();
-      setArrayPost(pArray);
-
+    if (postArray) {
       setIsLoading(false);
-    };
-
-    postArray();
+    }
   }, []);
 
   // SEO Info
   const title = t('title');
   const titleCategory = t('title_category');
   const description = t('description');
-  const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
+  const imgUrl = `/images/og/og-industria-${locale}.jpg`;
   const imgAlt = t('img_alt_home');
+  const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
 
   return (
-    <Fragment>
-      {isLoading ? (
-        <PostListSkeleton />
-      ) : (
-        <PostList
-          locale={locale}
-          title={title}
-          titleCategory={titleCategory}
-          description={description}
-          imgUrl={imgUrl}
-          imgAlt={imgAlt}
-          arrayPost={arrayPost.data.categories.nodes}
-          categoryId={category[0].id}
-        />
-      )}
-    </Fragment>
+    <>
+      {/* Hermenautas SEO settings */}
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={pageURL}
+        openGraph={{
+          url: pageURL,
+          title: title,
+          description: description,
+          site_name: process.env.NEXT_PUBLIC_SITE_NAME,
+          images: [
+            {
+              url: imgUrl,
+              width: 1200,
+              height: 630,
+              alt: imgAlt,
+            },
+          ],
+        }}
+        twitter={{
+          handle: '@hermenautasTM',
+          cardType: 'summary_large_image',
+        }}
+      />
+
+      <Fragment>
+        {isLoading ? (
+          <PostListSkeleton />
+        ) : (
+          <PostList
+            locale={locale}
+            titleCategory={titleCategory}
+            description={description}
+            arrayPost={postArray.data.categories.nodes}
+            categoryId={category[0].id}
+          />
+        )}
+      </Fragment>
+    </>
   );
 };
 
