@@ -19,13 +19,19 @@ const Home = () => {
       },
     },
   });
-
   const t = useTranslations('Home');
   const router = useRouter();
   const { locale } = router;
   const category = arrayPost.data.categories?.nodes.filter(
     (item) => item.name === locale
   );
+
+  // SEO Info
+  const title = t('title');
+  const titleCategory = t('title_category');
+  const description = t('description');
+  const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
+  const imgAlt = t('img_alt_home');
 
   useEffect(() => {
     const postArray = async () => {
@@ -37,13 +43,6 @@ const Home = () => {
 
     postArray();
   }, []);
-
-  // SEO Info
-  const title = t('title');
-  const titleCategory = t('title_category');
-  const description = t('description');
-  const imgUrl = `/images/og/${locale}/og-hermenautas.jpg`;
-  const imgAlt = t('img_alt_home');
 
   return (
     <Fragment>
