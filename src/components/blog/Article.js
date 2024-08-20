@@ -34,6 +34,7 @@ export const Article = ({ actualPost }) => {
 
   return (
     <>
+      {/* Hermenautas SEO settings  */}
       <NextSeo
         title={post?.title}
         description={parseDescription[0].props?.children}
@@ -105,8 +106,6 @@ export const Article = ({ actualPost }) => {
           <section className="py-4 py-lg-8 pb-14 bg-white ">
             <Container>
               <Fragment>
-                {/* Hermenautas SEO settings  */}
-
                 <Row className="justify-content-center">
                   <Col xl={8} lg={8} md={12} sm={12} className="mb-2">
                     <div className="text-center mb-4">
@@ -179,7 +178,17 @@ export const Article = ({ actualPost }) => {
                 <Row className="justify-content-center">
                   <Col xl={8} lg={8} md={12} sm={12} className="mb-2">
                     {/* Blog Content */}
-                    <div>{parse(decodeHtml(post.content))}</div>
+                    <div
+                      style={{
+                        fontFamily: 'Lora',
+                        fontOpticalSizing: 'auto',
+                        fontWeight: 'normal',
+                        fontStyle: 'normal',
+                        fontSize: '1.5rem',
+                      }}
+                    >
+                      {parse(decodeHtml(post.content))}
+                    </div>
                     <hr className="mt-8 mb-5" />
                     {/* Author */}
                     <AuthorAndSharing
