@@ -31,7 +31,7 @@
     "link_slug_contact": "/contacto",
     "link_slug_cookies_policies": "/politicas-de-cookies",
     "link_slug_privacy_policies": "/politicas-de-privacidad",
-    "link_slug_terms_of_services": "/terminos-del-servicio",
+    "link_slug_terms_of_services": "/terminos-y-condiciones",
     "all_rights_reserved": "Todos los derechos reservados"
   },
   "Health": {
@@ -74,6 +74,11 @@
   "Process-Loader": {
     "procesando_su_solicitud": "Procesando su solicitud..."
   },
+  "Privacy-Policies": {
+    "title": "Políticas de Privacidad",
+    "subtitle": "Lea nuestras condiciones a continuación para saber más sobre sus derechos en cuanto a privacidad",
+    "date": "Última actualización:"
+  },
   "Religion": {
     "title": "Religión – Diario de noticias mundial",
     "title_category": "Religión",
@@ -110,5 +115,10 @@
     "title_category": "Tecnología",
     "description": "Toda la información sobre tecnología",
     "img_alt_home": "Portada Tecnología Hermenautas"
+  },
+  "Terms-and-conditions": {
+    "title": "Términos y Condiciones",
+    "subtitle": "Lea nuestras condiciones a continuación para saber más sobre sus derechos y responsabilidades como usuario.",
+    "date": "Última actualización:"
   }
 }

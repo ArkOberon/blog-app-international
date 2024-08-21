@@ -31,7 +31,7 @@
     "link_slug_contact": "/contact",
     "link_slug_cookies_policies": "/cookies-policies",
     "link_slug_privacy_policies": "privacy-policies",
-    "link_slug_terms_of_services": "/terms-of-services",
+    "link_slug_terms_of_services": "/terms-and-conditions",
     "all_rights_reserved": "All rights reserved"
   },
   "Health": {
@@ -74,6 +74,11 @@
   "Process-Loader": {
     "procesando_su_solicitud": "Processing your request..."
   },
+  "Privacy-policies": {
+    "title": "Privacy Policies",
+    "subtitle": "Read our terms and conditions below to learn more about your privacy rights.",
+    "date": "Last updated:"
+  },
   "Religion": {
     "title": "Religion – World News Journal",
     "title_category": "Religion",
@@ -110,5 +115,10 @@
     "title_category": "Technology",
     "description": "All the information about technology.",
     "img_alt_home": "Portada Tecnología Hermenautas"
+  },
+  "Terms-and-conditions": {
+    "title": "Terms & Conditions",
+    "subtitle": "Read our terms and conditions below to learn more about your rights and responsibilities as a user.",
+    "date": "Last updated:"
   }
 }

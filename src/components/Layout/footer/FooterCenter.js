@@ -24,9 +24,9 @@ const FooterCenter = () => {
               {/* <Link href={t("link_slug_contact")} className="nav-link">
 								{t("contact")}
 							</Link> */}
-              <Link href={t('link_slug_cookies_policies')} className="nav-link">
+              {/* <Link href={t('link_slug_cookies_policies')} className="nav-link">
                 {t('cookies_policies')}
-              </Link>
+              </Link> */}
               <Link href={t('link_slug_privacy_policies')} className="nav-link">
                 {t('privacy_policies')}
               </Link>
