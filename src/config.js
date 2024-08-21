@@ -76,6 +76,14 @@ export const pathnames = {
     es: '/autenticacion/registrarse',
     en: '/authentication/sign-up',
   },
+  '/terms-and-conditions': {
+    es: '/terminos-y-condiciones',
+    en: '/terms-and-conditions',
+  },
+  '/privacy-policies': {
+    es: '/politicas-de-privacidad',
+    en: '/privacy-policies',
+  },
 };
 
 export const localePrefix = 'never';

@@ -5,9 +5,9 @@
     "close": "Cerrar"
   },
   "Documentaries": {
-    "title": "Documentales – Hermenautas",
+    "title": "Documentales Video Online – Hermenautas",
     "title_category": "Documentales",
-    "subtitle_h2": "Listado de documentales",
+    "subtitle_h2": "Video en streaming. Documentales de alta calidad",
     "description": "Grandes documentales sobre ciencia, naturaleza, historia, religión, etc.",
     "text_body": "Revisa nuestros últimos documentales",
     "img_alt_home": "Portada Documentales Hermenautas"
@@ -15,7 +15,7 @@
   "Economy": {
     "title": "Economía – Hermenautas",
     "title_category": "Economía",
-    "description": "Toda la información económica mundial.",
+    "description": "Noticias económicas mundiales. CBDCs, informes e investigaciones sobre políticas que atentan contra la libertad civil. Novedades sobre los controles y restricciones del mercado financiero.",
     "img_alt_home": "Portada Economía Hermenautas"
   },
   "Footer": {
@@ -31,13 +31,13 @@
     "link_slug_contact": "/contacto",
     "link_slug_cookies_policies": "/politicas-de-cookies",
     "link_slug_privacy_policies": "/politicas-de-privacidad",
-    "link_slug_terms_of_services": "/terminos-del-servicio",
+    "link_slug_terms_of_services": "/terminos-y-condiciones",
     "all_rights_reserved": "Todos los derechos reservados"
   },
   "Health": {
-    "title": "Salud – Hermenautas",
+    "title": "Centro de Salud Digital – Hermenautas",
     "title_category": "Salud",
-    "description": "Toda la información sobre salud.",
+    "description": "Tu centro de salud digital. Encuentra aquí toda la información relevante sobre comida y estilo de vida saludable, medicina natural, investigaciones y artículos científicos, etc.",
     "img_alt_home": "Portada Salud Hermenautas"
   },
   "Home": {
@@ -49,7 +49,7 @@
   "Industry": {
     "title": "Industria – Hermenautas",
     "title_category": "Industria",
-    "description": "Toda la información sobre industria.",
+    "description": "Toda la información sobre industria y agriculta. Información relevante sobre política industrial y agricultura.",
     "img_alt_home": "Portada Industria Hermenautas"
   },
   "Navbar": {
@@ -74,16 +74,21 @@
   "Process-Loader": {
     "procesando_su_solicitud": "Procesando su solicitud..."
   },
+  "Privacy-Policies": {
+    "title": "Políticas de Privacidad",
+    "subtitle": "Lea nuestras condiciones a continuación para saber más sobre sus derechos en cuanto a privacidad",
+    "date": "Última actualización:"
+  },
   "Religion": {
-    "title": "Religión – Diario de noticias mundial",
+    "title": "Fe y Religión – Diario de noticias mundial",
     "title_category": "Religión",
-    "description": "Toda la información sobre religión.",
+    "description": "Testimonios, cristianismo, fe e investigaciones de grandes movimientos religiosos.",
     "img_alt_home": "Portada Religión Hermenautas"
   },
   "Science": {
     "title": "Ciencia – Hermenautas",
     "title_category": "Ciencia",
-    "description": "Toda la información sobre ciencia.",
+    "description": "Publicaciones e investigaciones científicas",
     "img_alt_home": "Portada Ciencia Hermenautas"
   },
   "Sign-in": {
@@ -108,7 +113,12 @@
   "Technology": {
     "title": "Tecnología – Hermenautas",
     "title_category": "Tecnología",
-    "description": "Toda la información sobre tecnología",
+    "description": "Todas las noticias sobre medidas en el campo de la tecnología, que atentan contra las libertades y los derechos humanos.",
     "img_alt_home": "Portada Tecnología Hermenautas"
+  },
+  "Terms-and-conditions": {
+    "title": "Términos y Condiciones",
+    "subtitle": "Lea nuestras condiciones a continuación para saber más sobre sus derechos y responsabilidades como usuario.",
+    "date": "Última actualización:"
   }
 }

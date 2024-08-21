@@ -1,5 +1,5 @@
 /**
- * @description Realizar GET de cualquier post individualmente según su slug
+ * @description Realizar GET para entregar cualquier post individualmente según su ID
  */
 
 export const getPostBySlug = async (slug) => {
