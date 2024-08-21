@@ -5,9 +5,9 @@
     "close": "Close"
   },
   "Documentaries": {
-    "title": "Documentaries – Hermenautas",
+    "title": "Documentaries Video Online – Hermenautas",
     "title_category": "Documentaries",
-    "subtitle_h2": "List of documentaries",
+    "subtitle_h2": "Streaming video. High quality documentaries",
     "description": "Great documentaries on science, nature, history, religion, etc.",
     "text_body": "Check out our latest documentaries",
     "img_alt_home": "Portada Documentales Hermenautas"
@@ -15,7 +15,7 @@
   "Economy": {
     "title": "Economy – Hermenautas",
     "title_category": "Economy",
-    "description": "All the world economic information.",
+    "description": "World economic news. CBDCs, reports and investigations into policies that undermine civil liberties. News on financial market controls and restrictions.",
     "img_alt_home": "Home Economics - Hermenautas"
   },
   "Footer": {
@@ -37,7 +37,7 @@
   "Health": {
     "title": "Health",
     "title_category": "Health",
-    "description": "All the information about health.",
+    "description": "Your digital health centre. Find here all relevant information about healthy food and lifestyle, natural medicine, scientific research and articles, etc.",
     "img_alt_home": "Home Health - Hermenautas"
   },
   "Home": {
@@ -49,7 +49,7 @@
   "Industry": {
     "title": "Industry – Hermenautas",
     "title_category": "Industry",
-    "description": "All the information about the industry.",
+    "description": "All information on industry and agriculture. Relevant information on industrial policy and agriculture.",
     "img_alt_home": "Home Industry - Hermenautas"
   },
   "Navbar": {
@@ -82,13 +82,13 @@
   "Religion": {
     "title": "Religion – World News Journal",
     "title_category": "Religion",
-    "description": "All information about religion.",
+    "description": "Testimonies, Christianity, faith and research on major religious movements.",
     "img_alt_home": "Home Religion Hermenautas"
   },
   "Science": {
     "title": "Science – Hermenautas",
     "title_category": "Science",
-    "description": "All the information about science.",
+    "description": "Publications and scientific research.",
     "img_alt_home": "Home Science - Hermenautas"
   },
   "Sign-in": {
@@ -113,7 +113,7 @@
   "Technology": {
     "title": "Technology – Hermenautas",
     "title_category": "Technology",
-    "description": "All the information about technology.",
+    "description": "All the news about measures in the field of technology, which infringe on freedoms and human rights.",
     "img_alt_home": "Portada Tecnología Hermenautas"
   },
   "Terms-and-conditions": {
