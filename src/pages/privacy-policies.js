@@ -58,6 +58,7 @@ function PrivacyPolicies({ page }) {
           <Container>
             <Row className="justify-content-center">
               <Col lg={8} md={12} sm={12}>
+                {parse(page.data.pageBy.content)}
                 {/* date */}
                 <div className="py-3 mb-5 border-bottom">
                   <h3>
@@ -65,7 +66,6 @@ function PrivacyPolicies({ page }) {
                     <span className="text-primary">{pageDate}</span>
                   </h3>
                 </div>
-                {parse(page.data.pageBy.content)}
               </Col>
             </Row>
           </Container>
