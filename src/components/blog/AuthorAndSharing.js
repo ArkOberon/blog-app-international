@@ -86,14 +86,20 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
           >
             <i className="fab fa-facebook"></i>
           </Link>
-          <Link href="https://x.com/hermenautasl" className="ms-2 text-muted">
+          <Link href="https://x.com/hermenautasTM" className="ms-2 text-muted">
             <i className="fab fa-twitter"></i>
           </Link>
           <Link
-            href="https://www.linkedin.com/company/hermenautas-sl/"
+            href="https://www.youtube.com/@hermenautas"
             className="ms-2 text-muted"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-youtube"></i>
+          </Link>
+          <Link
+            href="https://www.instagram.com/hermenautas.official"
+            className="ms-2 text-muted"
+          >
+            <i className="fab fa-instagram"></i>
           </Link>
         </div>
       )}
