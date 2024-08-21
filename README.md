@@ -8,6 +8,7 @@ Aplicación Frontend que combina un diario digital de noticias junto con un cat�
 2. [Variables de Entorno](#id2)
 3. [Gestión de traducciones](#id3)
 4. [Control de Versiones Automatizadas](#id4)
+5. [Generador de Sitemaps](#id5)
 
 
 ## **1. Realizando la Instalación** <div id='id1' />
@@ -118,3 +119,5 @@ npm run release
 Configurar release conforme a lo que se requiera en cada momento
 Para +Info consultar la [`Documentación Oficial`](https://github.com/release-it/release-it)
 
+## **5. Realizando la Instalación** <div id='id5' />
+Se implementa un generador automático de Sitemaps para Google Search Console usando next-sitemap [`Next Sitemap`](https://github.com/iamvishnusankar/next-sitemap)
