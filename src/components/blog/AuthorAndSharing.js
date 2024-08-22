@@ -56,7 +56,7 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
           <Image
             src={data.avatar.url}
             alt=""
-            className="rounded-circle avatar-md"
+            className="rounded-circle avatar-xl"
           />
         )}
         <div className="ms-2 lh-1">
