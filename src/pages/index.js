@@ -29,10 +29,18 @@ export async function getServerSideProps() {
 
 const Home = ({ postArray }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [arrayPost, setArrayPost] = useState({
+    data: {
+      posts: {
+        nodes: [],
+      },
+    },
+  });
+
   const t = useTranslations('Home');
   const router = useRouter();
   const { locale } = router;
-  const category = postArray.data.categories?.nodes.filter(
+  const category = arrayPost.data.categories?.nodes.filter(
     (item) => item.name === locale
   );
 
@@ -45,9 +53,14 @@ const Home = ({ postArray }) => {
   const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
 
   useEffect(() => {
-    if (postArray) {
+    const postArray = async () => {
+      const pArray = await getAllPosts();
+      setArrayPost(pArray);
+
       setIsLoading(false);
-    }
+    };
+
+    postArray();
   }, []);
 
   return (
