@@ -66,8 +66,9 @@ function generateSiteMap(posts) {
           locale.children.nodes.map((categories) =>
             categories.posts.nodes.map((post) => {
               return `
+                
                 <url>
-                  <loc>${`${URL}/${locale.name}/${categories.slug}/${post.slug}`}</loc>
+                  <loc>${`${URL}${locale.name === 'es' ? '/' : '/en'}/${categories.slug}/${post.slug}`}</loc>
                 </url>
               `;
             })
