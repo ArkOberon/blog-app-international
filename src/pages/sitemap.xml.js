@@ -68,7 +68,7 @@ function generateSiteMap(posts) {
               return `
                 
                 <url>
-                  <loc>${`${URL}${locale.name === 'es' ? '/' : '/en'}/${categories.slug}/${post.slug}`}</loc>
+                  <loc>${`${URL}${locale.name === 'es' ? '' : '/en'}/${categories.slug}/${post.slug}`}</loc>
                 </url>
               `;
             })
