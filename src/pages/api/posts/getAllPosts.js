@@ -53,7 +53,8 @@ export const getAllPosts = async () => {
                         }
                       }
                     }
-                  }
+                  },
+                  slug
                 }
               }
             }
