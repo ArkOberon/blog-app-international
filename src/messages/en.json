@@ -85,6 +85,9 @@
     "description": "Testimonies, Christianity, faith and research on major religious movements.",
     "img_alt_home": "Home Religion Hermenautas"
   },
+  "RelatedPost": {
+    "title": "Related post"
+  },
   "Science": {
     "title": "Science – Hermenautas",
     "title_category": "Science",

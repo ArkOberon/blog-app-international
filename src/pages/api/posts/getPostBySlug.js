@@ -49,6 +49,11 @@ export const getPostBySlug = async (slug) => {
               idYoutube
               iframeCode
             }
+            relacionados {
+              articuloRelacionado
+              categoriaArticulo
+              idiomaArticulo
+            }
           }
         }
       `,
