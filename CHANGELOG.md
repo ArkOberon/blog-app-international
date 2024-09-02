@@ -1,5 +1,12 @@
 
 
+## [0.6.0](///compare/0.5.0...0.6.0) (2024-09-02)
+
+
+### Features
+
+* agrega un sistema de articulos relacionados c470fe7
+
 ## [0.5.0](///compare/0.4.6...0.5.0) (2024-08-21)
 
 
