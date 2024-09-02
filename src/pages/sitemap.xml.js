@@ -15,16 +15,10 @@ function generateSiteMap(posts) {
       </url>
       <url>
         <loc>${URL}/documentales</loc>
-      </url>
-      <url>
-        <loc>${URL}/economia</loc>
-      </url>
+      </url>    
       <url>
         <loc>${URL}/salud</loc>
-      </url>
-      <url>
-        <loc>${URL}/industria</loc>
-      </url>
+      </url>    
       <url>
         <loc>${URL}/actualidad</loc>
       </url>
@@ -33,22 +27,13 @@ function generateSiteMap(posts) {
       </url>
       <url>
         <loc>${URL}/ciencia</loc>
-      </url>
-      <url>
-        <loc>${URL}/tecnologia</loc>
-      </url>
+      </url>  
       <url>
         <loc>${URL}/en/documentaries</loc>
-      </url>
-      <url>
-        <loc>${URL}/en/economy</loc>
-      </url>
+      </url>    
       <url>
         <loc>${URL}/en/health</loc>
-      </url>
-      <url>
-        <loc>${URL}/en/industry</loc>
-      </url>
+      </url>  
       <url>
         <loc>${URL}/en/news</loc>
       </url>
@@ -57,10 +42,7 @@ function generateSiteMap(posts) {
       </url>
       <url>
         <loc>${URL}/en/science</loc>
-      </url>
-      <url>
-        <loc>${URL}/en/technology</loc>
-      </url>
+      </url>    
       ${posts.data.categories.nodes
         .map((locale) =>
           locale.children.nodes.map((categories) =>

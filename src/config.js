@@ -4,14 +4,6 @@ export const locales = ['es', 'en'];
 export const pathnames = {
   '/': '/',
   '/404': '/404',
-  '/technology': {
-    es: '/tecnologia',
-    en: '/technology',
-  },
-  '/technology/[slug]': {
-    es: '/tecnologia/[slug]',
-    en: '/technology/[slug]',
-  },
   '/news': {
     es: '/actualidad',
     en: '/news',
@@ -19,14 +11,6 @@ export const pathnames = {
   '/news/[slug]': {
     es: '/actualidad/[slug]',
     en: '/news/[slug]',
-  },
-  '/industry': {
-    es: '/industria',
-    en: '/industry',
-  },
-  '/industry/[slug]': {
-    es: '/industria/[slug]',
-    en: '/industry/[slug]',
   },
   '/health': {
     es: '/salud',
@@ -43,14 +27,6 @@ export const pathnames = {
   '/science/[slug]': {
     es: '/ciencia/[slug]',
     en: '/science/[slug]',
-  },
-  '/economy': {
-    es: '/economia',
-    en: '/economy',
-  },
-  '/economy/[slug]': {
-    es: '/economia/[slug]',
-    en: '/economy/[slug]',
   },
   '/religion': {
     es: '/religion-es',
