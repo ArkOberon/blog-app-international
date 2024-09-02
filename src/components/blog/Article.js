@@ -216,12 +216,17 @@ export const Article = ({ actualPost }) => {
                 </Row>
               </Fragment>
             </Container>
-            <RelatedPost
-              post={relatedPost}
-              slug={actualPost.data.postBy.relacionados.articuloRelacionado}
-              category={actualPost.data.postBy.relacionados.categoriaArticulo}
-              lang={actualPost.data.postBy.relacionados.idiomaArticulo}
-            />
+
+            {relatedPost.errors ? (
+              <></>
+            ) : (
+              <RelatedPost
+                post={relatedPost}
+                slug={actualPost.data.postBy.relacionados.articuloRelacionado}
+                category={actualPost.data.postBy.relacionados.categoriaArticulo}
+                lang={actualPost.data.postBy.relacionados.idiomaArticulo}
+              />
+            )}
           </section>
         )}
       </Fragment>
