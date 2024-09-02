@@ -8,16 +8,17 @@ import { NextSeo } from 'next-seo';
 
 // import widget/custom components
 import { AuthorAndSharing, NewsletterForm } from '.';
-
+import { RelatedPost } from '.';
 import { SinglePostSkeleton } from '../ui/loaders';
 import { VideoYouTube } from '../blog';
 
 // Custom functionalities
 import { decodeHtml } from '../../utils/decodeHTML';
+import { getPostBySlug } from '../../pages/api/posts/getPostBySlug';
 
 export const Article = ({ actualPost }) => {
   const [isLoading, setIsLoading] = useState(true);
-
+  const [relatedPost, setRelatedPost] = useState({});
   const post = actualPost?.data.postBy;
   const router = useRouter();
   const { locale } = router;
@@ -27,6 +28,16 @@ export const Article = ({ actualPost }) => {
       setIsLoading(false);
     }
   }, [actualPost]);
+
+  useEffect(() => {
+    const getRelated = async (slug) => {
+      const related = await getPostBySlug(slug);
+      setRelatedPost(related);
+      return related;
+    };
+
+    getRelated(actualPost.data.postBy.relacionados.articuloRelacionado);
+  }, []);
 
   // SEO data
   const parseDescription = parse(post?.excerpt);
@@ -189,6 +200,7 @@ export const Article = ({ actualPost }) => {
                     >
                       {parse(decodeHtml(post.content))}
                     </div>
+
                     <hr className="mt-8 mb-5" />
                     {/* Author */}
                     <AuthorAndSharing
@@ -204,6 +216,12 @@ export const Article = ({ actualPost }) => {
                 </Row>
               </Fragment>
             </Container>
+            <RelatedPost
+              post={relatedPost}
+              slug={actualPost.data.postBy.relacionados.articuloRelacionado}
+              category={actualPost.data.postBy.relacionados.categoriaArticulo}
+              lang={actualPost.data.postBy.relacionados.idiomaArticulo}
+            />
           </section>
         )}
       </Fragment>

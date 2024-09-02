@@ -6,3 +6,4 @@ export * from './Article';
 export * from './DocumentaryCard';
 export * from './VideoYouTube';
 export * from './DescriptionTab';
+export * from './RelatedPost';

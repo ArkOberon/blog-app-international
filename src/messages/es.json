@@ -85,6 +85,9 @@
     "description": "Testimonios, cristianismo, fe e investigaciones de grandes movimientos religiosos.",
     "img_alt_home": "Portada Religión Hermenautas"
   },
+  "RelatedPost": {
+    "title": "Artículo relacionado"
+  },
   "Science": {
     "title": "Ciencia – Hermenautas",
     "title_category": "Ciencia",

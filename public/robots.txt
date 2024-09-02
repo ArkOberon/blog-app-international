@@ -1,0 +1,5 @@
+User-agent: (*)
+Disallow: /portada-es/
+Disallow: /portada-en/
+Disallow: /principal-es/
+Disallow: /principal-en/

@@ -1,5 +1,21 @@
 
 
+## [0.6.2](///compare/0.6.1...0.6.2) (2024-09-02)
+
+
+### Bug Fixes
+
+* agrega correccion idiomas y robots.txt 1b5fcc3
+
+## [0.6.1](///compare/0.6.0...0.6.1) (2024-09-02)
+
+## [0.6.0](///compare/0.5.0...0.6.0) (2024-09-02)
+
+
+### Features
+
+* agrega un sistema de articulos relacionados c470fe7
+
 ## [0.5.0](///compare/0.4.6...0.5.0) (2024-08-21)
 
 

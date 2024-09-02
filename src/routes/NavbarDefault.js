@@ -11,16 +11,6 @@ const NavbarDefault = () => {
       },
       {
         id: uuid(),
-        menuitem: 'Tecnología',
-        link: '/tecnologia',
-      },
-      {
-        id: uuid(),
-        menuitem: 'Industria',
-        link: '/industria',
-      },
-      {
-        id: uuid(),
         menuitem: 'Salud',
         link: '/salud',
       },
@@ -28,11 +18,6 @@ const NavbarDefault = () => {
         id: uuid(),
         menuitem: 'Ciencia',
         link: '/ciencia',
-      },
-      {
-        id: uuid(),
-        menuitem: 'Economía',
-        link: '/economia',
       },
       {
         id: uuid(),
@@ -54,16 +39,6 @@ const NavbarDefault = () => {
       },
       {
         id: uuid(),
-        menuitem: 'Technology',
-        link: '/en/technology',
-      },
-      {
-        id: uuid(),
-        menuitem: 'Industry',
-        link: '/en/industry',
-      },
-      {
-        id: uuid(),
         menuitem: 'Health',
         link: '/en/health',
       },
@@ -71,11 +46,6 @@ const NavbarDefault = () => {
         id: uuid(),
         menuitem: 'Science',
         link: '/en/science',
-      },
-      {
-        id: uuid(),
-        menuitem: 'Economy',
-        link: '/en/economy',
       },
       {
         id: uuid(),
