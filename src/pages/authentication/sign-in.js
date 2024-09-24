@@ -29,11 +29,8 @@ const SignIn = () => {
 
     //console.log(e.target.email.value)
     //console.log(e.target.password.value)
-
     //const response = await loginUser(e.target.email.value, e.target.password.value)
-
     //console.log(response)
-
     //console.log(response.data.loginUser.authToken)
   };
 
