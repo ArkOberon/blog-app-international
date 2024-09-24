@@ -95,10 +95,12 @@
     "img_alt_home": "Portada Ciencia Hermenautas"
   },
   "Sign-in": {
-    "title": "Iniciar sesión"
+    "title": "Iniciar sesión – Hermenautas",
+    "description": "Iniciar sesión"
   },
   "Sign-up": {
-    "title": "Registrarse",
+    "title": "Registrarse – Hermenautas",
+    "description": "Regristro de usuario",
     "already_have_an_account": "¿Ya tienes una cuenta?",
     "sign_in": "Iniciar sesión",
     "redirect_link_slug": "/autenticacion/iniciar-sesion",

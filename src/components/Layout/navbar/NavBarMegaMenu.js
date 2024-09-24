@@ -99,7 +99,20 @@ export const NavbarMegaMenu = () => {
                 <DarkLightMode />
 
                 {!isLoged ? (
-                  <></>
+                  <>
+                    <Link
+                      href={t('link_slug_sign_in')}
+                      className="btn btn-outline-dark ms-3"
+                    >
+                      {t('sign_in')}
+                    </Link>
+                    <Link
+                      href={t('link_slug_sign_up')}
+                      className="btn btn-dark ms-1"
+                    >
+                      {t('sign_up')}
+                    </Link>
+                  </>
                 ) : (
                   <>
                     <ListGroup
@@ -162,18 +175,6 @@ export const NavbarMegaMenu = () => {
                         </Dropdown.Menu>
                       </Dropdown>
                     </ListGroup>
-                    <Link
-                      href={t('link_slug_sign_in')}
-                      className="btn btn-outline-dark ms-3"
-                    >
-                      {t('sign_in')}
-                    </Link>
-                    <Link
-                      href={t('link_slug_sign_up')}
-                      className="btn btn-dark ms-1"
-                    >
-                      {t('sign_up')}
-                    </Link>
                   </>
                 )}
               </div>

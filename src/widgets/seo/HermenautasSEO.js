@@ -11,7 +11,6 @@ const HermenautasSEO = (props) => {
   const pageURL = process.env.NEXT_PUBLIC_HOST_URL + router.asPath;
   const { title, description, imgUrl, imgAlt, typePage } = props;
 
-  //console.log(description)
   const parseDescription = parse(decodeHtml(description));
   const selectDescription =
     typePage === 'article'

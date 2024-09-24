@@ -29,10 +29,10 @@ export const Languages = () => {
     Cookies.set('NEXT_LOCALE', newLang, { expires: 365 });
     setSelectLang(newLang);
 
-    // Construye la nueva URL con el prefijo del idioma seleccionado
+    // Construct the new URL with the prefix of the selected language.
     const newPath = `/${newLang}${asPath}`;
 
-    // Reemplaza la ruta actual con la nueva, incluyendo el prefijo del idioma
+    // Replace the current path with the new one, including the language prefix
     router.push({ pathname, query }, newPath, { locale: newLang });
   };
 
@@ -48,7 +48,7 @@ export const Languages = () => {
             as="a"
             bsPrefix=" "
             id="dropdownNotification"
-            className="text-dark icon-notifications me-lg-1 btn btn-light btn-icon rounded-circle text-muted" // controlar el indicator indicator-primary
+            className="text-dark icon-notifications me-lg-1 btn btn-light btn-icon rounded-circle text-muted"
           >
             <i className="fe fe-globe"></i>
           </Dropdown.Toggle>
