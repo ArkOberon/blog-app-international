@@ -1,5 +1,12 @@
 
 
+## [0.7.0](///compare/0.6.2...0.7.0) (2024-09-24)
+
+
+### Features
+
+* agrega sistema de registro 34acac6
+
 ## [0.6.2](///compare/0.6.1...0.6.2) (2024-09-02)
 
 
