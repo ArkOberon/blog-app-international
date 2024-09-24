@@ -96,7 +96,14 @@
   },
   "Sign-in": {
     "title": "Iniciar sesión – Hermenautas",
-    "description": "Iniciar sesión"
+    "description": "Iniciar sesión",
+    "dont_have_account": "¿No tienes una cuenta?",
+    "sign_in": "Iniciar sesión",
+    "sign_up": "Registrarse",
+    "username_or_email": "Nombre de usuario o Correo electrónico",
+    "username_or_email_here": "Nombre de usuario o Correo electrónico aquí",
+    "password": "Contraseña",
+    "forgot_your_password": "¿Olvidaste la contraseña?"
   },
   "Sign-up": {
     "title": "Registrarse – Hermenautas",

@@ -1,37 +1,58 @@
 // import node module libraries
-import { Fragment } from 'react';
-import { Col, Row, Card, Form, Button, Image } from 'react-bootstrap';
+import { Fragment, useState } from 'react';
+import { Col, Row, Card, Form, Button, Toast } from 'react-bootstrap';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
+import parse from 'html-react-parser';
 
 // import widget/custom components
-//import { LoaderProcess } from '../../components/ui/loaders';
 import { SocialLinks } from '../../components/ui/SocialLinks';
+import { decodeHtml } from '../../utils/decodeHTML';
 
 // import API functions
-//import { loginUser } from '../../pages/api/user/loginUser';
+import { loginUser } from '../../pages/api/user/loginUser';
 
 const SignIn = () => {
   const isAuth = Cookies.get('AUTH_SESSION');
   const t = useTranslations('Sign-in');
   const router = useRouter();
+  const [errors, setErrors] = useState(false);
   const { locale } = router;
 
   if (isAuth) {
     router.push('/');
+    return <></>;
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    //console.log(e.target.email.value)
-    //console.log(e.target.password.value)
-    //const response = await loginUser(e.target.email.value, e.target.password.value)
-    //console.log(response)
-    //console.log(response.data.loginUser.authToken)
+    const response = await loginUser(
+      e.target.email.value,
+      e.target.password.value
+    );
+
+    if (response.errors) {
+      setErrors(response.errors);
+    } else {
+      const userData = {
+        token: response.data.loginUser.authToken,
+        id: response.data.loginUser.user.id,
+      };
+
+      Cookies.set('AUTH_SESSION', JSON.stringify(userData), {
+        expires: 7,
+        secure: true,
+      });
+      const isAuth = Cookies.get('AUTH_SESSION');
+
+      if (isAuth) {
+        router.push('/');
+      }
+    }
   };
 
   // SEO Info
@@ -71,37 +92,48 @@ const SignIn = () => {
           <Card>
             <Card.Body className="p-6">
               <div className="mb-4">
-                <Link href="/">
-                  <Image
-                    src="/images/brand/logo/logo-icon.svg"
-                    className="mb-4"
-                    alt=""
-                  />
-                </Link>
-                <h1 className="mb-1 fw-bold">Sign in</h1>
+                <h1 className="mb-1 fw-bold">{t('sign_in')}</h1>
+
                 <span>
-                  Don’t have an account?{' '}
+                  {t('dont_have_account')}{' '}
                   <Link href="/authentication/sign-up" className="ms-1">
-                    Sign up
+                    {t('sign_up')}
                   </Link>
                 </span>
+
+                {!errors ? (
+                  <></>
+                ) : (
+                  errors.map((error, idx) => (
+                    <Toast
+                      key={idx}
+                      bg="danger"
+                      style={{ color: '#fff' }}
+                      className="mt-5 mb-5"
+                    >
+                      <Toast.Body>
+                        {parse(decodeHtml(error.message))}
+                      </Toast.Body>
+                    </Toast>
+                  ))
+                )}
               </div>
               {/* Form */}
               <Form onSubmit={handleSubmit}>
                 <Row>
                   <Col lg={12} md={12} className="mb-3">
                     {/* Username or email */}
-                    <Form.Label>Username or email </Form.Label>
+                    <Form.Label>{t('username_or_email')}</Form.Label>
                     <Form.Control
-                      type="email"
+                      type="text"
                       id="email"
-                      placeholder="Email address here"
+                      placeholder={t('username_or_email_here')}
                       required
                     />
                   </Col>
                   <Col lg={12} md={12} className="mb-3">
                     {/* Password */}
-                    <Form.Label>Password </Form.Label>
+                    <Form.Label>{t('password')}</Form.Label>
                     <Form.Control
                       type="password"
                       id="password"
@@ -112,21 +144,15 @@ const SignIn = () => {
                   <Col lg={12} md={12} className="mb-3">
                     {/* Checkbox */}
                     <div className="d-md-flex justify-content-between align-items-center">
-                      <Form.Group
-                        className="mb-3 mb-md-0"
-                        controlId="formBasicCheckbox"
-                      >
-                        <Form.Check type="checkbox" label="Remember me" />
-                      </Form.Group>
                       <Link href="/authentication/forget-password">
-                        Forgot your password?
+                        {t('forgot_your_password')}
                       </Link>
                     </div>
                   </Col>
                   <Col lg={12} md={12} className="mb-0 d-grid gap-2">
                     {/* Button */}
                     <Button variant="primary" type="submit">
-                      Sign in
+                      {t('sign_in')}
                     </Button>
                   </Col>
                 </Row>

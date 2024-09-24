@@ -1,6 +1,6 @@
 // import node module libraries
 import { Fragment, useEffect, useState } from 'react';
-import { Col, Row, Card, Form, Button, Image, Toast } from 'react-bootstrap';
+import { Col, Row, Card, Form, Button, Toast } from 'react-bootstrap';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
@@ -11,6 +11,7 @@ import { NextSeo } from 'next-seo';
 // import widget/custom components
 import { LoaderProcess } from '../../components/ui/loaders';
 import { SocialLinks } from '../../components/ui/SocialLinks';
+import { decodeHtml } from '../../utils/decodeHTML';
 
 // import API functions
 import { registerUser } from '../../pages/api/user/registerUser';
@@ -56,12 +57,6 @@ const SignUp = () => {
     }
   };
 
-  const decodeHtml = (html) => {
-    const textArea = document.createElement('textarea');
-    textArea.innerHTML = html;
-    return textArea.value;
-  };
-
   // SEO Info
   const title = t('title');
   const description = t('description');
@@ -104,14 +99,6 @@ const SignUp = () => {
               ) : (
                 <>
                   <div className="mb-4">
-                    <Link href="/">
-                      <Image
-                        src="/images/brand/logo/logo-icon.svg"
-                        className="mb-4"
-                        alt=""
-                      />
-                    </Link>
-
                     <h1 className="mb-1 fw-bold">{t('sign_up')}</h1>
 
                     {!errors ? (

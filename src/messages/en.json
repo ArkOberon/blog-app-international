@@ -95,10 +95,18 @@
     "img_alt_home": "Home Science - Hermenautas"
   },
   "Sign-in": {
-    "title": "Sign in"
+    "title": "Sign in – Hermenautas",
+    "description": "Sign in",
+    "dont_have_account": "Don’t have an account?",
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "username_or_email": "Email address or username",
+    "username_or_email_here": "Email address or username here",
+    "password": "Password",
+    "forgot_your_password": "Forgot your password?"
   },
   "Sign-up": {
-    "title": "Sign up",
+    "title": "Sign up – Hermenautas",
     "already_have_an_account": "Already have an account?",
     "sign_in": "Sign in",
     "redirect_link_slug": "/en/authentication/sign-in",
