@@ -1,5 +1,12 @@
 
 
+## [0.9.0](///compare/0.8.0...0.9.0) (2024-09-29)
+
+
+### Features
+
+* sistema de envio de email recuperacion 6fc073c
+
 ## [0.8.0](///compare/0.7.0...0.8.0) (2024-09-24)
 
 
