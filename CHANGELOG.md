@@ -1,5 +1,12 @@
 
 
+## [0.9.1](///compare/0.9.0...0.9.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* agrega enlaces corregidos de politicas aece270
+
 ## [0.9.0](///compare/0.8.0...0.9.0) (2024-09-29)
 
 
