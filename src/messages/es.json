@@ -131,7 +131,9 @@
     "i_agree_to_the_terms": "Estoy de acuerdo con los",
     "terms_of_services": "Términos de Servicio",
     "and": "y la",
-    "privacy_policy": "Política de Privacidad"
+    "privacy_policy": "Política de Privacidad",
+    "privacy_policy_slug": "/politicas-de-privacidad",
+    "terms_of_services_slug": "/terminos-y-condiciones"
   },
   "Technology": {
     "title": "Tecnología – Hermenautas",

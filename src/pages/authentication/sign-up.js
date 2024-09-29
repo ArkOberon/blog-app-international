@@ -158,11 +158,11 @@ const SignUp = () => {
                           <Form.Check.Input type="checkbox" required />
                           <Form.Check.Label>
                             {t('i_agree_to_the_terms')}{' '}
-                            <Link href="/marketing/specialty/terms-and-conditions/">
+                            <Link href={t('terms_of_services_slug')}>
                               {t('terms_of_services')}
                             </Link>{' '}
                             {t('and')}{' '}
-                            <Link href="/marketing/specialty/terms-and-conditions/">
+                            <Link href={t('privacy_policy_slug')}>
                               {t('privacy_policy')}.
                             </Link>
                           </Form.Check.Label>
