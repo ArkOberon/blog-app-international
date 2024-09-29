@@ -52,6 +52,14 @@ export const pathnames = {
     es: '/autenticacion/registrarse',
     en: '/authentication/sign-up',
   },
+  '/authentication/forget-password': {
+    es: '/autenticacion/recuperar-contrasena',
+    en: '/authentication/forget-password',
+  },
+  '/authentication/reset-password': {
+    es: '/autenticacion/restaurar-contrasena',
+    en: '/authentication/reset-password',
+  },
   '/terms-and-conditions': {
     es: '/terminos-y-condiciones',
     en: '/terms-and-conditions',

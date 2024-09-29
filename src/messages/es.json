@@ -18,6 +18,16 @@
     "description": "Noticias económicas mundiales. CBDCs, informes e investigaciones sobre políticas que atentan contra la libertad civil. Novedades sobre los controles y restricciones del mercado financiero.",
     "img_alt_home": "Portada Economía Hermenautas"
   },
+  "forgotPassword": {
+    "title": "¿Olvidaste la contraseña?",
+    "description": "¿Olvidaste la contraseña?",
+    "forgot_your_password": "¿Olvidaste la contraseña?",
+    "email": "Correo electrónico",
+    "email_here": "Introduce tu Correo Electrónico aquí",
+    "recover_password": "Recuperar contraseña",
+    "asPath": "/autenticacion/restaurar-contrasena",
+    "send_email": "Revisa la bandeja de entrada de tu Correo Electrónico"
+  },
   "Footer": {
     "description": "Creemos que la información es un poder que sustenta todas las libertades civiles. La imprenta marcó el comienzo de una nueva era en la historia de la comunicación y la prensa libre jugará un papel determinante en nuestra época actual. Ahora más que nunca, existe la necesidad imperiosa de ofrecer publicaciones sin censura.",
     "company": "Corporativo",
@@ -103,7 +113,8 @@
     "username_or_email": "Nombre de usuario o Correo electrónico",
     "username_or_email_here": "Nombre de usuario o Correo electrónico aquí",
     "password": "Contraseña",
-    "forgot_your_password": "¿Olvidaste la contraseña?"
+    "forgot_your_password": "¿Olvidaste la contraseña?",
+    "your_password_here": "Escribe tu contraseña"
   },
   "Sign-up": {
     "title": "Registrarse – Hermenautas",

@@ -47,6 +47,7 @@ const SignIn = () => {
         expires: 7,
         secure: true,
       });
+
       const isAuth = Cookies.get('AUTH_SESSION');
 
       if (isAuth) {
@@ -137,7 +138,7 @@ const SignIn = () => {
                     <Form.Control
                       type="password"
                       id="password"
-                      placeholder="**************"
+                      placeholder={t('your_password_here')}
                       required
                     />
                   </Col>

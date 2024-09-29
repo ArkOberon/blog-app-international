@@ -34,6 +34,16 @@
     "link_slug_terms_of_services": "/terms-and-conditions",
     "all_rights_reserved": "All rights reserved"
   },
+  "forgotPassword": {
+    "title": "Forgot your password?",
+    "description": "Forgot your password?",
+    "forgot_your_password": "Forgot your password?",
+    "email": "Email address",
+    "email_here": "Email address here",
+    "recover_password": "Recover your password",
+    "asPath": "/authentication/reset-password",
+    "send_email": "Check your Email inbox"
+  },
   "Health": {
     "title": "Health",
     "title_category": "Health",
@@ -103,7 +113,8 @@
     "username_or_email": "Email address or username",
     "username_or_email_here": "Email address or username here",
     "password": "Password",
-    "forgot_your_password": "Forgot your password?"
+    "forgot_your_password": "Forgot your password?",
+    "your_password_here": "Password here"
   },
   "Sign-up": {
     "title": "Sign up – Hermenautas",
