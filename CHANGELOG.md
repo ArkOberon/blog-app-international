@@ -1,5 +1,12 @@
 
 
+## [0.9.3](///compare/0.9.2...0.9.3) (2024-10-09)
+
+
+### Bug Fixes
+
+* archivos configuracion Jest 30d35e1
+
 ## [0.9.2](///compare/0.9.1...0.9.2) (2024-10-09)
 
 
