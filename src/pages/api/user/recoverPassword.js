@@ -1,5 +1,5 @@
 /**
- * @description Recuperación de contraseña.
+ * @description Envía el email de recuperación de contraseña.
  * @param {String} email Email del Cliente
  * @param {String} locale Idioma del Cliente
  * @param {String} asPath asPath del Cliente

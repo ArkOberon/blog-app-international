@@ -1,43 +1,54 @@
-/* eslint-disable */
 // import node module libraries
 import { Fragment, useState } from 'react';
 import { Col, Row, Card, Form, Button, Toast } from 'react-bootstrap';
-
 import { useTranslations } from 'next-intl';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
 import parse from 'html-react-parser';
+import PasswordStrengthBar from 'react-password-strength-bar';
 
 // import widget/custom components
 import { SocialLinks } from '../../components/ui/SocialLinks';
 import { decodeHtml } from '../../utils/decodeHTML';
 
 // import API functions
-
-import { recoverPassword } from '../api/user/recoverPassword';
+import { resetPassword } from '../api/user/resetPassword';
 
 const ResetPassword = () => {
   const isAuth = Cookies.get('AUTH_SESSION');
   const t = useTranslations('Sign-in');
   const router = useRouter();
   const [errors, setErrors] = useState(false);
-  const { locale } = router;
+  const { locale, query } = router;
+  const [passwordStrength, setPasswordStrength] = useState('');
 
   if (isAuth) {
     router.push('/');
     return <></>;
   }
 
+  const handleChangeInput = (e) => {
+    const { value } = e.target;
+
+    setPasswordStrength(value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await recoverPassword(e.target.email.value);
+    /*   console.log(e.target.password.value) */
+
+    const response = await resetPassword(
+      query.key,
+      query.login,
+      e.target.password.value
+    );
 
     if (response.errors) {
       setErrors(response.errors);
     } else {
-      console.log(response);
+      return;
     }
   };
 
@@ -97,6 +108,7 @@ const ResetPassword = () => {
                   ))
                 )}
               </div>
+
               {/* Form */}
               <Form onSubmit={handleSubmit}>
                 <Row>
@@ -106,9 +118,11 @@ const ResetPassword = () => {
                     <Form.Control
                       type="password"
                       id="password"
+                      onChange={handleChangeInput}
                       placeholder="Your password here"
                       required
                     />
+                    <PasswordStrengthBar password={passwordStrength} />
                   </Col>
 
                   <Col lg={12} md={12} className="mb-3">
@@ -116,7 +130,7 @@ const ResetPassword = () => {
                     <Form.Label>Confirm Password</Form.Label>
                     <Form.Control
                       type="password"
-                      id="password"
+                      id="passwordConfirm"
                       placeholder="Confirm password here"
                       required
                     />
