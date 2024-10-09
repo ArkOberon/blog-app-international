@@ -1,5 +1,12 @@
 
 
+## [0.9.2](///compare/0.9.1...0.9.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* agrega dependencias testing jest 85b4cb8
+
 ## [0.9.1](///compare/0.9.0...0.9.1) (2024-09-29)
 
 
