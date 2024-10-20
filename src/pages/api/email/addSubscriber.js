@@ -5,14 +5,8 @@
  * @param {String} categoryName Nombre de la categoría de la que proviene el Lead
  */
 
-const endpoint = process.env.NEXT_PUBLIC_API_URL as string;
-
-export const addSubscriberToList = async (
-  email: string | null | undefined,
-  listId: number | null | undefined,
-  categoryName: string | null | undefined
-): Promise<Object> => {
-  const response = await fetch(endpoint, {
+export const addSubscriberToList = async (email, listId, categoryName) => {
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
     method: 'POST',
     mode: 'cors',
     headers: {

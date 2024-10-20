@@ -6,22 +6,7 @@ import { useTranslations, useFormatter } from 'next-intl';
 // import API functions
 import { getPageById } from './api/pages/getPageById';
 
-type ServerSidePropsType = {
-  locale: string;
-};
-
-type PrivacyPoliciesProps = {
-  page: {
-    data: {
-      pageBy: {
-        date: Date;
-        content: string;
-      };
-    };
-  };
-};
-
-export async function getServerSideProps({ locale }: ServerSidePropsType) {
+export async function getServerSideProps({ locale }) {
   const termsAndConditionsIdKey = `NEXT_PUBLIC_PRIVACY_POLICIES_ID_${locale}`;
   const id = process.env[termsAndConditionsIdKey];
 
@@ -40,7 +25,7 @@ export async function getServerSideProps({ locale }: ServerSidePropsType) {
   };
 }
 
-function PrivacyPolicies({ page }: PrivacyPoliciesProps): JSX.Element {
+function PrivacyPolicies({ page }) {
   const t = useTranslations('Privacy-Policies');
   const dateTime = new Date(page.data.pageBy.date);
   const format = useFormatter();

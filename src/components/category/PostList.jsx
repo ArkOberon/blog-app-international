@@ -1,5 +1,5 @@
 // import node module libraries
-import { Fragment, useEffect, useState, useRef, FormEvent } from 'react';
+import { Fragment, useEffect, useState, useRef } from 'react';
 import { Col, Row, Container, Form, Button } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
@@ -13,113 +13,6 @@ import { LoaderProcess } from '../ui/loaders';
 import { getAllPostsByCategory } from '../../pages/api/posts/getAllPostsByCategory';
 import { addSubscriberToList } from '../../pages/api/email/addSubscriber';
 
-type Tag = {
-  name: string;
-};
-
-type PrincipalCategory = {
-  name: string;
-  slug: string;
-};
-
-type ObjectItem = {
-  name: string;
-  slug: string;
-};
-
-type TagsItem = {
-  name: string;
-};
-
-type ItemPostByCategory = {
-  author: {
-    node: {
-      avatar: {
-        url: string;
-      };
-      firstName: string;
-      lastName: string;
-    };
-  };
-  title: string;
-  featuredImage: {
-    node: {
-      link: string;
-    };
-  };
-  categories: {
-    nodes: [ObjectItem];
-  };
-  date: string;
-  slug: string;
-  tags: {
-    nodes: [TagsItem];
-  };
-};
-
-type PrincipalPost = {
-  title: string;
-  author: {
-    node: {
-      avatar: {
-        url: string;
-      };
-      firstName: string;
-      lastName: string;
-    };
-  };
-  categories: {
-    nodes: [PrincipalCategory];
-  };
-  date: string;
-  slug: string;
-  featuredImage: {
-    node: {
-      link: string;
-    };
-  };
-  tags: {
-    nodes: [Tag];
-  };
-};
-
-type ArrayPostActualLang = {
-  name: string;
-  children: {
-    nodes: [
-      item: {
-        name?: string | undefined;
-        posts: {
-          nodes: [PrincipalPost];
-        };
-      },
-    ];
-  };
-};
-
-type PostListProps = {
-  locale: string | undefined;
-  titleCategory: string;
-  description: string;
-  arrayPost: [ArrayPostActualLang];
-  categoryId: string;
-  listId: number;
-};
-
-type PostByCategory = {
-  data?: {
-    category: {
-      posts: {
-        nodes: [ItemPostByCategory];
-      };
-    };
-  };
-};
-
-interface ApiResponse {
-  errors?: string[];
-}
-
 export const PostList = ({
   locale,
   titleCategory,
@@ -127,10 +20,10 @@ export const PostList = ({
   arrayPost,
   categoryId,
   listId = 4,
-}: PostListProps): JSX.Element => {
-  const [postByCategory, setPostByCategory] = useState<PostByCategory>({});
-  const [isLoading, setIsLoading] = useState<Boolean>(false);
-  const emailRef = useRef<null | HTMLInputElement>(null);
+}) => {
+  const [postByCategory, setPostByCategory] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const emailRef = useRef(null);
   const router = useRouter();
   const t = useTranslations('NewsletterForm');
   const { pathname } = router;
@@ -141,8 +34,8 @@ export const PostList = ({
 
   useEffect(() => {
     if (categoryId) {
-      const postByCategory = async (id: string): Promise<void> => {
-        const pArrayByCategory = (await getAllPostsByCategory(id)) as object;
+      const postByCategory = async (id) => {
+        const pArrayByCategory = await getAllPostsByCategory(id);
         setPostByCategory(pArrayByCategory);
       };
 
@@ -150,15 +43,11 @@ export const PostList = ({
     }
   }, [categoryId]);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     const email = emailRef.current?.value;
-    const response: ApiResponse = await addSubscriberToList(
-      email,
-      listId,
-      titleCategory
-    );
+    const response = await addSubscriberToList(email, listId, titleCategory);
 
     if (response.errors) {
       return;
@@ -167,7 +56,7 @@ export const PostList = ({
     }
   };
 
-  const filterPrincipal: string =
+  const filterPrincipal =
     pathname === '/' ||
     pathname === '/en' ||
     pathname === '/es' ||
@@ -176,7 +65,7 @@ export const PostList = ({
       ? 'Principal'
       : 'Portada';
 
-  const oposeCategory: string =
+  const oposeCategory =
     filterPrincipal === 'Principal' ? 'Portada' : 'Principal';
 
   const breakpointColumnsObj = {

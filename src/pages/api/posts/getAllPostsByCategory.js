@@ -2,12 +2,8 @@
  * @description Realizar GET de todo los post según el idioma y una categoría específica
  */
 
-const endpoint = process.env.NEXT_PUBLIC_API_URL as string;
-
-export const getAllPostsByCategory = async (
-  id: string
-): Promise<object | string> => {
-  const response = await fetch(endpoint, {
+export const getAllPostsByCategory = async (id) => {
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
     method: 'POST',
     mode: 'cors',
     headers: {

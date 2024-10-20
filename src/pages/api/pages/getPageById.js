@@ -2,12 +2,8 @@
  * @description Realizar GET para entregar cualquier página individualmente según su ID
  */
 
-const endpoint = process.env.NEXT_PUBLIC_API_URL as string;
-
-export const getPageById = async (
-  id: string | undefined
-): Promise<object | string> => {
-  const response = await fetch(endpoint, {
+export const getPageById = async (id) => {
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
     method: 'POST',
     mode: 'cors',
     headers: {

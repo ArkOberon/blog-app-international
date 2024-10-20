@@ -10,7 +10,7 @@ import { NextSeo } from 'next-seo';
 import { AuthorAndSharing, NewsletterForm } from '.';
 import { RelatedPost } from '.';
 import { SinglePostSkeleton } from '../ui/loaders';
-import { VideoYouTube } from '../blog';
+import { VideoYouTube } from '.';
 
 // import API functions
 import { getPostBySlug } from '../../pages/api/posts/getPostBySlug';

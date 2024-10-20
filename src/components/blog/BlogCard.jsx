@@ -10,52 +10,7 @@ import { categoryColors } from '../../utils/categoryColor';
 // Global Variables
 import { defaultImage } from '../../global';
 
-type ObjectItem = {
-  name: string;
-  slug: string;
-};
-
-type TagsItem = {
-  name: string;
-};
-
-type BlogCardProps = {
-  item: {
-    author: {
-      node: {
-        avatar: {
-          url: string;
-        };
-        firstName: string;
-        lastName: string;
-      };
-    };
-    title: string;
-    featuredImage: {
-      node: {
-        link: string;
-      };
-    };
-    categories: {
-      nodes: [ObjectItem];
-    };
-    date: string;
-    slug: string;
-    tags: {
-      nodes: [TagsItem];
-    };
-  };
-  locale: string | undefined;
-  filterPrincipal: string;
-  oposeCategory: string;
-};
-
-export const BlogCard = ({
-  item,
-  locale,
-  filterPrincipal,
-  oposeCategory,
-}: BlogCardProps): JSX.Element => {
+export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
   const format = useFormatter();
 
   const categorie = item.categories.nodes.filter(
