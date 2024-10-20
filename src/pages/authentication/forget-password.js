@@ -92,9 +92,7 @@ const ForgotPassword = () => {
                       {t('forgot_your_password')}
                     </h1>
 
-                    {!errors ? (
-                      <></>
-                    ) : (
+                    {errors &&
                       errors.map((error, idx) => (
                         <Toast
                           key={idx}
@@ -106,10 +104,9 @@ const ForgotPassword = () => {
                             {parse(decodeHtml(error.message))}
                           </Toast.Body>
                         </Toast>
-                      ))
-                    )}
+                      ))}
 
-                    {emailSend ? (
+                    {emailSend && (
                       <Toast
                         bg="success"
                         style={{ color: '#331832' }}
@@ -117,8 +114,6 @@ const ForgotPassword = () => {
                       >
                         <Toast.Body>{t('send_email')}</Toast.Body>
                       </Toast>
-                    ) : (
-                      <></>
                     )}
                   </div>
 

@@ -10,10 +10,12 @@ import PasswordStrengthBar from 'react-password-strength-bar';
 
 // import widget/custom components
 import { SocialLinks } from '../../components/ui/SocialLinks';
-import { decodeHtml } from '../../utils/decodeHTML';
 
 // import API functions
 import { resetPassword } from '../api/user/resetPassword';
+
+// import Utils/ custom functionalities
+import { decodeHtml } from '../../utils/decodeHTML';
 
 const ResetPassword = () => {
   const isAuth = Cookies.get('AUTH_SESSION');

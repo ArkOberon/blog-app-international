@@ -118,6 +118,7 @@
   },
   "Sign-up": {
     "title": "Sign up – Hermenautas",
+    "description": "Sign up",
     "already_have_an_account": "Already have an account?",
     "sign_in": "Sign in",
     "redirect_link_slug": "/en/authentication/sign-in",

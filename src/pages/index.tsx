@@ -11,6 +11,75 @@ import { PostListSkeleton } from '../components/ui/loaders';
 // import API functions
 import { getAllPosts } from './api/posts/getAllPosts';
 
+type SetStateAction = {
+  data: {
+    categories: {
+      nodes: never[];
+    };
+  };
+};
+
+type PrincipalCategory = {
+  name: string;
+  slug: string;
+};
+
+type Tag = {
+  name: string;
+};
+
+type PrincipalPost = {
+  title: string;
+  author: {
+    node: {
+      avatar: {
+        url: string;
+      };
+      firstName: string;
+      lastName: string;
+    };
+  };
+  categories: {
+    nodes: [PrincipalCategory];
+  };
+  date: string;
+  slug: string;
+  featuredImage: {
+    node: {
+      link: string;
+    };
+  };
+  tags: {
+    nodes: [Tag];
+  };
+};
+
+type ArrayPostActualLang = {
+  name: string;
+  children: {
+    nodes: [
+      item: {
+        name?: string | undefined;
+        posts: {
+          nodes: [PrincipalPost];
+        };
+      },
+    ];
+  };
+};
+
+type PostArray = {
+  data: {
+    categories: {
+      nodes: [ArrayPostActualLang];
+    };
+  };
+};
+
+type HomeProps = {
+  postArray: PostArray;
+};
+
 export async function getServerSideProps() {
   const postArray = await getAllPosts();
 
@@ -27,12 +96,17 @@ export async function getServerSideProps() {
   };
 }
 
-const Home = ({ postArray }) => {
+const Home = ({ postArray }: HomeProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [arrayPost, setArrayPost] = useState({
     data: {
-      posts: {
-        nodes: [],
+      categories: {
+        nodes: [
+          {
+            name: '',
+            id: '',
+          },
+        ],
       },
     },
   });
@@ -54,7 +128,7 @@ const Home = ({ postArray }) => {
 
   useEffect(() => {
     const postArray = async () => {
-      const pArray = await getAllPosts();
+      const pArray = (await getAllPosts()) as SetStateAction;
       setArrayPost(pArray);
 
       setIsLoading(false);
@@ -96,13 +170,11 @@ const Home = ({ postArray }) => {
         ) : (
           <PostList
             locale={locale}
-            title={title}
             titleCategory={titleCategory}
             description={description}
-            imgUrl={imgUrl}
-            imgAlt={imgAlt}
             arrayPost={postArray.data.categories.nodes}
             categoryId={category[0].id}
+            listId={4}
           />
         )}
       </Fragment>

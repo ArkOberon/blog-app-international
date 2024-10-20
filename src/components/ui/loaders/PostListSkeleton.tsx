@@ -4,7 +4,7 @@ import { Card, Row, Col, Container } from 'react-bootstrap';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
-export const PostListSkeleton = () => {
+export const PostListSkeleton = (): JSX.Element => {
   return (
     <section className="pb-8 bg-white">
       <Container>
@@ -20,7 +20,7 @@ export const PostListSkeleton = () => {
           </Col>
           {Array(8)
             .fill('a')
-            .map((_, index) => (
+            .map((_, index: number) => (
               <Col xl={4} lg={4} md={6} sm={12} className="d-flex" key={index}>
                 <Card className="mb-4 shadow-lg">
                   <Skeleton height={300} width={404} />

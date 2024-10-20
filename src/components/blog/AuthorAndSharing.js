@@ -59,8 +59,8 @@ export const AuthorAndSharing = ({ data, date, lastComponent }) => {
             className="rounded-circle avatar-xl"
           />
         )}
-        <div className="ms-2 lh-1">
-          <h3 className="mb-1 text-primary">
+        <div className="ms-2 lh-2 fs-4">
+          <h3 className="mb-1 text-primary fs-3">
             {data.firstName} {data.lastName}
           </h3>
           {lastComponent ? (

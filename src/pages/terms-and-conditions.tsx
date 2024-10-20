@@ -6,7 +6,22 @@ import { useTranslations, useFormatter } from 'next-intl';
 // import API functions
 import { getPageById } from './api/pages/getPageById';
 
-export async function getServerSideProps({ locale }) {
+type ServerSidePropsType = {
+  locale: string;
+};
+
+type TermsAndConditionsProps = {
+  page: {
+    data: {
+      pageBy: {
+        date: Date;
+        content: string;
+      };
+    };
+  };
+};
+
+export async function getServerSideProps({ locale }: ServerSidePropsType) {
   const termsAndConditionsIdKey = `NEXT_PUBLIC_TERMS_AND_CONDITIONS_ID_${locale}`;
   const id = process.env[termsAndConditionsIdKey];
 
@@ -25,7 +40,7 @@ export async function getServerSideProps({ locale }) {
   };
 }
 
-function TermsAndConditions({ page }) {
+function TermsAndConditions({ page }: TermsAndConditionsProps): JSX.Element {
   const t = useTranslations('Terms-and-conditions');
   const dateTime = new Date(page.data.pageBy.date);
   const format = useFormatter();

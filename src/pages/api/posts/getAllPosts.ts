@@ -2,8 +2,10 @@
  * @description Realizar GET de todo los post según el idioma
  */
 
-export const getAllPosts = async () => {
-  const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
+const endpoint = process.env.NEXT_PUBLIC_API_URL as string;
+
+export const getAllPosts = async (): Promise<object | string> => {
+  const response = await fetch(endpoint, {
     method: 'POST',
     mode: 'cors',
     headers: {

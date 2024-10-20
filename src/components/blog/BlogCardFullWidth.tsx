@@ -9,13 +9,60 @@ import { categoryColors } from '../../utils/categoryColor';
 // Global Variables
 import { defaultImage } from '../../global';
 
+type tag = {
+  name: string;
+};
+
+type principalCategory = {
+  name: string;
+  slug: string;
+};
+
+type principalPost = {
+  title: string;
+  author: {
+    node: {
+      avatar: {
+        url: string;
+      };
+      firstName: string;
+      lastName: string;
+    };
+  };
+  categories: {
+    nodes: [principalCategory];
+  };
+  date: string;
+  slug: string;
+  featuredImage: {
+    node: {
+      link: string;
+    };
+  };
+  tags: {
+    nodes: [tag];
+  };
+};
+
+type BlogCardFullWidthProps = {
+  item: {
+    posts: {
+      nodes: [principalPost];
+    };
+  };
+  locale: string | undefined;
+  filterPrincipal: string;
+  oposeCategory: string;
+  titleCategory: string;
+};
+
 export const BlogCardFullWidth = ({
   item,
   locale,
   filterPrincipal,
   oposeCategory,
   titleCategory,
-}) => {
+}: BlogCardFullWidthProps): JSX.Element => {
   const format = useFormatter();
   const principalPost =
     filterPrincipal === 'Principal'

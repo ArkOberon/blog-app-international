@@ -1,7 +1,7 @@
 import { Spinner } from 'react-bootstrap';
 import { useTranslations } from 'next-intl';
 
-export const LoaderProcess = () => {
+export const LoaderProcess = (): JSX.Element => {
   const t = useTranslations('Process-Loader');
   return (
     <>

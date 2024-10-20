@@ -8,13 +8,15 @@ import parse from 'html-react-parser';
 import PasswordStrengthBar from 'react-password-strength-bar';
 import { NextSeo } from 'next-seo';
 
-// import widget/custom components
+// import widget/ custom components
 import { LoaderProcess } from '../../components/ui/loaders';
 import { SocialLinks } from '../../components/ui/SocialLinks';
-import { decodeHtml } from '../../utils/decodeHTML';
 
 // import API functions
 import { registerUser } from '../../pages/api/user/registerUser';
+
+// import Utils/ custom functionalities
+import { decodeHtml } from '../../utils/decodeHTML';
 
 const SignUp = () => {
   const t = useTranslations('Sign-up');
@@ -152,7 +154,7 @@ const SignUp = () => {
                         />
                         <PasswordStrengthBar password={passwordStrength} />
                       </Col>
-                      <Col lg={12} md={12} className="mb-3">
+                      <Col lg={12} md={12} className="mb-3 fs-4">
                         {/* Checkbox */}
                         <Form.Check type="checkbox" id="check-api-checkbox">
                           <Form.Check.Input type="checkbox" required />
