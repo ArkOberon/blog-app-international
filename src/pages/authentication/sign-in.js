@@ -147,9 +147,7 @@ const SignIn = () => {
                   <Col lg={12} md={12} className="mb-3">
                     {/* Checkbox */}
                     <div className="d-md-flex justify-content-between align-items-center">
-                      <Link href="/authentication/forget-password">
-                        {t('forgot_your_password')}
-                      </Link>
+                      <Link href="#">{t('forgot_your_password')}</Link>
                     </div>
                   </Col>
                   <Col lg={12} md={12} className="mb-0 d-grid gap-2">
