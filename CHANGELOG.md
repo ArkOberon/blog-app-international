@@ -1,5 +1,12 @@
 
 
+## [0.9.4](///compare/0.9.3...0.9.4) (2024-10-20)
+
+
+### Bug Fixes
+
+* conversion parcial de pages a TS fb9ed19
+
 ## [0.9.3](///compare/0.9.2...0.9.3) (2024-10-09)
 
 
