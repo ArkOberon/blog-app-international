@@ -1,5 +1,12 @@
 
 
+## [0.9.7](///compare/0.9.6...0.9.7) (2024-10-21)
+
+
+### Bug Fixes
+
+* elimina el registro y el login 05c7d64
+
 ## [0.9.6](///compare/0.9.5...0.9.6) (2024-10-20)
 
 
