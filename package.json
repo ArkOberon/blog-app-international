@@ -1,14 +1,12 @@
 {
   "name": "hermenautas",
-  "description": "Web Oficial de Hermenautas S.L.",
+  "description": "Blog Hermenautas",
   "version": "0.9.7",
-  "private": true,
-  "homepage": "https://hermenautas.com/",
+  "private": true,  
   "license": "propietary",
   "contributors": [
     {
-      "name": "Pedro M. Cruz",
-      "email": "mcrz@hermenautas.es"
+      "name": "Pedro M. Cruz"      
     }
   ],
   "scripts": {
