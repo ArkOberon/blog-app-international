@@ -35,7 +35,7 @@ const NavbarDefault = () => {
       {
         id: uuid(),
         menuitem: 'News',
-        link: '/news',
+        link: '/en/news',
       },
       {
         id: uuid(),
@@ -55,7 +55,7 @@ const NavbarDefault = () => {
       {
         id: uuid(),
         menuitem: 'Documentaries',
-        link: '/documentaries',
+        link: '/en/documentaries',
       },
     ],
   };

@@ -16,8 +16,7 @@ export const loginUser = async (username, password) => {
       query: `
         mutation LoginUser($username: String!, $password: String!) {
           loginUser(input: {username: $username, password: $password}) {  
-            authToken
-            session        
+            authToken                   
             user {
               id
             }

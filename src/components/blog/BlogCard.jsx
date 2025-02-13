@@ -1,7 +1,7 @@
 // import node module libraries
+import React from 'react';
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import { useFormatter } from 'next-intl';
 
 // Custom functionalities
@@ -12,6 +12,7 @@ import { defaultImage } from '../../global';
 
 export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
   const format = useFormatter();
+
   const categorie = item.categories.nodes.filter(
     (item) =>
       item.name !== `${filterPrincipal}-${locale}` &&
@@ -51,6 +52,7 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
               />
             )}
           </Link>
+
           {/* Card body  */}
           <Card.Body>
             <Link
@@ -69,6 +71,7 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
                 {item.title}
               </Link>
             </h2>
+
             {/*  Media content  */}
             <Row className="align-items-center g-0 mt-4">
               <Col xs="auto">
@@ -94,9 +97,4 @@ export const BlogCard = ({ item, locale, filterPrincipal, oposeCategory }) => {
       )}
     </>
   );
-};
-
-// Typechecking With PropTypes
-BlogCard.propTypes = {
-  item: PropTypes.object.isRequired,
 };

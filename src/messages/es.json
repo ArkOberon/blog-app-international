@@ -18,6 +18,16 @@
     "description": "Noticias económicas mundiales. CBDCs, informes e investigaciones sobre políticas que atentan contra la libertad civil. Novedades sobre los controles y restricciones del mercado financiero.",
     "img_alt_home": "Portada Economía Hermenautas"
   },
+  "forgotPassword": {
+    "title": "¿Olvidaste la contraseña?",
+    "description": "¿Olvidaste la contraseña?",
+    "forgot_your_password": "¿Olvidaste la contraseña?",
+    "email": "Correo electrónico",
+    "email_here": "Introduce tu Correo Electrónico aquí",
+    "recover_password": "Recuperar contraseña",
+    "asPath": "/autenticacion/restaurar-contrasena",
+    "send_email": "Revisa la bandeja de entrada de tu Correo Electrónico"
+  },
   "Footer": {
     "description": "Creemos que la información es un poder que sustenta todas las libertades civiles. La imprenta marcó el comienzo de una nueva era en la historia de la comunicación y la prensa libre jugará un papel determinante en nuestra época actual. Ahora más que nunca, existe la necesidad imperiosa de ofrecer publicaciones sin censura.",
     "company": "Corporativo",
@@ -95,10 +105,20 @@
     "img_alt_home": "Portada Ciencia Hermenautas"
   },
   "Sign-in": {
-    "title": "Iniciar sesión"
+    "title": "Iniciar sesión – Hermenautas",
+    "description": "Iniciar sesión",
+    "dont_have_account": "¿No tienes una cuenta?",
+    "sign_in": "Iniciar sesión",
+    "sign_up": "Registrarse",
+    "username_or_email": "Nombre de usuario o Correo electrónico",
+    "username_or_email_here": "Nombre de usuario o Correo electrónico aquí",
+    "password": "Contraseña",
+    "forgot_your_password": "¿Olvidaste la contraseña?",
+    "your_password_here": "Escribe tu contraseña"
   },
   "Sign-up": {
-    "title": "Registrarse",
+    "title": "Registrarse – Hermenautas",
+    "description": "Regristro de usuario",
     "already_have_an_account": "¿Ya tienes una cuenta?",
     "sign_in": "Iniciar sesión",
     "redirect_link_slug": "/autenticacion/iniciar-sesion",
@@ -111,7 +131,9 @@
     "i_agree_to_the_terms": "Estoy de acuerdo con los",
     "terms_of_services": "Términos de Servicio",
     "and": "y la",
-    "privacy_policy": "Política de Privacidad"
+    "privacy_policy": "Política de Privacidad",
+    "privacy_policy_slug": "/politicas-de-privacidad",
+    "terms_of_services_slug": "/terminos-y-condiciones"
   },
   "Technology": {
     "title": "Tecnología – Hermenautas",

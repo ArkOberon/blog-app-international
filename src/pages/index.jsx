@@ -31,8 +31,13 @@ const Home = ({ postArray }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [arrayPost, setArrayPost] = useState({
     data: {
-      posts: {
-        nodes: [],
+      categories: {
+        nodes: [
+          {
+            name: '',
+            id: '',
+          },
+        ],
       },
     },
   });
@@ -96,13 +101,11 @@ const Home = ({ postArray }) => {
         ) : (
           <PostList
             locale={locale}
-            title={title}
             titleCategory={titleCategory}
             description={description}
-            imgUrl={imgUrl}
-            imgAlt={imgAlt}
             arrayPost={postArray.data.categories.nodes}
             categoryId={category[0].id}
+            listId={4}
           />
         )}
       </Fragment>

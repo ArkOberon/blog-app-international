@@ -21,7 +21,7 @@ export const PostList = ({
   categoryId,
   listId = 4,
 }) => {
-  const [postByCategory, setPostByCategory] = useState('');
+  const [postByCategory, setPostByCategory] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const emailRef = useRef(null);
   const router = useRouter();
@@ -46,7 +46,7 @@ export const PostList = ({
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    const email = emailRef.current.value;
+    const email = emailRef.current?.value;
     const response = await addSubscriberToList(email, listId, titleCategory);
 
     if (response.errors) {
@@ -174,7 +174,6 @@ export const PostList = ({
                         locale={locale}
                         filterPrincipal={filterPrincipal}
                         oposeCategory={oposeCategory}
-                        titleCategory={titleCategory}
                       />
                     ))
                 : postByCategory.data?.category.posts.nodes
@@ -192,7 +191,6 @@ export const PostList = ({
                         locale={locale}
                         filterPrincipal={filterPrincipal}
                         oposeCategory={oposeCategory}
-                        titleCategory={titleCategory}
                       />
                     ))}
             </Masonry>

@@ -1,5 +1,75 @@
 
 
+## [0.9.7](///compare/0.9.6...0.9.7) (2024-10-21)
+
+
+### Bug Fixes
+
+* elimina el registro y el login 05c7d64
+
+## [0.9.6](///compare/0.9.5...0.9.6) (2024-10-20)
+
+
+### Bug Fixes
+
+* elimina TS del proyecto 9872d47
+
+## [0.9.5](///compare/0.9.4...0.9.5) (2024-10-20)
+
+
+### Bug Fixes
+
+* restaura sign-in y sign-up 9e390ea
+
+## [0.9.4](///compare/0.9.3...0.9.4) (2024-10-20)
+
+
+### Bug Fixes
+
+* conversion parcial de pages a TS fb9ed19
+
+## [0.9.3](///compare/0.9.2...0.9.3) (2024-10-09)
+
+
+### Bug Fixes
+
+* archivos configuracion Jest 30d35e1
+
+## [0.9.2](///compare/0.9.1...0.9.2) (2024-10-09)
+
+
+### Bug Fixes
+
+* agrega dependencias testing jest 85b4cb8
+
+## [0.9.1](///compare/0.9.0...0.9.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* agrega enlaces corregidos de politicas aece270
+
+## [0.9.0](///compare/0.8.0...0.9.0) (2024-09-29)
+
+
+### Features
+
+* sistema de envio de email recuperacion 6fc073c
+
+## [0.8.0](///compare/0.7.0...0.8.0) (2024-09-24)
+
+
+### Features
+
+* sistema de login completo 47cf893
+
+## [0.7.0](///compare/0.6.2...0.7.0) (2024-09-24)
+
+
+### Features
+
+* agrega sistema de registro 34acac6
+
 ## [0.6.2](///compare/0.6.1...0.6.2) (2024-09-02)
 
 

@@ -10,11 +10,13 @@ import { NextSeo } from 'next-seo';
 import { AuthorAndSharing, NewsletterForm } from '.';
 import { RelatedPost } from '.';
 import { SinglePostSkeleton } from '../ui/loaders';
-import { VideoYouTube } from '../blog';
+import { VideoYouTube } from '.';
 
-// Custom functionalities
-import { decodeHtml } from '../../utils/decodeHTML';
+// import API functions
 import { getPostBySlug } from '../../pages/api/posts/getPostBySlug';
+
+// import Utils/ custom functionalities
+import { decodeHtml } from '../../utils/decodeHTML';
 
 export const Article = ({ actualPost }) => {
   const [isLoading, setIsLoading] = useState(true);

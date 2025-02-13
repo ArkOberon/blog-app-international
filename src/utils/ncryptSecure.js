@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 
 /**
  * @description Función de desencriptado para poder generar
- *  la firma que solicitada por Backend Hermenautas.
+ *  la firma solicitada por Backend Hermenautas.
  */
 
 export const decodeParameters = (data) => {

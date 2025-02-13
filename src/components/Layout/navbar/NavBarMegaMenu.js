@@ -1,17 +1,10 @@
 // import node module libraries
 import { Fragment, useState } from 'react';
-import {
-  Image,
-  Navbar,
-  Nav,
-  Container,
-  ListGroup,
-  Dropdown,
-} from 'react-bootstrap';
+import { Image, Navbar, Nav, Container } from 'react-bootstrap';
 import Link from 'next/link';
-import { useMediaQuery } from 'react-responsive';
+/* import { useMediaQuery } from 'react-responsive';*/
 import { useRouter } from 'next/router';
-import { useTranslations } from 'next-intl';
+/* import { useTranslations } from 'next-intl'; */
 
 // import sub components
 import { NavMegaDropdown } from './';
@@ -23,16 +16,16 @@ import { Languages } from '../../ui';
 import NavbarDefault from '../../../routes/NavbarDefault';
 
 // import hooks
-import useMounted from '../../../hooks/useMounted';
+/* import useMounted from '../../../hooks/useMounted'; */
 
 export const NavbarMegaMenu = () => {
-  const t = useTranslations('Navbar');
+  /*   const t = useTranslations('Navbar'); */
   const { locale } = useRouter();
   const [expandedMenu, setExpandedMenu] = useState(false);
-  const hasMounted = useMounted();
+  /* const hasMounted = useMounted();
   const isDesktop = useMediaQuery({ query: '(min-width: 1224px)' });
 
-  const isLoged = false;
+  const isLoged = false; */
 
   const arrayMenu = NavbarDefault();
 
@@ -60,6 +53,16 @@ export const NavbarMegaMenu = () => {
             <span className="icon-bar middle-bar"></span>
             <span className="icon-bar bottom-bar"></span>
           </Navbar.Toggle>
+
+          <Link
+            href="#"
+            variant="light-primary"
+            className="btn btn-light-primary ms-1 text-primary"
+            id="category-dropdown-menu-button-mobile"
+          >
+            <i className="fe fe-book me-1 align-middle "></i> Visita la Librería
+          </Link>
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               {arrayMenu[locale].slice(1, 100).map((item, index) => {
@@ -92,14 +95,26 @@ export const NavbarMegaMenu = () => {
 
             <div className="ms-auto mt-3 mt-lg-0">
               <div className="d-flex align-items-center">
-                {/* <NavBarCart /> // Cuando esté listo el sistema se reactiva este componente */}
-
                 <Languages />
 
                 <DarkLightMode />
-
-                {!isLoged ? (
-                  <></>
+                {/* TEMPORALMENTE DESACTIVADO HASTA QUE TENGAMOS 
+                EL SISTEMA DE SUSCRIPCIÓN DE LA REVISTA ACTIVO */}
+                {/*!isLoged ? (
+                  <>
+                    <Link
+                      href={t('link_slug_sign_in')}
+                      className="btn btn-outline-dark ms-3"
+                    >
+                      {t('sign_in')}
+                    </Link>
+                    <Link
+                      href={t('link_slug_sign_up')}
+                      className="btn btn-dark ms-1"
+                    >
+                      {t('sign_up')}
+                    </Link>
+                  </>
                 ) : (
                   <>
                     <ListGroup
@@ -162,20 +177,8 @@ export const NavbarMegaMenu = () => {
                         </Dropdown.Menu>
                       </Dropdown>
                     </ListGroup>
-                    <Link
-                      href={t('link_slug_sign_in')}
-                      className="btn btn-outline-dark ms-3"
-                    >
-                      {t('sign_in')}
-                    </Link>
-                    <Link
-                      href={t('link_slug_sign_up')}
-                      className="btn btn-dark ms-1"
-                    >
-                      {t('sign_up')}
-                    </Link>
                   </>
-                )}
+                ) */}
               </div>
             </div>
 
