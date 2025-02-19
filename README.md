@@ -1,49 +1,79 @@
-# Frontend Hermenautas Store
+<div>   
+  <img src="" alt="banner" />
+ 
+  <div align="center">
+    <img src="https://img.shields.io/badge/-react-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+    <img src="https://img.shields.io/badge/-sass-black?style=for-the-badge&logoColor=white&logo=sass&color=CC6699" alt="sass" />
+    <img src="https://img.shields.io/badge/-css-black?style=for-the-badge&logoColor=white&logo=css&color=663399" alt="css" />
+    <img src="https://img.shields.io/badge/-Bootstrap-black?style=for-the-badge&logoColor=white&logo=bootstrap&color=7952B3" alt="bootstrap" />
+    <img src="https://img.shields.io/badge/-react_bootstrap-black?style=for-the-badge&logoColor=white&logo=reactbootstrap&color=41E0FD" alt="reactbootstrap" />
+    <img src="https://img.shields.io/badge/-crowdin-black?style=for-the-badge&logoColor=white&logo=crowdin&color=2E3340" alt="crowdin" />
+    <img src="https://img.shields.io/badge/-vercel-black?style=for-the-badge&logoColor=white&logo=vercel&color=000000" alt="vercel" />
+    <img src="https://img.shields.io/badge/-redux-black?style=for-the-badge&logoColor=white&logo=redux&color=764ABC" alt="redux" />
+    <img src="https://img.shields.io/badge/-wordpress-black?style=for-the-badge&logoColor=white&logo=wordpress&color=21759B" alt="wordpress" />
+    <img src="https://img.shields.io/badge/-graphql-black?style=for-the-badge&logoColor=white&logo=graphql&color=E10098" alt="graphql" />
+  </div>
 
-Aplicación Frontend que combina un diario digital de noticias junto con un catálogo de productos y servicios editoriales para la [`Web Oficial de Hermenautas`](https://hermenautas.com/).
+  <h3 align="center">Blog App Multilanguage (beta)</h3>
+  <div align="center">
+    web application that allows to use a wordpress headless as a CMS and at the same time integrate it to the frontend in NextJS. In this case, we would use the Wordpress API to be able to show the different blog posts, as well as categories and subcategories.
+  </div>
+</div>
 
-**Índice**
+## 📋 <a name="table">Table of Contents</a>
 
-1. [Realizando la Instalación](#id1)
-2. [Variables de Entorno](#id2)
-3. [Gestión de traducciones](#id3)
-4. [Control de Versiones Automatizadas](#id4)
-5. [Generador de Sitemaps](#id5)
+1. [Installation](#id1)
+2. [Environment variables](#id2)
+3. [Translation management](#id3)
+4. [Automated Version Control](#id4)
+5. [Sitemaps Generator](#id5)
 
 
-## **1. Realizando la Instalación** <div id='id1' />
+## **1. Installation** <div id='id1' />
 
-La aplicación ha sido desarrollada con [`ReactJS`](https://react.dev/learn)usando el metaframework [`NextJS`](https://nextjs.org/docs). Se usó [`create-next-app`](https://nextjs.org/docs/getting-started/installation) por lo que requiere de tener instalado NodeJS. Para poder usar el repositorio en un entorno local de desarrollo se requiere:
+**Prerequisites**
 
-Ejecutar comando de instalación de paquetes de package.json:
+Make sure you have the following installed on your machine:
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+- [Wordpress](https://wordpress.org/download/) 
+
+Make sure you have the following plugins installed on your wordpress:
+- [WPGraphQL](https://www.wpgraphql.com/)
+- [WPGraphQL for ACF](https://acf.wpgraphql.com/)
+- [WPGraphQL JWT](https://github.com/wp-graphql/wp-graphql-jwt-authentication)
+
+Check the src/pages/api folder and make sure to add the GrapQL queries to your Wordpress Headless
+
+The application has been developed with [`ReactJS`](https://react.dev/learn) using the metaframework [`NextJS`](https://nextjs.org/docs). It used [`create-next-app`](https://nextjs.org/docs/getting-started/installation) so it requires NodeJS to be installed. In order to use the repository in a local development environment it is required:
+
+Execute package installation command:
 
 ```bash
 npm install
 
 ```
 
-Ejecutar comando para iniciar servidor en modo desarrollo:
+Execute command to start server in development mode:
 
 ```bash
 npm run dev
 
 ```
 
-```bash
-# IMPORTANTE: En el modo desarrollo local, NextJS se encarga de realizar la build
-# automáticamente, es por esto que NO SE DEBE EJECUTAR el comando npm run build
-```
+## **2. Environment variables** <div id='id2' />
 
-## **2. Variables de Entorno** <div id='id2' />
+For the correct functioning of the APP, the environment variables must be used. Create a **.env.local** file in the repository root folder (**IMPORTANT:** It must be at the same level as the package.json or README.md file. Do not insert in /src or any other existing folder).
 
-Para un correcto funcionamiento de la APP se deben utilizar las variables de entorno. Crear un archivo **.env.local** en la carpeta raíz del repositorio (**IMPORTANTE:** Debe quedar al mismo nivel que el archivo package.json o el README.md. No insertar en /src ni en ninguna otra carpeta existente.)
+````bash
+# IMPORTANT: These variables are for the local development environment only.
+# Do not use these values in production environments.
+````
 
-```bash
-# IMPORTANTE: Estas variables son solo para el entorno local de desarrollo.
-# No usar para la rama Master ni para la rama Dev.
-```
-
-Copiar y pegar las siguientes variables en el interior del archivo **.env.local**
+Copy and paste the following variables into the **.env.local** file
 
 ```env
 # .env
@@ -51,7 +81,7 @@ Copiar y pegar las siguientes variables en el interior del archivo **.env.local*
 #
 # API URL
 #
-NEXT_PUBLIC_API_URL = "https://api.hermenautas.es/v1"
+NEXT_PUBLIC_API_URL = "https://yourapiwordpressheadles.com/v1"
 
 #
 # HOST WEB URL
@@ -62,62 +92,64 @@ NEXT_PUBLIC_PORT = 3000
 
 ```
 
-## **3. Gestión de las traducciones** <div id='id3' />
+## **3. Translation management** <div id='id3' />
 
-Para gestionar las traducciones usamos la dependencia de [`next-intl`](https://next-intl-docs-git-feat-next-13-rsc-next-intl.vercel.app/) y lo integramos a la plataforma de [`crowdin`](https://crowdin.com/) con la que podemos sincronizar todas las traducciones de nuestros frontends sin necesidad de enviar información manualmente al equipo de traducciones.
+To manage the translations we use the [`next-intl`](https://next-intl-docs-git-feat-next-13-rsc-next-intl.vercel.app/) dependency and integrate it with the [`crowdin`](https://crowdin.com/) platform with which we can synchronise all the translations of our frontends without the need to send information manually to the translations team.
 
-Todas las traducciones al español se registran en la carpeta "messenger" en el archivo es.json
+All English translations are registered in the ‘messenger’ folder in the file en.json.
 
-Para poder usar adecuadamente el middleware de crowdin se deben seguir las instrucciones de instalación del [`Crowdin CLI`](https://crowdin.github.io/crowdin-cli/installation)
+In order to properly use the crowdin middleware you must follow the installation instructions of the [`Crowdin CLI`](https://crowdin.github.io/crowdin-cli/installation).
 
-Una vez instalado puedes el push para enviar el archivo es.json al equipo de traducción
+Once installed you can push the en.json file to the translation team.
+
 
 ```bash
 crowdin push
 ```
 
-Cuando el equipo haya terminado de traducir puedes usar el pull para obtener todos los archivos traducidos en todos los idiomas
+When the translation team has finished translating you can use the pull to get all translated files in all languages.
+
 ```bash
 crowdin pull
 ```
 
-## **4. Control de Versiones Automatizadas** <div id='id4' />
+## **4. Automated Version Control** <div id='id4' />
 
-### ¿Cómo realizar commits?
+### How to commit?
 
-Para agregar un commit, introducir el siguiente comando:
+To add a commit, enter the following command:
 
 ```bash
 git commit -a
 ```
 
-Se abre una nueva terminal en VIM.
+A new terminal opens in VIM.
 
-Escribir la tipología del commit: fix, feat, docs, etc. (Siguiendo los parámetros establecidos en el package.json lineas 70 a la 85).
+Write the commit type: fix, feat, docs, etc. (following the parameters set in the package.json lines 70 to 85).
 
-EJEMPLO
+EXAMPLE
 ```bash
-fix: este es una corrección de un bug
+fix: this is a bug fix
 ```
 
 ```bash
-feat: esta es una actualización importante
+feat: this is an important update
 ```
 
-Salir de terminal usando ctrl+c
+Exit VIM terminal using ctrl+c then introduce the following command and press enter
 
 ```bash
 :wq
 ```
 
-Ejecutar release-it
+Execute release-it
 
 ```bash
 npm run release
 ```
 
-Configurar release conforme a lo que se requiera en cada momento
-Para +Info consultar la [`Documentación Oficial`](https://github.com/release-it/release-it)
+You can Configure Release according to the needs of the project.
+For +Info see [`Official Documentation`](https://github.com/release-it/release-it)
 
-## **5. Realizando la Instalación** <div id='id5' />
-Se implementa un generador automático de Sitemaps para Google Search Console usando next-sitemap [`Next Sitemap`](https://github.com/iamvishnusankar/next-sitemap)
+## **5. Performing the Installation** <div id='id5' />
+An automatic sitemap generator for Google Search Console using next-sitemap is implemented. [`Next Sitemap`](https://github.com/iamvishnusankar/next-sitemap)
