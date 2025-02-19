@@ -1,5 +1,5 @@
 <div>   
-  <img src="" alt="banner" />
+  <img src="https://github.com/ArkOberon/blog-app-international/blob/dev/project-banner-blog-app.png?raw=true" alt="banner" />
  
   <div align="center">
     <img src="https://img.shields.io/badge/-react-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react" />
