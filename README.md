@@ -18,7 +18,7 @@
 
   <h3 align="center">Blog App Multilanguage (beta)</h3>
   <div align="center">
-    web application that allows to use a wordpress headless as a CMS and at the same time integrate it to the frontend in NextJS. In this case, we would use the Wordpress API to be able to show the different blog posts, as well as categories and subcategories.
+    Multilanguage web application that allows to use a wordpress headless as a CMS and at the same time integrate it to the frontend in NextJS. In this case, we would use the Wordpress API to display the different blog posts, as well as categories and subcategories.
   </div>
 </div>
 
